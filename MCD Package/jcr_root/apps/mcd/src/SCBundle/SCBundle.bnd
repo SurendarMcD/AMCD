@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: SCBundle
+Bundle-Description: SCBundle
+Bundle-SymbolicName: SCBundle
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.accessmcd.ace.scheduler.Activator
