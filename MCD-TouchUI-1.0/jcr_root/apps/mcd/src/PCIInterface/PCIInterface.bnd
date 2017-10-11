@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: PCIInterface
+Bundle-Description: PCI Interface bundle
+Bundle-SymbolicName: PCIInterface
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.accessmcd.pci.Activator

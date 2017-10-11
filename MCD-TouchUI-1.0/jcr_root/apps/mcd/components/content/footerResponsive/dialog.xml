@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    height="300"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <userLinks
+                jcr:primaryType="cq:Widget"
+                title="User Links"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <heading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="User Links Heading"
+                        name="./userLinksHeading"
+                        xtype="textfield"/>
+                    <linkslabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Configure User Links"
+                        name="./linkslabel"
+                        xtype="label"/>
+                    <userlinks
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./userLinks"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="footeruserlinks"/>
+                    </userlinks>
+                </items>
+            </userLinks>
+            <toolbar
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Widget"
+                border="false"
+                height=""
+                title="Toolbar Section"
+                width=""
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <prop2
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show Email Link"
+                        fieldSubLabel=""
+                        name="./emailLink"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <emaillink
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop2>
+                    <prop7
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Default Text: Email"
+                        fieldLabel="Text for Email Link"
+                        name="./textEmailLink"
+                        xtype="textfield"/>
+                    <prop4
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Eg AccessMCD - https://www.accessmcd.com/accessmcd.html?frameTarget="
+                        fieldLabel="Enter prefix URL for link"
+                        name="./textprefixAMCD"
+                        xtype="textfield"/>
+                    <prop5
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show GetLink"
+                        fieldSubLabel=""
+                        name="./getLink"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <getLink
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop5>
+                    <prop10
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Default text : GetLink"
+                        fieldLabel="Text for GetLink"
+                        name="./textGetLink"
+                        xtype="textfield"/>
+                    <prop11
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show Bookmark Link"
+                        fieldSubLabel=""
+                        name="./bookMark"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <bookmark
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop11>
+                    <prop12
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Default Text: Bookmark"
+                        fieldLabel="Text for Bookmark Link"
+                        name="./textBookMark"
+                        xtype="textfield"/>
+                    <prop13
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show Print Link"
+                        fieldSubLabel=""
+                        name="./printLink"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <printlink
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop13>
+                    <prop14
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Default Text: Print"
+                        fieldLabel="Text for Print Link"
+                        name="./textPrintLink"
+                        xtype="textfield"/>
+                    <prop15
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Show Idea Form Link"
+                        name="./formLink"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <formlink
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop15>
+                    <prop16
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default Text: Submit an Idea form"
+                        fieldLabel="Text for Idea Form Link"
+                        name="./textIdeaFormLink"
+                        xtype="textfield"/>
+                    <prop17
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Provide the Idea Form Link"
+                        name="./ideaFormLink"
+                        xtype="browsefield"/>
+                    <prop20
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show System Message Archive Link"
+                        fieldSubLabel=""
+                        name="./showSysMessageLink"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <sysmessage
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop20>
+                    <prop18
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="System Message Archive Text"
+                        name="./sysMessage"
+                        xtype="textfield"/>
+                    <prop19
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="System Message Archive Link"
+                        name="./sysMessageLink"
+                        xtype="browsefield"/>
+                </items>
+            </toolbar>
+            <pageInfo
+                jcr:primaryType="cq:Widget"
+                border="false"
+                height=""
+                title="Footer Section"
+                width=""
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <attributes
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="\[&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;Copyright&quot;]"
+                        fieldLabel="Page Info"
+                        isCheckBox="true"
+                        name="./pageInfo"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Last_x0020_Modified_x0020_Date
+                                jcr:primaryType="nt:unstructured"
+                                text="Last Modified Date"
+                                value="Last Modified,cq:lastModified"/>
+                            <Author_x0020_Name
+                                jcr:primaryType="nt:unstructured"
+                                text="Author Name"
+                                value="Author,authorName"/>
+                            <Contact_x0020_Email
+                                jcr:primaryType="nt:unstructured"
+                                text="Contact Email Address"
+                                value="Contact Email,authorEmail"/>
+                            <Copyright_x0020_Message
+                                jcr:primaryType="nt:unstructured"
+                                text="Copyright Message"
+                                value="Copyright"/>
+                        </options>
+                    </attributes>
+                    <copyrightmessage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Copyright Message"
+                        name="./copyMessage"
+                        xtype="textfield"/>
+                    <timezone
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="US"
+                        fieldLabel="Time Zone"
+                        name="./timezone"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Aus
+                                jcr:primaryType="nt:unstructured"
+                                value="aus"/>
+                            <US
+                                jcr:primaryType="nt:unstructured"
+                                value="us"/>
+                        </options>
+                    </timezone>
+                </items>
+            </pageInfo>
+            <gcdBasicSearch
+                jcr:primaryType="cq:Widget"
+                title="GCD Basic Search"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <comptitle
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Contact Directory is default value"
+                        fieldLabel="Component Title"
+                        name="./comptitle"
+                        xtype="textfield"/>
+                    <firstname
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="First Name"
+                        fieldLabel="First Name Label"
+                        name="./firstname"
+                        xtype="textfield"/>
+                    <lastname
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Last Name"
+                        fieldLabel="Last Name Label"
+                        name="./lastname"
+                        xtype="textfield"/>
+                    <startlinkUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="External Link should begin with http://"
+                        fieldLabel="Start Link Page URL"
+                        name="./startLinkPage"
+                        xtype="browsefield"/>
+                    <resultPageUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Search Result Page URL"
+                        name="./resultPage"
+                        xtype="pathfield"/>
+                </items>
+            </gcdBasicSearch>
+        </items>
+    </items>
+</jcr:root>

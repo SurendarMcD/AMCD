@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/admin/sites-a-z.html?wcmmode=disabled"
+    title="Edit Sites A-Z"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <siteFinder
+                jcr:primaryType="cq:Panel"
+                title="Sites A-Z">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <Title
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Sites A-Z"
+                        fieldDescription="Site finder title to be displayed. Default Value &quot;Sites A-Z&quot;"
+                        fieldLabel="Sites A-Z Title"
+                        name="./sfTitle"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Sites A-Z  is a single point of access to all McDonalds related sites. You can quickly locate internal and external sites around the world by viewing the categories below. If youd like a site to be added to Site Finder, please submit your request via feedback."
+                        fieldDescription="Sites A-Z Description to be displayed Note. The text feedback/Feedback in the text would appear as feedback link. Default Value &quot;Site Finder is a single point of access to all McDonalds related sites. You can quickly locate internal and external sites around the world by viewing the categories below. If youd like a site to be added to Site Finder, please submit your request via feedback.&quot;"
+                        fieldLabel="Description"
+                        name="./description"
+                        width="300"
+                        xtype="textarea"/>
+                    <principals
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Admitted Groups"
+                        name="./admittedGroups"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            displayField="principal"
+                            optionsCallback="function(path, record) {&#xa;var pageHandle=location.toString();&#xa;&#xa;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);&#xa;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;var temp = new Array();&#xa;temp = url2.split('.');&#xa;pageHandle = url1 + '/' +  temp[0] + '.AudienceType.html';&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))));&#xa;}"
+                            type="select"
+                            xtype="selection"/>
+                    </principals>
+                    <feedbackLink
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Feedback Link"
+                        name="./feedbackLink"
+                        xtype="browsefield"/>
+                    <helpLink
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Help Link"
+                        name="./helpLink"
+                        xtype="browsefield"/>
+                </items>
+            </siteFinder>
+            <pci
+                jcr:primaryType="cq:Panel"
+                title="PCI Parameters">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <categoryId
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Category Id"
+                        name="./categoryId"
+                        xtype="textfield"/>
+                    <entityType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="ENT"
+                        fieldLabel="MCD Entity Type"
+                        name="./entityType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <ent
+                                jcr:primaryType="nt:unstructured"
+                                text="ENT"
+                                value="ENT"/>
+                            <us
+                                jcr:primaryType="nt:unstructured"
+                                text="US"
+                                value="US"/>
+                            <au
+                                jcr:primaryType="nt:unstructured"
+                                text="AU"
+                                value="AU"/>
+                            <ja
+                                jcr:primaryType="nt:unstructured"
+                                text="JA"
+                                value="JA"/>
+                        </options>
+                    </entityType>
+                    <StyleSheet_x0020_Path
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Style SheetPath"
+                        name="./xslPath"
+                        rootPath="/content/dam/accessmcd/sitea-z"
+                        xtype="browsefield"/>
+                </items>
+            </pci>
+        </items>
+    </items>
+</jcr:root>

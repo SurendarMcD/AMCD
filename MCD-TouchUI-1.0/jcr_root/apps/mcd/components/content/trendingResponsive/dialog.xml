@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Edit Component"
+    width="{Long}1000"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Trending">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <displayOption
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="textcloud"
+                        fieldDescription="Select any option for displaying trending items."
+                        fieldLabel="Display Option"
+                        name="./displayOption"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <textCloud
+                                jcr:primaryType="nt:unstructured"
+                                text="Text Cloud"
+                                value="textcloud"/>
+                        </options>
+                    </displayOption>
+                    <heading
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;html>&lt;/html>"
+                        fieldLabel="Heading Text"
+                        name="./heading"
+                        xtype="textfield"/>
+                    <headingLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select a image from dam to display along with heading text"
+                        fieldLabel="Heading Image"
+                        name="./headingImage"
+                        xtype="pathfield"/>
+                    <textColor
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Choose the font color for Keywords"
+                        fieldLabel="Text Color"
+                        name="./textColor"
+                        xtype="mcdsitecolorclassfield"/>
+                    <hoverColor
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Choose the hover color for Keywords"
+                        fieldLabel="Hover Color"
+                        name="./hoverColor"
+                        xtype="mcdsitecolorclassfield"/>
+                    <trendingItem
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./trendingItem"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="trendingnow"/>
+                    </trendingItem>
+                    <preview
+                        jcr:primaryType="cq:Widget"
+                        autoWidth="{Boolean}false"
+                        boxMaxWidth="{Long}100"
+                        handler="function(){&#xa;&#x9;var dialog = this.findParentByType('dialog');&#xa;&#x9;var trendingItems = new Array();&#xa;&#x9;var item = new Array();&#xa;&#x9;var query = &quot;&quot;;&#xa;&#x9;trendingItems = dialog.getField('./trendingItem').getValue(); &#xa;&#x9;var separator = &quot;&quot;;&#xa;&#x9;var trendingItemValues = &quot;&quot;;&#xa;&#x9;for(i=0;i&lt;trendingItems.length;i++){&#xa;&#x9;&#x9;trendingItemValues += separator;&#xa;&#x9;&#x9;trendingItemValues += trendingItems[i];&#xa;&#x9;&#x9;if(separator == &quot;&quot;) separator = &quot;^&quot;;&#xa;&#x9;}&#xa;&#x9;var displayOption  = dialog.getField('./displayOption').getValue();&#xa;&#x9;var headingText = dialog.getField('./heading').getValue();&#xa;&#x9;var textColor = dialog.getField('./textColor').getValue();&#xa;&#x9;var hoverColor = dialog.getField('./hoverColor').getValue();&#xa;&#x9;if(trendingItems.length>0){&#xa;&#x9;&#x9;var url = dialog.path;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;url = url + &quot;.trendingPreview.html?displayoption=&quot;+displayOption+&quot;&amp;headingtext=&quot;+escape(headingText)+&quot;&amp;textcolor=&quot;+textColor+&quot;&amp;hovercolor=&quot;+hoverColor+&quot;&amp;trendingitems=&quot;+escape(trendingItemValues);&#x9;&#xa;&#x9;&#x9;window.open(url);&#xa;&#x9;}&#xa;}"
+                        style="max-width:100px;font-weight:bold;padding-bottom:50px;cursor:pointer;"
+                        text="Preview"
+                        xtype="button"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforeSubmit="function(dialog)&#xa;{&#xa;&#x9;var multiValues = new Array();&#xa;&#x9;var singleValue = new Array();&#xa;&#x9;var pagehandle = '';&#xa;&#x9;var pagehandle1 = '';&#xa;&#x9;var link = '';&#xa;&#x9;var groupsList = '';&#xa;&#x9;var difference = 'false';&#xa;&#x9;var check = '';&#xa;&#xa;&#x9;pageHandle = location.toString();&#x9;&#xa;&#x9;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);        &#x9;&#xa;&#x9;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;&#x9;var temp = new Array();&#xa;&#x9;temp = url2.split('.');&#xa;&#xa;&#x9;multiValues = dialog.getField('./trendingItem').getValue();&#xa;&#xa;&#x9;for(var i = 0;i &lt; multiValues.length; i++)&#xa;&#x9;{&#x9;&#xa;&#x9;&#x9;singleValue = multiValues[i].split(&quot;|&quot;);&#x9;&#x9;&#xa;&#x9;&#x9;link = singleValue[2];&#xa;&#x9;&#x9;groupsList = singleValue[3];&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;if(groupsList.length == 0)&#xa;&#x9;&#x9;{&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show(&#xa;&#x9;&#x9;&#x9;{&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&quot;title&quot;:&quot;Allowed Access validation&quot;,&#xa;&#x9;&#x9;&#x9;&#x9;&quot;msg&quot;: &quot;Please select a value in Allowed Access for trending item &quot;+(i+1),&#xa;&#x9;&#x9;&#x9;&#x9;&quot;buttons&quot;:CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&quot;icon&quot;:CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&quot;scope&quot;:this&#xa;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;return false;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;pageHandle1 = url1 + '/' +  temp[0] + '.checkGroupsValue.html?groups=' + groupsList;&#x9;&#xa;&#x9;&#x9;check = CQ.Util.formatData(CQ.HTTP.eval(CQ.HTTP.get(pageHandle1)))[0].check;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;if(check)&#xa;&#x9;&#x9;{&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show(&#xa;&#x9;&#x9;&#x9;{&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&quot;title&quot;:&quot;Allowed Access validation&quot;,&#xa;&#x9;&#x9;&#x9;&#x9;&quot;msg&quot;: &quot;Please select a value in Allowed Access for trending item &quot;+(i+1),&#xa;&#x9;&#x9;&#x9;&#x9;&quot;buttons&quot;:CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&quot;icon&quot;:CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&quot;scope&quot;:this&#xa;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;return false;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;if(groupsList.length != 0)&#xa;&#x9;&#x9;{&#xa;&#x9;&#x9;&#x9;pageHandle = url1 + '/' +  temp[0] + '.checkGroups.html?pagURL=' + link + '&amp;groups=' + groupsList;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;difference = CQ.Util.formatData(CQ.HTTP.eval(CQ.HTTP.get(pageHandle)))[0].diff;&#xa;&#x9;&#x9;&#x9;if(!difference)&#xa;&#x9;&#x9;&#x9;{&#xa;&#x9;&#x9;&#x9;&#x9;CQ.Ext.Msg.show(&#xa;&#x9;&#x9;&#x9;&#x9;{&#x9;&quot;title&quot;:&quot;Allowed Access validation&quot;,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;msg&quot;: &quot;Groups selected don't match with CUG of the page given in trending item &quot;+(i+1),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;buttons&quot;:CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;icon&quot;:CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;scope&quot;:this&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;&#x9;&#x9;break;&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#xa;&#x9;var displayOption = dialog.getField('./displayOption').getValue().toString();&#xa;&#x9;&#xa;&#x9;if(displayOption == 'textcloud'){&#xa;&#x9;&#x9;for(var i = 0;i &lt; multiValues.length; i++){&#xa;&#x9;&#x9;&#x9;var trendingItemValues = multiValues[i].split(&quot;|&quot;);&#xa;&#x9;&#x9;&#x9;var fontSize = trendingItemValues[1].trim();&#xa;&#x9;&#x9;&#x9;var temp = i + 1;&#xa;&#x9;&#x9;&#x9;if(fontSize == ''){&#xa;&#x9;&#x9;&#x9;&#x9;CQ.Ext.Msg.show(&#xa;&#x9;&#x9;&#x9;&#x9;{&#x9;&quot;title&quot;:&quot;Font Size Validation&quot;,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;msg&quot;: &quot;Please provide font size for trending item &quot; + temp,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;buttons&quot;:CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;icon&quot;:CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;scope&quot;:this&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;}"/>
+</jcr:root>

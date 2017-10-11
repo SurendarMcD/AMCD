@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description=" Flexi Column Control"
+    jcr:primaryType="cq:Component"
+    jcr:title=" Flexi Column Control"
+    allowedParents="[*/parsys]"
+    backgroundColumnctrl="sitecolor3:sitecolor4:sitecolor5:sitecolor6:sitecolor2"
+    componentGroup="Columns"
+    marginBottom="0"/>

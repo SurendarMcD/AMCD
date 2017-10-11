@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    height="300"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        activeTab="0"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./image/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                mapParameter="./image/imageMap"
+                name="./image/file"
+                requestSuffix="/image.img.png"
+                rotateParameter="./image/imageRotate"
+                sizeLimit="100"
+                title="Footer Image"
+                uploadUrl="/tmp/mcd/componnets/content/footer/*"
+                xtype="smartimage"/>
+            <imgAdvanced
+                jcr:primaryType="cq:Widget"
+                title="Image Properties"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <altText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Alt Text"
+                        name="./altText"
+                        xtype="textfield"/>
+                    <size
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Size"
+                        name="./size"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <_x0031_00
+                                jcr:primaryType="nt:unstructured"
+                                text="100%"
+                                value="1.0"/>
+                            <_x0032_5
+                                jcr:primaryType="nt:unstructured"
+                                text="25%"
+                                value="0.25"/>
+                            <_x0035_0
+                                jcr:primaryType="nt:unstructured"
+                                text="50%"
+                                value="0.5"/>
+                            <_x0037_5
+                                jcr:primaryType="nt:unstructured"
+                                text="75%"
+                                value="0.75"/>
+                        </options>
+                    </size>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="mcd/components/content/footer"
+                        xtype="hidden"/>
+                </items>
+            </imgAdvanced>
+            <page_x0020_Info
+                jcr:primaryType="cq:Widget"
+                border="false"
+                height=""
+                title="Footer Section"
+                width=""
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <attributes
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="\[&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;Copyright&quot;]"
+                        fieldLabel="Page Info"
+                        isCheckBox="true"
+                        name="./pageInfo"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Last_x0020_Modified_x0020_Date
+                                jcr:primaryType="nt:unstructured"
+                                text="Last Modified Date"
+                                value="Last Modified,cq:lastModified"/>
+                            <Author_x0020_Name
+                                jcr:primaryType="nt:unstructured"
+                                text="Author Name"
+                                value="Author,authorName"/>
+                            <Contact_x0020_Email
+                                jcr:primaryType="nt:unstructured"
+                                text="Contact Email Address"
+                                value="Contact Email,authorEmail"/>
+                            <Copyright_x0020_Message
+                                jcr:primaryType="nt:unstructured"
+                                text="Copyright Message"
+                                value="Copyright"/>
+                        </options>
+                    </attributes>
+                    <copyright_x0020_message
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Copyright Message"
+                        name="./copyMessage"
+                        xtype="textfield"/>
+                    <timezone
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="US"
+                        fieldLabel="Time Zone"
+                        name="./timezone"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Aus
+                                jcr:primaryType="nt:unstructured"
+                                value="aus"/>
+                            <US
+                                jcr:primaryType="nt:unstructured"
+                                value="us"/>
+                        </options>
+                    </timezone>
+                </items>
+            </page_x0020_Info>
+            <toolbar
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Widget"
+                border="false"
+                height=""
+                title="Toolbar Section"
+                width=""
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <prop2
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show Email Link"
+                        fieldSubLabel=""
+                        name="./emailLink"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <emaillink
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop2>
+                    <prop7
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Default Text: Email"
+                        fieldLabel="Text for Email Link"
+                        name="./textEmailLink"
+                        xtype="textfield"/>
+                    <prop4
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Eg AccessMCD - https://www.accessmcd.com/accessmcd.html?frameTarget="
+                        fieldLabel="Enter prefix URL for link "
+                        name="./textprefixAMCD"
+                        xtype="textfield"/>
+                    <prop5
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show GetLink "
+                        fieldSubLabel=""
+                        name="./getLink"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <getLink
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop5>
+                    <prop10
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Default text : GetLink"
+                        fieldLabel="Text for GetLink"
+                        name="./textGetLink"
+                        xtype="textfield"/>
+                    <prop11
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show Bookmark Link"
+                        fieldSubLabel=""
+                        name="./bookMark"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <bookmark
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop11>
+                    <prop12
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Default Text: Bookmark"
+                        fieldLabel="Text for Bookmark Link"
+                        name="./textBookMark"
+                        xtype="textfield"/>
+                    <prop13
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription=""
+                        fieldLabel="Show Print Link"
+                        fieldSubLabel=""
+                        name="./printLink"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <printlink
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </prop13>
+                    <prop14
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Default Text: Print"
+                        fieldLabel="Text for Print Link"
+                        name="./textPrintLink"
+                        xtype="textfield"/>
+                </items>
+            </toolbar>
+        </items>
+    </items>
+</jcr:root>

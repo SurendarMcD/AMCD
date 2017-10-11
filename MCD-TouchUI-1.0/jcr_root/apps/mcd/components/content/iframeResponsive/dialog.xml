@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/mcd/online_man/components/iframe.html?wcmmode=disabled"
+    title="IFrame"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <IFrame
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="IFrame"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <TargetURL
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    emptyText="Target URL is mandatory"
+                    fieldDescription="&lt;br>"
+                    fieldLabel="Target URL"
+                    name="./targeturl"
+                    xtype="browsefield"/>
+                <Height
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Default is 500px."
+                    fieldLabel="Height (in pixels)"
+                    name="./height"
+                    xtype="hidden"/>
+                <Width
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Default is 100% and Maximum width is 960px."
+                    fieldLabel="Width (in pixels)"
+                    name="./width"
+                    xtype="hidden"/>
+                <ShowScroll
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="auto"
+                    fieldLabel="Show ScrollBar"
+                    name="./showscroll"
+                    type="radio"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <No
+                            jcr:primaryType="nt:unstructured"
+                            text="No"
+                            value="no"/>
+                        <Yes
+                            jcr:primaryType="nt:unstructured"
+                            text="Yes"
+                            value="yes"/>
+                        <Auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"
+                            value="auto"/>
+                    </options>
+                </ShowScroll>
+                <bottompadding
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="in px. (Default: 44px)&#xa;"
+                    fieldLabel="Bottom Padding"
+                    name="./btmpadding"
+                    xtype="textfield"/>
+            </items>
+        </IFrame>
+    </items>
+</jcr:root>

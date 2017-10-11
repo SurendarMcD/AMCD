@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}400"
+    helpPath="/content/accessmcd/mcd/online_man/template/nav-bar.html?wcmmode=disabled"
+    title="Edit Navigation Bar"
+    width="{Long}600">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <flyouts
+                jcr:primaryType="cq:Widget"
+                title="Flyout Menu"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enableFlyout
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enable Flyout Menu"
+                        name="./enableFlyout"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <enable
+                                jcr:primaryType="nt:unstructured"
+                                text=""
+                                value="enabled"/>
+                        </options>
+                    </enableFlyout>
+                    <numOfCols
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="1"
+                        fieldDescription="Provide the max number of columns you would like to use, when enough links provided."
+                        fieldLabel="Number of Columns"
+                        name="./numOfCols"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <_x0031_
+                                jcr:primaryType="nt:unstructured"
+                                text="1"
+                                value="1"/>
+                            <_x0032_
+                                jcr:primaryType="nt:unstructured"
+                                text="2"
+                                value="2"/>
+                            <_x0033_
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="3"/>
+                        </options>
+                    </numOfCols>
+                    <minLinkCount
+                        jcr:primaryType="cq:Widget"
+                        defaultvalue="5"
+                        fieldDescription="This value will be used to ensure columns have no less than this many links each."
+                        fieldLabel="Minimum Items per Column"
+                        name="./minLinkCount"
+                        regex="/^1?[1-9]$/"
+                        regexText="Invalid character entered.  Please provide a number 1-9 only."
+                        xtype="numberfield"/>
+                </items>
+            </flyouts>
+            <navigationbar
+                jcr:primaryType="cq:Panel"
+                disabled="{Boolean}true"
+                title="Did You Know">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <titleDYK
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Specify the label for the Did You Know Title"
+                        fieldLabel="Did You Know Title"
+                        name="./titleDYK"
+                        xtype="textfield"/>
+                    <linkDyk
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="URL of the Did You Know Title"
+                        fieldLabel="Did You Know Link"
+                        name="./linkDYK"
+                        xtype="browsefield"/>
+                    <rotateArticles
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Choose whether you want the articles to rotate or not"
+                        fieldLabel="Article Rotation"
+                        name="./rotateArticles"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(rec,path)&#xa;{ &#xa;&#x9;var dialog = this.findParentByType('dialog');&#xa;&#x9;var storyType = dialog.getField('./selectionType').getValue();&#xa;&#x9;alert(&quot;Load Content :: &quot; + storyType);&#xa;}"
+                            selectionchanged="function(box,value)&#xa;{ &#xa;&#x9;var dialog=box.findParentByType('dialog'); &#xa;&#x9;var rotateArticles=dialog.getField('./rotateArticles').getValue();&#xa;&#x9;if(rotateArticles=='yes')&#xa;&#x9;{&#xa;&#x9;&#x9;dialog.getField('./playspeed').enable();&#xa;&#x9;&#x9;dialog.getField('./transitiontime').enable();&#xa;&#x9;&#x9;dialog.getField('./showcircles').enable();&#xa;&#x9;}&#xa;&#x9;else if(rotateArticles=='no')&#xa;&#x9;{&#xa;&#x9;&#x9;dialog.getField('./playspeed').disable();&#xa;&#x9;&#x9;dialog.getField('./transitiontime').disable();&#xa;&#x9;&#x9;dialog.getField('./showcircles').disable();&#xa;&#x9;}&#xa;}"/>
+                    </rotateArticles>
+                    <playspeed
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the article rotation speed."
+                        fieldLabel="Play Speed"
+                        name="./playspeed"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <slow
+                                jcr:primaryType="nt:unstructured"
+                                text="Slow (15 sec delay)"
+                                value="15000"/>
+                            <medium
+                                jcr:primaryType="nt:unstructured"
+                                text="Medium (10 sec delay)"
+                                value="10000"/>
+                            <fast
+                                jcr:primaryType="nt:unstructured"
+                                text="Fast (6 sec delay)"
+                                value="6000"/>
+                        </options>
+                    </playspeed>
+                    <transitionTime
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the article fade-in speed. Transition time should be less than play speed."
+                        fieldLabel="Transition Time"
+                        name="./transitiontime"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <slow
+                                jcr:primaryType="nt:unstructured"
+                                text="Slow (3 sec fade in)"
+                                value="3000"/>
+                            <medium
+                                jcr:primaryType="nt:unstructured"
+                                text="Medium (2 sec fade in)"
+                                value="2000"/>
+                            <fast
+                                jcr:primaryType="nt:unstructured"
+                                text="Fast (1 sec fade in)"
+                                value="1000"/>
+                        </options>
+                    </transitionTime>
+                    <showCircles
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Choose whether to display or hide the circle images used for rotation of articles"
+                        fieldLabel="Control Style"
+                        name="./showcircles"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <disable
+                                jcr:primaryType="nt:unstructured"
+                                text="Disable"
+                                value="disable"/>
+                        </options>
+                    </showCircles>
+                    <type
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select whether the articles should be fetched manually or automatically"
+                        fieldLabel="Configuration Type"
+                        name="./type"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <manual
+                                jcr:primaryType="nt:unstructured"
+                                text="Manual"
+                                value="manual"/>
+                            <automated
+                                jcr:primaryType="nt:unstructured"
+                                text="Automated"
+                                value="automated"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(rec,path)&#xa;&#xa;{ var dialog=this.findParentByType('dialog'); &#xa;var type=dialog.getField('./type').getValue(); &#xa;if(type=='automated')&#xa;&#x9;{&#xa;&#x9;&#x9;dialog.getField('./headings').enable();&#xa;&#x9;&#x9;dialog.getField('./browse').disable();&#xa;&#x9;&#x9;&#xa;&#x9;} &#xa;else if(type=='manual')&#xa;&#x9;{&#xa;&#x9;&#x9;dialog.getField('./browse').enable();&#xa;&#x9;&#x9;dialog.getField('./headings').disable();&#xa;&#x9;}&#xa;}"
+                            selectionchanged="function(box,value)&#xa;{ &#xa;&#x9;var dialog=box.findParentByType('dialog'); &#xa;&#x9;var componentType=dialog.getField('./type').getValue();&#xa;&#x9;if(componentType=='automated')&#xa;&#x9;{&#xa;&#x9;&#x9;dialog.getField('./headings').enable();&#xa;&#x9;&#x9;dialog.getField('./browse').disable();&#xa;&#x9;} &#xa;&#x9;else if(componentType=='manual')&#xa;&#x9;{&#xa;&#x9;&#x9;dialog.getField('./browse').enable();&#xa;&#x9;&#x9;dialog.getField('./headings').disable();&#xa;&#x9;}&#xa;}"/>
+                    </type>
+                    <noOfHeadings
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Long}5"
+                        fieldDescription="Select the number of articles to be viewed"
+                        fieldLabel="Number of Headings to be displayed"
+                        name="./headings"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <one
+                                jcr:primaryType="nt:unstructured"
+                                text="1"
+                                value="{Long}1"/>
+                            <two
+                                jcr:primaryType="nt:unstructured"
+                                text="2"
+                                value="{Long}2"/>
+                            <three
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="{Long}3"/>
+                            <four
+                                jcr:primaryType="nt:unstructured"
+                                text="4"
+                                value="{Long}4"/>
+                            <five
+                                jcr:primaryType="nt:unstructured"
+                                text="5"
+                                value="{Long}5"/>
+                        </options>
+                    </noOfHeadings>
+                    <browselabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Browse the path(s)"
+                        xtype="label"/>
+                    <browseitem
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./browse"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            rootPath="/content/accessmcd"
+                            xtype="pathfield"/>
+                    </browseitem>
+                </items>
+            </navigationbar>
+            <mobilelinks
+                jcr:primaryType="cq:Widget"
+                title="Mobile Links"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <mobilelinks
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./mobileLinks"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="footeruserlinks"/>
+                    </mobilelinks>
+                    <dividerText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This is the divider text which will be displayed between top nav &amp; navigation bar in mobile view."
+                        fieldLabel="Mobile Menu Divider Text"
+                        name="./dividerText"
+                        xtype="textfield"/>
+                    <menuSubHeading
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This sub heading will be displayed for sub menu in mobile. Default Set to &lt;b>Menu&lt;/B> "
+                        fieldLabel="Mobile Menu Sub Heading"
+                        name="./subMenuHeading"
+                        xtype="textfield"/>
+                </items>
+            </mobilelinks>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog) { &#xa;var ManualItem =dialog.getField('./browse').getValue();&#xa;var playspeed =parseInt(dialog.getField('./playspeed').getValue());&#xa;var transitiontime =parseInt(dialog.getField('./transitiontime').getValue());&#xa;var i=0; &#xa;for(i=0;i&lt;ManualItem.length;i++) { &#xa;if(i==5) { &#xa;CQ.Ext.Msg.show({ 'title': CQ.I18n.getMessage('Navigation Bar Validation'), 'msg':  CQ.I18n.getMessage('Please do not provide more than five(5) browse paths in headings section.'), 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this }); return false; } &#xa;if(transitiontime>=playspeed){&#xa;&#x9;CQ.Ext.Msg.show({ 'title': CQ.I18n.getMessage('Navigation Bar Validation'), 'msg':  CQ.I18n.getMessage('Transition Time can only be less than Play Speed'), 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this }); return false;&#xa;}&#xa;}&#xa;}"
+        loadContent="function(dialog){ &#xa;&#x9;var path = this.path.replace('/jcr:content/navigationpara', '');  &#xa;&#xa;&#x9;var pageHandle = path + '.moreinfo.html'; &#xa;&#x9;var JSONObj = CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)));  &#xa;&#x9;var viewPath = JSONObj.viewPath;  &#xa;&#x9;if(viewPath.indexOf('/content/')&lt;0) { &#xa; &#x9;&#x9;viewPath = '/content' + viewPath; &#xa;&#x9;}&#xa;  &#x9;if(path != viewPath) {  &#xa;&#x9;&#x9;CQ.Ext.Msg.show({'title': CQ.I18n.getMessage('Navigation Bar Validation'),'msg':  CQ.I18n.getMessage('Please configure the values only on views home page') + ' : ' + viewPath,'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); this.hide();  &#x9;} }"/>
+</jcr:root>

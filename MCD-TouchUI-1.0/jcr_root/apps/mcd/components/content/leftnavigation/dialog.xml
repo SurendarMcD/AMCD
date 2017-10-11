@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items
+            jcr:primaryType="nt:unstructured"
+            border="false"
+            height=""
+            title="Left Navigaton"
+            width=""
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <check
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Include round corners"
+                    name="./checkRoundCorners"
+                    type="checkbox"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <check
+                            jcr:primaryType="nt:unstructured"
+                            value="true"/>
+                    </options>
+                </check>
+                <list
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Root Path"
+                    name="./listroot"
+                    rootPath="/content"
+                    xtype="pathcompletion"/>
+                <parentLevel
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="true"
+                    disabled="false"
+                    fieldDescription="(eg. 1-  /content/geo...) &lt;br> Note**  If both the Root Path &amp; Parent level values are given then the value for Parent Level will be considered."
+                    fieldLabel="Parent Level(absolute)"
+                    fieldSubLabel="Enter numeric value only"
+                    grow="false"
+                    hideLabel="false"
+                    hideMode="display"
+                    inputType="text"
+                    name="./parentLevel"
+                    readOnly="false"
+                    selectOnFocus="false"
+                    validateOnBlur="true"
+                    xtype="numberfield"/>
+                <stoplevel
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    blankText="It's a Mandatory Field &lt;br> Enter value between 1-7 "
+                    disabled="false"
+                    fieldDescription="(eg  1 for 1st Level &amp; 7 for 7th Level)"
+                    fieldLabel="Navigation Stop Level*"
+                    fieldSubLabel="Enter value between 1-7"
+                    grow="false"
+                    hideLabel="false"
+                    name="./stoplevel"
+                    readOnly="false"
+                    regex="/^[1-7]\\d{0}$/"
+                    selectOnFocus="false"
+                    validateOnBlur="true"
+                    xtype="textfield"/>
+            </items>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){var list=dialog.getField('./listroot').getValue();var plevel=dialog.getField('./parentLevel').getValue();if(plevel=='' &amp;&amp; list==''){plevel=parseInt(plevel);if(plevel==0){return true;}else{alert('Author must provide value in either of the two fields - Root Path or Parent level(absolute)'); return false;}}else{plevel=plevel*1; if(plevel&lt;0){alert('Parent Level Cannot be a negative value');return false;}plevel=plevel+''; if(plevel.indexOf('.')>0){ alert('Parent level cannot be in Decimal'); return false;}}}"/>
+</jcr:root>

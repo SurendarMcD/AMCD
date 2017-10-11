@@ -1,0 +1,12 @@
+.historyColumn{
+            float:left;
+            width:50%;
+        }
+        
+.historyWrapper h1{
+color:#FFFFFF;
+font-size:12px;
+background:none repeat scroll 0 0 #B0B0B0;
+padding: 7px;
+}
+

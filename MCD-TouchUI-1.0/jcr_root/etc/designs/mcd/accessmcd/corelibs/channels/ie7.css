@@ -1,0 +1,16 @@
+/* MCD ColorBox */
+#cboxOverlay
+{
+    background-image:none;
+    background-color:#1c1c1c;   
+    opacity:0.5; 
+    filter:alpha(opacity=70) !important;
+    zoom:1; /* hasLayout  */
+    display:block;
+}
+
+.topnavigationitems ul#navrender li div#flyouts ul li a {
+    height: 22px !important;
+    background: none !important;
+    margin: 0 !important; padding: 0 !important;
+}

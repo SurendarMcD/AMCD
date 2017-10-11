@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="World Clock"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Display Options">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <bgcolor
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Not used in Modal window&lt;br>"
+                        fieldLabel="Background Color"
+                        name="./bgColor"
+                        showHexValue="{Boolean}false"
+                        xtype="mcdsitecolorclassfield"/>
+                    <width
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Add a number to provide a width for the clock.  (Leave blank for auto width)"
+                        fieldLabel="Width: "
+                        name="./width"
+                        xtype="numberfield"/>
+                    <padding
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Add a number to provide padding around the clock, inside the container. (&quot;10px&quot;)."
+                        fieldLabel="Padding: "
+                        name="./padding"
+                        xtype="numberfield"/>
+                    <margin
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Add a number to provide a margin around the clock, outside the container. (&quot;10px&quot;)."
+                        fieldLabel="Margin: "
+                        name="./margin"
+                        xtype="numberfield"/>
+                    <rounded
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Rounded Corners?: "
+                        name="./rounded"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="rounded"/>
+                        </options>
+                    </rounded>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

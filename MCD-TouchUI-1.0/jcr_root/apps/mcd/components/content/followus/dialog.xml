@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Edit Follow Us"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Follow Us">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <Text
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Text to be displayed (e.g Follow us)"
+                        fieldLabel="Text"
+                        name="./text"
+                        xtype="textfield"/>
+                    <Link
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="URL to be linked with the text"
+                        fieldLabel="Link"
+                        name="./link"
+                        xtype="browsefield"/>
+                    <Align
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Alignment of the component"
+                        fieldLabel="Alignment"
+                        name="./align"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="Center"/>
+                            <Right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="Right"/>
+                            <Left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="Left"/>
+                        </options>
+                    </Align>
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter Social Networking Data"
+                        xtype="label"/>
+                    <data
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./followusdata"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="followus"/>
+                    </data>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

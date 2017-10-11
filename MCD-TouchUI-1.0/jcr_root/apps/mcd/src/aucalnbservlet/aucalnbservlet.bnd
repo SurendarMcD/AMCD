@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: aucalnbservlet
+Bundle-Description: 
+Bundle-SymbolicName: aucalnbservlet
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.accessmcd.aucalnbservlet.Activator

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    autoWidth="{Boolean}false"
+    height="{Long}600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <SearchSuggestion
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Search Suggestion"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <Suggestion
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Text which will appear in Search Suggestions dropdown list"
+                        fieldLabel="Suggestion"
+                        hideLabel="{Boolean}false"
+                        name="./suggestion"
+                        width="300"
+                        xtype="textfield"/>
+                    <Site_x0020_Link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Site Link"
+                        name="./sitelink"
+                        rootPath="/content/accessmcd"
+                        xtype="pathcompletion"/>
+                    <newWindow
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel=""
+                        name="./newWindow"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Include Rounded Corners"
+                                text="Open In New Window"
+                                value="{Boolean}true"/>
+                        </options>
+                    </newWindow>
+                    <summary
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription=" Text to appear below Quick Link on Search Results page."
+                        fieldLabel="Summary"
+                        height="150"
+                        hideLabel="{Boolean}true"
+                        name="./summary"
+                        width="400"
+                        xtype="richtext">
+                        <cssStyles
+                            jcr:primaryType="nt:unstructured"
+                            mainTitle="Main Title"
+                            paragraphTitle="Paragraph Title"
+                            rtStyleBlueText="Blue Text"
+                            rtStyleGoToLink="Go To Link"
+                            rtStyleRedText="Red Text"
+                            rtStyleWhiteText="White Text"
+                            sectionSubTitle="Section Site Title"
+                            sectionTitle="Section Title"
+                            siteTitle="Site Title"/>
+                        <linkbrowseConfig
+                            jcr:primaryType="nt:unstructured"
+                            protocols="[http://,https://,ftp://,mailto:]"/>
+                    </summary>
+                    <keywords
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}false"
+                        fieldLabel="Keywords"
+                        hideLabel="{Boolean}true"
+                        name="./keywords"
+                        title="Keywords"
+                        xtype="multifield">
+                        <keyword
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Keywords or phrases which will trigger the display of the search suggestion."
+                            fieldLabel="Keyword"
+                            xtype="textfield"/>
+                    </keywords>
+                    <audience
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Limit to certain audiences (If none selected, ALL roles can view)"
+                        fieldLabel="Audience"
+                        hideLabel="{Boolean}true"
+                        name="./audience"
+                        title="Audience"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Groups which should see suggestion"
+                            fieldLabel="Allowed Group"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <Employee
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Employee"
+                                    value="ce"/>
+                                <Franchisee
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Franchisee"
+                                    value="fe"/>
+                                <FranchiseeOfficeStaff
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Fran. Office Staff"
+                                    value="fo"/>
+                                <FranchiseeRestMgr
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Fran. Rest. Mgr"
+                                    value="fm"/>
+                                <McOpCoRestMgr
+                                    jcr:primaryType="nt:unstructured"
+                                    text="McOpCo Restaurant Manager"
+                                    value="rm"/>
+                                <Agency
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Agency"
+                                    value="ag"/>
+                                <SupplierVendor
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Supplier Vendor"
+                                    value="sv"/>
+                                <SupportPartners
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Support Partners"
+                                    value="sp"/>
+                            </options>
+                        </fieldConfig>
+                    </audience>
+                </items>
+            </SearchSuggestion>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,123 @@
+/*Media Queries*/
+@media all and (min-device-width:1024px)
+{
+body{background:#fff;}
+.wra pper{max-width:666px;}
+.selectarea{width:34% !important;}
+.inputarea{width:50% !important;}
+.go_btn{width:14%;}
+.loadingclass{
+    margin-left:240px;
+    margin-top:70px;
+}
+}
+
+
+/*
+@media all and (max-width: 1000px) and (min-width: 760px)
+{
+body{background:#CC3;}
+.inputarea{width:61% !important;}
+.searchbox{width:100% !important}
+.selectarea{width:23% !important;}
+select.selmenu{width:100% !important;}
+.go_btn{width:14%;}
+.search_btn{width:100%;}
+}
+@media all and (max-width: 760px) and (min-width: 600px)
+{
+body{background:#0CF;}
+.inputarea{width:61% !important;}
+.searchbox{width:100% !important}
+.selectarea{width:23% !important;}
+select.selmenu{width:100% !important;}
+.go_btn{width:14%;}
+.search_btn{width:100%;}
+}
+@media all and (max-width: 600px) and (min-width: 480px)
+{
+body{background:#099;}
+.inputarea{float:none; width:100% !important; margin:0 0 10px 0 !important;}
+.searchbox{width:100% !important}
+.selectarea{float:none; width:100% !important; margin-bottom:10px;}
+select.selmenu{width:100% !important;}
+.go_btn{float:none; width:100%;}
+.search_btn{width:100%;}
+}
+@media all and (max-width: 480px) and (min-width: 320px)
+{
+body{background:#099;}
+.inputarea{float:none; width:100% !important; margin:0 0 10px 0 !important;}
+.searchbox{width:100% !important}
+.selectarea{float:none; width:100% !important; margin-bottom:10px;}
+select.selmenu{width:100% !important;}
+.go_btn{float:none; width:100%;}
+.search_btn{width:100%;}
+}
+@media only screen and (max-width : 320px)
+{
+body{background:#9F3;}
+.inputarea{float:none; width:100% !important;  margin:0 0 10px 0 !important;}
+.searchbox{width:100% !important}
+.selectarea{float:none; width:100% !important; margin-bottom:10px;}
+select.selmenu{width:100% !important;}
+.go_btn{float:none; width:100%;}
+.search_btn{width:100%;}
+}
+*/
+
+
+
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+body{background:#fff;}
+.selectarea{width:34% !important;}
+.inputarea{width:50% !important;}
+.go_btn{width:14%;}
+.loadingclass{
+    margin-left:240px;
+    margin-top:70px;
+}
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+body{background:#fff;}
+.selectarea{width:34% !important;}
+.inputarea{width:50% !important;}
+.go_btn{width:14%;}
+.loadingclass{
+    margin-left:110px;
+    margin-top:70px;
+}
+.description p{
+margin-top:25px;
+width:100%;
+}
+}
+
+@media screen and (orientation:portrait) {
+body{background:#fff;}
+.selectarea{width:100% !important;}
+.inputarea{width:59% !important; margin:1% 0 0 0 !important;}
+.go_btn{width:40%; margin:1% 0 0 1% !important;}
+.loadingclass{
+    margin-left:110px;
+    margin-top:70px;
+}
+.searchbox{
+    font-size:10px;
+}
+}
+
+@media screen and (orientation:landscape) {
+body{background:#fff;}
+.selectarea{width:34% !important;}
+.inputarea{width:50% !important;}
+.go_btn{width:14%;
+}
+.loadingclass{
+    margin-left:240px;
+    margin-top:70px;
+}
+}

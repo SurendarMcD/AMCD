@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog">
+    <items
+        jcr:primaryType="cq:Dialog"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <wogutility
+                jcr:primaryType="cq:Widget"
+                title="World of Good Utility"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <file
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddGroups="[media]"
+                        fieldLabel="Upload File"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        name="./file"
+                        sizeLimit="100"
+                        uploadUrl="/tmp/upload_test/*"
+                        useHTML5="{Boolean}false"
+                        xtype="html5smartfile"/>
+                    <flag
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Flag"
+                        name="./flag"
+                        xtype="hidden"/>
+                </items>
+            </wogutility>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){ dialog.getField('./flag').setValue('1'); }"/>
+</jcr:root>

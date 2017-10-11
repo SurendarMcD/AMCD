@@ -1,0 +1,266 @@
+/*Media Queries*/
+@media all and (max-width:999px) and (min-width:760px)
+{
+    #headerwrap
+    {
+        display:none;
+    }
+    
+    #headerwrapper
+    { 
+        display:none;
+    }
+    
+    body
+    {
+        background:#FFF !important; 
+        width:100%; 
+        margin:0 auto;
+    }
+    img
+    {
+        max-width:100%; 
+        height:auto; 
+    }
+    
+    .breadCrumb
+    {
+        background:#FFF !important; 
+        display:block !important;
+    }
+    
+    #menu
+    {
+        display:none;
+    }
+    
+    #rwd_logo_t
+    {
+        display:block !important;
+    }
+    
+    .slicknav_menu
+    {
+        display:block !important;
+    }
+    
+    .topnavigation
+    {
+        display:none !important;
+    }
+    
+    .logo_t
+    {
+        display:none !important;
+    }
+    
+    #left-widgets-column
+    {
+        display:none !important;
+    }
+    
+    #pagecontentwrapper
+    {
+        margin:20px auto 0; 
+        padding:0 !important; 
+        width:100% !important;
+    } 
+    
+    #right-results-column
+    {
+        float:none !important; 
+        max-width:100% !important;
+    } 
+    
+    .mainBody .leftcontentpara
+    {
+        display:none!important;
+    } 
+    
+    #footerEmailAction, .contentlinkbold, #footerBookmarksAction
+    {
+        display:none !important;
+    }
+    
+    .sub-menu
+    {
+        width:100% !important; 
+        text-align:left !important;
+    }
+    
+    .slicknav_background
+    {
+        background-image: url("/etc/designs/mcd/accessmcd/corelibs/images/jquery/mcdcolorbox/overlay_bg.png");
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 9999;
+
+    
+    }
+    
+    .rwdnewclass{
+    
+        position: relative;
+        z-index: 9999;
+        top: 0;
+        width: 100%;
+        
+    }
+    
+    .slicknav_hidden
+    {
+        display:none !important;
+    }
+    
+    .slicknav_arrow_new
+    {
+        background: url("/etc/designs/mcd/accessmcd/g2g/g2g_rwd/g2g_rwd_cyan/images/arrow.jpg") no-repeat scroll 0 0 transparent;
+    }    
+    
+    .ideaFormLink 
+    {
+        display:block !important;
+    }
+    
+    #ideaForm
+    {    
+        text-decoration: none;
+    }
+
+    #sitefooter
+    {
+        border-spacing: 0 !important;
+    }
+}
+
+@media all and (max-width:759px) and (min-width:601px)
+{
+    #headerwrap
+    {
+        display:none;
+    }
+    
+    #headerwrapper
+    {
+        display:none;
+    }
+    
+    body
+    {
+        background:#FFF !important; 
+        width:100%; 
+        margin:0 auto;
+    }
+    
+    img
+    {
+        max-width:100%;  
+        height:auto; 
+    }
+    
+    .breadCrumb
+    {
+        background:#FFF !important; 
+        display:block !important;
+    }
+    
+    #menu
+    {
+        display:none;
+    }
+    
+    #rwd_logo_t
+    {
+        display:block !important;
+    }
+    
+    .slicknav_menu
+    {
+        display:block !important;
+    }
+    
+    .topnavigation
+    {
+        display:none !important;
+    }
+    
+    .logo_t
+    {
+        display:none !important;
+    }
+    
+    #left-widgets-column
+    {
+        display:none !important;
+    }
+    
+    #footerEmailAction, .contentlinkbold, #footerBookmarksAction
+    {
+        display:none !important;
+    }
+    
+    #right-results-column
+    {
+        float:none !important; 
+        max-width:100% !important;
+    }
+    
+    #pagecontentwrapper
+    { 
+        margin:20px auto 0; 
+        padding:0 !important; 
+        width:100% !important;
+    } 
+    
+    .sub-menu
+    {
+        width:100% !important; 
+        text-align:left !important;
+    }
+
+    .slicknav_background
+    {
+        background-image: url("/etc/designs/mcd/accessmcd/corelibs/images/jquery/mcdcolorbox/overlay_bg.png");
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 9999;
+    }
+    
+    .rwdnewclass{
+    
+        position: relative;
+        z-index: 9999;
+        top: 0;
+        width: 100%;
+        
+    }
+    
+    .slicknav_hidden
+    {
+        display:none !important;
+    }
+    
+    .slicknav_arrow_new
+    {
+        background: url("/etc/designs/mcd/accessmcd/g2g/g2g_rwd/g2g_rwd_cyan/images/arrow.jpg") no-repeat scroll 0 0 transparent;
+    }
+    
+    .ideaFormLink 
+    {
+        display:block !important;
+    }
+    
+    #ideaForm
+    {    
+        text-decoration: none;
+    }
+    
+    #sitefooter
+    {
+        border-spacing: 0 !important;
+    }
+
+}
+/*Media Queries*/

@@ -1,0 +1,68 @@
+/* Archivepost Layout Start */
+.archiveHeaderSection .welcomeContent {
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+}
+           
+Div.archiveSection{ font-size: 0;margin-bottom: 0; }
+Div.archiveSectionLeft{ width:90%;font-size: 0;margin-bottom: 0; float:left;}
+
+ .restDetails { 
+        PADDING: 8px 0px 0px 43px;  MARGIN: 0px;  FLOAT: left; wid th:185px; 
+    }
+    .restDetails H3 {
+        FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; margin-top: 0px; padding:0px;
+    }
+    .restDetails A {
+        FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #cd0000; FONT-SIZE: 11px; disp lay:block; margin-bottom:5px;
+    }
+
+    .restDetails A:hover {
+    _color:#cd0000;
+    }
+    
+.welcomeRoundCorner {display: none !important;}
+.archiveRoundCorner {display: none !important;}
+.archiveRoundCornerInner {height: 5px; float:left; }
+.archivelink   
+    {
+    color:#cd0000;
+    font-size:13px;
+    font-weight:bold;
+    padding:10px 0px 10px 0px;
+    overflow:hidden;
+    }
+.archivelink a {color:#cd0000;font-size:13px;font-weight:bold; text-decoration:none;}
+.archivelink a:hover {text-decoration:underline;}
+
+#mainContainer{width:100%;padding:0px; margin:0px ; height:auto;}
+#leftContainer{width:20%; float:left; }
+#rightContainer{width:80%;float:left; }
+#rightContainer .archivesection{width:100%; height:auto;}
+
+.archiveSectionRight{ width:90%;font-size: 0;margin-bottom: 0; }
+.archiveSectionRightMain{width:100%;font-size: 0;margin-bottom: 0; margin-top:30px; border:1px solid red;}
+.archiveSectionRightOne{ width:40%;font-size: 0;margin-bottom: 0; height:100px; border:1px solid red; float:left;}
+.archiveSectionRightTwo{font-size: 0;margin-bottom: 0;  width:40%; height:100px; border:1px solid red; float:left;}
+.archiveWelcomeMessage{font-size:18px; color:#000; font-weight:bold;}
+.archiveHeaderSection{width:98%;}
+.archiveNoticeBoard{min-height:450px; margin-top:19px;}
+.archiveLeft{width:16%; float:left; margin-right:1%;}
+.archiveRight{float:left;width:83%;}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.archivePost-c1{width:50%; margin-right:1%;}
+.archivePost-c2{width:49%;}
+.utilityFormContainer{min-height:450px;}
+.archiveContentHolder{min-height:510px;}
+.archivePost-c2 h1, .utilityFormContainer h1{font-size:16px; padding-bottom:5px;}
+dl.archiveList1{margin:0px; padding:0px;}
+dl.archiveList1 dt, dl.archiveList2 dt{font-size:12px; font-weight:bold; color:#000; padding:5px 0 0;}
+dl.archiveList1 dd{font-size:12px; margin:0; padding:0 0 0 12px; }
+dl.archiveList1 dd a, dl.archiveList2 dd a{color:#cd0000;font-size:12px;}
+dl.archiveList1 dd a:hover, dl.archiveList2 dd a:hover{text-decoration:none;}
+dl.archiveList2{margin:0; padding:0;}
+dl.archiveList2 dd{font-size:12px; margin:0; padding:0; font-weight:normal;}
+/* Archivepost Layout End */

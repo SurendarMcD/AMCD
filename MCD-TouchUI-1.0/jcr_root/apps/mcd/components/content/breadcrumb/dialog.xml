@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:TabPanel"
+    activeTab="0"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <Advanced
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Breadcrumb"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <absParent
+                    jcr:primaryType="nt:unstructured"
+                    fieldDescription="(eg: 1 for /content/site)"
+                    fieldLabel="Parent Level (absolute)"
+                    name="./absParent"
+                    regex="/^[1-9]+[0-9]*$/"
+                    xtype="numberfield"/>
+                <fieldseparator
+                    jcr:primaryType="nt:unstructured"
+                    fieldDescription="(eg: >> for separator)"
+                    fieldLabel="Field Separator"
+                    name="./fieldSeparator"
+                    xtype="textfield"/>
+            </items>
+        </Advanced>
+    </items>
+</jcr:root>

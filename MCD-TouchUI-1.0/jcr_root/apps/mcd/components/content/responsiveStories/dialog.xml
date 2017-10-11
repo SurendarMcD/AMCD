@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}400"
+    title="Home Page Stories"
+    width="{Long}600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <selectionType
+                jcr:primaryType="cq:Panel"
+                title="Story Details">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <selectionType
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the mode of selection of story articles"
+                        fieldLabel="Selection Type"
+                        name="./selectionType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <news
+                                jcr:primaryType="nt:unstructured"
+                                text="News"
+                                value="news"/>
+                            <leadership
+                                jcr:primaryType="nt:unstructured"
+                                text="Leadership"
+                                value="leadership"/>
+                            <progress
+                                jcr:primaryType="nt:unstructured"
+                                text="Progress"
+                                value="progress"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(rec,path){ &#xa;&#x9;var dialog = this.findParentByType('dialog');&#xa;&#x9;var storyType = dialog.getField('./selectionType').getValue();&#xa;&#x9;if(storyType == &quot;news&quot; || storyType == &quot;leadership&quot;){&#xa;&#x9;&#x9;dialog.getField('./headingText').enable();&#xa;&#x9;&#x9;dialog.getField('./headingImage').enable();&#xa;&#x9;&#x9;dialog.getField('./storyData').enable();&#xa;&#x9;&#x9;dialog.getField('./seeMoreNewsTitle').enable();&#xa;&#x9;&#x9;dialog.getField('./seeMoreNewsLink').enable();&#xa;&#x9;}&#xa;&#x9;else if(storyType == &quot;progress&quot;){&#xa;&#x9;&#x9;dialog.getField('./headingText').enable();&#xa;&#x9;&#x9;dialog.getField('./headingImage').enable();&#xa;&#x9;&#x9;dialog.getField('./storyData').disable();&#xa;&#x9;&#x9;dialog.getField('./seeMoreNewsTitle').disable();&#xa;&#x9;&#x9;dialog.getField('./seeMoreNewsLink').disable();&#xa;&#x9;}&#xa;}"
+                            selectionchanged="function(box,value){&#xa;&#x9;var dialog = box.findParentByType('dialog');&#xa;&#x9;var storyType = dialog.getField('./selectionType').getValue();&#xa;&#x9;if(storyType == &quot;news&quot; || storyType == &quot;leadership&quot;){&#xa;&#x9;&#x9;dialog.getField('./headingText').enable();&#xa;&#x9;&#x9;dialog.getField('./headingImage').enable();&#xa;&#x9;&#x9;dialog.getField('./storyData').enable();&#xa;&#x9;&#x9;dialog.getField('./seeMoreNewsTitle').enable();&#xa;&#x9;&#x9;dialog.getField('./seeMoreNewsLink').enable();&#xa;&#x9;}&#xa;&#x9;else if(storyType == &quot;progress&quot;){&#xa;&#x9;&#x9;var tt = dialog.getField('./headingText').getValue()&#xa;&#x9;&#x9;//alert(&quot;Test :: &quot; + tt);&#xa;&#x9;&#x9;dialog.getField('./headingText').enable();&#xa;&#x9;&#x9;dialog.getField('./headingImage').enable();&#xa;&#x9;&#x9;dialog.getField('./storyData').disable();&#xa;&#x9;&#x9;dialog.getField('./seeMoreNewsTitle').disable();&#xa;&#x9;&#x9;dialog.getField('./seeMoreNewsLink').disable();&#xa;&#x9;}&#xa;}"/>
+                    </selectionType>
+                    <headingText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Mention the text for heading of stories"
+                        fieldLabel="Heading Text"
+                        name="./headingText"
+                        xtype="textfield"/>
+                    <headingLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select a image from dam to display along with heading text"
+                        fieldLabel="Heading Image"
+                        name="./headingImage"
+                        xtype="pathfield"/>
+                    <storyListPage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Story List Pages"
+                        name="./storyListPage"
+                        xtype="label"/>
+                    <storyitem
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./storyData"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="pathfield"/>
+                    </storyitem>
+                    <seeMoreNewsTitle
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Mention the title for see more news link. Default set to See more News Releases"
+                        fieldLabel="See More News Text"
+                        name="./seeMoreNewsTitle"
+                        xtype="textfield"/>
+                    <seeMoreNewsLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select a link to which will take user to story full list page."
+                        fieldLabel="More News Link"
+                        name="./seeMoreNewsLink"
+                        xtype="pathfield"/>
+                    <message
+                        jcr:primaryType="cq:Widget"
+                        html="&lt;div style=&quot;margin-bottom:20px;font-weight:bold;&quot;> Stories Heading Icons recommended image size is 48 x 48 px (width x height). &lt;/div>"
+                        xtype="label"/>
+                </items>
+            </selectionType>
+        </items>
+    </items>
+    <listeners jcr:primaryType="nt:unstructured"/>
+</jcr:root>

@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: PageComment
+Bundle-Description: 
+Bundle-SymbolicName: pagecomment
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.accessmcd.comments.Activator

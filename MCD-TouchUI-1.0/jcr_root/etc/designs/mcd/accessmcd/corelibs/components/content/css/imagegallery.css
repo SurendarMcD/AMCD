@@ -1,0 +1,50 @@
+.article {
+    padding: 0px 0px 0px 0px;
+}
+.article img {
+    margin-top: 5px;
+}
+.image_gallery_spacer {
+    float: left;
+    height: 20px;
+}
+.image_gallery {
+    float:left;
+    background-color: #f8f7f7;
+    margin: 0px 0px 10px 0px;
+    padding-top:0px;
+}
+.image_gallery a  {     
+    float: left;
+    width: 124px;
+    height: 90px;
+    border-style: solid;
+    border-color: #f8f7f7;
+    border-width: 0px 1px 1px 0px;
+    overflow: hidden;
+    text-align:left;
+}
+
+.image_gallery a img {
+    position: absolute;    
+    z-index: 20;
+}
+.image_gallery div.caption {
+    color:#363636;
+    font-size: 13px;
+    font-weight: 900;
+    clear: both;
+    padding: 1em;
+}
+#hover_plus {
+    overflow: hidden;
+    position:absolute;
+    width: 118px;
+    height: 84px;
+    z-index: 21;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/plus_overlay.png) no-repeat center center;
+    border-color: #f8f7f7;
+    border-style: solid;
+    border-width: 4px 3px 3px 3px;
+    margin: 4px 0px 0px 0px;
+}

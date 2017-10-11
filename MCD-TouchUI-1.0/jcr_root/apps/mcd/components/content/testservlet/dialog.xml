@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    formUrl="/mcd/accessmcd/aucalendar/servlet/AUCalendarInsertPost"
+    height="450"
+    responseScope="this"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items
+            jcr:primaryType="nt:unstructured"
+            border="false"
+            height=""
+            title="Calendar"
+            width=""
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <categoryId
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    defaultValue="1000"
+                    fieldDescription="Enter Category ID"
+                    fieldLabel="Category ID*"
+                    name="./categoryId"
+                    type="textfield"/>
+                <audience
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="CorpEmployees"
+                    fieldLabel="Audience Type"
+                    name="./audience"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <CorpEmployees
+                            jcr:primaryType="nt:unstructured"
+                            value="CorpEmployees"/>
+                        <Crew
+                            jcr:primaryType="nt:unstructured"
+                            value="Crew"/>
+                        <FranchiseeRestMgrs
+                            jcr:primaryType="nt:unstructured"
+                            value="FranchiseeRestMgrs"/>
+                        <Franchisees
+                            jcr:primaryType="nt:unstructured"
+                            value="Franchisees"/>
+                        <McOpCoRestMgrs
+                            jcr:primaryType="nt:unstructured"
+                            value="McOpCoRestMgrs"/>
+                        <SupplierVendors
+                            jcr:primaryType="nt:unstructured"
+                            value="SupplierVendors"/>
+                    </options>
+                </audience>
+                <mcdentity
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="AU"
+                    fieldLabel="Entity Type"
+                    name="./mcdEntity"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <au
+                            jcr:primaryType="nt:unstructured"
+                            value="AU"/>
+                        <ent
+                            jcr:primaryType="nt:unstructured"
+                            value="ENT"/>
+                        <ja
+                            jcr:primaryType="nt:unstructured"
+                            value="JA"/>
+                        <us
+                            jcr:primaryType="nt:unstructured"
+                            value="US"/>
+                    </options>
+                </mcdentity>
+                <sorttype
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="chrono"
+                    fieldLabel="Sort Type"
+                    name="./sorttype"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <chrono
+                            jcr:primaryType="nt:unstructured"
+                            value="chrono"/>
+                    </options>
+                </sorttype>
+                <viewtype
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="content"
+                    fieldLabel="View Type"
+                    name="./viewType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <category
+                            jcr:primaryType="nt:unstructured"
+                            value="category"/>
+                        <content
+                            jcr:primaryType="nt:unstructured"
+                            value="content"/>
+                    </options>
+                </viewtype>
+                <timezone
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="AUS"
+                    fieldLabel="Time Zone"
+                    name="./timezone"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <Aus
+                            jcr:primaryType="nt:unstructured"
+                            value="aus"/>
+                        <US
+                            jcr:primaryType="nt:unstructured"
+                            value="us"/>
+                    </options>
+                </timezone>
+                <showLimit
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter the Calendar Scroll Limit (in weeks 1-5)&lt;br>The default value is 1."
+                    fieldLabel="Show Link Limit"
+                    name="./showLimit"
+                    regex="/^[1-5]\\d{0}$/"
+                    xtype="textfield"/>
+            </items>
+        </items>
+    </items>
+</jcr:root>

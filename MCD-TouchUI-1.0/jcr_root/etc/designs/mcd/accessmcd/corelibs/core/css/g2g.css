@@ -1,0 +1,1132 @@
+/* 
+CSS Document: AccessMCD - Good to Gold
+Original Author - Lokesh Yadav
+Modified by - Stephen Pfaff
+Date - April 2012
+*/
+@charset "utf-8";
+
+/* START Default Page Styles */
+*html { margin:0; padding:0; }
+* html .clearfix { height: 1%; }
+
+body {
+    margin: 0;
+    padding: 0;
+    outline:none;
+}
+
+body, #everythingmain p, #everythingmain ul, #everythingmain ol, #everythingmain a,
+.footer, .footer a, .sitefooter a{
+    font-family:"Arial",Helvetica,sans-serif;
+    line-height: 11pt;
+    font-size: 10pt; 
+}
+
+div.mainBody { width: 100%; height: 100%; }
+
+img { border:none; }
+div.clear {clear:both}
+.clearboth { clear:both; }
+.normalfont { font-weight: normal; }
+.textbold { font-weight:bold;}
+.textnormal { font-weight:lighter;}
+.paddingleft5px { padding-left: 5px; }
+.paddingright5px { padding-left: 5px; }
+.paddingbottom20px { padding-bottom: 20px; *padding-bottom:3px; }
+.paddingtop5px { padding-top: 5px; }
+.outer-body-wrapper { width: 100%; position:relative; }
+.no-border-bottom { border-bottom:none; }
+h2 { color:#363636; font-size:13px; font-style:normal; font-variant:normal; font-weight:bold; line-height:15pt; margin: 0px 0px 5px 0px; }
+p{ margin:0px; }
+a { text-decoration:underline; }
+#accordion_top a, a.contentlinkbold { text-decoration:none; }
+
+ul li.bulletsymbolpadding { padding: 0 6px; font-size: 15px; font-weight: bold; }
+ul li a:hover { text-decoration:underline;}
+
+ul, ol{
+  /*margin-left:25px;
+  margin-left:5px;*/
+  padding-left:10px;
+}
+
+/* END Default Page Styles */
+
+/* START PARSYS LAYOUT */
+.cq-wcm-edit #logo_t, .cq-wcm-design #logo_t {width: 250px !important;}   
+#logo_t {max-width: 250px; float:left; margin:0; padding:0}
+
+#bread_tnav_cntr {margin:0px; padding:0; width:710px; float:left;}
+
+.cq-wcm-edit #left-widgets-column, .cq-wcm-design #left-widgets-column {width: 250px !important;}
+#left-widgets-column { padding:0; margin:0 20px 0 0; float:left; text-align:left; max-width: 250px;}
+
+.cq-wcm-edit #right-results-column, .cq-wcm-design #right-results-column {width: 690px !important;}
+#right-results-column {padding:0; margin:0; min-width: 600px; max-width: 960px; text-align:left; }   
+
+.cq-wcm-edit #right_content_par, .cq-wcm-design #right_content_par {width: 250px !important; float: right;}
+#right_content_par {float: right; max-width: 250px; margin: 0 0 0 19px; padding: 0;}
+
+.cq-wcm-edit #content_txt, .cq-wcm-design #content_txt {width: 420px !important; padding: 0 !important;}
+#content_txt {float:left; padding:0; margin:0; text-align:left; width: 100%;}    
+/* END PARSYS LAYOUT */ 
+
+/* START My Site */
+#bookmarksTab {padding:20px; text-align:left;}
+/* END My Site */
+
+/* START Content Wrappers */
+#wrap { width: 960px; margin: 0 auto; }
+
+#pagecontentwrapper { width: 960px; margin:0 auto; padding:20px 0; }
+
+#topheader { padding:0 0 11px 0; height:55px;}
+#headerwrap { width:100%; }
+/* END Content Wrappers */
+
+/* START AccessMCD Logo*/
+.logo {margin:6px 0 0 0; float:left; }
+/* END AccessMCD Logo*/
+
+/* START Header User Information */
+#searchOuterBlock { padding: 14px 0 0 15px; float:left; text-align:left; valign:middle; }
+#searchLabel {font-weight:bold; font-size:14px;; padding-top:7px; float:left;}
+/* END Header User Information */
+
+/* START Search Block*/
+#searchblock { width: 262px; padding: 0px 0 0 5px; float:left; text-align:left; }
+#searchblock .boxoutline{ border:1px solid #8f8f8f; margin:0; padding:0; height:28px; }
+#searchblock .iconbox { background:#FFF; width:39px; border-right:1px solid #8f8f8f; float:left; height:28px; } 
+#searchblock .iconbox span.globe img { margin:0; padding:0; }
+#searchblock .txtbox { float:left; margin:0; padding:0; background:#FFF url(/etc/designs/mcd/accessmcd/corelibs/images/txtbox_bg.jpg) repeat-x top left; height:28px; width:179px; }
+#searchblock .gobtn { margin:0; padding:0; float:right; } 
+#searchblock .textbox { color:#000; border:none; font-size:12px; background: transparent; height:22px; padding: 2px 0 0 5px; width: 173px; }
+#dropdown {
+    display: block;
+    position: absolute;
+    top: 14px;
+    float: left;
+    width: 39px;
+    height: 86px;
+    margin: 0px 0 0 -1px;
+    border: 1px solid #aaa; 
+    z-index: 1000;
+    *margin: 0 0 0 -44px;
+}
+#mcd_search_icon {margin: -1px 0 0}
+#site_search_icon {margin: -2px 0 0}
+
+.imagecursor { cursor: default; }
+/* END Search Block */
+
+/* START Header */
+#toplinks {float: right;margin: 12px 0 0; text-align: right;width: 340px;; }
+#toplinks ul { margin:0; padding:0; list-style-type:none; } 
+#toplinks ul li { list-style:none; margin:0; padding:0; float:left; text-align:left; }
+#toplinks ul.boldlinks { font-weight: bold; font-size:11px; float:right; }
+
+#toplinks ul.boldlinks li a{ color:#3a3a3a; text-decoration:none; }
+#toplinks ul.boldlinks li a:hover{ text-decoration:underline; }
+#toplinks ul.boldlinks li.active { font-weight:bold; }
+
+#toplinks ul.normallinks { font-weight: normal; font-size:11px; padding: 2px 0 0 0; float:right;}
+#toplinks ul.normallinks li a{ color:#494647; text-decoration:none; }
+#toplinks ul.normallinks li a:hover{ text-decoration:underline; }
+#toplinks ul.normallinks li.active { font-weight:bold; }
+
+ul.sec-nav-links { font-weight: normal; font-size:12px; padding: 2px 0 0 0; margin:0px;}
+ul.sec-nav-links li a { color:#FFF; text-decoration:none; } 
+ul.profile-links { font-weight: bold; font-size:12px; padding: 2px 0 0 0;  }
+ul.profile-links li a { color:#333333; text-decoration:none; }
+
+#toplinks ul.boldlinks li.bullet-sptr { padding: 0 7px; font-size: 15px; font-weight: bold; color:#3a3a3a; }
+#toplinks ul.normallinks li.bullet-sptr { padding: 0 7px; font-size: 15px; font-weight: bold; color:#494647; }
+.secnav .sec-nav-links li.bullet-sptr { padding: 0 7px; font-size: 15px; font-weight: bold; color:#ffffff; }
+ul li.bullet-profile { padding: 0 7px; font-size: 15px; font-weight: bold; color:#333333; }
+
+#toplinks #dropdownList{
+display:none;
+text-align:left;
+background:#FFFFFF none repeat scroll 0 0;
+border:1px solid #ADADAD;
+line-height:normal;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0 0 0 0;
+padding:0;
+position:absolute;
+top:27px;
+z-index:500;
+min-width: 100px;
+width: auto !important;  
+}
+
+#bookmarksList {
+display:none;
+text-align:left;
+background:#FFFFFF none repeat scroll 0 0;
+border:1px solid #ADADAD;
+line-height:normal;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+position:absolute;
+top:42px;
+z-index:500;
+left:883px;
+max-width:500px;
+width: auto !important; 
+}
+
+#navBookmarksList {
+display:none; 
+text-align:left;
+background:#FFFFFF none repeat scroll 0 0;
+border:1px solid #ADADAD;
+line-height:normal;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+position:absolute;
+top:184px;
+#top:180px;
+z-index:500;
+left:885px;
+width:17px;
+text-color:#000000;
+}
+
+#toplinks #dropdownList { padding:10px 0px 10px 5px;}  
+#toplinks #dropdownList li{padding: 2px 5px 2px 0;}
+#toplinks #bookmarksList li, #headerwrapper #navBookmarksList li {padding-right: 5px;}
+#toplinks #dropdownList li a { color:#000000; text-decoration:none; }
+#toplinks #dropdownList li a:hover { text-decoration:underline; }
+#toplinks ul li.viewdropdown {margin-left:2px;}
+#toplinks #dropdownList li, #toplinks #bookmarksList li, #headerwrapper #navBookmarksList li { white-space: nowrap; font-weight:normal; } 
+
+#dropdownList li, #toplinks #bookmarksList li, #navBookmarksList ul li{  
+background:#FFFFFF none repeat fixed 0 0; clear:left; float:left; margin:0; 
+}
+#headerwrapper #navBookmarksList li {clear:both; float:left;}
+#toplinks #bookmarksList li, #navBookmarksList li {text-align:left; padding-bottom:3px;}
+
+#headerwrapper { 
+    width: auto; 
+    float:none;
+    padding: 0; 
+    border-bottom: 0px solid #8f8f8f; 
+    border-top: 0px solid #8f8f8f;      
+    min-width: 980px;
+    clear:both;
+    
+}
+
+#headerwrapper .contentwrapper { 
+    width:960px; 
+    margin:0 auto; 
+    padding:0; 
+}
+
+#headerwrapper .top-nav {
+    width: 250px; 
+    background:url('/etc/designs/mcd/accessmcd/corelibs/images/top_nav_bg.png') no-repeat scroll 100% 99% transparent;
+    min-height: 160px; 
+    height: auto !important;
+    float:left;
+    padding:0;
+    z-index: 2;
+    margin-top: -1px; 
+}
+#headerwrapper .top-nav .nav-bg {display: none;}
+
+.navigationbar {margin-bottom: -1px}
+.topnavigationitems ul {margin:0px; padding:0px;}
+#headerwrapper ul {list-style-type:none; }
+#headerwrapper .top-nav .topnavigationitems { font-weight:bold; padding: 12px 0; background:url('/etc/designs/mcd/accessmcd/corelibs/images/top_nav_bg.png') no-repeat scroll 0 0 transparent; }
+#headerwrapper .top-nav .topnavigationitems ul li { display:block; float:none; text-align:center !important; padding: 7px 0 0 0; color:#333333; }
+#headerwrapper .top-nav .topnavigationitems ul li a { color:#333333; text-decoration:none; }
+#headerwrapper .top-nav .topnavigationitems ul li a.active { text-decoration:none; }
+#headerwrapper .top-nav .topnavigationitems ul li a:hover { text-decoration:underline; }
+
+#headerwrapper .pageheading { background: transparent; width: 710px; height: 159px; float:left; padding:0; margin:0; }
+#headerwrapper .pageheading .stocknewsbar { padding:0; margin:0px; z-index: -999; }
+#headerwrapper .pageheading .stocknewsbar .ad { padding:0; margin:0; float:left; color:#FFF; font-weight:bold; font-size: 11px; text-align:left; }
+#headerwrapper .pageheading .stocknewsbar .ad .adcontent { padding: 10px 12px; }
+#headerwrapper .pageheading .stocknewsbar .ad .adcontent a { text-decoration:none; color:#ffffff; }
+#headerwrapper .pageheading .stocknewsbar .ad .adcontent a:hover { text-decoration:underline; }
+#headerwrapper .pageheading .stocknewsbar .stocknews { padding:0; margin:0; float:right; color:#FFF; font-size: 11px; text-align:right; }
+#headerwrapper .pageheading .stocknewsbar .stocknews .newstext { padding: 7px 2px; color:#FFF; font-weight:bold; }
+#headerwrapper .pageheading .stocknewsbar .stocknews .newstext a { text-decoration:none; color:#ffffff; }
+#headerwrapper .pageheading .stocknewsbar .stocknews .newstext a:hover { text-decoration:underline; color:#ffffff !important;}
+#headerwrapper .pageheading .headingtext { width: 420px; float: left; padding-top: 35px; background: transparent; margin:0; clear:both; }
+#headerwrapper .pagetitleheading { font-size: 52px; color:#FFF; padding-top: 17px; line-height: 57px; display:inline-block;  text-align:left; width: 100%; }
+#headerwrapper .secnav { text-align: right; padding: 0; text-align:right; margin:0; }
+#headerwrapper .secnav ul { padding-top: 2px; list-style-type:none;; float:right; max-width:500px; width: auto !important; } 
+#headerwrapper .secnav ul li { float:right; color:#ffffff; list-style-type:none; float:right; }
+#headerwrapper .secnav ul li a { color:#ffffff; text-decoration:none; }
+#headerwrapper .secnav ul li a:hover { text-decoration:underline; }
+
+#headerwrapper .secnav ul li ul li {
+color:#000000; font-size:11px; font-weight:normal;
+}
+#headerwrapper .secnav ul li ul li a {
+color:#000000; text-decoration:none;
+}
+#headerwrapper .secnav ul li ul li a:hover {
+ text-decoration:underline;
+}
+
+#headerwrapper .punchline { font-size: 16px; font-weight:bold; color:#ffffff; }
+
+#headerwrapper .pageheading { background: transparent; width: 700px; height: 159px; float:left; padding:0; margin:0; }
+#headerwrapper .pageheading .topRightnews{ color:#fff; font-size:12px; text-align:right; width:220px; float:right; position:relative; top:20px;}
+
+#headerwrapper .pageheading .topRightnews .newHd{font-size:16px; line-height:20px; color:#fff; font-weight:bold;}
+#headerwrapper .pageheading .topRightnews .newHd:hover u {color:#fff;}
+
+.secnav .sec-nav-links li.bullet-sptr { padding: 0 7px; font-size: 15px; font-weight: bold; color:#ffffff; }
+
+.secnav .sec-nav-links11 li.bullet-sptr { padding: 0 7px; font-size: 15px; font-weight: bold; color:#000000; }
+
+#headerwrapper .pageheading .headingtextchildpages { background: transparent; margin:0; clear:both; width:700px; float:right; padding-top:0px;}
+#headerwrapper .pageheading .headingtextchildpages .childpages a {color: #FFFFFF; text-align:right; }
+#headerwrapper .pageheading .headingtextchildpages .childpages {color: #FFFFFF;text-align:right; padding-top: 15px; }
+#headerwrapper .pagetitleheadingchildpages { font-size: 52px; color:#FFF; padding-top: 4px; line-height: 57px; display:inline-block;  text-align:right; width: 100%; }
+
+/*STOCK TICKER*/
+.stockvalue { padding-left:7px; }
+.padding-left-2px { padding-left:2px; }
+.sectioncontent .talkin { color:#666666; height:140px; padding:10px !important; }
+.sectioncontent a { color:#333333; text-decoration:none; }
+.sectioncontent a:hover { text-decoration:underline; }
+.section-text { line-height: 19px; color:#333333; }
+#headerwrapper .pageheading .stocknewsbarchildpages{ padding:0; margin:0px; z-index: -999; }
+#headerwrapper .pageheading .stocknewsbarchildpages .ad { padding:0; margin:0; float:left; color:#FFF; font-weight:bold; font-size: 11px; text-align:left; }
+#headerwrapper .pageheading .stocknewsbarchildpages .ad .adcontent { padding: 10px 12px; }
+#headerwrapper .pageheading .stocknewsbarchildpages .ad .adcontent a { text-decoration:none; color:#ffffff; }
+#headerwrapper .pageheading .stocknewsbarchildpages .ad .adcontent a:hover { text-decoration:underline; }
+#headerwrapper .pageheading .stocknewsbarchildpages .stocknewschildpages{ padding:0; margin:0; float:right; color:#FFF; font-size: 11px; text-align:right; }
+#headerwrapper .pageheading .stocknewsbarchildpages .stocknewschildpages .newstextchildpages{ padding: 0px 2px; color:#FFF; font-weight:bold;}
+#headerwrapper .pageheading .stocknewsbarchildpages .stocknewschildpages .newstextchildpages a { text-decoration:none; color:#ffffff; }
+#headerwrapper .pageheading .stocknewsbarchildpages .stocknewschildpages .newstextchildpages a:hover { text-decoration:underline; }
+
+/*GLOBALAD TEXT*/
+.ad-text { color:#fdfdfd; }
+#headerwrapper .pageheading #noGlobaladtext{
+    color:#FFFFFF;
+    float:left;
+    font-size:12px;
+    height:26px;
+    left:-30px;
+    line-height:16px;
+    padding:10px 0 0 10px;
+    position:relative;
+    width:378px;
+}
+#headerwrapper .pageheading #globaladtext{
+    background:url("./images/gadbg.png") no-repeat scroll top transparent;
+    color:#FFFFFF;
+    float:left;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:12px;
+    height:26px;
+    line-height:16px;
+    padding:10px 0 0 10px;
+    width:378px;
+    margin-left:-32px;
+    *position:relative; 
+    *left:0px;
+}
+
+#headerwrapper .pageheading #globaladtext a {
+    color:#FFFFFF;
+    padding-left: 25px;
+}  
+   
+.newsleftBt {
+    background: url("images/tblBotLeftCor.png") no-repeat scroll center top transparent;
+    min-height: 12px;
+    width: 12px;
+}
+ .newsrightBt {
+    background: url("images/tblBotRightCor.png") no-repeat scroll center top transparent;
+    min-height: 12px;  
+    width: 11px;
+}
+
+.newsTopleftBt {
+    background: url("images/newstblTopLeftImg.png") no-repeat scroll center top transparent;
+    min-height: 12px; 
+    width: 12px;
+} 
+.newsToprightBt {
+    background: url("images/newstblTopRightImg.png") no-repeat scroll center top transparent;
+    min-height: 12px;
+    width: 11px;
+}
+
+/*SHARE FLYOUT*/
+#share_flyout {
+    position: absolute;
+    top:25px;
+    left:185px;  
+    width:135px;
+    height: 36px;
+    z-index: 100;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/share_alt_bg.png) no-repeat 0px 3px; 
+    text-align: center;
+    padding-top: 16px;
+    display: none;
+}
+#share_flyout a {
+    margin: 0px 10px 0px 7px;
+}
+#share_flyout a:hover {
+    -moz-opacity:.50; filter:alpha(opacity=50); opacity:.50;
+} 
+#share_flyout a img {
+    margin-top:-4px;
+}
+
+/*AUTOCOMPLETE DROPDOWN*/
+.ac_results {
+    text-align:left; width:auto !important; PADDING: 0px; OVERFLOW: hidden; BORDER: windowframe 1px solid; BACKGROUND-COLOR: window; FONT-SIZE: 11px; z-index: 500;
+}
+.ac_results UL {
+    PADDING: 0px; LIST-STYLE-POSITION: outside; MARGIN: 0px 5px; WIDTH: 100%; LIST-STYLE-TYPE: none; width:auto !important;
+}
+.ac_results LI {
+    DISPLAY: block; FONT-SIZE: 12px; PADDING: 2px 0px; MARGIN: 0px; FONT: menu; OVERFLOW: hidden; CURSOR: default;
+}
+.ac_loading { 
+    BACKGROUND: url(indicator.gif) window no-repeat right center
+}
+.ac_over {
+    COLOR: highlighttext; BACKGROUND-COLOR: highlight
+}
+
+/*DYK ITEMS*/
+.si_slider_box {WIDTH: 270px; FONT: 12px Arial, Helvetica, sans-serif; FLOAT: left; COLOR: #fff; text-align:right; background: none !important;}
+.slideContainer {POSITION: relative; HEIGHT: 100px; OVERFLOW: hidden; color:#fff; right:50px;}
+.slides {POSITION: absolute; TOP: 0px; LEFT: 0px}
+.slides > DIV{POSITION: absolute; WIDTH: 320px; DISPLAY: none; TOP: 0px; line-height:20px;}
+.slides a:hover{color:#fff !important;}
+.hp_pnbox {PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 8px; text-align:right; DISPLAY:block; }
+UL.hp_pnbox {Z-INDEX: 100; POSITION: absolute; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING: 0px; TOP: 90px; right:50px;}
+UL.hp_pnbox LI {TEXT-ALIGN: center; WIDTH: 20px; FONT: 11px Arial, Helvetica, sans-serif; FLOAT: left; HEIGHT: 14px; COLOR: #000}
+UL.hp_pnbox LI A {FONT: 11px Arial, Helvetica, sans-serif; COLOR: #000; TEXT-DECORATION:none;}
+.dyk , .childpages a , #globaladtext a{ color:#000000; text-decoration:none; }
+.dyk:hover  , .childpages a:hover ,  #globaladtext a:hover{ text-decoration:underline; }
+/* END Header */
+
+/* START Left Parsys Area */
+#uslogoarea {float:left; width:220px;}
+#ussearcharea {float:left; width:220px;}
+/* END Left Parsys */
+
+/* START Navigation Formatting */
+.topnav_icons { vertical-align:middle; padding-right:5px; }
+
+#nav {  padding:0; font-size:12px; zoom:1; margin-bottom: 21px; marg in-top:-50px; float:none; width:960px; }
+#nav a{ font-size:12px; color: #333333;}
+#nav a span {font-size:12px; font-weight:bold; }
+#nav ul {list-style-type:none; padding:0; margin:0;}
+#nav ul li ul {background-color:#fff; padding:0; margin:0px; text-align:center;}
+#nav ul li{
+    list-style:none;
+    float:left; 
+    text-align:center; 
+    padding:0; 
+    margin:0px; 
+    word-wrap: break-word;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat -6px 0;
+    display:block;
+}
+#nav ul li a, #nav-icons ul li a { white-space: nowrap;}
+#nav ul li ul li a, #nav-icons ul li ul li a{ white-space: normal;}
+
+#nav ul li:hover{ background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat -6px -34px; }
+#nav ul li:hover a { color:#FFF }
+#nav ul li a span.darrow {
+    width: 10px; height:8px; 
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/downArrow.png) no-repeat 0 0; 
+    display:inline-block; 
+    margin-left:5px;  
+}
+#nav ul li:hover span.darrow {  background-position: 0 -8px;  }
+#nav ul li:hover ul li a { color:#000 }
+#nav ul li:hover ul li a:hover { color:#FFF; }
+
+#nav ul li.active { background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat -6px -68px; color:#fff; }
+#nav ul li.active:hover { background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat -6px -34px; color:#fff; }
+
+#nav ul li.left_side { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat 0 0;  }
+#nav ul li.left_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat  0 -34px; color:#FFF !important; }
+
+#nav ul li.right_side { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat right 0;  }
+#nav ul li.right_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat  right -34px; color:#FFF !important; }
+
+#nav .left_side_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat 0 -68px; }
+#nav .left_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat 0 -34px;}
+
+#nav .right_side_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat right -68px; }
+#nav .right_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat right -34px;}
+
+#nav ul li.both_side { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat 0 0;  }
+#nav ul li.both_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat  0 -34px; color:#FFF !important; }
+
+#nav .both_side_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat 0 -68px; }
+#nav .both_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat 0 -34px;}
+
+#nav ul li.both_side700 { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_700.png) no-repeat 0 0;  }
+#nav ul li.both_side700:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_700.png) no-repeat  0 -34px; color:#FFF !important; }
+
+#nav .both_side_active700 { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_700.png) no-repeat 0 -68px; }
+#nav .both_side_active700:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_700.png) no-repeat 0 -34px;}
+
+#nav a { 
+    border-right: 1px solid #CCC; 
+    padding:9px 12px;
+    display:block; 
+    font-weight:bold; 
+    text-decoration:none; 
+    font:bold 12px Arial, Helvetica, sans-serif; 
+    margin:0px;
+    color: #333333;
+} 
+
+#nav li.right_side a, #nav li.right_side_active a, #nav-icons li.right_side_active a, #nav-icons li.right_side a, #nav li.both_side a, 
+#nav-icons li.both_side a, #nav li.both_side_active a, #nav-icons li.both_side_active a { 
+    border-right: none;
+}
+
+#nav ul li ul {position:absolute; display:none; padding:0; margin: 0;}
+#nav ul li ul.last{ margin-left: -80px !important; }
+#nav ul li:hover ul {display:block;}
+
+#nav ul li:hover ul li ul {display:none;}
+#nav ul li ul li:hover ul {display:block;}
+#nav ul li ul li:hover ul li ul {display:none;}
+#nav ul li ul li ul li:hover ul {display:block;}
+#nav ul li ul li { overflow:visible; text-align:center; float:none; margin:0; padding:0; display:block; border-right:0 !important}
+#nav ul li ul li a { color:#333333; padding:8px; background:none !important; background-color:#FFF !important; display:block; line-height: 15px !important; white-space: }
+#nav ul li ul li a:hover { color:#000; }
+#nav ul li ul.last { margin-left: 20px; }
+.borderbottom-none { border-bottom:0; }
+
+#nav ul li ul li a { height:auto; margin:0;}
+
+/*Top Navigation Without Round Corners */
+#nav a.left_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat -6px 0; border-left:1px solid #CCC; }
+#nav a.left_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat  -6px -34px; }
+#nav .left_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat -6px -68px; }
+
+#nav a.right_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat -6px 0; border-right:1px solid #CCC; }
+#nav a.right_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat  -6px -34px; }
+#nav .right_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite.png) no-repeat -6px -68px; }
+/*End Top Navigation Without Round Corners */
+
+#nav-icons {  padding:0; font-size:12px; zoom:1; color:#333333; margin-bottom: 21px; margin-top:0px; float:none; width:960px; }
+#nav-icons a{ font-size:12px; color:#333333;}
+#nav-icons a span {font-size:12px; font-weight:bold; }
+#nav-icons ul {list-style-type:none; padding:0; margin:0;}
+#nav-icons ul li ul {background-color:#fff; padding:0; margin:0px; text-align:center;}
+#nav-icons ul li{
+    list-style:none;
+    float:left; 
+    text-align:center;
+    padding:0; 
+    margin:0px; 
+    word-wrap: break-word; /*IE7 Menu Wrap Hack*/
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat -6px 0;
+    display:block;
+}
+#nav-icons ul li.active-menu {background: url(/etc/designs/mcd/accessmcd/corelibs/images/active_menu_bg.jpg) repeat-x;}
+
+#nav-icons ul li:hover a { color:#000 }
+#nav-icons ul li a span.darrow { 
+    width: 10px; 
+    height:8px; 
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/downArrow.png) no-repeat 0 0; 
+    display:inline-block; 
+    margin-left:5px;  
+    overflow:hidden;
+}
+#nav-icons ul li:hover span.darrow {  
+    background-position: 0 -8px;  
+}
+
+#nav-icons ul li:hover ul li a { color:#000 }
+#nav-icons ul li:hover ul li a:hover { color:#fff; }
+
+#nav-icons a { 
+    padding:5px 8px; 
+    display:block; 
+    font-weight:bold; 
+    text-decoration:none; 
+    font:bold 12px Arial, Helvetica, sans-serif; 
+    color:#333333; 
+    margin:0px;
+    border-right: 1px solid #CCC;
+} 
+#nav-icons a:hover { color:#FFF; }
+
+#nav-icons ul li:hover{ background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat -6px -45px; color:#FFF; }
+#nav-icons ul li.active { background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat -6px -90px; color:#fff; }
+#nav-icons ul li.active:hover { background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat -6px -45px; color:#fff; }
+
+#nav-icons ul li.left_side { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat 0 0;  }
+#nav-icons ul li.left_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat  0 -45px; color:#FFF !important; }
+
+#nav-icons ul li.right_side { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat right 0;  }
+#nav-icons ul li.right_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat  right -45px; color:#FFF !important; }
+
+#nav-icons .right_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat right -45px;}
+
+#nav-icons ul li.both_side { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat 0 0;  }
+#nav-icons ul li.both_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat  0 -45px; color:#FFF !important; }
+
+#nav-icons .both_side_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat 0 -90px; }
+#nav-icons .both_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat 0 -45px;}
+
+
+#nav-icons ul li.both_side700 { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons700.png) no-repeat 0 0;  }
+#nav-icons ul li.both_side700:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons700.png) no-repeat  0 -45px; color:#FFF !important; }
+
+#nav-icons .both_side_active700 { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons700.png) no-repeat 0 -90px; }
+#nav-icons .both_side_active700:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons700.png) no-repeat 0 -45px;}
+
+#nav-icons ul li ul {position:absolute; display:none; padding:0; margin: 0;}
+#nav-icons ul li ul.last{ margin-left: -80px !important; }
+#nav-icons ul li:hover ul {display:block;}
+
+#nav-icons ul li:hover ul li ul {display:none;}
+#nav-icons ul li ul li:hover ul {display:block;}
+#nav-icons ul li ul li:hover ul li ul {display:none;}
+#nav-icons ul li ul li ul li:hover ul {display:block;}
+#nav-icons ul li ul li { overflow:visible; text-align:left; float:none; margin:0; padding:0; display:block; border-right:0 !important;}
+#nav-icons ul li ul li a { padding:8px; background:none !important; background-color:#FFF !important; display:block; line-height: 15px !important; }
+#nav-icons ul li ul.last { margin-left: 20px; }
+.borderbottom-none { border-bottom:0; }
+
+#nav-icons .left_side_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat 0 -90px; }
+#nav-icons .left_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat 0 -45px;}
+#nav-icons .right_side_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat right -90px; }
+
+#nav-icons ul li ul li a { height:auto; margin:0;}
+
+#nav-icons a.left_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat 0 0; border-left:1px solid #CCC; }
+#nav-icons a.left_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat  0 -45px; }
+#nav-icons .left_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat 0 -90px; }
+
+#nav-icons a.right_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat right 0; border-right:1px solid #CCC; }
+#nav-icons a.right_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat  right -45px; }
+#nav-icons .right_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_icons.png) no-repeat right -90px; }
+
+#nav ul li.straight_nav_active {background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_straight.png) no-repeat scroll 0px -68px; }
+#nav ul li.straight_nav {background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_straight.png) no-repeat scroll 0px 0px; }
+#nav ul li.straight_nav_hover {background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_straight.png) no-repeat scroll 0px -33px; }
+#nav ul li.straight_nav:hover, #nav-icons ul li.straight_nav_active:hover {background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_sprite_straight.png) no-repeat scroll 0px -33px; }
+
+#nav-icons ul li.straight_navicons {background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_iconssprite_straight.png) no-repeat scroll 0px 0px; }
+#nav-icons ul li.straight_navicons_active {background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_iconssprite_straight.png) no-repeat scroll 0px -90px; }
+#nav-icons ul li.straight_navicons_hover {background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_iconssprite_straight.png) no-repeat scroll 0px -45px; }
+#nav-icons ul li.straight_navicons:hover, #nav-icons ul li.straight_navicons_active:hover {background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/top_nav_iconssprite_straight.png) no-repeat scroll 0px -45px; }
+
+ul.sub-menu li a:hover {
+    color: #000;
+}
+/* END Navigation Formatting */
+
+/* START Left Navigation Formatting */
+.leftnav {
+    font-weight: bold;
+    font-size: 11px;
+    color: #000000;
+    text-decoration:none; 
+    width: 140px;
+}
+
+.leftnav a {
+    text-decoration:none;
+    color: #000000;
+}
+
+.leftnav a:hover {
+    text-decoration:underline;
+    color: #000000;
+}
+
+.leftsel {
+    font-weight: bold;
+    font-size: 11px;
+    color: #000000;
+}
+
+.leftnavRowStart, .leftnavRowStart1, .leftnavRowStart2 {
+    padding-top: 1px;
+    width: 140px;
+    height: 1px;
+}
+
+.leftnavRowStart3, .leftnavRowStart4, .leftnavRowStart5, .leftnavRowStart6, .leftnavRowStart7, .leftnavRowEnd {
+    display:none;
+}
+
+.leftnav1hover,.leftnav1 {
+    font-weight: bold;
+    font-size: 13px;
+    color: #000000;
+    padding-left:11px;
+    padding-right:5px; 
+    }
+
+.leftnav1spacerow {
+    background-color:#cccccc;
+    font-weight: normal;
+    color: #000000;
+    font-size: 12px;
+}
+
+.leftnav1hover a,.leftnav1 a, .leftnav1hover a:hover, .leftnav1 a:hover {   
+    float:left;
+    font-size: 13px;
+    font-weight:bold;    
+    padding: 10px 0 10px 0px;
+}
+
+.leftnav1hover a:visited,.leftnav1 a:visited {   
+    font-weight: bold;
+    font-size: 13px;  
+ }
+
+.leftnav1Onhover,.leftnav1On {
+    font-weight: bold;
+    font-size: 13px;
+    color: #000000;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 10px;
+    padding: 10px 5px 10px 11px;
+    
+}
+.leftnav1Onhover a,.leftnav1On a { 
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.leftnav1Onhover a:visited,.leftnav1On a:visited, .leftnav1Onhover a:hover,.leftnav1On a:hover {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.leftnav2spacerow {
+    background-color:#ffffff;
+    font-weight: normal;
+    font-size: 11px;
+    color: #000000;
+}
+
+.leftnav2hover,.leftnav2 { 
+    font-weight: normal;
+    font-size: 13px;     
+    padding: 8px 5px 8px 22px;
+}
+
+.leftnav2hover a:visited,.leftnav2 a:visited,
+.leftnav2hover a:hover,.leftnav2 a:hover, .leftnav2Onhover a,.leftnav2On a,
+.leftnav2Onhover a:visited,.leftnav2On a:visited,
+.leftnav2Onhover a:hover,.leftnav2On a:hover, .leftnav2hover a,.leftnav2 a  {   
+    font-size: 13px;    
+    font-weight: bold;
+}
+
+.leftnav2Onhover,.leftnav2On {
+    font-weight: bold;
+    font-size: 13px;
+    cursor: hand;
+    color:#000000;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 8px;
+    padding: 8px 5px 8px 22px;
+}
+
+.leftnav3hover,.leftnav3 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;   
+    #font-style: normal; 
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav3spacerow {   
+    font-weight: normal;
+    font-size: 12px; 
+}
+
+.leftnav3Onhover,.leftnav3On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000;
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 5px;
+    padding: 5px 5px 5px 35px;      
+}
+
+.leftnav3Onhover a,.leftnav3On a, .leftnav3Onhover a:visited,.leftnav3On a:visited,
+.leftnav3Onhover a:hover,.leftnav3On a:hover , .leftnav3hover a,.leftnav3 a, .leftnav3hover a:visited,.leftnav3 a:visited,
+.leftnav3hover a:hover,.leftnav3 a:hover, .leftnav4hover a,.leftnav4 a, .leftnav4hover a:visited,.leftnav4 a:visited,
+.leftnav4hover a:hover,.leftnav4 a:hover, .leftnav4Onhover a,.leftnav4On a, 
+.leftnav4Onhover a:visited,.leftnav4On a:visited, .leftnav4Onhover a:hover,.leftnav4On a:hover, 
+.leftnav5hover a,.leftnav5 a, .leftnav5Onhover a:hover,.leftnav5On a:hover, .leftnav5Onhover a, 
+.leftnav5On a, .leftnav5Onhover a:visited,.leftnav5On a:visited,
+.leftnav6Onhover a,.leftnav6On a, .leftnav6Onhover a:hover,.leftnav6On a:hover,
+.leftnav6Onhover a:visited,.leftnav6On a:visited, .leftnav7hover a, .leftnav7 a, .leftnav6hover a,.leftnav6 a {
+    font-size: 12px;    
+    font-weight: bold;
+    }
+
+.leftnav4hover,.leftnav4 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;   
+    #font-style: normal; 
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav4spacerow {   
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.leftnav4Onhover,.leftnav4On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000; 
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 4px;
+    padding: 5px 5px 5px 35px;      
+}
+
+.leftnav5hover,.leftnav5 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    #font-style: normal;
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav5spacerow {   
+    font-weight: normal;
+    font-size: 12px;  
+}
+
+.leftnav5hover a:visited,.leftnav5 a:visited, .leftnav5hover a:hover,.leftnav5 a:hover {
+    font-size: 12px;    
+    font-weight: bold;
+    }
+
+.leftnav5Onhover,.leftnav5On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000;
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 4px;
+    padding: 5px 5px 5px 35px;  
+}
+ 
+.leftnav6hover,.leftnav6 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    #font-style: normal;
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav6spacerow {   
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.leftnav6Onhover,.leftnav6On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000;
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 4px;
+    padding: 5px 5px 5px 35px;      
+}
+
+.leftnav7hover,.leftnav7 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    #font-style: normal;
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav7spacerow {   
+    font-weight: normal;
+    font-size: 12px;  
+}
+
+.leftnav7Onhover,.leftnav7On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000;
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 4px;
+    padding: 5px 5px 5px 35px;     
+}
+
+.leftnav7Onhover a,.leftnav7On a {
+    font-size: 12px;    
+    font-weight: bold;    
+    }
+
+.leftnav7Onhover a:visited,.leftnav7On a:visited {
+    font-size: 12px;    
+    font-weight: bold;    
+    }
+
+
+.leftnav7Onhover a:hover,.leftnav7On a:hover {
+    font-size: 12px;    
+    font-weight: bold;
+}
+ 
+.leftnavBorder{display:block}
+.leftnavBorder *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;}
+.leftnavBorder1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;}
+.leftnavBorder2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;}
+.leftnavBorder3{
+  margin-left:1px;
+  margin-right:1px;}
+.leftnavBorderSel{display:block}
+.leftnavBorderSel *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+}
+.leftnavBorderSel1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+}
+.leftnavBorderSel2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+}
+.leftnavBorderSel3{
+  margin-left:1px;
+  margin-right:1px;
+}
+/* END Left Navigation Formatting */
+
+/* START Footer Formatting */
+.alert {
+   display:none;
+   position:absolute;
+   top:1px;
+   left:1px;
+   width:200px;
+   background-color:#FFFFFF;
+   border-style:solid;
+   border-width:2px;
+   border-color:#333333;
+   padding:15px 20px 5px 20px;
+   font-size: 11px;
+   align:center;
+   z-index:1000;
+}
+.footer {
+    TEXT-ALIGN: center; 
+    font-face: Arial ;
+}
+.footerlinks {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9px; 
+    COLOR: #000000; 
+    TEXT-ALIGN: center; 
+    font-face: Arial ;
+}
+.footerlinkscopy {
+    FONT-WEIGHT: normal; 
+    FONT-SIZE: 9px; 
+    COLOR: #000000; 
+    TEXT-ALIGN: center; 
+    font-face: Arial ;
+}
+.emailImg {
+background-image: url('/etc/designs/mcd/accessmcd/corelibs/images/all_icons.gif');
+background-position:  -17px -208px;
+width: 27px;
+height:16px;
+float:left;
+cursor:hand 
+}
+.getlinkImg {
+background-image: url('/etc/designs/mcd/accessmcd/corelibs/images/all_icons.gif');
+background-position:  -90px -24px;
+width: 42px;
+height:16px;
+float:left;
+cursor:hand;
+}
+.bookmarkImg {
+background-image: url('/etc/designs/mcd/accessmcd/corelibs/images/all_icons.gif');
+background-position:  -88px -103px;
+width: 36px;
+height:32px;
+float:left;
+cursor:hand;
+}
+#bookmarkDiv {
+      margin:8px 0px 0px 36px;
+}
+.printImg {
+background-image: url('/etc/designs/mcd/accessmcd/corelibs/images/all_icons.gif');
+background-position:  -91px -56px;
+width: 38px;
+height:33px;
+float:left;
+cursor:hand;
+} 
+#printDiv {
+    margin:8px 0px 0px 38px;
+}
+td.footer a:hover {text-decoration: underline }
+/* END Footer Formatting */
+
+/* START Design-Mode Layout */
+#CQ .x-toolbar span.ytb-text{ /* Inheritance bar correction*/
+    white-space: normal;
+    padding:0px;
+    margin-right: -4px;
+}
+
+.cq-element-g2g_47maincontentpara {
+    z-index: 14999 !important;
+}
+
+.cq-element-g2g_47rightcontentpara {
+    z-index: 15000 !important;
+}
+
+.cq-element-sitelogopara {
+    width: 250px !important;
+}
+
+.cq-element-sitelogopara_47iparsys_95fake_95par {
+    width: 250px !important;
+}
+/* END Design-Mode Layout */
+
+
+
+#wrap { position:relative;}
+#wrap ul#topRightLinks, #wrap ul#topLeftLinks{list-style:none; padding:0px; margin:0px;}
+#wrap ul#topRightLinks li, #wrap ul#topLeftLinks li {font-family:calibri;color:#3f8195!important;font-weight:bold; float:left; padding: 0 3px; border-right:1px solid #136b82;}
+#wrap ul#topRightLinks li a, #wrap ul#topLeftLinks li a {font-family:calibri;color:#3f8195; font-weight:normal; text-decoration: none;}
+#wrap ul#topRightLinks li a:hover, #wrap ul#topLeftLinks li a:hover {text-decoration:underline}
+#wrap #wrapToplinks{height: auto;margin: 3px 0;width: 100%;font-family:calibri;font-size:13px;}
+#wrap .rightLinks{float:right;}
+#wrap .leftLinks{float:left;}
+    #wrap .slimlogo{margin:0;float:left;}
+.searched_wrapper {float:right;}
+
+.searched_wrapper ul#searchLinks {list-style:none; float:right; margin: 0 40px 0 0; padding: 0px; margin-top:3px;font-family:calibri;font-size:13px;}
+.searched_wrapper ul#searchLinks li {font-family:calibri;display:inline; padding: 0 5px; border-right:1px solid #136b82;}
+.searched_wrapper ul#searchLinks li a {font-family:calibri;color:#000000; text-decoration:none;}
+.searched_wrapper ul#searchLinks li a:hover {text-decoration:underline}
+.lastLI {border-right:0px!important;}
+#mainNavMenuContainer {width:960px; height:auto; overflow:hidden;margin: 0 auto;font-family:calibri;font-size:14px;}
+#stocksDiv {float:left; font-size: 14px;position:relative; margin:7px 0 0 0; z-index:999; color:#FFFFFF; font-weight:bold; padding:12px 10px 7px 10px; width:145px;font-family:calibri;}
+.stockUp {background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/green_stocks.png) no-repeat}
+.stockDown {background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/red_stocks.png) no-repeat}
+.slimlabel {color: #FFFFFF;}
+
+.nav_last {border:0px!important; margin:0px!important;}
+.bg{background-image:url(/etc/designs/mcd/accessmcd/corelibs/images/bg.png) !important; background-position:-12px 38px;}
+.bg_corp{background-image:url(/etc/designs/mcd/accessmcd/corelibs/images/bg_corp.png) !important; background-position:-16px 38px; }
+ul.mainNavMenu{list-style:none; padding:0; margin:4px 0 0; float:right; z-index:999998;}
+ul.mainNavMenu li {float:left; margin-right:1px;font-family:calibri;}
+ul.mainNavMenu li a {display:block; padding:2px 5px; font-size:14px; font-weight:bold; color:#FFFFFF; text-decoration:none;}
+ul.mainNavMenu li a span{vertical-align: middle;display: table-cell;height: 30px;font-family:calibri;text-align: center;width: 100px;margin:13px 0;}
+ul.mainNavMenu li div.nav_ulContainer {position:absolute; z-index:999999; display:block; left:0; visibility: hidden;}
+ul.mainNavMenu li div.nav_ulContainer ul{list-style:none;padding:2px; margin:0; border-right:1px solid #FFF;float:left;}
+ul.mainNavMenu li div.nav_ulContainer ul li {float:none; padding:2px 0;}
+ul.mainNavMenu li div.nav_ulContainer ul li a {display: block;font-weight:normal; font-size:12px; padding:5px;text-align:left;}
+ul.mainNavMenu li div.nav_ulContainer ul li a:hover {text-decoration:none}
+#stocksDiv a {color: #FFFFFF;text-decoration: none;}
+
+#stocksDiv_ca {float:left; position:relative;margin: 8px 0 0 0;  z-index:999; color:#FFFFFF; font-weight:bold; padding:8px 10px 7px 3px; font-size:14px!important; font-family:calibri;}
+#stocksDiv_ca a {color: #FFFFFF;text-decoration: none;}
+ul.mainNavMenu_ca{list-style:none; padding:0; margin: 2px 0; float:right; z-index:999998;}
+ul.mainNavMenu_ca li {float:left; margin-right:1px;font-family:calibri;}
+ul.mainNavMenu_ca li a {display:block; padding:0 5px; font-size:14px;text-align:center; font-weight:bold; color:#000; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;text-decoration:none;}
+ul.mainNavMenu_ca li a span{vertical-align: middle;display: table-cell;height: 30px;font-family:calibri;text-align: center;width: 100px;}
+ul.mainNavMenu_ca li div.nav_ulContainer {position:absolute; z-index:999999;display:block; left:0; visibility: hidden;background:#fff; border-width: 1px 2px 2px 1px; border-style:solid; border-color: #dadada;}
+ul.mainNavMenu_ca li div.nav_ulContainer ul {list-style:none; padding:2px; margin:0; float:left; border-width:0px 1px 0px 0px; border-style:solid; }
+ul.mainNavMenu_ca li div.nav_ulContainer ul li {float:none; padding:2px 0;}
+ul.mainNavMenu_ca li div.nav_ulContainer ul li a {display:block; font-weight:normal; font-size:12px; padding:5px;text-align:left;}
+ul.mainNavMenu_ca li div.nav_ulContainer ul li a:hover {text-decoration:none}
+.stockUp_ca {background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/mcweb_green_stocks_v2.png) no-repeat}
+.stockDown_ca {background:transparent url(/etc/designs/mcd/accessmcd/corelibs/images/mcweb_red_stocks_v2.png) no-repeat}
+
+    #wrapToplinks ul#topRightLinks #dropdownList li,#wrapToplinks ul#topRightLinks #bookmarksList li{
+        border-right:none !important;
+        float: none;
+        padding: 2px 5px 2px 0;
+        white-space: nowrap;
+    }
+
+    #wrapToplinks ul#topRightLinks #dropdownList li a ,#wrapToplinks ul#topRightLinks #bookmarksList li a{
+     color: #000000;
+    text-decoration: none;
+    }
+#wrapToplinks ul#topRightLinks #dropdownList,#wrapToplinks ul#topRightLinks #bookmarksList{
+
+background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #ADADAD;
+    display: none;
+    line-height: normal;
+    list-style: none outside none;
+    margin: 0;
+ 
+    position: absolute;
+    text-align: left;
+    top: 15px;
+    width: auto !important;
+    z-index: 500;
+    cursor:pointer;
+
+}
+
+#wrapToplinks #dropdownList{
+padding: 10px 0 10px 5px;}
+

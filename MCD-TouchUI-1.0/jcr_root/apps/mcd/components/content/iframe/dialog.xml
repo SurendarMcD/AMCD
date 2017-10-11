@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:lastReplicated="{Date}2017-07-07T04:53:00.311-05:00"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/components/iframe.html?wcmmode=disabled"
+    title="IFrame"
+    xtype="tabpanel">
+    <items
+        cq:lastReplicated="{Date}2017-07-07T04:53:04.848-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="cq:WidgetCollection">
+        <IFrame
+            cq:lastReplicated="{Date}2017-07-07T04:53:09.179-05:00"
+            cq:lastReplicatedBy="admin"
+            cq:lastReplicationAction="Activate"
+            jcr:mixinTypes="[cq:ReplicationStatus]"
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="IFrame"
+            xtype="panel">
+            <items
+                cq:lastReplicated="{Date}2017-07-07T04:53:13.755-05:00"
+                cq:lastReplicatedBy="admin"
+                cq:lastReplicationAction="Activate"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="cq:WidgetCollection">
+                <TargetURL
+                    cq:lastReplicated="{Date}2017-07-07T04:53:18.381-05:00"
+                    cq:lastReplicatedBy="admin"
+                    cq:lastReplicationAction="Activate"
+                    jcr:mixinTypes="[cq:ReplicationStatus]"
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    emptyText="Target URL is mandatory"
+                    fieldDescription="&lt;br>"
+                    fieldLabel="Target URL"
+                    name="./targeturl"
+                    xtype="browsefield"/>
+                <Height
+                    cq:lastReplicated="{Date}2017-07-07T04:53:22.453-05:00"
+                    cq:lastReplicatedBy="admin"
+                    cq:lastReplicationAction="Activate"
+                    jcr:mixinTypes="[cq:ReplicationStatus]"
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Default is 500px."
+                    fieldLabel="Height (in pixels)"
+                    name="./height"
+                    xtype="numberfield"/>
+                <Width
+                    cq:lastReplicated="{Date}2017-07-07T04:53:26.322-05:00"
+                    cq:lastReplicatedBy="admin"
+                    cq:lastReplicationAction="Activate"
+                    jcr:mixinTypes="[cq:ReplicationStatus]"
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Default is 100% and Maximum width is 960px."
+                    fieldLabel="Width (in pixels)"
+                    name="./width"
+                    xtype="numberfield"/>
+                <ShowScroll
+                    cq:lastReplicated="{Date}2017-07-07T04:53:29.836-05:00"
+                    cq:lastReplicatedBy="admin"
+                    cq:lastReplicationAction="Activate"
+                    jcr:mixinTypes="[cq:ReplicationStatus]"
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="auto"
+                    fieldLabel="Show ScrollBar"
+                    name="./showscroll"
+                    type="radio"
+                    xtype="selection">
+                    <options
+                        cq:lastReplicated="{Date}2017-07-07T04:53:34.292-05:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="cq:WidgetCollection">
+                        <No
+                            jcr:primaryType="nt:unstructured"
+                            text="No"
+                            value="no"/>
+                        <Yes
+                            jcr:primaryType="nt:unstructured"
+                            text="Yes"
+                            value="yes"/>
+                        <Auto
+                            jcr:primaryType="nt:unstructured"
+                            text="Auto"
+                            value="auto"/>
+                    </options>
+                </ShowScroll>
+                <bottompadding
+                    cq:lastReplicated="{Date}2017-07-07T04:53:40.828-05:00"
+                    cq:lastReplicatedBy="admin"
+                    cq:lastReplicationAction="Activate"
+                    jcr:mixinTypes="[cq:ReplicationStatus]"
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="in px. (Default: 44px)&#xa;"
+                    fieldLabel="Bottom Padding"
+                    name="./btmpadding"
+                    xtype="textfield"/>
+            </items>
+        </IFrame>
+    </items>
+</jcr:root>

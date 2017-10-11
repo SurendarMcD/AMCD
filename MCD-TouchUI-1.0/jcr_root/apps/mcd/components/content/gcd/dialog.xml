@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Edit GCD"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        manageTabs="function(tab,noSwitch){&#xa;var tabs=['components','comp1','comp2','comp3','comp4','comp5','comp6','comp7','comp8','comp9','comp10'];&#xa;var index=tabs.indexOf(tab);&#xa;&#xa;if(index==1){&#xa;this.unhideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.hideTabStripItem(10);&#xa;&#xa;}&#xa;this.doLayout();&#xa;if(index==2){&#xa;this.hideTabStripItem(1);&#xa;this.unhideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;}&#xa;if(index==3){&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.unhideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;}&#xa;&#xa;if(index==4){&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.unhideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;}&#xa;&#xa;if(index==5){&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.unhideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;}&#xa;&#xa;if(index==6){&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.unhideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;}&#xa;&#xa;if(index==7){&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.unhideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;}&#xa;if(index==8){&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.unhideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;}&#xa;if(index==9){&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.unhideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;&#xa;}&#xa;if(index==10){&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;this.hideTabStripItem(7);&#xa;this.hideTabStripItem(8);&#xa;this.hideTabStripItem(9);&#xa;this.unhideTabStripItem(10);&#xa;&#xa;}&#xa;&#xa;if(!noSwitch)this.activate(0);&#xa;}"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <components
+                jcr:primaryType="cq:Panel"
+                title="Components">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <numTabs
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Select a component"
+                        name="./comp"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <basicSearch
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD Basic Search"
+                                value="comp1"/>
+                            <advanceSearch
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD Advance Search"
+                                value="comp2"/>
+                            <searchResult
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD Search Result"
+                                value="comp3"/>
+                            <viewProfile
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD View Profile"
+                                value="comp4"/>
+                            <activateCountry
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD Activate Country"
+                                value="comp5"/>
+                            <getUsBuilding
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD Get US Building"
+                                value="comp6"/>
+                            <maintainUsBuilding
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD Maintain US Building"
+                                value="comp7"/>
+                            <getInternationalBuilding
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD Get International Building"
+                                value="comp8"/>
+                            <maintainInternationalBuilding
+                                jcr:primaryType="nt:unstructured"
+                                text="GCD Maintain International Building"
+                                value="comp9"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                            selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                    </numTabs>
+                </items>
+            </components>
+            <gcdBasicSearch
+                jcr:primaryType="cq:Panel"
+                id="tab1"
+                title="GCD Basic Search">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <comptitle
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Global Contact Directory is default value"
+                        fieldLabel="Component Title"
+                        name="./comptitle"
+                        xtype="textfield"/>
+                    <firstname
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="First Name"
+                        fieldLabel="First Name Label"
+                        name="./firstname"
+                        xtype="textfield"/>
+                    <lastname
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Last Name"
+                        fieldLabel="Last Name Label"
+                        name="./lastname"
+                        xtype="textfield"/>
+                    <startlinkUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="External Link should begin with http://"
+                        fieldLabel="Start Link Page URL"
+                        name="./startLinkPage"
+                        xtype="browsefield"/>
+                    <resultPageUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Search Result Page URL"
+                        name="./resultPage"
+                        xtype="pathfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(1);}"/>
+            </gcdBasicSearch>
+            <gcdAdvanceSearch
+                jcr:primaryType="cq:Panel"
+                id="tab2"
+                title="GCD Advance Search">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <labelForSubmitButton
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default Value is Submit"
+                        fieldLabel="Submit Button Label"
+                        name="./SubmitButtonName"
+                        xtype="textfield"/>
+                    <submitButtonURL
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="external should begin with http://"
+                        fieldLabel="Submit Button URL"
+                        name="./SubmitButtonURL"
+                        xtype="pathfield"/>
+                    <labelForReturnPageLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Cancel"
+                        fieldLabel="Cancel Link Label"
+                        name="./ReturnPageLinkName"
+                        xtype="textfield"/>
+                    <labelForReturnPageLinkURL
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cancel Link URL"
+                        name="./ReturnPageLinkURL"
+                        xtype="pathfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(2);}"/>
+            </gcdAdvanceSearch>
+            <gcdSearchResult
+                jcr:primaryType="cq:Panel"
+                id="tab3"
+                title="GCD Search Result Component">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <labelForAdvancedSearchLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default Value is Advanced Search"
+                        fieldLabel="Advanced Search Link Label"
+                        name="./link2Name"
+                        xtype="textfield"/>
+                    <urlForAdvancedSearchLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="External Link should begin with http://"
+                        fieldLabel="Advanced Search Link URL"
+                        name="./link2URL"
+                        xtype="pathfield"/>
+                    <labelForExportToExcelLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default Value is Export To Excel"
+                        fieldLabel="Export To Excel Link Label"
+                        name="./link3Name"
+                        xtype="textfield"/>
+                    <urlForExpSearchResultLink
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Profile Page URL"
+                        name="./profileLink"
+                        xtype="pathfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(3);}"/>
+            </gcdSearchResult>
+            <gcdViewProfile
+                jcr:primaryType="cq:Panel"
+                id="tab4"
+                title="GCD View Profile Component">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <labelForName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Name Label"
+                        name="./name"
+                        xtype="textfield"/>
+                    <labelForCountryCode
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Country Code Label"
+                        name="./countryCode"
+                        xtype="textfield"/>
+                    <labelForStateSite
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="State Site Label"
+                        name="./stateSite"
+                        xtype="textfield"/>
+                    <labelForCompanyName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Company Name Label"
+                        name="./companyName"
+                        xtype="textfield"/>
+                    <labelForDepartment
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Department Label"
+                        name="./department"
+                        xtype="textfield"/>
+                    <labelForTitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title Label"
+                        name="./title"
+                        xtype="textfield"/>
+                    <labelForRegion
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Region Label"
+                        name="./region"
+                        xtype="textfield"/>
+                    <labelForManager
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Manager Label"
+                        name="./manager"
+                        xtype="textfield"/>
+                    <labelForExtension
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Extension Label"
+                        name="./extension"
+                        xtype="textfield"/>
+                    <labelForFirstName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Preferred First Name Label"
+                        name="./PreferredFirstName"
+                        xtype="textfield"/>
+                    <labelForUsOfficePhone
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="US Office Phone Label"
+                        name="./UsOfficePhone"
+                        xtype="textfield"/>
+                    <labelForEmail
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Email Label"
+                        name="./email"
+                        xtype="textfield"/>
+                    <labelForManagerPhone
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Manager Phone Label"
+                        name="./ManagerPhone"
+                        xtype="textfield"/>
+                    <labelForManagerEmail
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Label For Manager Email"
+                        name="./ManagerEmail"
+                        xtype="textfield"/>
+                    <labelForOfficeLocation
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Office Location Label"
+                        name="./OfficeLocation"
+                        xtype="textfield"/>
+                    <labelForBusinessAddress1
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Business Address 1 Label"
+                        name="./BusinessAddress1"
+                        xtype="textfield"/>
+                    <labelForMailContact
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Mail Contact Label"
+                        name="./MailContact"
+                        xtype="textfield"/>
+                    <labelForVmNode
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="VmNode Label"
+                        name="./VmNode"
+                        xtype="textfield"/>
+                    <labelForAddress
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Address Label"
+                        name="./Address"
+                        xtype="textfield"/>
+                    <labelForPhone
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Phone Label"
+                        name="./Phone"
+                        xtype="textfield"/>
+                    <labelForCountry
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Country Label"
+                        name="./Country"
+                        xtype="textfield"/>
+                    <labelForComment
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Comment Label"
+                        name="./Comment"
+                        xtype="textfield"/>
+                    <labelForAssistantPhoneExt
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Assistant Phone Ext Label"
+                        name="./AssistantPhoneExt"
+                        xtype="textfield"/>
+                    <labelForAssistantFirstName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Assistant First Name Label"
+                        name="./AssistantFirstName"
+                        xtype="textfield"/>
+                    <labelForAssistantLastName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Assistant Last Name Label"
+                        name="./AssistantLastName"
+                        xtype="textfield"/>
+                    <labelForRegOfficeDeptNumber
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Reg Office Dept Number Label"
+                        name="./RegOfficeDeptNumber"
+                        xtype="textfield"/>
+                    <labelForPreferredMailCode
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Preferred Mail Code Label"
+                        name="./PreferredMailCode"
+                        xtype="textfield"/>
+                    <labelForMailBoxNumber
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Mail Box Number Label"
+                        name="./VoiceMailBoxNumber"
+                        xtype="textfield"/>
+                    <labelForOfficeNumber
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Office Number Label"
+                        name="./OfficeNumber"
+                        xtype="textfield"/>
+                    <labelForOfficeWing
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Office Wing Label"
+                        name="./OfficeWing"
+                        xtype="textfield"/>
+                    <labelForOfficeFloor
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Office Floor Label"
+                        name="./OfficeFloor"
+                        xtype="textfield"/>
+                    <labelForBusinessCountry
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Business Country Label"
+                        name="./BusinessCountry"
+                        xtype="textfield"/>
+                    <labelForBusinessPostCode
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Business Post Code Label"
+                        name="./BusinessPostCode"
+                        xtype="textfield"/>
+                    <labelForBusinessState
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Business State Label"
+                        name="./BusinessState"
+                        xtype="textfield"/>
+                    <labelForBusinessCity
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Business City Label"
+                        name="./BusinessCity"
+                        xtype="textfield"/>
+                    <labelForBusinessAddress2
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Business Address2 Label"
+                        name="./BusinessAddress2"
+                        xtype="textfield"/>
+                    <labelForAdvanceSearchLinkURL
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Advance Search Link Label"
+                        name="./AdvanceSearchLinkLabel"
+                        xtype="textfield"/>
+                    <labelForAdvanceSearchpath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Advance search Path"
+                        name="./AdvanceSearchPath"
+                        xtype="pathfield"/>
+                    <updateProfileLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Update Profile Label"
+                        name="./updateProf"
+                        xtype="textfield"/>
+                    <updateProfilePath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Update Profile Path"
+                        name="./updateProfLink"
+                        xtype="pathfield"/>
+                    <labelForExitLinkLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cancel Link Label"
+                        name="./ExitLinkLabel"
+                        xtype="textfield"/>
+                    <CancelURL
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cancel URL"
+                        name="./cancelURL"
+                        xtype="pathfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(4);}"/>
+            </gcdViewProfile>
+            <gcdMaintainCountry
+                jcr:primaryType="cq:Panel"
+                id="tab5"
+                title="GCD Maintain Country Component">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <labelForCountry
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Country"
+                        fieldLabel="Label For Country"
+                        name="./CountryText"
+                        xtype="textfield"/>
+                    <labelForExitLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Cancel "
+                        fieldLabel="Label For Cancel Link"
+                        name="./ExitPageLinkName"
+                        xtype="textfield"/>
+                    <exitPageLinkUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cancel Page Link URL"
+                        name="./ExitPageLinkURL"
+                        xtype="pathfield"/>
+                    <labelForSaveLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Save"
+                        fieldLabel="Label For Save Link"
+                        name="./SaveLinkName"
+                        xtype="textfield"/>
+                    <labelForPageMessage
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Check a country name to make it available in the country field drop downs"
+                        fieldLabel="Label For Page Message"
+                        name="./PageMessage"
+                        xtype="textfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(5);}"/>
+            </gcdMaintainCountry>
+            <gcdGetUsBuilding
+                jcr:primaryType="cq:Panel"
+                id="tab6"
+                title="GCD Get US Building Component">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <urlForAddLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="External Link should begin with http://"
+                        fieldLabel="URL For Add Link"
+                        name="./addLink"
+                        xtype="browsefield"/>
+                    <urlForCancelLink
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="URL For Cancel Link"
+                        name="./cancelLink"
+                        xtype="browsefield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(6);}"/>
+            </gcdGetUsBuilding>
+            <gcdMaintainUsBuilding
+                jcr:primaryType="cq:Panel"
+                id="tab7"
+                title="GCD Maintain US Building">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <urlForCancelLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="External Link should begin with http://"
+                        fieldLabel="URL For Cancel Link"
+                        name="./usCancelLink"
+                        xtype="browsefield"/>
+                    <urlForDeleteLink
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="External Link should begin with http://"
+                        fieldLabel="URL For Delete Link"
+                        name="./usDeleteLink"
+                        xtype="browsefield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(7);}"/>
+            </gcdMaintainUsBuilding>
+            <gcdViewIntBuilding
+                jcr:primaryType="cq:Panel"
+                id="tab8"
+                title="GCD View International Building">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <labelForAddLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Add"
+                        fieldLabel="Add Link Label"
+                        name="./intlbldaddlinklabel"
+                        xtype="textfield"/>
+                    <urlForAddLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="External Link should begin with http://"
+                        fieldLabel="Add Link URL"
+                        name="./intlbldaddurl"
+                        xtype="pathfield"/>
+                    <labelForCancelLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Cancel"
+                        fieldLabel="Cancel Link Label"
+                        name="./intlbldcancellabel"
+                        xtype="textfield"/>
+                    <urlForCancelLink
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cancel Link URL"
+                        name="./intlbldcancelurl"
+                        xtype="pathfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(8);}"/>
+            </gcdViewIntBuilding>
+            <gcdMaintainIntBuilding
+                jcr:primaryType="cq:Panel"
+                id="tab9"
+                title="GCD Maintain International Building">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <labelForSaveLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Save"
+                        fieldLabel="Save Link Label"
+                        name="./form_intlbldsavelabel"
+                        xtype="textfield"/>
+                    <labelForDeleteLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Delete"
+                        fieldLabel="Delete Link Label"
+                        name="./form_intlblddeletelabel"
+                        xtype="textfield"/>
+                    <labelForCancelLink
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default value is Cancel"
+                        fieldLabel="Cancel Link Label"
+                        name="./form_intlbldcancellabel"
+                        xtype="textfield"/>
+                    <urlForCancelLink
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cancel Link URL"
+                        name="./form_intlbldcancelurl"
+                        xtype="pathfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(9);}"/>
+            </gcdMaintainIntBuilding>
+            <helpParameter
+                jcr:primaryType="cq:Panel"
+                id="tab10"
+                title="Help Parameter">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <helpURL
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Help Page Link"
+                        name="./helpPath"
+                        xtype="pathfield"/>
+                    <height
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Height"
+                        name="./helpHeight"
+                        xtype="textfield"/>
+                    <width
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Width"
+                        name="./helpWidth"
+                        xtype="textfield"/>
+                    <helpLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default is Help"
+                        fieldLabel="Help Label"
+                        name="./helpLabel"
+                        xtype="textfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(10);}"/>
+            </helpParameter>
+        </items>
+    </items>
+</jcr:root>

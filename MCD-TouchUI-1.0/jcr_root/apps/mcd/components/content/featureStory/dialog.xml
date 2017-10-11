@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}400"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/admin/feature-story.html?wcmmode=disabled"
+    title="Edit Feature Story"
+    width="{Long}600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        manageTabs="function(tab){&#xa;&#x9;var tabs=['Image1','featureStory1','Image2','featureStory2','Image3','featureStory3'];&#xa;&#x9;var index=tabs.indexOf(tab);&#xa;&#x9;if(index==-1) {&#xa;&#x9;&#x9;for(var i=0;i&lt;tabs.length;i++){&#xa;&#x9;&#x9;&#x9;this.hideTabStripItem(1+i);&#xa;&#x9;&#x9;} &#xa;      this.activate(0);&#xa;&#x9;}&#xa;&#x9;if(tab=='manual'){&#xa;&#x9;&#x9;for(var i=0;i&lt;tabs.length;i++){&#xa;&#x9;&#x9;&#x9;this.unhideTabStripItem(1+i);&#xa;&#x9;&#x9;}&#xa;&#x9;this.activate(1);&#x9;&#xa;&#x9;}&#x9;&#xa;&#x9;else{&#xa;&#x9;&#x9;for(var i=0;i&lt;tabs.length;i++)&#xa;&#x9;&#x9;&#x9;this.hideTabStripItem(1+i);&#x9;&#xa;&#x9;}&#xa;&#x9;this.doLayout(); &#x9;&#xa;&#xa;}"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <selectionType
+                jcr:primaryType="cq:Panel"
+                title="Feature Story Details">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <selectionType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Please select a value"
+                        fieldDescription="Select the mode of selection of feature story articles"
+                        fieldLabel="Selection Type"
+                        name="./selectionType"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <manual
+                                jcr:primaryType="nt:unstructured"
+                                text="Manual"
+                                value="manual"/>
+                            <automatic
+                                jcr:primaryType="nt:unstructured"
+                                text="Automatic"
+                                value="automatic"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(rec,path){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                            selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                    </selectionType>
+                    <playSpeed
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the feature image rotation speed."
+                        fieldLabel="Play Speed"
+                        name="./playSpeed"
+                        type="select"
+                        width="{Long}100"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="0"/>
+                            <slow
+                                jcr:primaryType="nt:unstructured"
+                                text="Slow (15 sec delay)"
+                                value="15000"/>
+                            <medium
+                                jcr:primaryType="nt:unstructured"
+                                text="Medium (10 sec delay)"
+                                value="10000"/>
+                            <fast
+                                jcr:primaryType="nt:unstructured"
+                                text="Fast (6 sec delay)"
+                                value="6000"/>
+                        </options>
+                    </playSpeed>
+                    <navigationFunctionality
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Choose whether to display or hide the circle images used for the rotation of articles"
+                        fieldLabel="Control Style"
+                        name="./navigationFunctionality"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <disable
+                                jcr:primaryType="nt:unstructured"
+                                text="Disable"
+                                value="disable"/>
+                        </options>
+                        <playspeed
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter the play speed for article rotation. Enter time in milliseconds. 6s will be taken as default"
+                            fieldLabel="Play Speed"
+                            name="./playspeed"
+                            xtype="textfield"/>
+                    </navigationFunctionality>
+                    <viewPastStories
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select a link to be shown on View Past Stories link."
+                        fieldLabel="View Past Stories Link"
+                        name="./viewPastStoriesLink"
+                        xtype="browsefield"/>
+                    <viewpaststoriesTitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="VIEW PAST STORIES"
+                        emptyText="VIEW PAST STORIES"
+                        fieldDescription="Mention the title for View Past Stories. 'VIEW PAST STORIES' will be taken as default"
+                        fieldLabel="View Past Stories Title"
+                        name="./viewPastStoriesTitle"
+                        xtype="textfield"/>
+                    <transitionTime
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the feature image fade-in speed. Transition time should be less than play speed."
+                        fieldLabel="Transition Time"
+                        name="./transitionTime"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <slow
+                                jcr:primaryType="nt:unstructured"
+                                text="Slow (3 sec fade-in effect)"
+                                value="3000"/>
+                            <medium
+                                jcr:primaryType="nt:unstructured"
+                                text="Medium (2 sec fade-in effect)"
+                                value="2000"/>
+                            <fast
+                                jcr:primaryType="nt:unstructured"
+                                text="Fast (1 sec fade-in effect)"
+                                value="1000"/>
+                        </options>
+                    </transitionTime>
+                    <commentcount
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Show Comment Count"
+                        name="./showcommentcount"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <show
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </commentcount>
+                </items>
+            </selectionType>
+            <Image1
+                jcr:primaryType="cq:Widget"
+                autoWidth="{Boolean}false"
+                cropParameter="./image1/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image1/fileName"
+                fileReferenceParameter="./image1/fileReference"
+                mapParameter="./image1/imageMap"
+                name="./image1/file"
+                requestSuffix="/image1.img.png"
+                rotateParameter="./image1/imageRotate"
+                sizeLimit="{Long}100"
+                title="Feature Story 1 Image"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage">
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(1); }"/>
+            </Image1>
+            <featureStory1
+                jcr:primaryType="cq:Panel"
+                title="Feature Story 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link1
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This field is mandatory. Enter an external or internal link. Enter an external link starting with http://"
+                        fieldLabel="Link"
+                        name="./link1"
+                        xtype="browsefield"/>
+                    <title1
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max Length : 39 characters "
+                        fieldLabel="Title"
+                        name="./title1"
+                        xtype="textfield"/>
+                    <teaser1
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max Length : 104 characters "
+                        fieldLabel="Teaser Text"
+                        name="./teaser1"
+                        xtype="textfield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image1/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(2); }"/>
+            </featureStory1>
+            <Image2
+                jcr:primaryType="cq:Widget"
+                autoWidth="{Boolean}false"
+                cropParameter="./image2/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image2/fileName"
+                fileReferenceParameter="./image2/fileReference"
+                height="{Long}600"
+                mapParameter="./image2/imageMap"
+                name="./image2/file"
+                requestSuffix="/image2.img.png"
+                rotateParameter="./image2/imageRotate"
+                sizeLimit="{Long}100"
+                title="Feature Story 2 Image"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage">
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(3); }"/>
+            </Image2>
+            <featureStory2
+                jcr:primaryType="cq:Panel"
+                title="Feature Story 2">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link2
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This field is mandatory. Enter an external or internal link. Enter an external link starting with http://"
+                        fieldLabel="Link"
+                        name="./link2"
+                        xtype="browsefield"/>
+                    <title2
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max Length : 39 characters "
+                        fieldLabel="Title"
+                        name="./title2"
+                        xtype="textfield"/>
+                    <teaser2
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max Length : 104 characters "
+                        fieldLabel="Teaser Text"
+                        name="./teaser2"
+                        xtype="textfield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image2/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(4); }"/>
+            </featureStory2>
+            <Image3
+                jcr:primaryType="cq:Widget"
+                autoWidth="{Boolean}false"
+                cropParameter="./image3/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image3/fileName"
+                fileReferenceParameter="./image3/fileReference"
+                height="{Long}600"
+                mapParameter="./image3/imageMap"
+                name="./image3/file"
+                requestSuffix="/image3.img.png"
+                rotateParameter="./image3/imageRotate"
+                sizeLimit="{Long}100"
+                title="Feature Story 3 Image"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage">
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(5); }"/>
+            </Image3>
+            <featureStory3
+                jcr:primaryType="cq:Panel"
+                title="Feature Story 3">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link3
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This field is mandatory. Enter an external or internal link. Enter an external link starting with http://"
+                        fieldLabel="Link"
+                        name="./link3"
+                        xtype="browsefield"/>
+                    <title3
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max Length : 39 characters "
+                        fieldLabel="Title"
+                        name="./title3"
+                        xtype="textfield"/>
+                    <teaser3
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max Length : 104 characters "
+                        fieldLabel="Teaser Text"
+                        name="./teaser3"
+                        xtype="textfield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image3/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(6); }"/>
+            </featureStory3>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){&#xa;var playSpeed =parseInt(dialog.getField('./playSpeed').getValue());&#xa;var transitionTime =parseInt(dialog.getField('./transitionTime').getValue());&#xa;if((playSpeed>0) &amp;&amp; (transitionTime>=playSpeed)){&#xa;&#x9;CQ.Ext.Msg.show({ 'title':'Feature Story Validation', 'msg':'The value of Transition Time can only be smaller than Playspeed', 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this }); return false;&#xa;}&#xa;if(dialog.getField('./selectionType').getValue()=='manual'){&#xa;&#x9;if(dialog.getField('./link1').getValue()==''){&#xa;&#x9;&#x9; CQ.Ext.Msg.show (                                &#xa;&#x9;&#x9;&#x9;&#x9;{'title':'Feature Story Validation',&#xa;&#x9;&#x9;&#x9;&#x9; 'msg':'Kindly select a link in Feature Story 1 tab', &#xa;&#x9;&#x9;&#x9;&#x9; 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this                               &#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;if(dialog.getField('./link2').getValue()==''){&#xa;&#x9;&#x9; CQ.Ext.Msg.show (                                &#xa;&#x9;&#x9;&#x9;&#x9;{'title':'Feature Story Validation',&#xa;&#x9;&#x9;&#x9;&#x9; 'msg':'Kindly select a link in Feature Story 2 tab', &#xa;&#x9;&#x9;&#x9;&#x9; 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this                               &#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;if(dialog.getField('./link3').getValue()==''){&#xa;&#x9;&#x9; CQ.Ext.Msg.show (                                &#xa;&#x9;&#x9;&#x9;&#x9;{'title':'Feature Story Validation',&#xa;&#x9;&#x9;&#x9;&#x9; 'msg':'Kindly select a link in Feature Story 3 tab', &#xa;&#x9;&#x9;&#x9;&#x9; 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this                               &#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;if(dialog.getField('./link1').getValue().indexOf('http')!=-1){&#xa;&#x9;&#x9;if((dialog.getField('./title1').getValue()=='')||(dialog.getField('./teaser1').getValue()==''))&#xa;&#x9;&#x9;&#x9;{&#xa;&#x9;&#x9; CQ.Ext.Msg.show (                                &#xa;&#x9;&#x9;&#x9;&#x9;{'title':'Feature Story Validation',&#xa;&#x9;&#x9;&#x9;&#x9; 'msg':'Kindly fill all the fields in Feature Story 1 tab since the link is an external path', &#xa;&#x9;&#x9;&#x9;&#x9; 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this                               &#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;if(dialog.getField('./link2').getValue().indexOf('http://')!=-1){&#xa;&#x9;&#x9;if((dialog.getField('./title2').getValue()=='')||(dialog.getField('./teaser2').getValue()==''))&#xa;&#x9;&#x9;&#x9;{&#xa;&#x9;&#x9; CQ.Ext.Msg.show (                                &#xa;&#x9;&#x9;&#x9;&#x9;{'title':'Feature Story Validation',&#xa;&#x9;&#x9;&#x9;&#x9; 'msg':'Kindly fill all the fields in Feature Story 2 tab since the link is an external path', &#xa;&#x9;&#x9;&#x9;&#x9; 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this                               &#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;if(dialog.getField('./link3').getValue().indexOf('http://')!=-1){&#xa;&#x9;&#x9;if((dialog.getField('./title3').getValue()=='')||(dialog.getField('./teaser3').getValue()==''))&#xa;&#x9;&#x9;&#x9;{&#xa;&#x9;&#x9; CQ.Ext.Msg.show (                                &#xa;&#x9;&#x9;&#x9;&#x9;{'title':'Feature Story Validation',&#xa;&#x9;&#x9;&#x9;&#x9; 'msg':'Kindly fill all the fields in Feature Story 3 tab since the link is an external path', &#xa;&#x9;&#x9;&#x9;&#x9; 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this                               &#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;}&#xa;}"/>
+</jcr:root>

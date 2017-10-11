@@ -1,0 +1,722 @@
+/*
+ * jQuery UI CSS Framework 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.newsui-helper-hidden { display: none; }
+.newsui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.newsui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.newsui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.newsui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .newsui-helper-clearfix { height:1%; }
+.newsui-helper-clearfix { display:block; }
+/* end clearfix */
+.newsui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.newsui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.newsui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.newsui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/*
+ * jQuery UI CSS Framework 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ctl=themeroller
+ */
+
+
+/* Component containers
+----------------------------------*/
+.newsui-widget { font-family: Arial,sans-serif; font-size: 11px; color:#333; font-weight:bold;}
+.newsui-widget .newsui-widget { font-size: 1em; }
+.newsui-widget input, .newsui-widget select, .newsui-widget textarea, .newsui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.newsui-widget-content {background: #ffffff url(../../images/newsui-bg_glass_75_ffffff_1x400.png) 50% 50% repeat-x; color: #222222; }
+
+.newsui-widget-content a { color: #004276; text-decoration:none;}
+.newsui-widget-content a:hover {color: #004276; text-decoration:underline;}
+.newsui-widget-content .ital{font-style:italic; font-weight:normal;}
+.newsui-widget-header { border: 0px solid #aaaaaa; color: #222222; font-weight: bold; }
+.newsui-widget-header a { color: #222222; }
+
+/* Interaction states
+----------------------------------*/
+.newsui-state-default, .newsui-widget-content .newsui-state-default, .newsui-widget-header .newsui-state-default { border: 0px solid #d3d3d3; background: #e6e6e6 url(../../images/newsui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555; }
+.newsui-state-default a, .newsui-state-default a:link, .newsui-state-default a:visited { color: #555555; text-decoration: none; }
+.newsui-state-hover, .newsui-widget-content .newsui-state-hover, .newsui-widget-header .newsui-state-hover, .newsui-state-focus, .newsui-widget-content .newsui-state-focus, .newsui-widget-header .newsui-state-focus { border: 0px solid #999999; background: #dadada url(../../images/newsui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.newsui-state-hover a, .newsui-state-hover a:hover { color: #212121; text-decoration: none; }
+.newsui-state-active, .newsui-widget-content .newsui-state-active, .newsui-widget-header .newsui-state-active { border: 0px solid #aaaaaa; background: #ffffff url(../../images/newsui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.newsui-state-active a, .newsui-state-active a:link, .newsui-state-active a:visited { color: #212121; text-decoration: none; }
+.newsui-widget :active { outline: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.newsui-state-highlight, .newsui-widget-content .newsui-state-highlight, .newsui-widget-header .newsui-state-highlight  {border: 1px solid #fcefa1; background: #fbf9ee url(../../images/newsui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x; color: #363636; }
+.newsui-state-highlight a, .newsui-widget-content .newsui-state-highlight a,.newsui-widget-header .newsui-state-highlight a { color: #363636; }
+.newsui-state-error, .newsui-widget-content .newsui-state-error, .newsui-widget-header .newsui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(../../images/newsui-bg_inset-soft_95_fef1ec_1x100.png) 50% bottom repeat-x; color: #cd0a0a; }
+.newsui-state-error a, .newsui-widget-content .newsui-state-error a, .newsui-widget-header .newsui-state-error a { color: #cd0a0a; }
+.newsui-state-error-text, .newsui-widget-content .newsui-state-error-text, .newsui-widget-header .newsui-state-error-text { color: #cd0a0a; }
+.newsui-priority-primary, .newsui-widget-content .newsui-priority-primary, .newsui-widget-header .newsui-priority-primary { font-weight: bold; }
+.newsui-priority-secondary, .newsui-widget-content .newsui-priority-secondary,  .newsui-widget-header .newsui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.newsui-state-disabled, .newsui-widget-content .newsui-state-disabled, .newsui-widget-header .newsui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.newsui-icon { width: 16px; height: 16px; background-image: url(../../images/newsui-icons_222222_256x240.png); }
+.newsui-widget-content .newsui-icon {background-image: url(../../images/newsui-icons_222222_256x240.png); }
+.newsui-widget-header .newsui-icon {background-image: url(../../images/newsui-icons_222222_256x240.png); }
+.newsui-state-default .newsui-icon { background-image: url(../../images/newsui-icons_888888_256x240.png); }
+.newsui-state-hover .newsui-icon, .newsui-state-focus .newsui-icon {background-image: url(../../images/newsui-icons_454545_256x240.png); }
+.newsui-state-active .newsui-icon {background-image: url(../../images/newsui-icons_454545_256x240.png); }
+.newsui-state-highlight .newsui-icon {background-image: url(../../images/newsui-icons_2e83ff_256x240.png); }
+.newsui-state-error .newsui-icon, .newsui-state-error-text .newsui-icon {background-image: url(../../images/newsui-icons_cd0a0a_256x240.png); }
+
+/* positioning */
+.newsui-icon-carat-1-n { background-position: 0 0; }
+.newsui-icon-carat-1-ne { background-position: -16px 0; }
+.newsui-icon-carat-1-e { background-position: -32px 0; }
+.newsui-icon-carat-1-se { background-position: -48px 0; }
+.newsui-icon-carat-1-s { background-position: -64px 0; }
+.newsui-icon-carat-1-sw { background-position: -80px 0; }
+.newsui-icon-carat-1-w { background-position: -96px 0; }
+.newsui-icon-carat-1-nw { background-position: -112px 0; }
+.newsui-icon-carat-2-n-s { background-position: -128px 0; }
+.newsui-icon-carat-2-e-w { background-position: -144px 0; }
+.newsui-icon-triangle-1-n { background-position: 0 -16px; }
+.newsui-icon-triangle-1-ne { background-position: -16px -16px; }
+.newsui-icon-triangle-1-e { background-position: -32px -16px; }
+.newsui-icon-triangle-1-se { background-position: -48px -16px; }
+.newsui-icon-triangle-1-s { background-position: -64px -16px; }
+.newsui-icon-triangle-1-sw { background-position: -80px -16px; }
+.newsui-icon-triangle-1-w { background-position: -96px -16px; }
+.newsui-icon-triangle-1-nw { background-position: -112px -16px; }
+.newsui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.newsui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.newsui-icon-arrow-1-n { background-position: 0 -32px; }
+.newsui-icon-arrow-1-ne { background-position: -16px -32px; }
+.newsui-icon-arrow-1-e { background-position: -32px -32px; }
+.newsui-icon-arrow-1-se { background-position: -48px -32px; }
+.newsui-icon-arrow-1-s { background-position: -64px -32px; }
+.newsui-icon-arrow-1-sw { background-position: -80px -32px; }
+.newsui-icon-arrow-1-w { background-position: -96px -32px; }
+.newsui-icon-arrow-1-nw { background-position: -112px -32px; }
+.newsui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.newsui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.newsui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.newsui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.newsui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.newsui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.newsui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.newsui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.newsui-icon-arrowthick-1-n { background-position: 0 -48px; }
+.newsui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.newsui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.newsui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.newsui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.newsui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.newsui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.newsui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.newsui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.newsui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.newsui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.newsui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.newsui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.newsui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.newsui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.newsui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.newsui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.newsui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.newsui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.newsui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.newsui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.newsui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.newsui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.newsui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.newsui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.newsui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.newsui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.newsui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.newsui-icon-arrow-4 { background-position: 0 -80px; }
+.newsui-icon-arrow-4-diag { background-position: -16px -80px; }
+.newsui-icon-extlink { background-position: -32px -80px; }
+.newsui-icon-newwin { background-position: -48px -80px; }
+.newsui-icon-refresh { background-position: -64px -80px; }
+.newsui-icon-shuffle { background-position: -80px -80px; }
+.newsui-icon-transfer-e-w { background-position: -96px -80px; }
+.newsui-icon-transferthick-e-w { background-position: -112px -80px; }
+.newsui-icon-folder-collapsed { background-position: 0 -96px; }
+.newsui-icon-folder-open { background-position: -16px -96px; }
+.newsui-icon-document { background-position: -32px -96px; }
+.newsui-icon-document-b { background-position: -48px -96px; }
+.newsui-icon-note { background-position: -64px -96px; }
+.newsui-icon-mail-closed { background-position: -80px -96px; }
+.newsui-icon-mail-open { background-position: -96px -96px; }
+.newsui-icon-suitcase { background-position: -112px -96px; }
+.newsui-icon-comment { background-position: -128px -96px; }
+.newsui-icon-person { background-position: -144px -96px; }
+.newsui-icon-print { background-position: -160px -96px; }
+.newsui-icon-trash { background-position: -176px -96px; }
+.newsui-icon-locked { background-position: -192px -96px; }
+.newsui-icon-unlocked { background-position: -208px -96px; }
+.newsui-icon-bookmark { background-position: -224px -96px; }
+.newsui-icon-tag { background-position: -240px -96px; }
+.newsui-icon-home { background-position: 0 -112px; }
+.newsui-icon-flag { background-position: -16px -112px; }
+.newsui-icon-calendar { background-position: -32px -112px; }
+.newsui-icon-cart { background-position: -48px -112px; }
+.newsui-icon-pencil { background-position: -64px -112px; }
+.newsui-icon-clock { background-position: -80px -112px; }
+.newsui-icon-disk { background-position: -96px -112px; }
+.newsui-icon-calculator { background-position: -112px -112px; }
+.newsui-icon-zoomin { background-position: -128px -112px; }
+.newsui-icon-zoomout { background-position: -144px -112px; }
+.newsui-icon-search { background-position: -160px -112px; }
+.newsui-icon-wrench { background-position: -176px -112px; }
+.newsui-icon-gear { background-position: -192px -112px; }
+.newsui-icon-heart { background-position: -208px -112px; }
+.newsui-icon-star { background-position: -224px -112px; }
+.newsui-icon-link { background-position: -240px -112px; }
+.newsui-icon-cancel { background-position: 0 -128px; }
+.newsui-icon-plus { background-position: -16px -128px; }
+.newsui-icon-plusthick { background-position: -32px -128px; }
+.newsui-icon-minus { background-position: -48px -128px; }
+.newsui-icon-minusthick { background-position: -64px -128px; }
+.newsui-icon-close { background-position: -80px -128px; }
+.newsui-icon-closethick { background-position: -96px -128px; }
+.newsui-icon-key { background-position: -112px -128px; }
+.newsui-icon-lightbulb { background-position: -128px -128px; }
+.newsui-icon-scissors { background-position: -144px -128px; }
+.newsui-icon-clipboard { background-position: -160px -128px; }
+.newsui-icon-copy { background-position: -176px -128px; }
+.newsui-icon-contact { background-position: -192px -128px; }
+.newsui-icon-image { background-position: -208px -128px; }
+.newsui-icon-video { background-position: -224px -128px; }
+.newsui-icon-script { background-position: -240px -128px; }
+.newsui-icon-alert { background-position: 0 -144px; }
+.newsui-icon-info { background-position: -16px -144px; }
+.newsui-icon-notice { background-position: -32px -144px; }
+.newsui-icon-help { background-position: -48px -144px; }
+.newsui-icon-check { background-position: -64px -144px; }
+.newsui-icon-bullet { background-position: -80px -144px; }
+.newsui-icon-radio-off { background-position: -96px -144px; }
+.newsui-icon-radio-on { background-position: -112px -144px; }
+.newsui-icon-pin-w { background-position: -128px -144px; }
+.newsui-icon-pin-s { background-position: -144px -144px; }
+.newsui-icon-play { background-position: 0 -160px; }
+.newsui-icon-pause { background-position: -16px -160px; }
+.newsui-icon-seek-next { background-position: -32px -160px; }
+.newsui-icon-seek-prev { background-position: -48px -160px; }
+.newsui-icon-seek-end { background-position: -64px -160px; }
+.newsui-icon-seek-start { background-position: -80px -160px; }
+/* newsui-icon-seek-first is deprecated, use newsui-icon-seek-start instead */
+.newsui-icon-seek-first { background-position: -80px -160px; }
+.newsui-icon-stop { background-position: -96px -160px; }
+.newsui-icon-eject { background-position: -112px -160px; }
+.newsui-icon-volume-off { background-position: -128px -160px; }
+.newsui-icon-volume-on { background-position: -144px -160px; }
+.newsui-icon-power { background-position: 0 -176px; }
+.newsui-icon-signal-diag { background-position: -16px -176px; }
+.newsui-icon-signal { background-position: -32px -176px; }
+.newsui-icon-battery-0 { background-position: -48px -176px; }
+.newsui-icon-battery-1 { background-position: -64px -176px; }
+.newsui-icon-battery-2 { background-position: -80px -176px; }
+.newsui-icon-battery-3 { background-position: -96px -176px; }
+.newsui-icon-circle-plus { background-position: 0 -192px; }
+.newsui-icon-circle-minus { background-position: -16px -192px; }
+.newsui-icon-circle-close { background-position: -32px -192px; }
+.newsui-icon-circle-triangle-e { background-position: -48px -192px; }
+.newsui-icon-circle-triangle-s { background-position: -64px -192px; }
+.newsui-icon-circle-triangle-w { background-position: -80px -192px; }
+.newsui-icon-circle-triangle-n { background-position: -96px -192px; }
+.newsui-icon-circle-arrow-e { background-position: -112px -192px; }
+.newsui-icon-circle-arrow-s { background-position: -128px -192px; }
+.newsui-icon-circle-arrow-w { background-position: -144px -192px; }
+.newsui-icon-circle-arrow-n { background-position: -160px -192px; }
+.newsui-icon-circle-zoomin { background-position: -176px -192px; }
+.newsui-icon-circle-zoomout { background-position: -192px -192px; }
+.newsui-icon-circle-check { background-position: -208px -192px; }
+.newsui-icon-circlesmall-plus { background-position: 0 -208px; }
+.newsui-icon-circlesmall-minus { background-position: -16px -208px; }
+.newsui-icon-circlesmall-close { background-position: -32px -208px; }
+.newsui-icon-squaresmall-plus { background-position: -48px -208px; }
+.newsui-icon-squaresmall-minus { background-position: -64px -208px; }
+.newsui-icon-squaresmall-close { background-position: -80px -208px; }
+.newsui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.newsui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.newsui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.newsui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.newsui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.newsui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.newsui-corner-all, .newsui-corner-top, .newsui-corner-left, .newsui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.newsui-corner-all, .newsui-corner-top, .newsui-corner-right, .newsui-corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.newsui-corner-all, .newsui-corner-bottom, .newsui-corner-left, .newsui-corner-bl { -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-left-radius: 0px; -khtml-border-bottom-left-radius: 0px; border-bottom-left-radius: 0px; }
+.newsui-corner-all, .newsui-corner-bottom, .newsui-corner-right, .newsui-corner-br { -moz-border-radius-bottomright: 0px; -webkit-border-bottom-right-radius: 0px; -khtml-border-bottom-right-radius: 0px; border-bottom-right-radius:0px; }
+
+/* Overlays */
+.newsui-widget-overlay { background: #aaaaaa url(../../images/newsui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); }
+.newsui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(../../images/newsui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); -moz-border-radius: 8px; -khtml-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }/*
+ * jQuery UI Resizable 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.newsui-resizable { position: relative;}
+.newsui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block; }
+.newsui-resizable-disabled .newsui-resizable-handle, .newsui-resizable-autohide .newsui-resizable-handle { display: none; }
+.newsui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.newsui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.newsui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.newsui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.newsui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.newsui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.newsui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.newsui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}/*
+ * jQuery UI Selectable 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Selectable#theming
+ */
+.newsui-selectable-helper { position: absolute; z-index: 100; border:1px dotted black; }
+/*
+ * jQuery UI Accordion 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Accordion#theming
+ */
+/* IE/Win - Fix animation bug - #4615 */
+.newsui-accordion { width: 100%; }
+.newsui-accordion .newsui-accordion-header { cursor: pointer; position: relative; margin-top: 1px; zoom: 1; }
+.newsui-accordion .newsui-accordion-li-fix { display: inline; }
+.newsui-accordion .newsui-accordion-header-active { border-bottom: 0 !important; }
+.newsui-accordion .newsui-accordion-header a { display: block; font-size: 1em; padding: .5em .5em .5em .7em; }
+.newsui-accordion-icons .newsui-accordion-header a { padding-left: 2.2em; }
+.newsui-accordion .newsui-accordion-header .newsui-icon { position: absolute; left: .5em; top: 50%; margin-top: -8px; }
+.newsui-accordion .newsui-accordion-content { padding: 1em 2.2em; border-top: 0; margin-top: -2px; position: relative; top: 1px; margin-bottom: 2px; overflow: auto; display: none; zoom: 1; }
+.newsui-accordion .newsui-accordion-content-active { display: block; }
+/*
+ * jQuery UI Autocomplete 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
+.newsui-autocomplete { position: absolute; cursor: default; }   
+
+/* workarounds */
+* html .newsui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+
+/*
+ * jQuery UI Menu 1.8.16
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Menu#theming
+ */
+.newsui-menu {
+    list-style:none;
+    padding: 2px;
+    margin: 0;
+    display:block;
+    float: left;
+}
+.newsui-menu .newsui-menu {
+    margin-top: -3px;
+}
+.newsui-menu .newsui-menu-item {
+    margin:0;
+    padding: 0;
+    zoom: 1;
+    float: left;
+    clear: left;
+    width: 100%;
+}
+.newsui-menu .newsui-menu-item a {
+    text-decoration:none;
+    display:block;
+    padding:.2em .4em;
+    line-height:1.5;
+    zoom:1;
+}
+.newsui-menu .newsui-menu-item a.newsui-state-hover,
+.newsui-menu .newsui-menu-item a.newsui-state-active {
+    font-weight: normal;
+    margin: 1px;
+}
+/*
+ * jQuery UI Button 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Button#theming
+ */
+.newsui-button { display: inline-block; position: relative; padding: 0; margin-right: .1em; text-decoration: none !important; cursor: pointer; text-align: center; zoom: 1; overflow: visible; } /* the overflow property removes extra width in IE */
+.newsui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
+button.newsui-button-icon-only { width: 2.4em; } /* button elements seem to need a little more width */
+.newsui-button-icons-only { width: 3.4em; } 
+button.newsui-button-icons-only { width: 3.7em; } 
+
+/*button text element */
+.newsui-button .newsui-button-text { display: block; line-height: 1.4;  }
+.newsui-button-text-only .newsui-button-text { padding: .4em 1em; }
+.newsui-button-icon-only .newsui-button-text, .newsui-button-icons-only .newsui-button-text { padding: .4em; text-indent: -9999999px; }
+.newsui-button-text-icon-primary .newsui-button-text, .newsui-button-text-icons .newsui-button-text { padding: .4em 1em .4em 2.1em; }
+.newsui-button-text-icon-secondary .newsui-button-text, .newsui-button-text-icons .newsui-button-text { padding: .4em 2.1em .4em 1em; }
+.newsui-button-text-icons .newsui-button-text { padding-left: 2.1em; padding-right: 2.1em; }
+/* no icon support for input elements, provide padding by default */
+input.newsui-button { padding: .4em 1em; }
+
+/*button icon element(s) */
+.newsui-button-icon-only .newsui-icon, .newsui-button-text-icon-primary .newsui-icon, .newsui-button-text-icon-secondary .newsui-icon, .newsui-button-text-icons .newsui-icon, .newsui-button-icons-only .newsui-icon { position: absolute; top: 50%; margin-top: -8px; }
+.newsui-button-icon-only .newsui-icon { left: 50%; margin-left: -8px; }
+.newsui-button-text-icon-primary .newsui-button-icon-primary, .newsui-button-text-icons .newsui-button-icon-primary, .newsui-button-icons-only .newsui-button-icon-primary { left: .5em; }
+.newsui-button-text-icon-secondary .newsui-button-icon-secondary, .newsui-button-text-icons .newsui-button-icon-secondary, .newsui-button-icons-only .newsui-button-icon-secondary { right: .5em; }
+.newsui-button-text-icons .newsui-button-icon-secondary, .newsui-button-icons-only .newsui-button-icon-secondary { right: .5em; }
+
+/*button sets*/
+.newsui-buttonset { margin-right: 7px; }
+.newsui-buttonset .newsui-button { margin-left: 0; margin-right: -.3em; }
+
+/* workarounds */
+button.newsui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */
+/*
+ * jQuery UI Dialog 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.newsui-dialog { position: absolute; padding: .2em; width: 300px; overflow: hidden; }
+.newsui-dialog .newsui-dialog-titlebar { padding: .4em 1em; position: relative;  }
+.newsui-dialog .newsui-dialog-title { float: left; margin: .1em 16px .1em 0; } 
+.newsui-dialog .newsui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
+.newsui-dialog .newsui-dialog-titlebar-close span { display: block; margin: 1px; }
+.newsui-dialog .newsui-dialog-titlebar-close:hover, .newsui-dialog .newsui-dialog-titlebar-close:focus { padding: 0; }
+.newsui-dialog .newsui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
+.newsui-dialog .newsui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.newsui-dialog .newsui-dialog-buttonpane .newsui-dialog-buttonset { float: right; }
+.newsui-dialog .newsui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
+.newsui-dialog .newsui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.newsui-draggable .newsui-dialog-titlebar { cursor: move; }
+/*
+ * jQuery UI Slider 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+.newsui-slider { position: relative; text-align: left; }
+.newsui-slider .newsui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; }
+.newsui-slider .newsui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
+
+.newsui-slider-horizontal { height: .8em; }
+.newsui-slider-horizontal .newsui-slider-handle { top: -.3em; margin-left: -.6em; }
+.newsui-slider-horizontal .newsui-slider-range { top: 0; height: 100%; }
+.newsui-slider-horizontal .newsui-slider-range-min { left: 0; }
+.newsui-slider-horizontal .newsui-slider-range-max { right: 0; }
+
+.newsui-slider-vertical { width: .8em; height: 100px; }
+.newsui-slider-vertical .newsui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em; }
+.newsui-slider-vertical .newsui-slider-range { left: 0; width: 100%; }
+.newsui-slider-vertical .newsui-slider-range-min { bottom: 0; }
+.newsui-slider-vertical .newsui-slider-range-max { top: 0; }
+ /* jQuery UI Tabs 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ *
+*/
+
+/*
+ * jQuery UI Datepicker 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.newsui-datepicker { width: 17em; padding: .2em .2em 0; display: none; }
+.newsui-datepicker .newsui-datepicker-header { position:relative; padding:.2em 0; }
+.newsui-datepicker .newsui-datepicker-prev, .newsui-datepicker .newsui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
+.newsui-datepicker .newsui-datepicker-prev-hover, .newsui-datepicker .newsui-datepicker-next-hover { top: 1px; }
+.newsui-datepicker .newsui-datepicker-prev { left:2px; }
+.newsui-datepicker .newsui-datepicker-next { right:2px; }
+.newsui-datepicker .newsui-datepicker-prev-hover { left:1px; }
+.newsui-datepicker .newsui-datepicker-next-hover { right:1px; }
+.newsui-datepicker .newsui-datepicker-prev span, .newsui-datepicker .newsui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.newsui-datepicker .newsui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.newsui-datepicker .newsui-datepicker-title select { font-size:1em; margin:1px 0; }
+.newsui-datepicker select.newsui-datepicker-month-year {width: 100%;}
+.newsui-datepicker select.newsui-datepicker-month, 
+.newsui-datepicker select.newsui-datepicker-year { width: 49%;}
+.newsui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.newsui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.newsui-datepicker td { border: 0; padding: 1px; }
+.newsui-datepicker td span, .newsui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+.newsui-datepicker .newsui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.newsui-datepicker .newsui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.newsui-datepicker .newsui-datepicker-buttonpane button.newsui-datepicker-current { float:left; }
+
+/* with multiple calendars */
+.newsui-datepicker.newsui-datepicker-multi { width:auto; }
+.newsui-datepicker-multi .newsui-datepicker-group { float:left; }
+.newsui-datepicker-multi .newsui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.newsui-datepicker-multi-2 .newsui-datepicker-group { width:50%; }
+.newsui-datepicker-multi-3 .newsui-datepicker-group { width:33.3%; }
+.newsui-datepicker-multi-4 .newsui-datepicker-group { width:25%; }
+.newsui-datepicker-multi .newsui-datepicker-group-last .newsui-datepicker-header { border-left-width:0; }
+.newsui-datepicker-multi .newsui-datepicker-group-middle .newsui-datepicker-header { border-left-width:0; }
+.newsui-datepicker-multi .newsui-datepicker-buttonpane { clear:left; }
+.newsui-datepicker-row-break { clear:both; width:100%; font-size:0em; }
+
+/* RTL support */
+.newsui-datepicker-rtl { direction: rtl; }
+.newsui-datepicker-rtl .newsui-datepicker-prev { right: 2px; left: auto; }
+.newsui-datepicker-rtl .newsui-datepicker-next { left: 2px; right: auto; }
+.newsui-datepicker-rtl .newsui-datepicker-prev:hover { right: 1px; left: auto; }
+.newsui-datepicker-rtl .newsui-datepicker-next:hover { left: 1px; right: auto; }
+.newsui-datepicker-rtl .newsui-datepicker-buttonpane { clear:right; }
+.newsui-datepicker-rtl .newsui-datepicker-buttonpane button { float: left; }
+.newsui-datepicker-rtl .newsui-datepicker-buttonpane button.newsui-datepicker-current { float:right; }
+.newsui-datepicker-rtl .newsui-datepicker-group { float:right; }
+.newsui-datepicker-rtl .newsui-datepicker-group-last .newsui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.newsui-datepicker-rtl .newsui-datepicker-group-middle .newsui-datepicker-header { border-right-width:0; border-left-width:1px; }
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.newsui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}/*
+ * jQuery UI Progressbar 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.newsui-progressbar { height:2em; text-align: left; }
+.newsui-progressbar .newsui-progressbar-value {margin: -1px; height:100%; }
+
+
+@media Print    
+{
+.newsui-newstabs-nav {
+    DISPLAY: none
+}
+    }
+.newsui-newstabs-nav {
+    
+}
+.newsui-newstabs-panel {
+    
+}
+.newsui-newstabs-nav {
+    PADDING-BOTTOM: 1px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 0px; PADDING-TOP: 0px;
+}
+.newsui-newstabs-nav:after {
+    DISPLAY: block; CLEAR: both; CONTENT: " "
+}
+.newsui-newstabs-nav LI {
+    MIN-WIDTH: 84px; MARGIN: 0px 0px 0px 1px; FLOAT: left
+}
+.newsui-newstabs-nav A {
+    PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; BACKGROUND: url(../../images/tab.png) no-repeat; PADDING-TOP: 0px
+}
+.newsui-newstabs-nav A SPAN {
+    PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; BACKGROUND: url(../../images/tab.png) no-repeat; PADDING-TOP: 0px
+}
+.newsui-newstabs-nav A {
+    TEXT-ALIGN: center; LINE-HEIGHT: 1.2; MARGIN: 0px 0px 0px; PADDING-LEFT: 0px; OUTLINE-WIDTH: 0px; WHITE-SPACE: nowrap; COLOR: #27537a; FONT-WEIGHT: bold; TEXT-DECORATION: none;
+}
+.newsui-newstabs-nav .newsui-newstabs-selected A {
+    Z-INDEX: 2; POSITION: relative; MARGIN-TOP: 0px; COLOR: #000; TOP: 0px; border-bottom:0px solid #fff;
+}
+.newsui-newstabs-nav A SPAN {
+    MIN-WIDTH: 64px; MIN-HEIGHT: 18px; WIDTH: 64px; PADDING-RIGHT: 0px; HEIGHT: 18px; PADDING-TOP: 6px
+}
+* > .newsui-newstabs-nav A SPAN {
+    WIDTH: auto; HEIGHT: auto
+}
+.newsui-newstabs-nav .newsui-newstabs-selected A SPAN {
+    PADDING-BOTTOM: 0px
+}
+.newsui-newstabs-nav .newsui-newstabs-selected A {
+    BACKGROUND-POSITION: 100% -150px;
+}
+.newsui-newstabs-nav A:hover {
+    BACKGROUND-POSITION: 100% -150px;
+}
+.newsui-newstabs-nav A:focus {
+    BACKGROUND-POSITION: 100% -150px
+}
+.newsui-newstabs-nav A:active {
+    BACKGROUND-POSITION: 100% -150px
+}
+.newsui-newstabs-nav A {
+    BACKGROUND-POSITION: 100% -100px
+}
+.newsui-newstabs-nav .newsui-newstabs-disabled A:hover {
+    BACKGROUND-POSITION: 100% -100px
+}
+.newsui-newstabs-nav .newsui-newstabs-disabled A:focus {
+    BACKGROUND-POSITION: 100% -100px
+}
+.newsui-newstabs-nav .newsui-newstabs-disabled A:active {
+    BACKGROUND-POSITION: 100% -100px
+}
+.newsui-newstabs-nav .newsui-newstabs-selected A SPAN {
+    BACKGROUND-POSITION: 0px -50px
+}
+.newsui-newstabs-nav A:hover SPAN {
+    BACKGROUND-POSITION: 0px -50px
+}
+.newsui-newstabs-nav A:focus SPAN {
+    BACKGROUND-POSITION: 0px -50px
+}
+.newsui-newstabs-nav A:active SPAN {
+    BACKGROUND-POSITION: 0px -50px
+}
+.newsui-newstabs-nav A SPAN {
+    BACKGROUND-POSITION: 0px 0px
+}
+.newsui-newstabs-nav .newsui-newstabs-disabled A:hover SPAN {
+    BACKGROUND-POSITION: 0px 0px
+}
+.newsui-newstabs-nav .newsui-newstabs-disabled A:focus SPAN {
+    BACKGROUND-POSITION: 0px 0px
+}
+.newsui-newstabs-nav .newsui-newstabs-disabled A:active SPAN {
+    BACKGROUND-POSITION: 0px 0px
+}
+.newsui-newstabs-nav .newsui-newstabs-selected A:link {
+    CURSOR: text
+}
+.newsui-newstabs-nav .newsui-newstabs-selected A:visited {
+    CURSOR: text
+}
+.newsui-newstabs-nav .newsui-newstabs-disabled A:link {
+    CURSOR: text
+}
+.newsui-newstabs-nav .newsui-newstabs-disabled A:visited {
+    CURSOR: text
+}
+.newsui-newstabs-nav A:hover {
+    CURSOR: pointer
+}
+.newsui-newstabs-nav A:focus {
+    CURSOR: pointer
+}
+.newsui-newstabs-nav A:active {
+    CURSOR: pointer
+}
+.newsui-newstabs-nav .newsui-newstabs-unselect A:hover {
+    CURSOR: pointer
+}
+.newsui-newstabs-nav .newsui-newstabs-unselect A:focus {
+    CURSOR: pointer
+}
+.newsui-newstabs-nav .newsui-newstabs-unselect A:active {
+    CURSOR: pointer
+}
+.newsui-newstabs-disabled {
+    FILTER: alpha(opacity=40); opacity: .4
+}
+.newsui-newstabs-panel {
+    PADDING-BOTTOM: 1em; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; BACKGROUND: #fff; BORDER-TOP: #aaa 1px solid; PADDING-TOP: 1em;
+}
+.newsui-newstabs-loading EM {
+    PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; BACKGROUND: url(loading.gif) no-repeat 0px 50%; PADDING-TOP: 0px
+}
+* HTML .newsui-newstabs-nav {
+    DISPLAY: inline-block
+}
+*:first-child + HTML .newsui-newstabs-nav {
+    DISPLAY: inline-block
+}
+.dspcont{display:block;}
+
+.tabheight
+{
+height:26px;
+height:25px\9;
+}
+.newsui-newstabs { position: relative; padding: 0px; zoom: 1;} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.newsui-newstabs .newsui-newstabs-nav { margin: 0; padding: .2em .2em 0; border-top:0px; border-left:0px; border-right:0px; 
+border-bottom-left-radius:0px; border-bottom-right-radius:0px; margin-left:15px;}
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; 
+
+border-bottom: 0 !important; padding: 0; white-space: nowrap;}
+.newsui-newstabs .newsui-newstabs-nav li a { float: left; text-decoration: none;}
+.newsui-newstabs .newsui-newstabs-nav li.newsui-newstabs-selected { margin-bottom: 0; padding-bottom: 1px; }
+.newsui-newstabs .newsui-newstabs-nav li.newsui-newstabs-selected a, .newsui-newstabs .newsui-newstabs-nav li.ui-state-disabled a, .newsui-newstabs .newsui-newstabs-nav 
+
+li.ui-state-processing a { cursor: text;  color:#dc291e !important; font-weight:bold;}
+.newsui-newstabs .newsui-newstabs-nav li a, .newsui-newstabs.newsui-newstabs-collapsible .newsui-newstabs-nav li.newsui-newstabs-selected a { cursor: pointer; } 
+.newsui-newstabs .newsui-newstabs-hide { display: none !important; }
+     

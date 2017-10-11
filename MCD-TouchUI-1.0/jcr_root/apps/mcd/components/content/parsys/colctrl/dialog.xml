@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:dialogMode="floating"
+    jcr:primaryType="cq:Dialog"
+    beforeSubmit="CQ.form.MCD.checkSiteLevel"
+    height="400"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/layout/flexicolumn.html?wcmmode=disabled"
+    title="Column Control"
+    width="200"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items
+            jcr:primaryType="nt:unstructured"
+            title=" Flexi Column Control"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <check
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Include rounded corners"
+                    name="./checkColumnctrl"
+                    type="checkbox"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <check
+                            jcr:primaryType="nt:unstructured"
+                            value="check"/>
+                    </options>
+                </check>
+                <layout
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldLabel="Column Layout"
+                    name="./layout"
+                    newStylePath="../../../jcr:content.style.json/sitelevelproperties/layouts"
+                    optionsCallback="CQ.utils.WCM.getDesignStyleOptions"
+                    stylePath="../../../jcr:content.style.json/sitelevelproperties/layouts"
+                    type="select"
+                    xtype="selection"/>
+                <useSiteLevel
+                    jcr:primaryType="cq:Widget"
+                    name="./useSiteLevel"
+                    type="text"
+                    xtype="hidden">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <check
+                            jcr:primaryType="nt:unstructured"
+                            value="check"/>
+                    </options>
+                </useSiteLevel>
+                <showColors
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The 'Hide Colors' option is locked to true for AU and NZ pages."
+                    fieldLabel="Hide Column Colors?:"
+                    name="./showColors"
+                    type="checkbox"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <yes
+                            jcr:primaryType="nt:unstructured"
+                            value="check"/>
+                    </options>
+                </showColors>
+                <colColors
+                    jcr:primaryType="cq:Widget"
+                    border="{Boolean}false"
+                    fieldLabel="Column Colors"
+                    id="mcdsitecolorclasslist"
+                    name="./backgroundColumnctrl"
+                    xtype="mcdsitecolorclasslist"/>
+                <padding
+                    jcr:primaryType="cq:Widget"
+                    collapsed="true"
+                    collapsible="true"
+                    title="Padding Options"
+                    width="{Long}200"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <paddingTop
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter Top padding in px"
+                            fieldLabel="Top Padding"
+                            grow="{Boolean}false"
+                            maxLength="{Long}2"
+                            name="./paddingTop"
+                            regex="/^\\s*\\d+\\s*$/"
+                            width="{Long}20"
+                            xtype="spinner">
+                            <strategy
+                                jcr:primaryType="nt:unstructured"
+                                incrementValue="{Double}1.0"
+                                maxValue="{Long}20"
+                                minValue="{Double}0.0"
+                                xtype="number"/>
+                        </paddingTop>
+                        <paddingRight
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter Right Padding in px"
+                            fieldLabel="Right Padding"
+                            name="./paddingRight"
+                            xtype="spinner">
+                            <strategy
+                                jcr:primaryType="nt:unstructured"
+                                incrementValue="{Double}1.0"
+                                maxValue="{Long}20"
+                                minValue="{Double}0.0"
+                                xtype="number"/>
+                        </paddingRight>
+                        <paddingBottom
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter bottom padding in px"
+                            fieldLabel="Bottom Padding"
+                            name="./paddingBottom"
+                            regex="/^\\s*\\d+\\s*$/"
+                            xtype="spinner">
+                            <strategy
+                                jcr:primaryType="nt:unstructured"
+                                incrementValue="{Double}1.0"
+                                maxValue="{Long}20"
+                                minValue="{Double}0.0"
+                                xtype="number"/>
+                        </paddingBottom>
+                        <paddingLeft
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter Left Padding in px"
+                            fieldLabel="Left Padding"
+                            name="./paddingLeft"
+                            xtype="spinner">
+                            <strategy
+                                jcr:primaryType="nt:unstructured"
+                                incrementValue="{Double}1.0"
+                                maxValue="{Long}20"
+                                minValue="{Double}0.0"
+                                xtype="number"/>
+                        </paddingLeft>
+                    </items>
+                </padding>
+                <margin
+                    jcr:primaryType="cq:Widget"
+                    collapsed="true"
+                    collapsible="true"
+                    title="Margin Options"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <marginTop
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter Top margin in px"
+                            fieldLabel="Top margin"
+                            name="./marginTop"
+                            xtype="spinner">
+                            <strategy
+                                jcr:primaryType="nt:unstructured"
+                                incrementValue="{Double}1.0"
+                                maxValue="{Long}20"
+                                minValue="{Double}0.0"
+                                xtype="number"/>
+                        </marginTop>
+                        <marginRight
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter Right Margin in px"
+                            fieldLabel="Right Margin"
+                            name="./marginRight"
+                            xtype="spinner">
+                            <strategy
+                                jcr:primaryType="nt:unstructured"
+                                incrementValue="{Double}1.0"
+                                maxValue="{Long}20"
+                                minValue="{Double}0.0"
+                                xtype="number"/>
+                        </marginRight>
+                        <marginBottom
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter Bottom Margin in px"
+                            fieldLabel="Bottom Margin"
+                            name="./marginBottom"
+                            xtype="spinner">
+                            <strategy
+                                jcr:primaryType="nt:unstructured"
+                                incrementValue="{Double}1.0"
+                                maxValue="{Long}20"
+                                minValue="{Double}0.0"
+                                xtype="number"/>
+                        </marginBottom>
+                        <marginLeft
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter Left Margin in px"
+                            fieldLabel="Left Margin"
+                            name="./marginLeft"
+                            xtype="spinner">
+                            <strategy
+                                jcr:primaryType="nt:unstructured"
+                                incrementValue="{Double}1.0"
+                                maxValue="{Long}20"
+                                minValue="{Double}0.0"
+                                xtype="number"/>
+                        </marginLeft>
+                    </items>
+                </margin>
+                <restoreButton
+                    jcr:primaryType="cq:Widget"
+                    border="{Boolean}false"
+                    fieldLabel="Restore to site level properties"
+                    name="./restorebutton"
+                    xtype="restorebutton"/>
+            </items>
+        </items>
+    </items>
+</jcr:root>

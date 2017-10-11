@@ -1,0 +1,65 @@
+/* Let's Talk Styles */
+.letsTalkBox{
+    position: relative;
+    font-family:Arial, Helvetica, sans-serif; 
+    color:#333333; 
+    line-height:17px; 
+    margin-bottom:10px; 
+    background:#fff;
+    /* margin-left:-23px; */
+    width: 100%;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px; 
+    border-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+    position: relative; 
+}
+
+#letsTalkBox{
+    position: relative;
+    font-family:Arial, Helvetica, sans-serif; 
+    color:#333333; 
+    line-height:17px; 
+    margin-bottom:10px; 
+    background:#fff;
+    /* margin-left:-23px; */
+    width: 100%;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+    position: relative; 
+}
+.letsTalkContent {margin-bottom: 10px; padding: 0 10px 0 10px;}
+.letsTalkBox .talkTitle {
+    padding: 10px; width: 100%;
+}
+.letsTalkBox .boxHdBlack{
+    position: relative;
+    display: block;
+    min-width: 100%;
+    margin: 0 0 10px 0 !important;
+    font-size:32px; 
+    line-height:28px; 
+    color:#e4281f; 
+    font-weight:normal;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #CCC;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+    position: relative;
+    }  
+.letsTalkBox .boxHdBlue{font-size:32px; line-height:36px; color:#007796; font-weight:bold;}
+.letsTalkBox .innerCont{padding:15px 20px;}
+.letsTalkBox .date{font-size:10px;}
+.letsTalkBox .txtHd{font-size:12px; font-weight:bold;}
+.letsTalkBox .innerTxt{font-size:11px; float:left;}
+.letsTalkBox .innerTxt a{color:#004276; text-decoration:underline;}
+.letsTalkBox .innerTxt a:hover{color:#004276; text-decoration:none;}
+.letsTalkBox .txtImg{margin: 10px 0px 0px 10px; vertical-align:top; width:138px; text-align:right;}
+.letsTalkBox .brdr{border:1px solid #ccc; border-bottom:none; padding:7px 15px 0px 15px;width:100%} 
+/* END Let's Talk Styles */

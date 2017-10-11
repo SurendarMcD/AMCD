@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Like">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <defualtText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default message to display on the page.eg.&quot; Be the first to like this&quot;"
+                        fieldLabel="Default Text"
+                        name="./defaulttext"
+                        xtype="textfield"/>
+                    <message
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Configure message to display on the page when like count is more than 0."
+                        fieldLabel="Display Text"
+                        name="./message"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

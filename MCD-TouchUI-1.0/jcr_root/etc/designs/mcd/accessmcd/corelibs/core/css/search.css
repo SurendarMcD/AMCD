@@ -1,0 +1,486 @@
+
+
+@charset "utf-8";
+/* CSS Document */
+.float{float:left;}
+.clear{clear:both;}
+p{margin:0; padding:0;}
+.search_wrapper{float:left; margin:14px 0 0 0; padding:0 0 0 10px;}
+.select_code{height:32px; cursor:pointer;}
+.select_code p{color:#3f3f3f; background:url(/images/customSelect-arrow.gif) no-repeat 38px center;}
+.select_box{max-height:150px; display:none;}
+.select_box ul{margin:0; padding:0; list-style-type:none; position:relative;}
+.select_box ul li{font-size:11px;color:#333; cursor:pointer; background:#fff; padding:2px 0px 2px 3px; border-top:1px solid #999;border-left:1px solid #999; border-right:1px solid #999; box-shadow:inset 0 0 5px #d2d2d2;}
+#site{ border-bottom:1px solid #999;}
+.select_box ul li:last-child{border-bottom:1px solid #999;}
+.list_body{margin:0 0 0 20px;}
+.list_body ul{list-style-type:none; margin:0; padding:0;}
+.list_body li{margin:0; padding:0 0 0 10px; display:inline-block;}
+/*.checkbox, .radio{width:19px; height:18px; padding:0 5px 0 0; background: url(../images/radio.png) top left no-repeat; display:block; clear:both; float:left;}
+.radio{background:url(../images/radio.png) no-repeat;}*/
+.select{position: absolute;font-size:13px;color:#4F4F4F;height: 29px;line-height:29px;padding:0 5px;background: url(../images/select.png) no-repeat;overflow: hidden;}
+.option{font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#4F4F4F; border:0px;z-index:999;}
+.submit_btn{border:0; background:url(../images/search_btn.png) no-repeat center center;height:28px;}
+.img_btn1{border:none; background:url(../images/mcdonalds.png) no-repeat center center; width:47px; height:28px; border-radius:5px;}
+.img_btn2{border:none; background:url(../images/globe.png) no-repeat center center; width:47px; height:28px; border-radius:5px;}
+.img_btn3{border:none; background:url(../images/search.png) no-repeat center center; width:47px; height:28px; border-radius:5px;}
+   
+.selectLabel span img{} 
+.option li span img{}
+
+/*Yahoo Searchbox*/
+.searchbox{border:0; color:#3F3F3F; font-family:Arial, Helvetica, sans-serif; font-size:14px; padding:8px 5px 8px 5px; #padding-bottom:6px; padding-bottom:6px\9; box-shadow:inset 0 0 5px #d2d2d2;width:175px;z-index:2000;}
+.search_btn{
+    background:#dc291e;
+    border-color: #dc291e;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    height:33px;
+    padding:0;
+    color:#fff;
+    text-align: center;
+    font:300 15px sans-serif;
+    }
+span.customSelect {
+    font-size:11px;
+    background-color:#f18b85;
+    color:#fff;
+    padding:5px 7px;
+    border:1px solid #dc291e;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px;
+}
+span.customSelect.changed {
+    background-color: #f0dea4;
+}
+
+.searchfield{
+    font-size:11px; 
+    text-align:right;
+    height:10px;
+    line-height:12px;
+    display:inline-block; 
+    width:16px!important;
+    padding:11px 0 11px 5px;
+}
+
+.searchfield img{display:block;}
+
+.search_arrow
+{
+    font-size:11px; 
+    text-align:right;
+    height:32px;
+    line-height:12px;
+    display:inline-block;
+    width:10px!important;
+}
+
+.search_arrow img{display:block; padding:12px 0;}
+
+.searchoption{
+    font-size:12px; 
+    text-align:right;
+    padding:10px 5px 10px 0px;
+    line-height:12px;
+    display:inline-block;
+    vertical-align:top;
+}
+
+
+.search_btn{width : 41px!important;}
+
+.customSelectInner{background:url(../images/_arrow.png) no-repeat center right;}
+sel ect option{font-size:11px; padding:5px; border:0 !important;}
+/*Yahoo Searchbox*/   
+/*! jQuery UI - v1.10.2 - 2013-03-14
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana%2CArial%2Csans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=cccccc&bgTextureHeader=highlight_soft&bgImgOpacityHeader=75&borderColorHeader=aaaaaa&fcHeader=222222&iconColorHeader=222222&bgColorContent=ffffff&bgTextureContent=flat&bgImgOpacityContent=75&borderColorContent=aaaaaa&fcContent=222222&iconColorContent=222222&bgColorDefault=e6e6e6&bgTextureDefault=glass&bgImgOpacityDefault=75&borderColorDefault=d3d3d3&fcDefault=555555&iconColorDefault=888888&bgColorHover=dadada&bgTextureHover=glass&bgImgOpacityHover=75&borderColorHover=999999&fcHover=212121&iconColorHover=454545&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=aaaaaa&fcActive=212121&iconColorActive=454545&bgColorHighlight=fbf9ee&bgTextureHighlight=glass&bgImgOpacityHighlight=55&borderColorHighlight=fcefa1&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=fef1ec&bgTextureError=glass&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+* Copyright 2013 jQuery Foundation and other contributors Licensed MIT */
+
+/* nesting all under automplete id to avoid conflicts w/accordian & tab ECW */
+
+/*start .search_wrapper  nest */
+.search_wrapper .ui-helper-hidden {
+    display: none;
+}
+.search_wrapper .ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.search_wrapper .ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none;
+}
+.search_wrapper .ui-helper-clearfix:before,
+.search_wrapper .ui-helper-clearfix:after {
+    content: "";
+    display: table;
+    border-collapse: collapse;
+}
+.search_wrapper .ui-helper-clearfix:after {
+    clear: both;
+}
+.search_wrapper .ui-helper-clearfix {
+    min-height: 0; 
+}
+.search_wrapper .ui-helper-zfix {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    filter:Alpha(Opacity=0);
+}
+
+.search_wrapper .ui-front {
+    z-index: 100;
+}
+
+
+.search_wrapper .ui-state-disabled {
+    cursor: default !important;
+}
+
+.search_wrapper .ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.search_wrapper .ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* added to hide result message ECW 5/1/2014 */
+.ui-helper-hidden-accessible { position: absolute; left:-999em; }
+
+
+.ui-autocomplete.ui-menu {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    display: block;
+    outline: none;
+    z-index: 2000;
+}
+
+.ui-autocomplete.ui-menu .ui-menu {
+    margin-top: -3px;
+    position: absolute;
+}
+.ui-autocomplete.ui-menu .ui-menu-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.ui-autocomplete.ui-menu .ui-menu-divider {
+    margin: 5px -2px 5px -2px;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 1px 0 0 0;
+}
+.ui-autocomplete.ui-menu .ui-menu-item a {
+    text-decoration: none;
+    display: block;
+    padding: 2px .4em;
+    line-height: 1.5;
+    min-height: 0; /* support: IE7 */
+    font-weight: normal;
+}
+.ui-autocomplete.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-autocomplete.ui-menu .ui-menu-item a.ui-state-active {
+    font-weight: normal;
+    margin: -1px;
+}
+
+.ui-autocomplete.ui-menu .ui-menu .ui-state-disabled {
+    font-weight: normal;
+    margin: .4em 0 .2em;
+    line-height: 1.5;
+}
+.ui-autocomplete.ui-menu .ui-state-disabled a {
+    cursor: default;
+}
+
+
+/* icon support */
+.ui-autocomplete.ui-menu .ui-menu-icons {
+    position: relative;
+}
+.ui-autocomplete.ui-menu .ui-menu-icons .ui-menu-item a {
+    position: relative;
+    padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-autocomplete.ui-menu  .ui-icon {
+    position: absolute;
+    top: .2em;
+    left: .2em;
+}
+
+/* right-aligned */
+.ui-autocomplete.ui-menu  .ui-menu-icon {
+    position: static;
+    float: right;
+}
+
+
+
+/* Component containers
+----------------------------------*/
+.ui-autocomplete.ui-widget {
+    font-family:font-family:Arial, Helvetica, sans-serif;;
+    #font-size: 1.1em;
+}
+.ui-autocomplete.ui-widget .ui-widget {
+    font-size: 1em;
+}
+.ui-autocomplete.ui-widget input,
+.ui-autocomplete.ui-widget select,
+.ui-autocomplete.ui-widget textarea,
+.ui-autocomplete.ui-widget button {
+    font-family:font-family:Arial, Helvetica, sans-serif;;
+    font-size: 1em;
+}
+.ui-autocomplete.ui-widget-content {
+    border: 1px solid #aaaaaa;
+    background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
+    color: #222222;
+}
+.ui-autocomplete.ui-widget-content a {
+    color: #222222;
+}
+.ui-autocomplete .ui-widget-header {
+    border: 1px solid #aaaaaa;
+    background: #cccccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+    color: #222222;
+    font-weight: bold;
+}
+.ui-autocomplete .ui-widget-header a {
+    color: #222222;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-autocomplete .ui-state-default,
+.ui-autocomplete.ui-widget-content .ui-state-default,
+.ui-autocomplete .ui-widget-header .ui-state-default {
+    border: 1px solid #d3d3d3;
+    background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #555555;
+}
+.ui-autocomplete .ui-state-default a,
+.ui-autocomplete .ui-state-default a:link,
+.ui-autocomplete .ui-state-default a:visited {
+    color: #555555;
+    text-decoration: none;
+}
+.ui-autocomplete .ui-state-hover,
+.ui-autocomplete.ui-widget-content .ui-state-hover,
+.ui-autocomplete .ui-widget-header .ui-state-hover,
+.ui-autocomplete .ui-state-focus,
+.ui-autocomplete.ui-widget-content .ui-state-focus,
+.ui-autocomplete .ui-widget-header .ui-state-focus {
+    border: 1px solid #999999;
+    background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #212121;
+}
+.ui-autocomplete .ui-state-hover a,
+.ui-autocomplete .ui-state-hover a:hover,
+.ui-autocomplete .ui-state-hover a:link,
+.ui-autocomplete .ui-state-hover a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+.ui-autocomplete .ui-state-active,
+.ui-autocomplete.ui-widget-content .ui-state-active,
+.ui-autocomplete .ui-widget-header .ui-state-active {
+    border: 1px solid #aaaaaa;
+    background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #212121;
+}
+.ui-autocomplete .ui-state-active a,
+.ui-autocomplete .ui-state-active a:link,
+.ui-autocomplete .ui-state-active a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-autocomplete .ui-state-highlight,
+.ui-autocomplete.ui-widget-content .ui-state-highlight,
+.ui-autocomplete .ui-widget-header .ui-state-highlight {
+    border: 1px solid #fcefa1;
+    background: #fbf9ee url(images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x;
+    color: #363636;
+}
+.ui-autocomplete .ui-state-highlight a,
+.ui-autocomplete.ui-widget-content .ui-state-highlight a,
+.ui-autocomplete .ui-widget-header .ui-state-highlight a {
+    color: #363636;
+}
+.ui-autocomplete .ui-state-error,
+.ui-autocomplete.ui-widget-content .ui-state-error,
+.ui-autocomplete .ui-widget-header .ui-state-error {
+    border: 1px solid #cd0a0a;
+    background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x;
+    color: #cd0a0a;
+}
+.ui-autocomplete .ui-state-error a,
+.ui-autocomplete.ui-widget-content .ui-state-error a,
+.ui-autocomplete .ui-widget-header .ui-state-error a {
+    color: #cd0a0a;
+}
+.ui-autocomplete .ui-state-error-text,
+.ui-autocomplete.ui-widget-content .ui-state-error-text,
+.ui-autocomplete .ui-widget-header .ui-state-error-text {
+    color: #cd0a0a;
+}
+.ui-autocomplete .ui-priority-primary,
+.ui-autocomplete.ui-widget-content .ui-priority-primary,
+.ui-autocomplete .ui-widget-header .ui-priority-primary {
+    font-weight: bold;
+}
+.ui-autocomplete .ui-priority-secondary,
+.ui-autocomplete.ui-widget-content .ui-priority-secondary,
+.ui-autocomplete .ui-widget-header .ui-priority-secondary {
+    opacity: .7;
+    filter:Alpha(Opacity=70);
+    font-weight: normal;
+}
+.ui-autocomplete .ui-state-disabled,
+.ui-autocomplete.ui-widget-content .ui-state-disabled,
+.ui-autocomplete .ui-widget-header .ui-state-disabled {
+    opacity: .35;
+    filter:Alpha(Opacity=35);
+    background-image: none;
+}
+.ui-autocomplete .ui-state-disabled .ui-icon {
+    filter:Alpha(Opacity=35); /* For IE8 - See #6059 */
+}
+
+
+/* states and images */
+.ui-autocomplete .ui-icon {
+    width: 16px;
+    height: 16px;
+}
+.ui-autocomplete .ui-icon,
+.ui-autocomplete .ui-widget-content .ui-icon {
+    background-image: url(images/ui-icons_222222_256x240.png);
+}
+.ui-autocomplete .ui-widget-header .ui-icon {
+    background-image: url(images/ui-icons_222222_256x240.png);
+}
+.ui-autocomplete .ui-state-default .ui-icon {
+    background-image: url(images/ui-icons_888888_256x240.png);
+}
+.ui-autocomplete .ui-state-hover .ui-icon,
+.ui-autocomplete .ui-state-focus .ui-icon {
+    background-image: url(images/ui-icons_454545_256x240.png);
+}
+.ui-autocomplete .ui-state-active .ui-icon {
+    background-image: url(images/ui-icons_454545_256x240.png);
+}
+.ui-autocomplete .ui-state-highlight .ui-icon {
+    background-image: url(images/ui-icons_2e83ff_256x240.png);
+}
+.ui-autocomplete .ui-state-error .ui-icon,
+.ui-autocomplete .ui-state-error-text .ui-icon {
+    background-image: url(images/ui-icons_cd0a0a_256x240.png);
+}
+
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-autocomplete .ui-corner-all,
+.ui-autocomplete .ui-corner-top,
+.ui-autocomplete .ui-corner-left,
+.ui-autocomplete .ui-corner-tl {
+    border-top-left-radius: 4px;
+}
+.ui-autocomplete .ui-corner-all,
+.ui-autocomplete .ui-corner-top,
+.ui-autocomplete .ui-corner-right,
+.ui-autocomplete .ui-corner-tr {
+    border-top-right-radius: 4px;
+}
+.ui-autocomplete .ui-corner-all,
+.ui-autocomplete .ui-corner-bottom,
+.ui-autocomplete .ui-corner-left,
+.ui-autocomplete .ui-corner-bl {
+    border-bottom-left-radius: 4px;
+}
+.ui-autocomplete .ui-corner-all,
+.ui-autocomplete .ui-corner-bottom,
+.ui-autocomplete .ui-corner-right,
+.ui-autocomplete .ui-corner-br {
+    border-bottom-right-radius: 4px;
+}
+
+/* Overlays */
+.ui-autocomplete .ui-widget-overlay {
+    background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+}
+.ui-autocomplete .ui-widget-shadow {
+    margin: -8px 0 0 -8px;
+    padding: 8px;
+    background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+    border-radius: 8px;
+}
+
+
+/* MCD CUSTOM */
+.ui-autocomplete-category{font-weight:bold; padding:8px 5px; border-radius:5px; margin:5px 0; border:1px solid #aaaaaa; background:#d2d2d2; line-height:10px;}
+
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    font:300 11px sans-serif;
+    z-index: 2000;
+} 

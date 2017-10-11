@@ -1,0 +1,15 @@
+/* Styles for OOTB Form Components */
+.form_leftcolmark {
+display: inline;
+color: #FF0000;
+}
+.form_leftcollabel {
+display: inline;
+font-weight: normal;
+padding-left: 1px;
+}
+.form_row_description {
+font-size: 9px;
+color: #999;
+padding-left: 1px;
+}

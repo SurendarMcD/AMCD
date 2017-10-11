@@ -1,0 +1,168 @@
+.topnav_icons{vertical-align:middle;padding-right:5px;}
+#nav{padding:0;font-size:12px;zoom:1;margin-bottom:21px;marg in-top:-50px;float:none;width:960px;}
+#nav a{font-size:12px;color:#333;}
+#nav a span{font-size:12px;font-weight:bold;}
+#nav ul{list-style-type:none;padding:0;margin:0;}
+#nav ul li ul{background-color:#fff;padding:0;margin:0;text-align:center;}
+#nav ul li{list-style:none;float:left;text-align:center;padding:0;margin:0;word-wrap:break-word;background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px 0;display:block;}
+#nav ul li a,#nav-icons ul li a{white-space:nowrap;}
+#nav ul li ul li a,#nav-icons ul li ul li a{white-space:normal;}
+#nav ul li:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -34px;}
+#nav ul li:hover a{color:#FFF;}
+#nav ul li a span.darrow{width:10px;height:8px;background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/downArrow.png) no-repeat 0 0;display:inline-block;margin-left:5px;}
+#nav ul li:hover span.darrow{background-position:0 -8px;}
+#nav ul li:hover ul li a{color:#000; text-align:left;}
+#nav ul li:hover ul li a:hover{color:#FFF;}
+#nav ul li.active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -68px;color:#fff;}
+#nav ul li.active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -34px;color:#fff;}
+#nav ul li.left_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 0;}
+#nav ul li.left_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px;color:#FFF!important;}
+#nav ul li.right_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat right 0;}
+#nav ul li.right_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat right -34px;color:#FFF!important;}
+#nav .left_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -68px;}
+#nav .left_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px;}
+#nav .right_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat right -68px;}
+#nav .right_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat right -34px;}
+#nav ul li.both_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 0;}
+#nav ul li.both_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px;color:#FFF!important;}
+#nav .both_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -68px;}
+#nav .both_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px;}
+#nav ul li.both_side700{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_700.png) no-repeat 0 0;}
+#nav ul li.both_side700:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_700.png) no-repeat 0 -34px;color:#FFF!important;}
+#nav .both_side_active700{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_700.png) no-repeat 0 -68px;}
+#nav .both_side_active700:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_700.png) no-repeat 0 -34px;}
+#nav a{border-right:1px solid #CCC;padding:9px 1px;display:block;font-weight:bold;text-decoration:none;font:bold 12px Arial,Helvetica,sans-serif;margin:0;color:#426f9a;}
+#nav li.right_side a,#nav li.right_side_active a,#nav-icons li.right_side_active a,#nav-icons li.right_side a,#nav li.both_side a,#nav-icons li.both_side a,#nav li.both_side_active a,#nav-icons li.both_side_active a{border-right:none;}
+#nav ul li ul{position:absolute;display:none;padding:0;margin:0;}
+#nav ul li ul.last{margin-left:-80px!important;}
+#nav ul li:hover ul{display:block;}
+#nav ul li:hover ul li ul{display:none;}
+#nav ul li ul li:hover ul{display:block;}
+#nav ul li ul li:hover ul li ul{display:none;}
+#nav ul li ul li ul li:hover ul{display:block;}
+#nav ul li ul li{overflow:visible;text-align:center;float:none;margin:0;padding:0;display:block;border-right:0!important;}
+#nav ul li ul li a{color:#333;padding:8px;background:none!important;background-color:#FFF!important;display:block;line-height:15px!important;white-space:;}
+#nav ul li ul li a:hover{color:#000;}
+#nav ul li ul.last{margin-left:20px;}
+.borderbottom-none{border-bottom:0;}
+#nav ul li ul li a{height:auto;margin:0;}
+#nav a.left_side_straight{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px 0;border-left:1px solid #CCC;}
+#nav a.left_side_straight:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -34px;}
+#nav .left_side_straight_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -68px;}
+#nav a.right_side_straight{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px 0;border-right:1px solid #CCC;}
+#nav a.right_side_straight:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -34px;}
+#nav .right_side_straight_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -68px;}
+#nav-icons{padding:0;font-size:12px;zoom:1;color:#333;margin-bottom:21px;margin-top:0;float:none;width:960px;}
+#nav-icons a{font-size:12px;color:#333;}
+#nav-icons a span{font-size:12px;font-weight:bold;}
+#nav-icons ul{list-style-type:none;padding:0;margin:0;}
+#nav-icons ul li ul{background-color:#fff;padding:0;margin:0;text-align:center;}
+#nav-icons ul li{list-style:none;float:left;text-align:center;padding:0;margin:0;word-wrap:break-word;background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat -6px 0;display:block;}
+#nav-icons ul li.active-menu{background:url(./images/active_menu_bg.jpg) repeat-x;}
+#nav-icons ul li:hover a{color:#000;}
+#nav-icons ul li a span.darrow{width:10px;height:8px;background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/downArrow.png) no-repeat 0 0;display:inline-block;margin-left:5px;overflow:hidden;}
+#nav-icons ul li:hover span.darrow{background-position:0 -8px;}
+#nav-icons ul li:hover ul li a{color:#000;}
+#nav-icons ul li:hover ul li a:hover{color:#fff;}
+#nav-icons a{padding:5px 8px;display:block;font-weight:bold;text-decoration:none;font:bold 12px Arial,Helvetica,sans-serif;color:#333;margin:0;border-right:1px solid #CCC;}
+#nav-icons a:hover{color:#FFF;}
+#nav-icons ul li:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat -6px -45px;color:#FFF;}
+#nav-icons ul li.active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat -6px -90px;color:#fff;}
+#nav-icons ul li.active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat -6px -45px;color:#fff;}
+#nav-icons ul li.left_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 0;}
+#nav-icons ul li.left_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 -45px;color:#FFF!important;}
+#nav-icons ul li.right_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat right 0;}
+#nav-icons ul li.right_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat right -45px;color:#FFF!important;}
+#nav-icons .right_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat right -45px;}
+#nav-icons ul li.both_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 0;}
+#nav-icons ul li.both_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 -45px;color:#FFF!important;}
+#nav-icons .both_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 -90px;}
+#nav-icons .both_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 -45px;}
+#nav-icons ul li.both_side700{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons700.png) no-repeat 0 0;}
+#nav-icons ul li.both_side700:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons700.png) no-repeat 0 -45px;color:#FFF!important;}
+#nav-icons .both_side_active700{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons700.png) no-repeat 0 -90px;}
+#nav-icons .both_side_active700:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons700.png) no-repeat 0 -45px;}
+#nav-icons ul li ul{position:absolute;display:none;padding:0;margin:0;}
+#nav-icons ul li ul.last{margin-left:-80px!important;}
+#nav-icons ul li:hover ul{display:block;}
+#nav-icons ul li:hover ul li ul{display:none;}
+#nav-icons ul li ul li:hover ul{display:block;}
+#nav-icons ul li ul li:hover ul li ul{display:none;}
+#nav-icons ul li ul li ul li:hover ul{display:block;}
+#nav-icons ul li ul li{overflow:visible;text-align:left;float:none;margin:0;padding:0;display:block;border-right:0!important;}
+#nav-icons ul li ul li a{padding:8px;background:none!important;background-color:#FFF!important;display:block;line-height:15px!important;}
+#nav-icons ul li ul.last{margin-left:20px;}
+.borderbottom-none{border-bottom:0;}
+#nav-icons .left_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 -90px;}
+#nav-icons .left_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 -45px;}
+#nav-icons .right_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat right -90px;}
+#nav-icons ul li ul li a{height:auto;margin:0;}
+#nav-icons a.left_side_straight{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 0;border-left:1px solid #CCC;}
+#nav-icons a.left_side_straight:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 -45px;}
+#nav-icons .left_side_straight_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat 0 -90px;}
+#nav-icons a.right_side_straight{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat right 0;border-right:1px solid #CCC;}
+#nav-icons a.right_side_straight:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat right -45px;}
+#nav-icons .right_side_straight_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite_icons.png) no-repeat right -90px;}
+#nav ul li.straight_nav_active{background:transparent url(./images/top_nav_sprite_straight.png) no-repeat scroll 0 -68px;}
+#nav ul li.straight_nav{background:transparent url(./images/top_nav_sprite_straight.png) no-repeat scroll 0 0;}
+#nav ul li.straight_nav_hover{background:transparent url(./images/top_nav_sprite_straight.png) no-repeat scroll 0 -33px;}
+#nav ul li.straight_nav:hover,#nav-icons ul li.straight_nav_active:hover{background:transparent url(./images/top_nav_sprite_straight.png) no-repeat scroll 0 -33px;}
+#nav-icons ul li.straight_navicons{background:transparent url(./images/top_nav_iconssprite_straight.png) no-repeat scroll 0 0;}
+#nav-icons ul li.straight_navicons_active{background:transparent url(./images/top_nav_iconssprite_straight.png) no-repeat scroll 0 -90px;}
+#nav-icons ul li.straight_navicons_hover{background:transparent url(./images/top_nav_iconssprite_straight.png) no-repeat scroll 0 -45px;}
+#nav-icons ul li.straight_navicons:hover,#nav-icons ul li.straight_navicons_active:hover{background:transparent url(./images/top_nav_iconssprite_straight.png) no-repeat scroll 0 -45px;}
+ul.sub-menu li a:hover{color:#000;}
+
+
+
+
+/* CSS from clientlib */
+
+
+#nav ul li ul{border:1px solid #426f9a!important;}
+#nav ul li ul li{border-bottom:1px solid #426f9a!important;}
+#nav ul li ul li a:hover{background-color:#426f9a!important;}
+#nav-icons ul li ul{border:1px solid #426f9a!important;}
+#nav-icons ul li ul li{border-bottom:1px solid #426f9a!important;}
+#nav-icons ul li ul li a:hover{background-color:#426f9a!important;}
+#nav ul li:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -34px!important;}
+#nav ul li.active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -68px!important;color:#fff;}
+#nav ul li.active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -34px!important;color:#fff;}
+#nav ul li.left_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 0!important;}
+#nav ul li.left_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px!important;color:#FFF!important;}
+#nav ul li.right_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat right 0!important;}
+#nav ul li.right_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat right -34px!important;color:#FFF!important;}
+#nav .left_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -68px!important;}
+#nav .left_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px!important;}
+#nav .right_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat right -68px!important;}
+#nav .right_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat right -34px!important;}
+#nav ul li.both_side{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 0!important;}
+#nav ul li.both_side:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px!important;color:#FFF!important;}
+#nav .both_side_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -68px!important;}
+#nav .both_side_active:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px!important;}
+#nav ul li.both_side700{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 0!important;}
+#nav ul li.both_side700:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat 0 -34px!important;color:#FFF!important;}
+#nav .both_side_active700{background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_cyan/images/top_nav_sprite_700.png) no-repeat 0 -68px!important;}
+#nav .both_side_active700:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_cyan/images/top_nav_sprite_700.png) no-repeat 0 -34px!important;}
+#nav a.left_side_straight{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px 0!important;border-left:1px solid #CCC;}
+#nav a.left_side_straight:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -34px!important;}
+#nav .left_side_straight_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -68px!important;}
+#nav a.right_side_straight{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px 0!important;border-right:1px solid #CCC;}
+#nav a.right_side_straight:hover{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png) no-repeat -6px -34px!important;}
+#nav .right_side_straight_active{background:transparent url(/etc/designs/mcd/accessmcd/g2g/g2g_cyan/images/top_nav_sprite.png)no-repeat -6px -68px!important;}
+/* Top Navigation menu spacing fix */
+#div_topnav ul {
+    z-index: 1000 !important;
+}
+#nav {
+    z-index: 1000 !important;
+}
+
+.topnavigation #nav a {
+    padding: 9px 0px !important;
+}
+
+.topnavigation #nav ul li ul li a {
+    padding: 9px !important;
+    text-align: left !important;
+}

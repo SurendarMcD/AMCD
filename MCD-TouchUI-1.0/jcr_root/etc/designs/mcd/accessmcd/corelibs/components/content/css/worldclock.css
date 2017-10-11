@@ -1,0 +1,18 @@
+.clockContainer {
+    width: auto;
+    margin: 0 auto;
+}
+
+.worldClock .rounded {
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+}
+
+.worldClock .swfClock {
+    position: relative;
+    top: -8px;
+    left: -4px;
+    margin: 0 !important; padding: 0 !important;
+}

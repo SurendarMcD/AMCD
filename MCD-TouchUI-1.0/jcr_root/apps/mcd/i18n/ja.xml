@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="ja"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <MB_ADD
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Add"/>
+    <MB_ADD_ALL
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="All>>"/>
+    <MB_BOOKMARK_ADDED_SUCCESSFULLY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Bookmark Added Successfully."/>
+    <MB_BOOKMARK_ALREADY_EXISTS_OVERRIDE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Bookmark already exists. Do you want to override the existing bookmark."/>
+    <MB_BOOKMARK_UPDATED_SUCCESSFULLY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Bookmark Updated Successfully."/>
+    <MB_BOOKMARKS_UPDATED
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Bookmarks Updated Successfully."/>
+    <MB_CANCEL
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Cancel"/>
+    <MB_DELETE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Delete"/>
+    <MB_DONE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Save"/>
+    <MB_DOWN
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Down"/>
+    <MB_EDIT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Edit"/>
+    <MB_FAV_BOOKMARK_SITE_LIMIT_EXEEDED
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Add"/>
+    <MB_HELP_TEXT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Double click a site name to preview the site."/>
+    <MB_LEFT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="&lt;&lt;"/>
+    <MB_NO_ACCESS
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Add"/>
+    <MB_NO_AUD_TYPE_SELECTED
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Please select Audience Type to add Site."/>
+    <MB_NO_SITES_FOUND
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Add"/>
+    <MB_NO_USERS_FOUND
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Add"/>
+    <MB_REMOVE_ALL
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="All&lt;&lt;"/>
+    <MB_RIGHT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message=">>"/>
+    <MB_SITE_ADDED_SUCCESSFULLY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Site Added Successfully."/>
+    <MB_SITE_ALREADY_EXISTS
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Site Name Already Exists."/>
+    <MB_SITE_DELETED_SUCCESSFULLY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Site Deleted Successfully."/>
+    <MB_SITE_UPDATED_SUCCESSFULLY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Site Updated Successfully."/>
+    <MB_UP
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Up"/>
+    <MB_USER_ADDED_SUCCESSFULLY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User Added Successfully."/>
+    <MB_USER_ALREADY_EXISTS
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User Already Exists."/>
+    <MB_USER_DELETED_SUCCESSFULLY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User Deleted Successfully."/>
+    <MB_USER_UPDATED_SUCCESSFULLY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User Updated Successfully."/>
+    <PAF_ADDME
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Send me a copy"/>
+    <PAF_ANOTHER
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Send Another"/>
+    <PAF_ARTICLE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Article*:"/>
+    <PAF_BODY
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Message"/>
+    <PAF_CANCEL
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Cancel"/>
+    <PAF_CLOSE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Close"/>
+    <PAF_FIRSTNAME
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="First Name"/>
+    <PAF_FOUNDMAX
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="There are more than 50 users found. Display the first 50."/>
+    <PAF_FROM
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Your Email"/>
+    <PAF_FROMNAME
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Your Name"/>
+    <PAF_LASTNAME
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Last Name*"/>
+    <PAF_LEGAL
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="The information contained in this e-mail and any accompanying documents is confidential, may be privileged, and is intended solely for the person and/or entity to whom it is addressed (i.e. those identified in the 'To' and 'cc' box). They are the property of McDonald's Corporation. Unauthorized review,use, disclosure, or copying of this communication, or any part thereof, is strictly prohibited and may be unlawful. If you have received this e-mail in error, please return the e-mail and attachments to the sender and delete the e-mail and attachments and any copy from your system. McDonald's thanks you for your cooperation."/>
+    <PAF_LINKTITLE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Page Title:"/>
+    <PAF_LINKWARN
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="*Please note that you might not have access to this link if you are in a different role group than the sender."/>
+    <PAF_MOREADDR
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Separate multiple addresses with commas"/>
+    <PAF_MSG_SENT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="The article has been sent to your friend"/>
+    <PAF_NORESULTS
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="No user found."/>
+    <PAF_NOTFOUND
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="No results found."/>
+    <PAF_POST_RESULT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="users"/>
+    <PAF_PRE_RESULT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Found"/>
+    <PAF_SELECT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Please select a user from the following list"/>
+    <PAF_SENDLINKTO
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Send link to:"/>
+    <PAF_SENDMORE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Do you want to send it to another friend?  "/>
+    <PAF_SUBJECT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Subject"/>
+    <PAF_SUBJECTLINE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message=" has sent you a link:  "/>
+    <PAF_SUBMIT
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Submit"/>
+    <PAF_THANKYOU
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Thank you!"/>
+    <PAF_TITLE
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="AccessMCD - Email to Friend"/>
+    <PAF_TO
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Email Address(es)"/>
+    <PAF_USEREMAIL
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User Email"/>
+    <PAF_USERID
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User ID"/>
+    <PAF_USERNAME
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User Name"/>
+    <PAGE_SIZE_ALERT1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="The following page has NOT been activated because it exceeds the maximum page size of "/>
+    <PAGE_SIZE_ALERT2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="MB. In order to activate this page, you must reduce its size by removing some of its content."/>
+    <UAF_ENTER_EID
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Please Enter an EID"/>
+    <UAF_GROUP_NOT_REPLICATED
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Group groupid(groupname) not replicated o Publish."/>
+    <UAF_MAX_RESULTS
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="More records exist, Please select a higher limit value to see more records."/>
+    <UAF_NO_USERS_FOR_GROUP
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Group groupname contains no members."/>
+    <UAF_SELECT_GROUP
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="Please select a Group."/>
+    <UAF_USER_DELETED
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid(fullname) deleted successfully from Group."/>
+    <UAF_USER_NOT_AUTHORIZED
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="You are not authorised to view the form."/>
+    <UAF_USER_NOT_CREATED
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid(fullname) not created in CQ."/>
+    <UAF_USER_NOT_EXIST_CQ
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid(fullname) does not exist in CQ."/>
+    <UAF_USER_NOT_EXIST_LDAP
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid(fullname) does not exist in LDAP."/>
+    <UAF_USER_NOT_FOUND
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid not found."/>
+    <UAF_USER_NOT_IN_GROUP
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid is not added in any group."/>
+    <UAF_USER_NOT_MEMBER_OF_GRP
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid(fullname) not a member of Group groupid(groupname) grouphandle."/>
+    <UAF_USER_NOT_REPLICATED
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid(fullname) not replicated on publish."/>
+    <UAF_USER_NOT_UPDT_IN_GRP
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid(fullname) not updated in Group."/>
+    <UAF_USER_SUCCESS
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="sling:Folder"
+        sling:message="User eid(fullname) added successfully in Group."/>
+</jcr:root>

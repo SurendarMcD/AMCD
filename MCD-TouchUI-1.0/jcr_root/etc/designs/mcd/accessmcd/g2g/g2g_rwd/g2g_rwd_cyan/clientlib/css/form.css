@@ -1,0 +1,55 @@
+.text
+{
+    margin-left: 20px;   
+}
+
+.textfield
+{    
+    margin-bottom: 8px;
+    width: 50%;    
+}
+
+.dropdown
+{
+    margin-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.form_row_description
+{
+    margin-bottom: 20px;        
+}
+
+.form_row_description span
+{
+    font-size: 11px !important;       
+}
+
+.end
+{
+    margin-left: 20px;
+}
+
+.end .form_row_description span
+{
+    font-size: 13px;          
+}
+
+.form_leftcollabel
+{
+    font-weight: bold !important;   
+    font-size: 12px !important;   
+}
+
+select[class="form_field form_field_select"]
+{
+    width:50%;
+}
+
+.form_leftcol
+{
+    margin-bottom: 10px !important; 
+}
+
+

@@ -1,0 +1,229 @@
+@media (max-width:600px)
+{
+    body
+    {
+        background:#fff; 
+        width:100%; 
+        margin:0 auto;  
+                -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;    
+    }
+    
+    img
+    {    
+        max-width:100%; 
+        height:auto; 
+        width: auto\9;
+    }     
+    #headerwrapper{
+      display:none;
+    }
+    #headerwrap
+    {
+        display:none;
+    }
+    
+    #pagecontentwrapper
+    {
+        margin:20px auto 0; 
+        padding:0 !important; 
+        width:100% !important;        
+    } 
+    
+    #right-results-column
+    {    
+        float:none !important; 
+        max-width:100% !important;    
+    } 
+    
+    #content_txt
+    {
+        width:100% !important;
+    }
+    
+    #maincolctrl_00
+    {
+        height:auto !important;
+    }
+    
+    .mainBody .leftcontentpara
+    {    
+        display:none!important;
+    } 
+    
+    #menu-item0 li
+    {    
+        width:100% !important; 
+        text-align:left !important;        
+    }
+    
+    .sub-menu
+    {
+        width:100% !important; 
+        text-align:left !important;            
+    }
+    
+    #nav ul li.left_side
+    {
+        background: url("mobile_top_nav_sprite.png") no-repeat scroll 0 0 transparent !important;
+    }
+    
+    #nav ul li.right_side
+    {
+        background: url("mobile_top_nav_sprite.png") no-repeat scroll right 0 transparent !important;
+    }
+    
+    .topnavigation
+    {
+        display:none !important;
+    }
+    
+    #menu
+    {
+        display:none;
+    }
+    
+    .slicknav_menu
+    {
+        display:block !important;    
+    }
+    
+    #footerEmailAction, .contentlinkbold, #footerBookmarksAction
+    {
+        display:none !important;
+    }
+    
+    .logo_t
+    {
+        display:none !important;
+    }
+    
+    #bread_tnav_cntr
+    {
+        width:100% !important;
+    }
+    
+    .slicknav_background
+    {    
+        background-image: url("/etc/designs/mcd/accessmcd/corelibs/images/jquery/mcdcolorbox/overlay_bg.png");
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 9999;    
+    }
+    
+    .rwdnewclass
+    {    
+        position: relative;
+        z-index: 9999;
+        top: 0;
+        /*min-width: 245px;*/
+        width: 100%;   
+    }
+    
+    input[class="form_field form_field_text"]
+    {
+        width:50%;
+    }
+    
+    input[class="form_field form_field_text form_address_firstname"]
+    {
+        width:50%;
+    }
+    
+    input[class="form_field form_field_text form_address_lastname"]
+    {
+        width:50%;
+    }
+    
+    input[class="form_field form_field_text form_address_street1"]
+    {
+        width:50%;
+    }
+    
+    input[class="form_field form_field_text form_address_street2"]
+    {
+        width:50%;
+    }
+    
+    input[class="form_field form_field_text form_address_zip"]
+    {
+        width:50%;
+    }
+    
+    input[class="form_field form_field_text form_address_city"]
+    {
+        width:50%;
+    }
+    
+    input[class="form_field form_field_text form_address_state"]
+    {
+        width:50%;
+    }
+    
+    select[class="form_field form_field_select form_address_country"]
+    {
+        width:50%;
+    }
+    
+    input[class="geo textinput"]
+    {
+        width:50%;
+    }
+    
+    input[class="form_field form_field_password"]
+    {
+        width:50%;
+    }
+    
+    select[class="form_field form_field_select"]
+    {
+        width:50%;
+    }
+    
+    option
+    {
+        width:50%; 
+        display:block;            
+    }
+    
+    .slicknav_hidden
+    {
+        display:none !important;
+    }
+    
+    .slicknav_arrow_new
+    {
+        background: url("/etc/designs/mcd/accessmcd/g2g/g2g_rwd/g2g_rwd_cyan/images/arrow.jpg") no-repeat scroll 0 0 transparent;
+    }
+    
+    .ideaFormLink   
+    {
+        display:block !important;
+    }
+    
+    #ideaForm
+    { 
+        text-decoration: none;
+    } 
+    
+    #sitefooter
+    {
+        border-spacing: 0 !important;
+    }
+    
+    .newTitle {
+        font-family:"Segoe Script";
+        font-weight:bold;
+        font-size:20px;
+    }
+    
+    #rwd_logo_t
+    {
+        display: block !important;
+    }     
+    
+}
+
+
+

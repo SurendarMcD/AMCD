@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="nt:file"
+    jcr:uuid="6f9d363f-d30b-44d8-845b-7a80e8bfb9b1">
+    <jcr:content
+        cq:lastReplicated="{Date}2012-03-08T10:13:24.418-06:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        jcr:mixinTypes="[cq:ReplicationStatus,dam:Thumbnails]"
+        jcr:primaryType="nt:unstructured">
+        <dam:thumbnails/>
+    </jcr:content>
+</jcr:root>

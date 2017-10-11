@@ -1,0 +1,10 @@
+Export-Package: com.mcd.cq.auth.impl
+Import-Package: *, com.sun.java_cup.internal;resolution:=optional, junit.framework;resolution:=optional, org.apache.xml.dtm;resolution:=optional, org.apache.xml.utils;resolution:=optional, org.apache.xpath;resolution:=optional, org.apache.xpath.compiler;resolution:=optional, org.apache.xpath.functions;resolution:=optional, org.apache.xpath.objects;resolution:=optional, org.bouncycastle.asn1;resolution:=optional, org.jaxen;resolution:=optional,  org.jaxen.jdom;resolution:=optional,  sun.security.util;resolution:=optional, org.apache.xerces.parsers;resolution:=optional,org.apache.xml.serialize;resolution:=optional,org.apache.xml.serializer;resolution:=optional
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: MCDSsoAuthenticationHandler
+Bundle-Description: 
+Bundle-SymbolicName: MCDSsoAuthenticationHandler
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.cq.auth.impl.Activator
+# Bundle-ClassPath: .,SpanSAMLProcessor.jar

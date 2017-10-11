@@ -1,0 +1,9 @@
+# Export-Package: *
+# Import-Package: *
+Private-Package: com.mcd.test
+# Include-Resource: 
+Bundle-Name: testbundle
+Bundle-Description: 
+Bundle-SymbolicName: testbundle
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.test.Activator

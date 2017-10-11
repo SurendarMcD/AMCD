@@ -1,0 +1,12 @@
+.breadCrumb {
+ font-size: 11px; 
+ font-weight:bold;
+ margin: 0px 0px 15px 0px;
+ text-align: left;
+}
+
+.breadCrumb a { font-weight:normal; }
+
+.breadCrumbSeperator {
+    padding: 0 3px 0 3px;
+} 

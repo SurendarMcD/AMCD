@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Dialog"
+    height="520"
+    stateful="false"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <props
+                jcr:primaryType="cq:Panel"
+                title="Global">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <titletext
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/titletext.infinity.json"
+                        xtype="cqinclude"/>
+                    <navtitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/navtitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <pagetitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/pagetitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <subtitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/subtitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <description
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/description.infinity.json"
+                        xtype="cqinclude"/>
+                    <sizeTextBox
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/sizeTextBox.infinity.json"
+                        xtype="cqinclude"/>
+                    <hideinnav
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription=" "
+                        fieldLabel="Hide Page in Navigation"
+                        inputValue="true"
+                        name="./hideinnav"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <top
+                                jcr:primaryType="nt:unstructured"
+                                text="Top"
+                                value="top"/>
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                            <navbar
+                                jcr:primaryType="nt:unstructured"
+                                text="Navigation Bar"
+                                value="navbar"/>
+                        </options>
+                    </hideinnav>
+                    <hideTopNav
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="parent"
+                        fieldDescription=" "
+                        fieldLabel="Hide Top Navigation"
+                        name="./hideTopNav"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <parent
+                                jcr:primaryType="nt:unstructured"
+                                text="As in Parent"
+                                value="parent"/>
+                        </options>
+                    </hideTopNav>
+                    <hideLeftNav
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="parent"
+                        fieldDescription=" "
+                        fieldLabel="Hide Left Navigation"
+                        name="./hideLeftNav"
+                        type="radio"
+                        xtype="hidden">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <parent
+                                jcr:primaryType="nt:unstructured"
+                                text="As in Parent"
+                                value="parent"/>
+                        </options>
+                    </hideLeftNav>
+                    <hideHeader
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/hideHeader.infinity.json"
+                        xtype="cqinclude">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <parent
+                                jcr:primaryType="nt:unstructured"
+                                text="As in Parent"
+                                value="parent"/>
+                        </options>
+                    </hideHeader>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./topnavimage/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                    <launchType
+                        jcr:primaryType="nt:unstructured"
+                        defaultValue="_self"
+                        fieldDescription="To be used in Top Navigation and Navigation Bar"
+                        fieldLabel="Launch Type"
+                        name="./launchType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window"
+                                value="_self"/>
+                            <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        </options>
+                    </launchType>
+                    <pagestyle
+                        jcr:primaryType="nt:unstructured"
+                        defaultValue="two"
+                        fieldDescription="To be used to divide the page in single column or two column.Default set to two column"
+                        fieldLabel="Page Layout"
+                        name="./pageLayout"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <single
+                                jcr:primaryType="nt:unstructured"
+                                text="One Column (Home Page Layout)"
+                                value="one"/>
+                            <two
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Column (Article Page Layout)"
+                                value="two"/>
+                        </options>
+                    </pagestyle>
+                    <awesomebartype
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="responsive"
+                        fieldDescription="Select the type of awesomebar to render on page, responsive or normal"
+                        fieldLabel="Awesomebar Type"
+                        name="./awesomeBarType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <responsive
+                                jcr:primaryType="nt:unstructured"
+                                text="Responsive"
+                                value="responsive"/>
+                            <normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Normal"
+                                value="normal"/>
+                        </options>
+                    </awesomebartype>
+                    <hideFeedbackSection
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription=" This will hide feedback section displaying just above footer."
+                        fieldLabel="Show Feedback Section"
+                        inputValue="true"
+                        name="./hideFeedbackSection"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <feedback
+                                jcr:primaryType="nt:unstructured"
+                                text="Show Feedback Section"
+                                value="yes"/>
+                        </options>
+                    </hideFeedbackSection>
+                    <background
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Background color to be applied on Feedback Section. Default set to &lt;b>#d1d3d4&lt;/b>"
+                        fieldLabel="Feedback Section Background Color"
+                        name="./feedbackBGColor"
+                        showHexValue="{Boolean}true"
+                        xtype="colorfield"/>
+                </items>
+            </props>
+            <advanced
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/advanced.infinity.json"
+                title="Advanced"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <language
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Page Language"
+                        name="./jcr:language"
+                        optionsCallback="CQ.utils.WCM.setContentLanguageOptionsCB"
+                        type="select"
+                        xtype="selection"/>
+                    <redirect
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Redirect Target"
+                        name="./redirectTarget"
+                        xtype="pathcompletion"/>
+                    <onTimeHint
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./onTime@TypeHint"
+                        value="Date"
+                        xtype="hidden"/>
+                    <ontime
+                        jcr:primaryType="cq:Widget"
+                        disabled="{Boolean}true"
+                        fieldLabel="On Time"
+                        name="./onTime"
+                        xtype="datetime"/>
+                    <offTimeHint
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./offTime@TypeHint"
+                        value="Date"
+                        xtype="hidden"/>
+                    <offtime
+                        jcr:primaryType="cq:Widget"
+                        disabled="{Boolean}true"
+                        fieldLabel="Off Time"
+                        name="./offTime"
+                        xtype="datetime"/>
+                    <designpath
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Design Path"
+                        name="./cq:designPath"
+                        rootPath="/etc/designs"
+                        xtype="pathcompletion">
+                        <rep:accessControl
+                            jcr:mixinTypes="[rep:AccessControllable]"
+                            jcr:primaryType="rep:AccessControl"/>
+                    </designpath>
+                    <vanityPath
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Vanity URL"
+                        name="./sling:vanityPath"
+                        xtype="multifield">
+                        <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            regex="/^\\/((.+?)\\/)*[a-zA-Z0-9]+$/"
+                            regexText="Vanity URL must start with a slash and should not contain an extension like .html."
+                            xtype="browsefield"/>
+                    </vanityPath>
+                    <vanityPathRedirect
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Redirect Vanity URL"
+                        name="./sling:redirect"
+                        type="checkbox"
+                        xtype="selection">
+                        <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+                    </vanityPathRedirect>
+                </items>
+            </advanced>
+            <author
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/author.infinity.json"
+                title="Author"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <name
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        blankText="Author Name is mandatory"
+                        fieldLabel="Author Name"
+                        name="./authorName"
+                        xtype="textfield"/>
+                    <email
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        blankText="Author Email is mandatory"
+                        fieldLabel="Author Email"
+                        name="./authorEmail"
+                        regex="/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\\.([a-zA-Z])+([a-zA-Z])+/"
+                        xtype="textfield"/>
+                </items>
+            </author>
+            <pci
+                jcr:primaryType="cq:Panel"
+                autoWidth="{Boolean}true"
+                path="/apps/mcd/components/page/global/dialog/items/items/pci.infinity.json"
+                title="Post"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <publishToPCI
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Publish To Portal"
+                        inputValue="true"
+                        name="./pci/PublishToPCI"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                        </options>
+                    </publishToPCI>
+                    <PCIImage
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddGroups="[media]"
+                        fieldLabel="Image File"
+                        fileNameParameter="./pci/PCIImageFilename"
+                        fileReferenceParameter="./pci/PCIImageFile"
+                        height="{Long}200"
+                        name="./pci/PCIImage"
+                        sizeLimit="1000"
+                        uploadUrl="/tmp/*"
+                        xtype="smartimage"/>
+                    <PCIEntry
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Panel"
+                        autoWidth="{Boolean}true"
+                        layout="form"
+                        title="PCI Entry"
+                        width="{Long}500"
+                        xtype="panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <Category
+                                jcr:primaryType="cq:Widget"
+                                autoWidth="{Boolean}false"
+                                fieldDescription=""
+                                fieldLabel="Category"
+                                listWidth="{Long}200"
+                                minListWidth="{Long}200"
+                                name="./pci/entry1/Category"
+                                optionsCallback=" function(path, record) {var pageHandle;var sidekick = CQ.utils.WCM.getSidekick();if (sidekick) {pageHandle=location.toString();pageHandle=pageHandle.replace('.html','.pcicategory.html');}else {pageHandle=this.findParentByType('dialog').path;pageHandle=pageHandle.replace('/jcr:content','.pcicategory.html');}this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); }"
+                                type="select"
+                                width="{Long}400"
+                                xtype="pcicategories">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <calendar
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Australia Homepage Calendar"
+                                        value="1000"/>
+                                    <inside_x0020_MCD
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Inside Mcdonalds"
+                                        value="20051"/>
+                                    <pcitesting
+                                        jcr:primaryType="nt:unstructured"
+                                        text="PCI Testing"
+                                        value="20113"/>
+                                </options>
+                            </Category>
+                            <views
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="global"
+                                fieldDescription="&lt;br>"
+                                fieldLabel="View(s)"
+                                name="./pci/entry1/View"
+                                type="checkbox"
+                                width="{Long}300"
+                                xtype="pciviews">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <australia
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Australia"
+                                        value="AU"/>
+                                    <global
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Global"
+                                        value="ENT"/>
+                                    <unitedstates
+                                        jcr:primaryType="nt:unstructured"
+                                        text="United States"
+                                        value="US"/>
+                                    <newzealand
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Zealand"
+                                        value="NZ"/>
+                                </options>
+                            </views>
+                            <Title
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Defaults to Page Title"
+                                fieldLabel="Title"
+                                inputValue="{Boolean}true"
+                                name="./pci/entry1/Title"
+                                width="300"
+                                xtype="textfield"/>
+                            <Description
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Defaults to Page Description"
+                                fieldLabel="Description"
+                                name="./pci/entry1/Description"
+                                rows="4"
+                                width="300"
+                                xtype="hidden"/>
+                            <PublishDate
+                                jcr:primaryType="cq:Widget"
+                                dateFormat="m/d/Y"
+                                dateWidth="{Long}200"
+                                defaultValue="now"
+                                fieldDescription=" Used by date-sorted categories, such as Inside McDonald's. Defaults to initial page activation date. &lt;br>"
+                                fieldLabel="Publish Date"
+                                name="./pci/entry1/PublishDate"
+                                timePosition="below"
+                                timeWidth="{Long}200"
+                                width="{Long}200"
+                                xtype="datetime"/>
+                            <DisplayType
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="shownav"
+                                fieldDescription="&lt;br>"
+                                fieldLabel="Display"
+                                inputValue="true"
+                                name="./pci/entry1/DisplayType"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <shownav
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Show site header &amp; navigation "
+                                        value="shownav"/>
+                                    <newwin
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Open in new window"
+                                        value="newwin"/>
+                                </options>
+                            </DisplayType>
+                        </items>
+                    </PCIEntry>
+                </items>
+            </pci>
+            <tagging
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/tagging.infinity.json"
+                title="Tags/Keywords"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <tags
+                        jcr:primaryType="cq:Widget"
+                        alowBlank="{Boolean}false"
+                        blankText="At least 1 tag/keyword must be entered"
+                        hideLabel="{Boolean}true"
+                        name="./cq:tags"
+                        xtype="tags"/>
+                </items>
+            </tagging>
+            <cug
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/cug.infinity.json"
+                title="CUG"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enabled
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enabled"
+                        inputValue="true"
+                        name="./cq:cugEnabled"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <loginPage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Login Page"
+                        name="./cq:cugLoginPage"
+                        xtype="pathcompletion"/>
+                    <principals
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Admitted Groups"
+                        name="./cq:cugPrincipals"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            filter="groups"
+                            xtype="authselection"/>
+                    </principals>
+                    <realm
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Realm"
+                        name="./cq:cugRealm"
+                        xtype="textfield"/>
+                </items>
+                <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+            </cug>
+            <topnavimage
+                jcr:primaryType="cq:Widget"
+                cropParameter="./topnavimage/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./topnavimage/fileName"
+                fileReferenceParameter="./topnavimage/fileReference"
+                mapParameter="./topnavimage/imageMap"
+                name="./topnavimage/file"
+                rotateParameter="./topnavimage/imageRotate"
+                sizeLimit="{Long}100"
+                title="Top Navigation Image"
+                uploadUrl="/tmp/upload_gtgimg/*"
+                xtype="smartimage"/>
+            <workflow
+                jcr:primaryType="cq:Panel"
+                title="Workflow">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <attachToWF
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="false"
+                        fieldLabel="Associate Approval Workflow ?"
+                        name="./attachToWF"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <true
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="true"/>
+                            <false
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="false"/>
+                        </options>
+                    </attachToWF>
+                    <reviewerName
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default : administrators"
+                        fieldLabel="Reviewer"
+                        filter="groups"
+                        name="./reviewerName"
+                        xtype="authselection"/>
+                </items>
+            </workflow>
+            <image
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/image.infinity.json"
+                title="Image"
+                xtype="cqinclude"/>
+            <didyouknow
+                jcr:primaryType="cq:Panel"
+                title="Did You Know">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <articleDate
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Article Date"
+                        format="d/m/Y"
+                        name="./dykArticleDate"
+                        submitFormat="Y-m-d H:i:s"
+                        xtype="datefield"/>
+                </items>
+            </didyouknow>
+            <Feature_x0020_Image
+                jcr:primaryType="cq:Widget"
+                autoWidth="{Boolean}false"
+                cropParameter="./featureImage/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./featureImage/fileName"
+                fileReferenceParameter="./featureImage/fileReference"
+                mapParameter="./featureImage/imageMap"
+                name="./featureImage/file"
+                requestSuffix="/featureImage.img.png"
+                rotateParameter="./featureImage/imageRotate"
+                sizeLimit="{Long}100"
+                title="Story Image"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage"/>
+            <Feature_x0020_Image_x0020_Details
+                jcr:primaryType="cq:Panel"
+                title="Story Details">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <message
+                        jcr:primaryType="cq:Widget"
+                        html="&lt;div style=&quot;margin-bottom:20px;&quot;>&lt;b>Use this TAB and the STORY IMAGE TAB for the feature story and home page stories components&lt;/b>&lt;/div>"
+                        xtype="label"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max Length : 50 characters "
+                        fieldLabel="Image Title"
+                        name="./featureImageTitle"
+                        xtype="textfield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./featureImage/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                    <Text
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max Length : 140 characters "
+                        fieldLabel="Image Teaser Text"
+                        name="./featureImageText"
+                        xtype="textarea"/>
+                    <date
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Publish Date"
+                        name="./featurePublishDate"
+                        xtype="datefield"/>
+                    <authorName
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="author name to display below stories "
+                        fieldLabel="Story Author Name"
+                        name="./featureAuthorName"
+                        xtype="textfield"/>
+                </items>
+            </Feature_x0020_Image_x0020_Details>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){&#xa;var name = dialog.getField('./siteOwnerName').getValue();&#xa;var mail = dialog.getField('./siteOwnerEmail').getValue();&#xa;var siteownername=1;&#xa;var siteowneremail=1;&#xa;&#xa;if(name.split(' ').join('')=='')&#xa;{&#xa;siteownername=0;&#xa;}&#xa;&#xa;if(mail.split(' ').join('')=='')&#xa;{&#xa;siteowneremail=0;&#xa;}&#xa;&#xa;&#xa;if(siteownername==1 &amp;&amp; siteowneremail==0)&#xa;{&#xa;  CQ.Ext.Msg.show({&#xa;  'title':  CQ.I18n.getMessage('Page Properties Validation'),&#xa;  'msg': CQ.I18n.getMessage('Please Enter The ' + 'Site Owner Email')  ,&#xa;  'buttons':CQ.Ext.Msg.OK,&#xa;  'icon':CQ.Ext.MessageBox.INFO,'scope':this});&#xa;  return false;&#xa;}&#xa;&#xa;if(siteownername==0 &amp;&amp; siteowneremail==1)&#xa;{&#xa;  CQ.Ext.Msg.show({&#xa;  'title':  CQ.I18n.getMessage('Page Properties Validation'),&#xa;  'msg': CQ.I18n.getMessage('Please Enter The ' + 'Site Owner Name')  ,&#xa;  'buttons':CQ.Ext.Msg.OK,&#xa;  'icon':CQ.Ext.MessageBox.INFO,'scope':this});&#xa;  return false;&#xa;}&#xa;&#xa;&#xa;&#xa;}&#xa;"
+        loadcontent="function(dialog){dialog.getField('./sizeVal').setValue('');dialog.getField('./sizeVal').setValue(CQ.Util.formatData(CQ.HTTP.eval(CQ.HTTP.get('/content/utility/utility.getpagesize.html?path='+this.path.replace('/jcr:content',''))))[0].disppagesize);}"/>
+</jcr:root>

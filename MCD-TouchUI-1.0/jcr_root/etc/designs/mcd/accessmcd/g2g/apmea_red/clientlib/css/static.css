@@ -1,0 +1,308 @@
+/*
+CSS Document: AccessMCD - Good to Gold APMEA-Red
+Author - Stephen Pfaff
+Date - April 2012
+*/
+
+/*PAGE THEME*/
+/*#headerwrapper { background-color:#990000 !important; }
+#headerwrapper .active { color:#990000 !important; }*/
+#headerwrapper .pageheading #globaladtext{
+    background:url("/etc/designs/mcd/accessmcd/g2g/apmea_red/images/gadbg.png") no-repeat scroll top transparent !important;
+}
+#pagecontentwrapper a { color:#990000; }
+#accordion_top a, a.contentlinkbold { color:#990000; }
+#accordion_top a:hover, a:hover { color:#990000; }
+
+/*CONTENT WRAPPERS*/
+#headerwrap { background-color:#dedede; } 
+
+/*HEADER NAVIGATION*/
+#headerwrapper .top-nav .topnavigationitems ul li a.active { color:#990000 !important; }
+#headerwrapper .top-nav .topnavigationitems ul li a:hover { color:#990000 !important; }
+
+/*HEADER COMPONENTS*/
+.si_slider_box {background:#990000 !important;}
+#bookmarksTab option.personal, hr { color: #990000 !important; }  
+#bookmarksTab option.global, hr { color: #000000; } 
+
+/*NAVIGATION FORMATTING*/
+#nav ul li ul {border:1px solid #990000 !important;}
+#nav ul li ul li {border-bottom:1px solid #990000 !important;}
+#nav ul li ul li a:hover {background-color:#990000 !important;}
+#nav-icons ul li ul {border:1px solid #990000 !important;}
+#nav-icons ul li ul li {border-bottom:1px solid #990000 !important;}
+#nav-icons ul li ul li a:hover {background-color:#990000 !important;}
+
+/* Top Navigation */
+#nav ul li:hover{ background: transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat -6px -34px !important; }
+
+#nav ul li.active { background: transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat -6px -68px !important; color:#fff; }
+#nav ul li.active:hover { background: transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat -6px -34px !important; color:#fff; }
+
+#nav ul li.left_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat 0 0 !important;  }
+#nav ul li.left_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat  0 -34px !important; color:#FFF !important; }
+
+#nav ul li.right_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat right 0 !important;  }
+#nav ul li.right_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat  right -34px !important; color:#FFF !important; }
+
+#nav .left_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat 0 -68px !important; }
+#nav .left_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat 0 -34px !important;}
+
+#nav .right_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat right -68px !important; }
+#nav .right_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat right -34px !important;}
+
+#nav ul li.both_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat 0 0 !important;  }
+#nav ul li.both_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat  0 -34px !important; color:#FFF !important; }
+
+#nav .both_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat 0 -68px !important; }
+#nav .both_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat 0 -34px !important;}
+
+#nav ul li.both_side700 { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_700.png) no-repeat 0 0 !important;  }
+#nav ul li.both_side700:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_700.png) no-repeat  0 -34px !important; color:#FFF !important; }
+
+#nav .both_side_active700 { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_700.png) no-repeat 0 -68px !important; }
+#nav .both_side_active700:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_700.png) no-repeat 0 -34px !important;}
+
+/*no rounded corners*/
+#nav a.left_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat -6px 0 !important; border-left:1px solid #CCC; }
+#nav a.left_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat  -6px -34px !important; }
+#nav .left_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat -6px -68px !important; }
+
+#nav a.right_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat -6px 0 !important; border-right:1px solid #CCC; }
+#nav a.right_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat  -6px -34px !important; }
+#nav .right_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite.png) no-repeat -6px -68px !important; }
+
+/* Top Navigation w/ Icons */
+#nav-icons ul li:hover{ background: transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat -6px -45px !important; }
+
+#nav-icons ul li.active { background: transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat -6px -90px !important; color:#fff; }
+#nav-icons ul li.active:hover { background: transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat -6px -45px !important; color:#fff; }
+
+#nav-icons ul li.left_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 0 !important;  }
+#nav-icons ul li.left_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat  0 -45px !important; color:#FFF !important; }
+
+#nav-icons ul li.right_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat right 0 !important;  }
+#nav-icons ul li.right_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat  right -45px !important; color:#FFF !important; }
+
+#nav-icons .left_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 -90px !important; }
+#nav-icons .left_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 -45px !important;}
+
+#nav-icons .right_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat right -90px !important; }
+#nav-icons .right_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat right -45px !important;}
+
+#nav-icons ul li.both_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 0 !important;  }
+#nav-icons ul li.both_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat  0 -45px !important; color:#FFF !important; }
+
+#nav-icons .both_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 -90px !important; }
+#nav-icons .both_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 -45px !important;}
+
+#nav-icons ul li.both_side700 { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons700.png) no-repeat 0 0 !important;  }
+#nav-icons ul li.both_side700:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons700.png) no-repeat  0 -45px !important; color:#FFF !important; }
+
+#nav-icons .both_side_active700 { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons700.png) no-repeat 0 -90px !important; }
+#nav-icons .both_side_active700:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons700.png) no-repeat 0 -45px !important;}
+
+#nav-icons ul li.both_side700 { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons700.png) no-repeat 0 0;  }
+#nav-icons ul li.both_side700:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons700.png) no-repeat  0 -45px; color:#FFF !important; }
+
+#nav-icons .both_side_active700 { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons700.png) no-repeat 0 -90px; }
+#nav-icons .both_side_active700:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons700.png) no-repeat 0 -45px;}
+ 
+/*no rounded corners*/
+#nav-icons a.left_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 0 !important; border-left:1px solid #CCC; }
+#nav-icons a.left_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat  0 -45px !important; }
+#nav-icons .left_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 -90px !important; }
+
+#nav-icons a.right_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 0 !important; border-right:1px solid #CCC; }
+#nav-icons a.right_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat  0 -45px !important; }
+#nav-icons .right_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/top_nav_sprite_icons.png) no-repeat 0 -90px !important; }
+/*End Top Navigation */
+
+/*LEFT NAVIGATION FORMATTING*/
+.leftnav { background-color:#990000 !important; }
+.leftnavRowStart, .leftnavRowStart1, .leftnavRowStart2 { background-color: #B07148; }
+.leftnav1hover,.leftnav1 { background-color:#990000 !important; }
+.leftnav1Onhover a,.leftnav1On a { background-color:#990000 !important; }
+.leftnav1Onhover a:visited,.leftnav1On a:visited, .leftnav1Onhover a:hover,.leftnav1On a:hover { background-color:#990000 !important; }
+.leftnav2hover,.leftnav2 { background-color:#990000 !important; }
+.leftnav2hover, .leftnav3hover, .leftnav4hover, .leftnav5hover, .leftnav6hover, .leftnav7hover { background-color:#990000 !important; }
+.leftnav2Onhover,.leftnav2On { background-color:#990000 !important; }
+.leftnav3hover,.leftnav3 { background-color:#990000 !important; }
+.leftnav3spacerow { background-color:#990000 !important; }
+.leftnav4hover,.leftnav4 { background-color:#990000 !important; }
+.leftnav4spacerow { background-color:#990000 !important; }
+.leftnav5hover,.leftnav5 { background-color:#990000 !important; }
+.leftnav5spacerow { background-color:#990000 !important; }
+.leftnav6hover,.leftnav6 { background-color:#990000 !important; }
+.leftnav6spacerow { background-color:#990000 !important; }
+.leftnav7hover,.leftnav7 { background-color:#990000 !important; }
+.leftnav7spacerow { background-color:#990000 !important; }
+.leftnavBorder *{background:#990000 !important;}
+.leftnavBorder1{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;
+  background:#990000
+}
+.leftnavBorder2{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;
+  background:#990000 !important;}
+.leftnavBorder3{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;}
+.leftnavBorder4{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;}
+.leftnavBorder5{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;}
+.leftnavBorderfg{
+  background:#990000
+}
+.leftnavBorderSel{display:block}
+.leftnavBorderSel *{
+  background:#990000 !important;}
+.leftnavBorderSel1{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;
+  background:#990000 !important;}
+.leftnavBorderSel2{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;
+  background:#990000 !important;}
+.leftnavBorderSel3{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;}
+.leftnavBorderSel4{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;}
+.leftnavBorderSel5{
+  border-left:1px solid #990000 !important;
+  border-right:1px solid #990000 !important;}
+.leftnavBorderSelfg{
+  background:#990000 !important;
+}
+
+
+/***START COMPONENT DESIGNS***/
+
+/*SKIPTO COMPONENT*/
+div.dropdown_header_active:hover,
+div.dropdown_header:hover 
+{
+    color:#990000 !important; 
+}
+ul.dropdown_body li a:hover {
+    color:#990000 !important;
+}
+
+/*TABBEDCONTENTPANEL COMPONENT*/
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+    color:#990000 !important;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a span {
+    color:#990000 !important;
+}
+.ui-tabs .ui-tabs-nav li a:hover, 
+.ui-tabs .ui-tabs-nav li a:hover span
+{
+    color:#990000 !important;
+}
+.ui-tabs .ui-tabs-nav li.first-tab-selected a span{
+    color:#990000;
+}
+/*ACCORDION COMPONENT*/
+#accordion a.active_widget {
+    color: #990000 !important;
+}
+
+#accordion span.ui-icon {
+    background: transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/bullets/red_arrow_right.gif) no-repeat 0px 0px !important;
+}
+#accordion h4.ui-state-active span.ui-icon {
+    background: transparent url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/bullets/red_arrow_down.gif) no-repeat 0px 0px !important;
+}
+
+/*EVERYTHING COMPONENT*/
+#everythingmain {
+    color:#4f4f4f;
+}
+.mainTitle { 
+    color: #990000;
+}
+.siteTitle {
+    color: #990000;
+}
+.sectionTitle { 
+    color: #990000;
+}
+
+.sectionSubTitle {
+    color: #990000;
+}
+  
+.paragraphTitle {
+    color: #990000;
+}
+
+.rtStyleGoToLink {
+    color: #990000;
+}
+
+/*GMS COMPONENT*/
+td.titleWithBlackBoldBorder { background-color: #990000 !important; }
+.searchgms{ background-color:#990000 !important; }
+#statusdiv { color: #990000 !important; }
+
+/*GCDBASICSEARCH COMPONENT*/
+.empDirBox .empDirboxHdBlack {color:#990000 !important;}
+
+/*LETS TALK COMPONENT*/
+.letsTalkBox .boxHdBlack{color:#990000 !important;}
+
+/*QUICK POLL COMPONENT*/
+.quickPollboxHdBlack{color:#990000 !important;}
+
+/*TRENDING*/
+.trending_text{background:url(/apps/mcd/components/content/trending/clientlibs/images/apmea_red.png) left top no-repeat !important;}
+.tagHdBlack{color:#990000 !important;}
+
+/*Like*/
+.likeCount {background:url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/like.jpg) left top no-repeat;padding-top:5px;height:25px;padding-left:30px;border:0;opacity:0.5;filter:alpha(opacity=50);display:block;}
+.likeCount_fr {background:url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/jaime2.jpg) left top no-repeat;padding-top:3px;height:25px;padding-left:42px;border:0;opacity:0.5;filter:alpha(opacity=50);display:block;}
+.likePage {padding-left: 20px; background: url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/smiley44.jpg) -4px -4px no-repeat;}
+/*pagecomment Like*/
+.reply-img
+{
+    background:url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/like.jpg) left top no-repeat;
+    border:0;
+    height: 25px;
+    opacity:0.5;
+    width: 25px;
+    filter:alpha(opacity=50);
+    text-indent:-9999px;
+    padding-left:16px;
+    vertical-align: middle;
+}
+
+
+.reply-img_fr
+{
+    background:url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/jaime2.jpg) left top no-repeat;
+   border:0;
+    height: 25px;
+    opacity:0.5;
+    width: 40px;
+    filter:alpha(opacity=50);
+    text-indent:-9999px;
+    padding-left:16px;
+    vertical-align: middle;
+}
+
+.replydiv form {float: inherit;}
+
+.reply-smile-img {padding-left: 20px; background: url(/etc/designs/mcd/accessmcd/g2g/apmea_red/images/smiley44.jpg) -4px -4px no-repeat; display: inherit; height: 16px;}
+
+
+/***END COMPONENT DESIGNS***/

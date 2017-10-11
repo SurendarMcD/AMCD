@@ -1,0 +1,58 @@
+body { back ground: #DEDEDE !important; }
+#pagecontentwrapper {wid th: 960px !important; background: #fff !important; margin-top:1px !important; padding: 20px !important; }
+
+/* US Custom Column Sizes */
+/*.cq-wcm-edit #content_txt {width:490px !important;}
+.cq-wcm-edit #right_content_par, .cq-wcm-design #right_content_par {width: 180px !important;}
+#right_content_par {max-width: 180px;}*/
+
+#bread_tnav_cntr {width: 780px;}
+#logo_t {max-width: 180px;}
+.cq-wcm-edit #logo_t, .cq-wcm-design #logo_t {width: 180px !important;}
+.cq-wcm-edit #right-results-column, .cq-wcm-design #right-results-column {width: 760px !important;}
+.cq-wcm-edit #content_txt {width:560px !important;}*/
+.cq-wcm-edit #right_content_par, .cq-wcm-design #right_content_par {width: 180px !important;}
+#right_content_par, #left-widgets-column {max-width: 180px;}
+
+
+/*TRENDING*/
+.trending_text{background:url(/apps/mcd/components/content/trending/clientlibs/images/us_g2g_blue.png) left top no-repeat !important;}
+.tagHdBlack{color:#6F7CB6 !important;}
+/*Like*/
+.likeCount {background:url(/etc/designs/mcd/accessmcd/g2g/us_g2g_blue/images/like.jpg) left top no-repeat;padding-top:5px;height:25px;padding-left:30px;border:0;opacity:0.5;filter:alpha(opacity=50);display:block;}
+.likeCount_fr {background:url(/etc/designs/mcd/accessmcd/g2g/us_g2g_blue/images/jaime2.jpg) left top no-repeat;padding-top:3px;height:25px;padding-left:42px;border:0;opacity:0.5;filter:alpha(opacity=50);display:block;}
+.likePage {padding-left: 20px; background: url(/etc/designs/mcd/accessmcd/g2g/us_g2g_blue/images/smiley44.jpg) -4px -4px no-repeat;}
+/*pagecomment Like*/
+.reply-img
+{
+    background:url(/etc/designs/mcd/accessmcd/g2g/us_g2g_blue/images/like.jpg) left top no-repeat;
+    border:0;
+    height: 25px;
+    opacity:0.5;
+    width: 25px;
+    filter:alpha(opacity=50);
+    text-indent:-9999px;
+    padding-left:16px;
+    vertical-align: middle;
+}
+
+
+.reply-img_fr
+{
+    background:url(/etc/designs/mcd/accessmcd/g2g/us_g2g_blue/images/jaime2.jpg) left top no-repeat;
+   border:0;
+    height: 25px;
+    opacity:0.5;
+    width: 40px;
+    filter:alpha(opacity=50);
+    text-indent:-9999px;
+    padding-left:16px;
+    vertical-align: middle;
+}
+
+.replydiv form {float: inherit;}
+
+.reply-smile-img {padding-left: 20px; background: url(/etc/designs/mcd/accessmcd/g2g/us_g2g_blue/images/smiley44.jpg) -4px -4px no-repeat; display: inherit; height: 16px;}
+
+.main-nav li.peopleg .subNav a, .main-nav li.peopleg > a:hover, .main-nav li.peopleg > a.active  { color: #a6a93a !important;}
+.main-nav li.people .subNav a, .main-nav li.people > a:hover, .main-nav li.people > a.active  { color: #e07a27 !important;}

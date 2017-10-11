@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Provides the ability to divide a paragraph into multiple paragraphs."
+    jcr:primaryType="cq:Component"
+    jcr:title="Column Control - Responsive"
+    sling:resourceSuperType="foundation/components/parbase"
+    allowedParents="[*/parsys]"
+    componentGroup="Admin"
+    isContainer="true"/>

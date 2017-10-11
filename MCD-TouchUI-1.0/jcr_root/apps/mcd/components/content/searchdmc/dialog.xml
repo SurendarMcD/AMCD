@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/components/dmcdocument.html?wcmmode=disabled"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items
+            jcr:primaryType="nt:unstructured"
+            title="DMC Document"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <prop1
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel=""
+                    name="./searchdmc"
+                    xtype="searchdmcbutton"/>
+                <prop2
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="true"
+                    fieldDescription="Document URL (Non Editable)"
+                    fieldLabel="Document URL"
+                    name="./documentURL"
+                    readOnly="true"
+                    validateOnBlur="true"
+                    xtype="textarea"/>
+                <prop4
+                    jcr:primaryType="nt:unstructured"
+                    fieldDescription="Enter a Document Name or accept the displayed to be used on your page."
+                    fieldLabel="Document Name"
+                    name="./documentName"
+                    xtype="textfield"/>
+                <prop5
+                    jcr:primaryType="nt:unstructured"
+                    fieldDescription="Enter a Document Description or accept the displayed to be used on your page."
+                    fieldLabel="Document Description"
+                    name="./documentDesc"
+                    xtype="textarea"/>
+                <prop6
+                    jcr:primaryType="nt:unstructured"
+                    fieldDescription="Document Icon String (Non Editable)"
+                    fieldLabel="Document Icon"
+                    name="./documentIcon"
+                    readOnly="true"
+                    xtype="textarea"/>
+                <showDocIcon
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Select 'Yes' to include Document Icon or thumbnail image as part of document link."
+                    fieldLabel="Show Document Icon"
+                    name="./showDocIcon"
+                    type="radio"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <No
+                            jcr:primaryType="nt:unstructured"
+                            text="No"
+                            value="no"/>
+                        <Yes
+                            jcr:primaryType="nt:unstructured"
+                            text="Yes"
+                            value="yes"/>
+                    </options>
+                </showDocIcon>
+                <prop7
+                    jcr:primaryType="nt:unstructured"
+                    fieldDescription="Document Size (Non Editable)"
+                    fieldLabel="Document Size"
+                    name="./documentSize"
+                    readOnly="true"
+                    xtype="textfield"/>
+            </items>
+        </items>
+    </items>
+</jcr:root>

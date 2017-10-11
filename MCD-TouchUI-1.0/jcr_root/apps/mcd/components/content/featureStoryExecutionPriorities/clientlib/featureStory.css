@@ -1,0 +1,72 @@
+#firstColumn {
+    /*float: right;*/
+    margin: 0;
+    padding: 2px 5px;
+    position: relative;
+    text-align: left;
+    max-width:620px;
+}
+#firstColumn div {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    /*padding: 5px;*/
+}
+#fsoverlay {
+    background-color: #000000;
+    height: 80px;
+    opacity:.5;
+    filter: alpha(opacity=50);
+    position: absolute;
+    text-align: left;
+    
+    
+}    
+#firstColumn div h2 {
+    font-size: 16px;
+    /*line-height: 20px;*/
+    margin: 0;
+    padding: 0;
+}
+#firstColumn h2 {
+    margin: 2px 0 0 5px !important;
+}
+#fsoverLayHeading{
+    color: #FFFFFF;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 15pt;
+    margin: 0 0 5px;
+}
+#bigImage{
+    max-height:354px;
+    max-width:400px;
+    padding-right:10px;
+    *padding-right:0px;
+}
+#smallImage{
+    max-height:68px;
+    max-width:200px;
+}
+.smallImageInfo {
+    background-color: #000000;
+    font-size:10px;
+    /*display: none;*/
+    margin-left: 0;
+    /*margin-bottom:3px;*/
+    margin-bottom:0;
+    opacity: 0.5 !important;
+    filter: alpha(opacity=50);
+    padding: 0px 5px 2px !important;
+    /*position: absolute;*/
+    width: 190px;
+}
+
+.fsoverLaySpan
+{
+  font-weight: normal !important;
+}

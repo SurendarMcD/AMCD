@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:ACL">
+    <allow
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="AU-A-Admin"
+        rep:privileges="{Name}[jcr:versionManagement,jcr:modifyAccessControl,jcr:readAccessControl,rep:write,jcr:lockManagement]"/>
+    <allow0
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="US-A-Admin"
+        rep:privileges="{Name}[jcr:versionManagement,jcr:modifyAccessControl,jcr:readAccessControl,rep:write,jcr:lockManagement]"/>
+    <allow1
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="CORP-A-Admin"
+        rep:privileges="{Name}[jcr:all]"/>
+    <allow2
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="mcweb-a-admin"
+        rep:privileges="{Name}[jcr:all]"/>
+</jcr:root>

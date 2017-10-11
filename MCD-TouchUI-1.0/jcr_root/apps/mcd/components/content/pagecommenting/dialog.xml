@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/components/pagecommenting.html?wcmmode=disabled"
+    responseScope="this"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <pageComment
+                jcr:primaryType="cq:Panel"
+                title="EID Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <defaultEID
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Default Employee ID"
+                        name="./default_eids"
+                        orderable="{Boolean}false"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="textfield"/>
+                    </defaultEID>
+                </items>
+            </pageComment>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforeSubmit="function(dialog,path){ &#x9;if(dialog.getField('./default_eids').getValue()!=''){ &#x9;&#x9;var item=dialog.getField('./default_eids').getValue(); &#x9;&#x9;for(i=0;i&lt;item.length;i++){ &#x9;&#x9;&#x9;if(item[i]=='' || item[i].toUpperCase().charAt(0)!='E'){ &#x9;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({'title':CQ.I18n.getMessage('Comment Dialog Validation'),'msg':CQ.I18n.getMessage('Please provide a valid Employee ID (e.g. E0012345).'),'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); &#x9;&#x9;&#x9;&#x9;return false; &#x9;&#x9;&#x9;} &#x9;&#x9;} &#x9;} }"/>
+</jcr:root>

@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: CQ Timing Servlet
+Bundle-Description: Servlet to remotely capture CQ timing information
+Bundle-SymbolicName: cqtimingservlet
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.cq.performance.Activator

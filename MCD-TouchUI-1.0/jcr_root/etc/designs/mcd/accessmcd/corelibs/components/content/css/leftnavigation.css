@@ -1,0 +1,356 @@
+/* Styles used for the left navigation */
+
+.leftNavRounded {
+    padding: 8px 4px 8px 4px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+}
+
+.leftnav {
+    background-color:#fee191;
+    font-weight: bold;
+    font-size: 11px;
+    color: #cd0000;
+    text-decoration:none; 
+    width: 140px;
+ }
+
+.leftnav a {
+    text-decoration:none;
+    color: #cd0000;
+}
+
+.leftnav a:hover {
+    text-decoration:underline;
+    color: #cd0000 !important;
+}
+
+.leftsel {
+    font-weight: bold;
+    font-size: 11px;
+    color: #cd0000;
+}
+
+.leftnavRowStart, .leftnavRowStart1, .leftnavRowStart2 {
+    background-color: #b07148;
+    padding-top: 1px;
+    width: 140px;
+    height: 1px;
+}
+
+.leftnavRowStart3, .leftnavRowStart4, .leftnavRowStart5, .leftnavRowStart6, .leftnavRowStart7, .leftnavRowEnd {
+    display:none;
+}
+
+.leftnav1hover,.leftnav1 {
+    font-weight: bold;
+    font-size: 13px;
+    color: #cd0000;
+    padding-left:11px;
+    padding-right:5px; 
+    }
+
+.leftnav1spacerow {
+    background-color:#b07148;
+    font-weight: normal;
+    color: #cd0000;
+    font-size: 12px;
+}
+
+.leftnav1hover a,.leftnav1 a, .leftnav1hover a:hover, .leftnav1 a:hover {   
+    float:left;
+    font-size: 13px;
+    font-weight:bold;    
+    padding: 10px 0 10px 0px;
+}
+
+.leftnav1hover a:visited,.leftnav1 a:visited {   
+    font-weight: bold;
+    font-size: 13px;  
+ }
+
+.leftnav1Onhover,.leftnav1On {
+    font-weight: bold;
+    font-size: 13px;
+    color: #000000;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 10px;
+    padding: 10px 5px 10px 11px;
+    
+}
+.leftnav1Onhover a,.leftnav1On a {   
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.leftnav1Onhover a:visited,.leftnav1On a:visited, .leftnav1Onhover a:hover,.leftnav1On a:hover {
+    color: #000; 
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.leftnav2spacerow {
+    background-color:#ffffff;
+    font-weight: normal;
+    font-size: 11px;
+    color: #cd0000;
+}
+
+.leftnav2hover,.leftnav2 { 
+    font-weight: normal;
+    font-size: 13px;     
+    padding: 8px 5px 8px 22px;
+}
+
+.leftnav2hover a:visited,.leftnav2 a:visited,
+.leftnav2hover a:hover,.leftnav2 a:hover, .leftnav2Onhover a,.leftnav2On a,
+.leftnav2Onhover a:visited,.leftnav2On a:visited,
+.leftnav2Onhover a:hover,.leftnav2On a:hover, .leftnav2hover a,.leftnav2 a  {   
+    font-size: 13px;    
+    font-weight: bold;
+}
+
+.leftnav2Onhover,.leftnav2On {
+    font-weight: bold;
+    font-size: 13px;
+    cursor: hand;
+    color:#000000;
+    background-color:#fee191;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 8px;
+    padding: 8px 5px 8px 22px;
+}
+
+.leftnav3hover,.leftnav3 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;   
+    #font-style: normal; 
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav3spacerow {   
+    font-weight: normal;
+    font-size: 12px;
+    background-color:#fee191;   
+}
+
+.leftnav3Onhover,.leftnav3On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000;
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 5px;
+    padding: 5px 5px 5px 35px;      
+}
+
+.leftnav3Onhover a,.leftnav3On a, .leftnav3Onhover a:visited,.leftnav3On a:visited,
+.leftnav3Onhover a:hover,.leftnav3On a:hover , .leftnav3hover a,.leftnav3 a, .leftnav3hover a:visited,.leftnav3 a:visited,
+.leftnav3hover a:hover,.leftnav3 a:hover, .leftnav4hover a,.leftnav4 a, .leftnav4hover a:visited,.leftnav4 a:visited,
+.leftnav4hover a:hover,.leftnav4 a:hover, .leftnav4Onhover a,.leftnav4On a, 
+.leftnav4Onhover a:visited,.leftnav4On a:visited, .leftnav4Onhover a:hover,.leftnav4On a:hover, 
+.leftnav5hover a,.leftnav5 a, .leftnav5Onhover a:hover,.leftnav5On a:hover, .leftnav5Onhover a, 
+.leftnav5On a, .leftnav5Onhover a:visited,.leftnav5On a:visited,
+.leftnav6Onhover a,.leftnav6On a, .leftnav6Onhover a:hover,.leftnav6On a:hover,
+.leftnav6Onhover a:visited,.leftnav6On a:visited, .leftnav7hover a, .leftnav7 a, .leftnav6hover a,.leftnav6 a {
+    font-size: 12px;    
+    font-weight: bold;
+    }
+
+.leftnav4hover,.leftnav4 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;   
+    #font-style: normal;
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav4spacerow {   
+    font-weight: normal;
+    font-size: 12px;
+    background-color:#fee191;
+}
+
+.leftnav4Onhover,.leftnav4On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000; 
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 4px;
+    padding: 5px 5px 5px 35px;      
+}
+
+.leftnav5hover,.leftnav5 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    #font-style: normal; 
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav5spacerow {   
+    font-weight: normal;
+    font-size: 12px;
+    background-color:#fee191;    
+}
+
+.leftnav5hover a:visited,.leftnav5 a:visited, .leftnav5hover a:hover,.leftnav5 a:hover {
+    font-size: 12px;    
+    font-weight: bold;
+    }
+
+.leftnav5Onhover,.leftnav5On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000;
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 4px;
+    padding: 5px 5px 5px 35px;  
+}
+ 
+.leftnav6hover,.leftnav6 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    #font-style: normal;
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav6spacerow {   
+    font-weight: normal;
+    font-size: 12px;
+    background-color:#fee191;
+}
+
+.leftnav6Onhover,.leftnav6On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000;
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 4px;
+    padding: 5px 5px 5px 35px;      
+}
+
+.leftnav7hover,.leftnav7 {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    #font-style: normal;
+    padding: 5px 5px 5px 35px;  
+}
+
+.leftnav7spacerow {   
+    font-weight: normal;
+    font-size: 12px;
+    background-color:#fee191;    
+}
+
+.leftnav7Onhover,.leftnav7On {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: hand;
+    color:#000000;
+    #font-style: normal;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/arrow_selected_black.gif') no-repeat  -5px 4px;
+    padding: 5px 5px 5px 35px;     
+}
+
+.leftnav7Onhover a,.leftnav7On a {
+    font-size: 12px;    
+    font-weight: bold;    
+    }
+
+.leftnav7Onhover a:visited,.leftnav7On a:visited {
+    font-size: 12px;    
+    font-weight: bold;    
+    }
+
+
+.leftnav7Onhover a:hover,.leftnav7On a:hover {
+    font-size: 12px;    
+    font-weight: bold;
+}
+    
+ /* styles for Leftnav border */
+ 
+.leftnavBorder{display:block}
+.leftnavBorder *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#fee191}
+.leftnavBorder1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191;
+  background:#fee191}
+.leftnavBorder2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191;
+  background:#fee191}
+.leftnavBorder3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191;}
+.leftnavBorder4{
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191}
+.leftnavBorder5{
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191}
+.leftnavBorderfg{
+  background:#fee191}
+  
+ .leftnavBorderSel{display:block}
+.leftnavBorderSel *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#fee191}
+.leftnavBorderSel1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191;
+  background:#fee191}
+.leftnavBorderSel2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191;
+  background:#fee191}
+.leftnavBorderSel3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191;}
+.leftnavBorderSel4{
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191;}
+.leftnavBorderSel5{
+  border-left:1px solid #fee191;
+  border-right:1px solid #fee191}
+.leftnavBorderSelfg{
+  background:#fee191}
+
+.leftnav1, .leftnav2, .leftnav3, .leftnav4, .leftnav5, .leftnav6, .leftnav7 {background-color: #fee191;}
+.leftnav1hover, .leftnav2hover, .leftnav3hover, .leftnav4hover, .leftnav5hover, .leftnav6hover, .leftnav7hover {background-color: #ffc324;}
+/*End of Left Nav*/

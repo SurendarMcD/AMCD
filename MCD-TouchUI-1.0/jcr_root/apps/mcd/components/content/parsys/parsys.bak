@@ -1,0 +1,463 @@
+<%--
+  
+  parsys component
+
+  Includes all child resources but respects the columns control resources and
+  layouts the HTML accordingly.
+  
+--%><%@page import="com.day.cq.wcm.foundation.Paragraph,
+                    com.day.cq.wcm.foundation.ParagraphSystem,
+                    com.day.cq.wcm.api.components.IncludeOptions,
+                    com.day.cq.commons.jcr.JcrConstants,
+                    com.day.cq.wcm.api.WCMMode" %><%
+%>
+<%@include file="/apps/mcd/global/global.jsp"%>
+<%
+    
+    //Out of box code to get an object of ParagraphSystem, a String type variable newType and hasColumn
+    //To check for column control
+    ParagraphSystem parSys = new ParagraphSystem(resource, request.getParameter("cq_diffTo"));
+    String newType = resource.getResourceType() + "/new";
+    boolean hasColumns = false;
+    int columnNum = 0;//To get the column number of the column starting with 0
+    String clmCntrlCheckRndCorners="";//To check whether round corners should be included or not
+    String clmCntrlBackgroundValue ="";//To store the column control background values entered in the dialog
+    String distinctID="";//To have a distinct ID for all the control elements 
+    //To use a default color if no value for background
+    //color is entered for a particular column in the dialog
+    String defaultColor="";
+    //To extract individual color value from the comma 
+    //seperated background values entered in the dialog
+    String backGroundValues[]=null;
+    int topPadding =0;//used for storing top padding
+    int bottomPadding =0;//used for storing bottom padding
+    Node sourceNode= null;
+    boolean flagNode=true;//Takes value from ColumnCntrlNode if its true else from the site level node
+    boolean valueNotModified=true;// false if value has been modified at the component level
+    //Initialize array index here 
+    int colctrl_count = -1;
+
+    //Out of box for loop to iterate through all the 
+    //components embedded on paragraph system
+    for (Paragraph par: parSys.paragraphs()) {
+        if (editContext != null) {
+            editContext.setAttribute("currentResource", par);
+        }
+        //try catch to embed the code to get values from the dialog
+        //of column control component
+        try
+        {
+            String nodeName =   par.getPath().substring(par.getPath().lastIndexOf("/")+1);
+            //Check whether the node is of column control component
+            if(nodeName.toLowerCase().indexOf("colctrl")>-1) {
+                //initialize the column control variables
+                columnNum = 0;
+                clmCntrlBackgroundValue="";
+                clmCntrlCheckRndCorners="";
+                //Get a new node object if the node is of column control type and 
+                //further get its properties
+                Node columnCntrlNode = slingRequest.getResourceResolver().getResource(par.getPath()).adaptTo(Node.class);
+                Resource resourcePath=slingRequest.getResourceResolver().getResource(currentDesign.getPath()+"/jcr:content/base/sitelevelproperties");
+                
+                //Get the value of value not modified from hidden field
+                valueNotModified=columnCntrlNode.hasProperty("valueNotModified")?
+                        columnCntrlNode.getProperty("valueNotModified").getValue().getBoolean():true;
+                
+                if(WCMMode.fromRequest(request) != WCMMode.EDIT){
+                    //if value is not modified source node is the site level node
+                    sourceNode=(valueNotModified )?resourcePath.adaptTo(Node.class):columnCntrlNode;
+                     
+                    //if sourcenode has top padding property then get the property
+                    if(sourceNode.hasProperty("paddingTop")){
+                        topPadding=Integer.parseInt(sourceNode.getProperty("paddingTop").getValue().getString());
+                    }
+                    
+                    //if sourcenode has bottom padding property then get the property
+                    if(sourceNode.hasProperty("paddingBottom")){
+                        bottomPadding=Integer.parseInt(sourceNode.getProperty("paddingBottom").getValue().getString());
+                    }
+                    
+                    //If colors are entered in the dialog then derive its properties
+                    if(sourceNode.hasProperty("backgroundColumnctrlValue"))
+                    {
+                        clmCntrlBackgroundValue = sourceNode.getProperty("backgroundColumnctrlValue").getValue().getString();
+                        clmCntrlBackgroundValue=clmCntrlBackgroundValue.replaceAll("No Color"," ");
+                        //if sourcenode has check column control property than get the property and check if the value is
+                        //different in the hidden property
+                        if(sourceNode.hasProperty("checkColumnctrl")){
+                            clmCntrlCheckRndCorners=sourceNode.getProperty("checkColumnctrl").getValue().getString();
+                        }
+                    }
+
+                    //Derive various colors entered and then set default color accordingly
+                    backGroundValues=clmCntrlBackgroundValue.split(",");
+                    defaultColor=backGroundValues[backGroundValues.length-1];
+                    
+                } else {
+                    if(resourcePath!=null ){
+                        //if a new component is embedded extract its properties from the site level node
+                        sourceNode = resourcePath.adaptTo(Node.class);
+                        //check the values of the hidden properties and the properties of the site level nodes
+                        
+                        //Check top padding in site level node and in hidden properties
+                        flagNode&=checkValues(sourceNode,columnCntrlNode,"paddingTop","topPadding",flagNode,"");
+                        //Check bottom padding in site level node and in hidden properties
+                        flagNode&=checkValues(sourceNode,columnCntrlNode,"paddingBottom","bottomPadding",flagNode,"");
+                        //Check for including round corners in site level node and in hidden properties
+                        flagNode&=checkValues(sourceNode,columnCntrlNode,"checkColumnctrl","checkCorners",flagNode,"");
+                        //Check for background color in site level node and in hidden properties
+                        flagNode&=checkValues(sourceNode,columnCntrlNode,"backgroundColumnctrlValue","colorVal",flagNode,"");
+                    }
+                    //if value is not modified and flagnode is false source node is the site level node
+                    sourceNode=(!flagNode && valueNotModified )?resourcePath.adaptTo(Node.class):columnCntrlNode;
+                    if(sourceNode.hasProperties()) {
+                           //if sourcenode has top padding property than get the property and check if the value is
+                           //different in the hidden property
+                           if(sourceNode.hasProperty("paddingTop")){
+                               topPadding=Integer.parseInt(sourceNode.getProperty("paddingTop").getValue().getString());
+                               valueNotModified&=setColumnCntrlValues(sourceNode,columnCntrlNode,"paddingTop","topPadding",""+topPadding,valueNotModified);
+                           }
+                           //if column control node has the property then set it to blank
+                           else if(columnCntrlNode.hasProperty("paddingTop") &&!columnCntrlNode.getProperty("paddingTop").getValue().getString().equals(""))
+                               columnCntrlNode.setProperty("paddingTop","");
+                           
+                           //if sourcenode has bottom padding property than get the property and check if the value is
+                           //different in the hidden property
+                           if(sourceNode.hasProperty("paddingBottom")){
+                               bottomPadding=Integer.parseInt(sourceNode.getProperty("paddingBottom").getValue().getString());
+                               valueNotModified&=setColumnCntrlValues(sourceNode,columnCntrlNode,"paddingBottom","bottomPadding",""+bottomPadding,valueNotModified);
+                           }
+                           //if column control node has the property then set it to blank
+                           else if(columnCntrlNode.hasProperty("paddingBottom") &&!columnCntrlNode.getProperty("paddingBottom").getValue().getString().equals(""))
+                               columnCntrlNode.setProperty("paddingBottom","");
+                                //If colors are entered in the dialog then derive its properties
+                           if(sourceNode.hasProperty("backgroundColumnctrlValue"))
+                           {
+                               clmCntrlBackgroundValue = sourceNode.getProperty("backgroundColumnctrlValue").getValue().getString();
+                               valueNotModified&=setColumnCntrlValues(sourceNode,columnCntrlNode,"backgroundColumnctrlValue","colorVal",clmCntrlBackgroundValue,valueNotModified);
+                               clmCntrlBackgroundValue=clmCntrlBackgroundValue.replaceAll("No Color"," ");
+                               //if sourcenode has check column control property than get the property and check if the value is
+                               //different in the hidden property
+                               if(sourceNode.hasProperty("checkColumnctrl")){
+                                   clmCntrlCheckRndCorners=sourceNode.getProperty("checkColumnctrl").getValue().getString();
+                                   valueNotModified&=setColumnCntrlValues(sourceNode,columnCntrlNode,"checkColumnctrl","checkCorners",clmCntrlCheckRndCorners,valueNotModified);
+                               }
+                               //if hidden value exist than the vale has been modified
+                               else if(sourceNode.hasProperty("checkCorners"))
+                                   valueNotModified=false;
+                           }
+                           //if column control node has the property then set it to blank and set the property of check column control
+                           else if(columnCntrlNode.hasProperty("backgroundColumnctrlValue") &&!columnCntrlNode.getProperty("backgroundColumnctrlValue").getValue().getString().equals(""))
+                           {
+                               columnCntrlNode.setProperty("backgroundColumnctrlValue","");
+                               columnCntrlNode.setProperty("checkColumnctrl",(sourceNode.hasProperty("checkColumnctrl"))?"check":"");
+                           }
+                           //else just set the property of check column control from site level node
+                           else
+                           {
+                               columnCntrlNode.setProperty("checkColumnctrl",(sourceNode.hasProperty("checkColumnctrl"))?"check":"");
+                           }
+                        
+                        //Derive various colors entered and then set default color accordingly
+                        backGroundValues=clmCntrlBackgroundValue.split(",");
+                        defaultColor=backGroundValues[backGroundValues.length-1];
+                        columnCntrlNode.setProperty("valueNotModified",valueNotModified);
+                        columnCntrlNode.save();
+                    }
+                }
+            }
+        }
+        catch(Exception ex)
+        {
+            log.error("Column control could not be rendered: " + ex.getMessage());
+        }
+        //Out of box code snippet for switch case 
+        switch (par.getType()) {
+            case START:
+                //Get distinct id of each column control element
+                distinctID=par.getPath().substring(par.getPath().lastIndexOf("/")+1);
+                if (hasColumns) {
+                    // close in case missing END
+                    %></div></div><%
+                }
+                if (editContext != null) {
+                    // draw 'edit' bar
+                    IncludeOptions.getOptions(request, true).getCssClassNames().add("section");
+                    %><sling:include resource="<%= par %>"/><%
+                }
+                // open outer div
+                %><div id="mainColumnCntrl" class="parsys_column <%= par.getBaseCssClass()%>" style="padding:<%=topPadding %>px 0 <%=bottomPadding%>px 0"><%
+                // open column div
+                %>
+                    <div class="parsys_column <%= par.getCssClass() %>">
+                    <%
+                    //Create the individual column for the column control
+                    out.println(renderTopContainer(distinctID,columnNum,backGroundValues,defaultColor));
+                    
+                    //Render top round corners
+                    out.println(renderTopCorner(distinctID,columnNum,clmCntrlCheckRndCorners,backGroundValues,defaultColor));
+                    
+                    //Render main content div
+                    out.println(renderContentContainer(distinctID,columnNum,backGroundValues,defaultColor));
+                    
+                    hasColumns = true;
+                break;
+            case BREAK:
+                if (editContext != null) {
+                    // draw 'new' bar
+                    IncludeOptions.getOptions(request, true).getCssClassNames().add("section");
+                    %><sling:include resource="<%= par %>" resourceType="<%= newType %>"/><%
+                }
+                %>
+                       </div>
+                <%
+                //Render bottom round corners
+                out.println(renderBottomCorner(distinctID,columnNum,clmCntrlCheckRndCorners,backGroundValues,defaultColor));
+                %>
+                        </div>
+                    </div>
+                <%
+                    columnNum++;
+                    // open next column div
+                %>
+                    <div class="parsys_column <%= par.getCssClass() %>">
+                    <%
+                    //Create the individual column for the column control
+                    out.println(renderTopContainer(distinctID,columnNum,backGroundValues,defaultColor));
+                    
+                    //Render top round corners
+                    out.println(renderTopCorner(distinctID,columnNum,clmCntrlCheckRndCorners,backGroundValues,defaultColor));
+                  
+                    //Render main content div
+                    out.println(renderContentContainer(distinctID,columnNum,backGroundValues,defaultColor));
+                break;
+            case END:
+                if (editContext != null) {
+                    // draw new bar
+                    IncludeOptions.getOptions(request, true).getCssClassNames().add("section");
+                    %><sling:include resource="<%= par %>" resourceType="<%= newType %>"/><%
+                }
+                if (hasColumns) {
+                %>
+                   </div>
+                <%
+                //Render bottom round corners
+                out.println(renderBottomCorner(distinctID,columnNum,clmCntrlCheckRndCorners,backGroundValues,defaultColor));
+                    // close divs and clear floating
+                %>
+                    </div></div></div><div style="clear:both"></div><%
+                    hasColumns = false;
+                    columnNum++;
+                }
+                if (editContext != null && WCMMode.fromRequest(request) == WCMMode.EDIT) {
+                    // draw 'end' bar
+                    IncludeOptions.getOptions(request, true).getCssClassNames().add("section");
+                    %><sling:include resource="<%= par %>"/><%
+                }
+                
+                if(!( (clmCntrlBackgroundValue.equals("")) || (clmCntrlBackgroundValue.contains(" ")) )) {
+                    if (WCMMode.fromRequest(request) != WCMMode.EDIT) {
+                    %>
+                    <script>
+                        // append values in array here                  
+                        insertInColctrlArray('<%=distinctID%>','<%=columnNum%>','<%= ++colctrl_count%>');                   
+                    </script>
+                    <%
+                    }
+                }
+                break;
+            case NORMAL:
+                // include 'normal' paragraph
+                IncludeOptions.getOptions(request, true).getCssClassNames().add("section");
+                
+                // draw anchor if needed
+                if (currentStyle.get("drawAnchors", false)) {
+                    String path = par.getPath();
+                    path = path.substring(path.indexOf(JcrConstants.JCR_CONTENT) 
+                            + JcrConstants.JCR_CONTENT.length() + 1);
+                    String anchorID = path.replace("/", "_").replace(":", "_");
+                    %><a name="<%= anchorID %>" style="visibility:hidden"></a><%
+                }
+                %><sling:include resource="<%= par %>"/><%
+                break;
+        }
+    }
+    if (hasColumns) {
+        // close divs in case END missing. and clear floating
+        %></div></div><div style="clear:both"></div><%
+    }
+    if (editContext != null) {
+        editContext.setAttribute("currentResource", null);
+        // draw 'new' bar
+        IncludeOptions.getOptions(request, true).getCssClassNames().add("section");
+        %><cq:include path="*" resourceType="<%= newType %>"/><%
+    }
+%>
+<script>
+    $(function(){
+        var distinctID = "";
+        var color = "";
+            
+        leftConfig = {
+            sensitivity: 1, // number = sensitivity threshold (must be 1 or higher)
+            interval: 0, // number = milliseconds for onMouseOver polling interval
+            timeout: 0, // number = milliseconds delay before onMouseOut
+            over: function() {                                
+                distinctID = this.id.substring("container".length);
+                color = $(this).attr("rel");                
+                if(color)
+                changediv(distinctID,color);
+            }, // function = onMouseOver callback (REQUIRED)
+            out: function() {               
+                distinctID = this.id.substring("container".length);
+                color = $(this).attr("rel");                
+                if(color)
+                togglediv(distinctID,color);
+            } // function = onMouseOut callback (REQUIRED)
+    
+        }        
+        $('.containerColumnCntrl').hoverIntent(leftConfig);
+    });
+</script>
+
+<%!
+    //Function used for creating top and bottom round corners
+    public String createRndCorner(String position, String distinctID, int columnNum, String backGroundValues)
+    {
+       StringBuffer rndCorner = new StringBuffer(); 
+       rndCorner.append("\n\r<div class='roundCornerClmCtrl'>");
+       
+       if("top".equals(position))//If top round corners need to be rendered
+       {
+           rndCorner.append("\n\r<b id='"+position+"0"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"'>");
+           rndCorner.append("\n\r<b id='"+position+"1"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"1'><b></b></b>");
+           rndCorner.append("\n\r<b id='"+position+"2"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"2'><b></b></b>");
+           rndCorner.append("\n\r<b id='"+position+"3"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"3'></b>");
+           rndCorner.append("\n\r<b id='"+position+"4"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"4'></b>");
+           rndCorner.append("\n\r<b id='"+position+"5"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"5'></b></b>");
+       }
+       else//If bottom round corners need to be rendered
+       {
+           rndCorner.append("\n\r<b id='"+position+"0"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"'>");
+           rndCorner.append("\n\r<b id='"+position+"5"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"5'></b>");
+           rndCorner.append("\n\r<b id='"+position+"4"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"4'></b>");
+           rndCorner.append("\n\r<b id='"+position+"3"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"3'></b>");
+           rndCorner.append("\n\r<b id='"+position+"2"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"2'><b></b></b>");
+           rndCorner.append("\n\r<b id='"+position+"1"+distinctID+columnNum+"' class='roundcorner"+backGroundValues+"1'><b></b></b></b>");
+       }
+      
+       rndCorner.append("\n\r</div>");
+       
+       return rndCorner.toString();
+    }
+
+    //Function for rendering top column control container
+    public String renderTopContainer(String distinctID, int columnNum, String backGroundValues[], String defaultColor)
+    {
+        StringBuffer topContainer = new StringBuffer();
+        
+        if(backGroundValues.length>columnNum)
+        {  //If the column's background value is entered use the entered value to generate container
+            topContainer.append("\n\r<div class='containerColumnCntrl' id='container"+distinctID+columnNum+"' rel='"+backGroundValues[columnNum]+"' >");
+        }
+        else
+        { //else use the default color value to generate container
+            topContainer.append("\n\r<div class='containerColumnCntrl' id='container"+distinctID+columnNum+"' rel='"+defaultColor+"' >");
+        }
+        
+        return topContainer.toString();
+    }
+    
+    //Function for rendering top round corners
+    public String renderTopCorner(String distinctID,int columnNum,String clmCntrlCheckRndCorners,String backGroundValues[],String defaultColor)
+    {
+        StringBuffer topCorner = new StringBuffer();
+        if(clmCntrlCheckRndCorners.equalsIgnoreCase("check") && (!backGroundValues[0].equals("")))
+        {
+            if(backGroundValues.length>columnNum)
+            { //Render top round corners if background value is mentioned in the dialog
+                topCorner.append(createRndCorner("top", distinctID, columnNum, backGroundValues[columnNum]));
+            }
+            else
+            {  //Render top round corners if background value is not mentioned in the dialog
+               //and use default color to render the same
+                topCorner.append(createRndCorner("top", distinctID, columnNum, defaultColor));
+            }
+        }
+        return topCorner.toString();
+    }
+    
+    //Function for rendering column control content container
+    public String renderContentContainer(String distinctID, int columnNum, String backGroundValues[], String defaultColor)
+    {
+        StringBuffer contentContainer= new StringBuffer();
+        if(backGroundValues.length>columnNum)
+        {  //If the column's background value is entered use the entered value to generate content container
+            contentContainer.append("\n\r<div id='main"+distinctID+columnNum+"' class='columncontrolmain"+backGroundValues[columnNum]+"' >");
+        }
+        else
+        {  //else use the default color value to generate content container
+            contentContainer.append("\n\r<div id='main"+distinctID+columnNum+"' class='columncontrolmain"+defaultColor+"' >");
+        }
+        return contentContainer.toString();
+    }
+    
+    //Function for rendering bottom round corners
+    public String renderBottomCorner(String distinctID,int columnNum,String clmCntrlCheckRndCorners,String backGroundValues[],String defaultColor)
+    {
+        StringBuffer bottomCorner = new StringBuffer();
+        if(clmCntrlCheckRndCorners.equalsIgnoreCase("check") && (!backGroundValues[0].equals("")))
+        {
+            if(backGroundValues.length>columnNum)
+            { //Render bottom round corners if background value is mentioned in the dialog
+                bottomCorner.append(createRndCorner("bottom", distinctID, columnNum, backGroundValues[columnNum]));
+            }
+            else
+            {  //Render bottom round corners if background value is not mentioned in the dialog
+               //and use default color to render the same
+                bottomCorner.append(createRndCorner("bottom", distinctID, columnNum, defaultColor));
+            }
+        }
+        return bottomCorner.toString();
+    }
+    //Function for checking the value of hidden properties and site level node properties
+    boolean checkValues(Node sourceNode,Node columnCntrlNode,String sourceProperty, String hiddenProperty,boolean flagNode,String defaultValue) throws Exception 
+    {
+        if(sourceNode.hasProperty(sourceProperty)){
+            //check if hidden property exist and then comapre its value with site level node
+            if(columnCntrlNode.hasProperty(hiddenProperty)
+               && columnCntrlNode.getProperty(hiddenProperty).getValue().getString().equals(sourceNode.getProperty(sourceProperty).getValue().getString()) )
+            {
+                flagNode=flagNode&true;//value not modified for property in the site level node
+            }
+            else
+            {
+                columnCntrlNode.setProperty(hiddenProperty,sourceNode.getProperty(sourceProperty).getValue().getString());
+                columnCntrlNode.save();
+                flagNode=false;//value modified for property in the site level node
+            }
+        }
+        else if(columnCntrlNode.hasProperty(hiddenProperty)){
+            columnCntrlNode.setProperty(hiddenProperty,defaultValue);//Set the property of the hidden node 
+            columnCntrlNode.save();                                  //to default value of " "
+            flagNode=false;//value has been removed from the site level node
+        }
+        return flagNode;
+    }
+    //Function for setting values in column control node and check if the value has been modified
+    boolean setColumnCntrlValues(Node sourceNode,Node columnCntrlNode,String sourceProperty,String hiddenProperty, String nodeProperty, boolean valueNotModified) throws Exception
+    {
+        if(!sourceNode.equals(columnCntrlNode))
+        {
+            columnCntrlNode.setProperty(sourceProperty,nodeProperty);
+            columnCntrlNode.save();
+        }
+        if(columnCntrlNode.hasProperty(hiddenProperty))
+        valueNotModified&=columnCntrlNode.getProperty(sourceProperty).getValue().getString().equals(columnCntrlNode.getProperty(hiddenProperty).getValue().getString());
+        else
+        valueNotModified=false;
+        
+    return valueNotModified;
+    }
+    
+%>

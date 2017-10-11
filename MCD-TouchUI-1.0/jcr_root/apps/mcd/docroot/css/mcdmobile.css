@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* Default Classes Starts Here */
+*{margin:0; border:0; padding:0; outline:0;}
+body {margin: 0;padding: 0;font-family:Arial,Helvetica,sans-serif; width: 100%; background:#b3b3b3; font-size:24px;} 
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding: 0; margin: 0;}
+table {border-collapse: collapse; border-spacing: 0;}
+fieldset,img {border: 0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-weight: normal;font-style: normal;}
+ol,ul {list-style: none;}
+caption,th {text-align: left;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+abbr,acronym { border: 0;}
+/* Clear Classes */
+.cLeft{clear:left;}
+.cRight{clear:right;}
+.cBoth{clear:both;}
+/*Horizontal Line*/
+hr{ width:100%; background:url(../images/hzLine.gif) repeat-x 0 0; height:2px; margin-top:10px;}
+/*mainContainer Starts Here*/
+#container{width:100%; }
+/*Header Section Starts Here which is fixed*/
+#header{position:fixed;background:url(../images/headerBg.gif) repeat-x 0 0; height:96px; width:100%; top:0; left:0;}
+#logo{height:69px;width:69px;margin:0 auto;}
+/*subContainer Starts Here which is scrollable*/
+#subContainer{width:100%;margin-top:48px;background:url(../images/subContainer1.gif) repeat-x 0 0; float:left; padding-top:30px;} 
+#subContainer ul{}
+#subContainer ul li{margin-top:5px; line-height:16px; padding:0 0 0 25px;}
+#subContainer ul li.txt{ text-align:left; margin-top:5px;}
+#subContainer ul li.txt a{ color:#595959; text-decoration:none; font-size:14px; font-weight:bold;}
+/* Li downarrow */
+.downarrow{padding-left:18px; }
+.downarrow a{margin-left:18px; cursor:pointer; }
+/* Thumbnail Image for Screen1*/
+#thumbnailImgOne{width:530px; height:175px; margin:0 auto; }
+/* Image Title Text */
+#subContainer p{font:Arial, Helvetica, sans-serif 38px; font-w eight:bold; color:#000000;padding-left:27%;}
+
+/* text and content*/
+#subContainer ul li.Mc-content{ text-align:left; color:#595959; padding:0 0px 10px 25px;background:url(../images/seprator.gif) left bottom repeat-x;}
+#subContainer ul li.Mc-content h1{font:bold 14px Helvetica, sans-serif, Arial;}
+#subContainer ul li.Mc-content a{ font:bold 14px Helvetica, sans-serif, Arial; text-decoration:none; color:#595959; }
+#subContainer ul li.Mc-content a img{ border:none; padding-right:10px; position:relative; top:2px;}
+#subContainer ul li.Mc-content p{ font:12px Helvetica, sans-serif, Arial; color:#fff; text-align:left; padding:0px 0 0 0; line-height:18px;}
+
+/* back button css*/
+.back-btn{ background:url(../images/back_img.gif) 0 0 repeat-x; width:98%; padding:3px 2% 0 0; height:17px; text-align:right; font-size:0; }
+.back-btn a{ font:bold 12px Helvetica, sans-serif, Arial; color:#fff; text-decoration:none; background:url(../images/back_arw.gif) 0 3px no-repeat; padding-left:15px;}

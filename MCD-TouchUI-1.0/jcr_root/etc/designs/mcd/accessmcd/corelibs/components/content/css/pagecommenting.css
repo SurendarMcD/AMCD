@@ -1,0 +1,88 @@
+.headertxt {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+} 
+.disablebgcolor {
+    background-color: #AFC7C7;
+}   
+.graybgcolor {
+    background-color: #E9E9E9;
+    line-height: 22px;
+}
+.grayborder {
+    border: 1px solid #CCCCCC;
+    zoom: 1;
+}
+.padding7px {
+    padding: 7px;
+}
+.margintop {
+    margin-top: 10px;
+}
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #666666;
+    border: 1px solid #666666;
+}
+a.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #E9E9E9;
+    border: 1px solid #E9E9E9; 
+    text-decoration: none;
+}
+a.button:hover {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #E9E9E9;
+    border: 1px solid #E9E9E9;
+}
+.buttonpadding {
+    padding: 1px 10px;
+}
+.buttonmargin {
+    margin-right:3px;
+}
+.clear {clear:both;}
+.btmborder {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+}
+.replydiv {
+    padding-left: 35px;
+}
+.textarea { width: 100%;
+}
+.toptxthead {
+    margin-bottom: 10px;
+}
+.toptxthead h2 {
+    margin: 0px;
+    padding: 0px;
+    clear: right;
+    float: left;
+}
+#formDiv {
+    display: none;
+}
+abbr[title]{
+    border: none;
+}
+.comment_desc {
+    word-wrap: break-word;
+}

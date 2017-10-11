@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog">
+    <items
+        jcr:primaryType="cq:Dialog"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <video
+                jcr:primaryType="cq:Widget"
+                title="Video"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <message
+                        jcr:primaryType="cq:Widget"
+                        html="&lt;span style=&quot;font-weight:bold;font-size:13px;color:red;line-height: 20px;font-family: arial;&quot;>&lt;i>This is the New Responsive Video Component. This component will support only &lt;b>MP4 Videos&lt;/b>. &lt;/span>&lt;br>&lt;br>"
+                        xtype="label"/>
+                    <file
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddAccept="[application/x-shockwave-flash]"
+                        ddGroups="[media]"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Video File"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        mimeTypes="*.swf;*.flv"
+                        name="./file"
+                        sizeLimit="100"
+                        uploadUrl="/tmp/upload_test/*"
+                        xtype="smartfile"/>
+                    <width
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please provide width in percentage (%) but not more than 100%"
+                        fieldLabel="Width"
+                        name="./width"
+                        xtype="textfield"/>
+                    <event
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter event category name&lt;br>otherwise page title name will appear as event catergory "
+                        fieldLabel="Event Category"
+                        name="./event"
+                        xtype="textfield"/>
+                    <videopath
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter an External URL to video file.&lt;br>"
+                        fieldLabel="Video Path"
+                        name="./videoPath"
+                        xtype="hidden"/>
+                    <resType_still
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./stillimage/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                    <bottompadding
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Bottom Padding"
+                        name="./btmpadding"
+                        xtype="textfield"/>
+                </items>
+            </video>
+            <stillimage
+                jcr:primaryType="cq:Widget"
+                cropParameter="./stillimage/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./stillimage/fileName"
+                fileReferenceParameter="./stillimage/fileReference"
+                mapParameter="./stillimage/imageMap"
+                name="./stillimage/file"
+                requestSuffix="/stillimage.img.png"
+                rotateParameter="./stillimage/imageRotate"
+                sizeLimit="100"
+                title="Still Image"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage"/>
+        </items>
+    </items>
+</jcr:root>

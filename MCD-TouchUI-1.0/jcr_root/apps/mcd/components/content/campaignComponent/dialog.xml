@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Edit Campaign Component"
+    width="{Long}800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <campaigntab
+                jcr:primaryType="cq:Widget"
+                title="Campaign"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <label
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter Campaign Data"
+                        xtype="label"/>
+                    <data
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./campdata"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="campaign"/>
+                    </data>
+                    <preview
+                        jcr:primaryType="cq:Widget"
+                        autoWidth="{Boolean}false"
+                        boxMaxWidth="{Long}100"
+                        handler="function(){var dialog=this.findParentByType('dialog');&#xa;var campData = new Array();&#xa;var camp = new Array();&#xa;var query = &quot;&quot;;&#xa;campData =dialog.getField('./campdata').getValue(); &#xa;for(var i=0;i&lt; campData.length ; i++)&#xa;{ &#xa;  camp = campData[i].split('|');&#xa;  for(var j = 0 ; j &lt; camp.length ; j++)&#xa;  {&#xa;   if(camp[j]=='')&#xa;   {&#xa;     camp[j] = ' ';&#xa;   }&#xa;  }&#xa;  if(i==0)&#xa;   {&#xa;    query = camp[0] + &quot;|&quot; + camp[1] + &quot;|&quot; + camp[2] + &quot;|&quot; + camp[3] + &quot;$&quot;;&#xa;   }&#xa;  else&#xa;    if(i == campData.length -1)&#xa;   {&#xa;    query = query + camp[0] + &quot;|&quot; + camp[1] + &quot;|&quot;  + camp[2] + &quot;|&quot; + camp[3] ;&#xa;   }&#xa;   else&#xa;   {&#xa;    query = query + &quot;|&quot; + camp[0] + &quot;|&quot; + camp[1] + &quot;|&quot; + camp[2] + &quot;|&quot;  + camp[3] + &quot;$&quot;; &#xa;   }&#xa; }&#xa;&#xa;  var url = dialog.path;&#xa; url = url.substring(0,url.indexOf('/jcr:content')); &#xa; url = url + &quot;.preview.html?data=&quot;;&#xa; window.open(url+ query);&#xa;}"
+                        style="max-width:100px;font-weight:bold;"
+                        text="Preview"
+                        xtype="button"/>
+                </items>
+            </campaigntab>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforeSubmit=" function(){&#xa;&#x9;var campdata =  new Array();&#xa;&#x9;var camp = new Array();&#xa;&#x9;var fran = 0;&#xa;&#x9;var crew = 0;&#xa;&#x9;var corp = 0;&#xa;&#x9;var supply = 0;&#xa;&#x9;var mcop=0;&#xa;&#x9;var support = 0;&#xa;&#x9;var franrestman = 0;&#xa;&#x9;var dialog = this;&#xa;&#x9;campdata = dialog.getField('./campdata').getValue();&#xa;&#x9;for(var i =0 ; i &lt; campdata.length ; i++)&#xa;&#x9; {&#xa;&#x9;  camp = campdata[i].split('|');&#xa;      if(camp[3].indexOf('CorpEmployees') != -1)&#xa;&#x9;    {&#xa;&#x9;&#x9; corp ++;&#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;&#xa;      if(camp[3].indexOf('McOpCoRestMgrs') != -1)&#xa;&#x9;    {&#xa;&#x9;&#x9; mcop ++; &#xa;&#x9;&#x9;}&#xa;      if(camp[3].indexOf('Franchisees') != -1)&#xa;&#x9;    { &#xa;                fran ++;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;} &#xa;       if(camp[3].indexOf('FranchiseeRestMgrs') != -1)&#xa;&#x9;    {&#xa;&#x9;     franrestman ++;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;} &#xa;&#x9;   if(camp[3].indexOf('SupplierVendors') != -1)&#xa;&#x9;    { supply ++;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;} &#xa;&#x9;   if(camp[3].indexOf('SupportPartners') != -1)&#xa;&#x9;    { support ++;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;} &#xa;&#x9;&#x9; if(camp[3].indexOf('Crew') != -1)&#xa;&#x9;    { crew ++;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;} &#xa;       }      &#xa;      var audience = '';&#xa;      var temp=0;&#xa;      if(corp > 1)&#xa;&#x9;{&#xa;          audience = audience + ' Corp Employees :';temp=1;&#xa;&#x9; }&#xa;      if(mcop > 1)&#xa;&#x9;{&#xa;&#xa;&#x9;audience = audience + ' McOpCo Restaurant Mgr :';temp=1;&#xa;&#x9; }&#xa;      if(fran > 1 )&#xa;&#x9;{&#xa;&#x9; audience = audience + ' Franchisee :';temp=1;&#xa;&#x9;}&#xa;      if(franrestman > 1 )&#xa;&#x9;{&#xa;&#x9; audience = audience + ' Franchisee Restaurant Mgr :';temp=1;&#xa;&#x9;}&#xa;      if(crew > 1 )&#xa;&#x9;{&#xa;&#x9; audience = audience + ' Crew :';temp=1;&#xa;&#x9;}&#xa;      if(supply > 1 )&#xa;&#x9;{&#xa;&#x9; audience = audience + ' Supplier/Vendor :';temp=1;&#xa;&#x9;}&#xa;      if(support > 1 )&#xa;&#x9;{&#xa;&#x9; audience = audience + ' Support Partners :';temp=1;&#xa;&#x9;}&#xa;      &#xa;        audience = audience.substring(0,audience.length-2);&#xa;&#xa;       if(temp == 1)&#xa;&#x9;{&#xa;&#x9;  CQ.Ext.Msg.show (                                &#xa;&#x9;&#x9;&#x9;&#x9;{'title': CQ.I18n.getMessage('Campaign Component Validation'),&#xa;&#x9;&#x9;&#x9;&#x9; 'msg':' '+ audience + ': ' + CQ.I18n.getMessage('Audience Group selected Multiple times '), &#xa;&#x9;&#x9;&#x9;&#x9; 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.INFO, 'scope':this                               &#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;  return false;&#xa;&#x9;}&#xa;}&#xa;"/>
+</jcr:root>

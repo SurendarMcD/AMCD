@@ -1,0 +1,31 @@
+.ie7selectarea{
+    border: 1px solid #aaa;
+    background-color:#FFFFFF;
+    margin-top:1px;
+    margin-right:5px; 
+}
+
+.selectarea{
+    width:34% !important;
+}
+
+select.selmenu {
+    filter:chroma(color=#aaaaaa);
+    border:none;
+    margin:10px 5px 6px 5px;
+    width:98%;
+}
+
+.search_btn{
+    margin-top:1px;
+    margin-left:5px;   
+}
+
+.description h2{
+    color: #333333;
+    font-size: 13pt;
+}
+
+.searchwrapper{
+    padding-bottom:0px;
+}

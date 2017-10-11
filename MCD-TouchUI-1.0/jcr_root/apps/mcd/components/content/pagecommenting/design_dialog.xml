@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <common
+                jcr:primaryType="cq:Panel"
+                title="Common Configurations">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <commentText
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Add a Comment"
+                        fieldDescription="Used for adding a comment option."
+                        fieldLabel="Add Comment Text"
+                        name="./comment_text"
+                        xtype="textfield"/>
+                    <replyText
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Reply"
+                        fieldDescription="Used for the reply options"
+                        fieldLabel="Reply Text"
+                        name="./reply_text"
+                        xtype="textfield"/>
+                </items>
+            </common>
+            <formConfig
+                jcr:primaryType="cq:Panel"
+                title="Form Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Add a Comment"
+                        fieldDescription="Displayed above the Commenting form"
+                        fieldLabel="Title"
+                        name="./form_title"
+                        xtype="textfield"/>
+                    <submitText
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Submit"
+                        fieldDescription="Displayed on the submit button of the form"
+                        fieldLabel="Submit Text"
+                        name="./form_submit_text"
+                        xtype="textfield"/>
+                    <validationMessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Please enter comments before submitting."
+                        fieldDescription="Alert Message displayed if user does not enter the comment before submitting"
+                        fieldLabel="Validation Message"
+                        name="./form_validation_msg"
+                        xtype="textfield"/>
+                </items>
+            </formConfig>
+            <subscriptionConfig
+                jcr:primaryType="cq:Panel"
+                title="Subscription/Unsubscription">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <subscriptionText
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Subscribe to Comment"
+                        fieldDescription="To be shown in the header part of the section"
+                        fieldLabel="Subscription Text"
+                        name="./subscribe_text"
+                        xtype="textfield"/>
+                    <subscriptionConfirmText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="To be displayed when user clicks on subscription link"
+                        fieldLabel="Subscription Confirmation Message"
+                        name="./subscribe_confirm_text"
+                        xtype="textfield"/>
+                    <subscriptionExceptionText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="To be displayed if the user has already subscribed."
+                        fieldLabel="Subscription Exception Message"
+                        name="./subscribe_exception_text"
+                        xtype="textfield"/>
+                    <unsubscriptionAlertText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="To be displayed if the user has successfully unsubscribed"
+                        fieldLabel="Unsubscription Alert Message"
+                        name="./unsubscribe_alert_text"
+                        xtype="textfield"/>
+                </items>
+            </subscriptionConfig>
+        </items>
+    </items>
+</jcr:root>

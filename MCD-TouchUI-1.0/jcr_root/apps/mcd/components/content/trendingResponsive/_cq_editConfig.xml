@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:dialogMode="floating"
+    jcr:primaryType="cq:EditConfig">
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        afteredit="REFRESH_PAGE"
+        afterinsert="function(path, definition) { &#xa;var val=CQ.Util.eval(CQ.HTTP.get(path+'.deleteTrendingComp.html')); &#xa;if(val[0].deleted=='true')&#xa;{&#xa;                CQ.Ext.Msg.show&#xa;                ({&#xa;                                'title':CQ.I18n.getMessage('Dialog Validation'),&#xa;                                'msg':CQ.I18n.getMessage('More than one trending now component is not allowed in a page.'),&#xa;                                'buttons':CQ.Ext.Msg.OK,&#xa;                                'icon':CQ.Ext.MessageBox.INFO,'scope':this&#xa;                }); &#xa;                return false;&#xa;}&#xa;else {&#xa;                location.reload(true);&#xa;}}&#xa;"/>
+</jcr:root>

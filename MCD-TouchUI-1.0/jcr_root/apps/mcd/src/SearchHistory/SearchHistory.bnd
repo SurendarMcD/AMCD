@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: SearchHistory
+Bundle-Description: Get the previous searches
+Bundle-SymbolicName: SearchHistory
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.accessmcd.SearchHistory.Activator

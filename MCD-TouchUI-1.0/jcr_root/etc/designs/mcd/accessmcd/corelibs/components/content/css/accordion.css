@@ -1,0 +1,121 @@
+/*********Accordion*******/ 
+#left-widgets-column .accordion {
+    width: 250px !important;
+}
+#content_txt .accordion {
+    width: 100% !important;
+}
+#right_content_par .accordion {
+    width: 250px !important;
+}
+#accordion_top {
+    position: relative;
+    border: solid 1px #DFDFDF;
+    -webkit-border-radius: 12px; 
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+    z-index: 10; 
+}
+
+.accordion_top {
+    padding: 11px 0px;
+    margin-left: 0px;
+    margin-bottom:15px;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+}
+#accordion_bottom {
+    padding-bottom: 11px;
+    background: #FFFFFF;
+}
+#accordion {
+    text-align:left; 
+    background: #FFFFFF;
+    
+}
+#accordion h4 {
+    margin:0;
+    padding:0;
+    outline: none;
+    clear:left;
+    position: relative;
+    /* Added after upgrade to AEM 5.6.1 */
+    font-family:Arial;
+    border: 0;
+    background: none;
+    display: block;
+}
+#accordion a.active_widget {
+    display: block;
+    font-size: 13px;
+    /*font-weight: bolder;*//* Hide for IE11 browser */
+    color: #990000;
+    text-decoration: none; 
+    line-height: 18px;
+    padding: 16px 35px 6px 23px;
+    outline: none;
+    border-top: #DFDFDF 1px solid;
+    #border-top: #DFDFDF 2px solid;
+}
+#accordion h4:first-child a.active_widget {
+   padding: 3px 35px 3px 23px;
+   border: none; 
+   line-height:18px;
+}
+#accordion div.active_segment {
+    display: block;
+    padding: 0px 23px 0px 23px;
+    height:auto !important;
+    margin: 13px 0px;
+}
+#accordion div.active_segment p {
+    margin: 0;
+    word-wrap: break-word;
+}
+#accordion span.ui-icon {
+    position: absolute;
+    right:0px;
+    width: 10px;
+    height: 10px;
+    margin: 21px 23px 0px 0px;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/bullets/red_arrow_right.gif) no-repeat 0px 0px;
+}
+#accordion h4.ui-state-active a {
+    cursor: default;
+}
+#accordion h4:first-child span.ui-icon {
+    margin: 9px 23px 0px 0px;
+}
+#accordion h4.ui-state-active span.ui-icon {   
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/bullets/red_arrow_down.gif) no-repeat 0px 0px;
+}
+.accordion_spacer {
+    clear: both; 
+    height: 20px;
+}
+.ui-accordion .ui-accordion-content {
+    overflow: hidden;
+    overflow-y: auto;
+    /* Added after upgrade to AEM 5.6.1 */
+    border: 0;
+    background: none;
+    padding: 0;
+    font-size: 10pt;
+    line-height: 11pt;
+    font-family:Arial;
+}   
+#accNoData {
+    padding: 25px 10px 0px 10px;
+    /* Added after upgrade to AEM 5.6.1 */
+    border:0;
+    font-family:Arial;
+}
+#accNoData .ui-icon {
+    display: none;
+}
+#accordion div.active_segment ul {
+    list-style: disc!important;
+}
+
+/******End of accordion*****/

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    formUrl="/mcd/accessmcd/aucalnbservlet/AUCalendarInsertPost"
+    height="{Long}650"
+    responseScope="this"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items
+            jcr:primaryType="nt:unstructured"
+            border="false"
+            height=""
+            title="Notice Board"
+            width=""
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <mandatoryField
+                    jcr:primaryType="cq:Widget"
+                    html="&lt;center>*Denotes mandatory fields&lt;br>"
+                    xtype="label"/>
+                <postingDate
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Use Ctrl+Click or Shift+Click to select multiple dates"
+                    fieldLabel="*Posting Date:"
+                    format="d/m/Y"
+                    multiSelection="{Boolean}true"
+                    name="./postingDate"
+                    noOfMonth="{Long}2"
+                    noOfMonthPerRow="{Long}1"
+                    showWeekNumber="{Boolean}false"
+                    submitFormat="d/m/Y"
+                    xtype="datefieldplus"/>
+                <title
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Maximum 120 characters"
+                    fieldLabel="*Title:"
+                    name="./title"
+                    title="Title"
+                    width="{Long}300"
+                    xtype="textfield"/>
+                <prefix
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="FOR ACTION"
+                    fieldLabel="*Prefix:"
+                    name="./prefix"
+                    type="radio"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <forAction
+                            jcr:primaryType="nt:unstructured"
+                            text="For Action"
+                            value="FOR ACTION"/>
+                        <forInformation
+                            jcr:primaryType="nt:unstructured"
+                            text="For Information"
+                            value="FOR INFORMATION"/>
+                    </options>
+                </prefix>
+                <description
+                    jcr:primaryType="cq:Widget"
+                    enableSourceEdit="{Boolean}true"
+                    fieldDescription="Maximun 150 characters"
+                    fieldLabel="Description:"
+                    name="./description"
+                    width="{Long}300"
+                    xtype="textarea"/>
+                <audienceStaff
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Staff"
+                    checked="{Boolean}true"
+                    fieldLabel="*Audience:"
+                    inputValue="1"
+                    name="./audienceStaff"
+                    type="checkbox"
+                    xtype="selection"/>
+                <linkStaff
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click the browse icon to browse internal link or type in http/https external URL"
+                    name="./linkStaff"
+                    predicate="nosystem"
+                    rootPath="/content/accessmcd/apmea"
+                    showTitlesInTree="{Boolean}false"
+                    width="{Long}300"
+                    xtype="pathfield"/>
+                <displayStaff
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Display Staff link in a New Window"
+                    inputValue="{Long}2"
+                    name="./displayStaff"
+                    type="checkbox"
+                    xtype="selection"/>
+                <audienceFranchiees
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Franchisees"
+                    checked="{Boolean}true"
+                    inputValue="{Long}4"
+                    name="./audienceFranchiees"
+                    type="checkbox"
+                    xtype="selection"/>
+                <linkFranchiees
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click the browse icon to browse internal link or type in http/https external URL"
+                    name="./linkFranchiees"
+                    predicate="nosystem"
+                    rootPath="/content/accessmcd/apmea"
+                    showTitlesInTree="{Boolean}false"
+                    width="{Long}300"
+                    xtype="pathfield"/>
+                <displayFranchiees
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Display Franchisees link in a New Window"
+                    inputValue="2"
+                    name="./displayFranchiees"
+                    type="checkbox"
+                    xtype="selection"/>
+                <viewAU
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Australia"
+                    checked="{Boolean}true"
+                    fieldLabel="*View:"
+                    inputValue="{Long}4"
+                    name="./viewAU"
+                    type="checkbox"
+                    xtype="selection"/>
+                <viewNZ
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="New Zealand"
+                    checked="{Boolean}true"
+                    inputValue="5"
+                    name="./viewNZ"
+                    type="checkbox"
+                    xtype="selection"/>
+                <postingType
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="{Long}2"
+                    name="./postingType"
+                    xtype="hidden"/>
+                <categoryId
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="{Long}4000"
+                    name="./categoryId"
+                    xtype="hidden"/>
+                <action
+                    jcr:primaryType="cq:Widget"
+                    name="./action"
+                    xtype="hidden"/>
+                <uuid
+                    jcr:primaryType="nt:unstructured"
+                    name="./uuid"
+                    xtype="hidden"/>
+                <startDate
+                    jcr:primaryType="nt:unstructured"
+                    name="./startDate"
+                    xtype="hidden"/>
+            </items>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){ var postingDate = dialog.getField('./postingDate').getValue();  if (postingDate == '') {alert('Please input Posting Date'); return false;}  var startDate = dialog.getField('./startDate').getValue(); var flag = 0; for (var i=0; i&lt;postingDate.length; i++) {   var diff = postingDate[i].valueOf() - parseInt(startDate);      if (diff &lt; 0) { &#x9;flag = 1;         break;   } } if (flag == 1) {alert('You can not input posting date(s) in archived period'); return false;} var title   = dialog.getField('./title').getValue().trim();  if (title == '') {alert('Please input Title'); return false;} if (title.length > 120) {alert('Title can   not exceed 120   characters'); return false;} var prefix = dialog.getField('./prefix').getValue();  if (prefix == '') {alert('Please select Prefix'); return false;}   /*var prefixText =   dialog.getField('./prefixText').getValue().trim();  if (prefix == 'OTHER' &amp;&amp; prefixText == '') {alert('Please input Prefix Text'); return false;}   */ var description =   dialog.getField('./description').getValue().trim();  if (description.length > 150) {alert('Description can not exceed 150 characters'); return   false;}  var   audienceStaff = dialog.getField('./audienceStaff').getValue();  var audienceFranchiees = dialog.getField('./audienceFranchiees').getValue();  if   (audienceStaff == ''   &amp;&amp; audienceFranchiees == '') { alert('Please select audience Staff or Franchisees'); return false; }   var viewAU =   dialog.getField('./viewAU').getValue();  var viewNZ   = dialog.getField('./viewNZ').getValue();  if (viewAU == '' &amp;&amp; viewNZ == '') {alert('Please select Australia or   New Zealand view'); return false; }   dialog.form.addListener('actioncomplete',dialog.refreshComponent);   dialog.form.addListener('actionfailed',dialog.refreshComponent);  }"/>
+</jcr:root>

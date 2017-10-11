@@ -1,0 +1,17 @@
+.article_preview a.article_preview_image
+{
+    float: left;
+    margin: 0px 30px 28px 0px;
+}
+.article_preview h3, 
+.article_preview h4,
+.article_preview p 
+{
+    margin: 0px 0px 5px 190px;
+} 
+a.preview,
+p.preview
+{
+    font-size: 11px;
+    line-height: 14px;
+}

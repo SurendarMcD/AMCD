@@ -1,0 +1,128 @@
+/*****Start Skip To CSS*****/
+.menu_wrap {
+    float:right;
+    position:relative;
+}
+
+.dropdown_body  /*alina */
+{
+    display:none;position:absolute; 
+    z-index: 10000; 
+    top:31px;
+    left:0px;
+    margin:0px ;
+    padding:0px;
+}
+
+div.dropdown_trigger /*alina */
+{
+    display: none;
+    float: left;
+    width: 200px;
+    height: 31px; 
+    line-height: 31px;
+    padding-left: 17px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+div.dropdown_header /*alina */
+{
+    display: block;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_inactive.png) no-repeat 0px 0px;
+}
+div.dropdown_header_active:hover,
+div.dropdown_header:hover 
+{
+    color:#990000; 
+}
+div.dropdown_header_active /*alina */
+{
+    display: block;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_active_first.png) no-repeat 0px bottom;
+    font-size: 11px;
+    color: #363636;
+}
+
+li.dropdown_node, li.dropdown_last_node /*alina */
+{
+    list-style:none;
+    width: 200px;
+    height: 31px; 
+    line-height: 28px;
+    padding-left: 17px;
+    cursor: pointer;
+    overflow: hidden;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_active_li.png) no-repeat 0px bottom;
+    list-style-image:none;
+    text-align:left;
+    clear:both;
+}
+li.dropdown_last_node /*alina*/
+{
+    list-style:none;
+    height: 32px;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_active_last.png) no-repeat 0px bottom;
+}
+
+ul.dropdown_body li a, lul.dropdown_body li a:link, 
+ul.dropdown_body li a:visited, ul.dropdown_body li a:active /*alina*/
+{
+    color: #363636;
+    text-decoration:none;
+    font-size: 11px;
+ }
+ul.dropdown_body li a:hover {
+    color:#990000;
+}
+
+div.dropdown_node {
+    display: none;
+    float: left;
+    width: 200px;
+    height: 31px; 
+    line-height: 31px;
+    padding-left: 17px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+div.dropdown_header
+{
+    display: block;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_inactive.png) no-repeat 0px 0px;
+    font-size: 11px;
+    color: #363636;
+}
+
+div.dropdown_selected
+{
+    display: block;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_inactive.png) no-repeat 0px 0px;
+}
+
+div.dropdown_active
+{
+    display: block;
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_active_li.png) no-repeat 0px bottom;
+    clear: left;
+}
+div.dropdown_active:first-child
+{
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_active_first.png) no-repeat 0px bottom;
+}
+div.dropdown_active.last
+{
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_active_last.png) no-repeat 0px top;
+}
+div.dropdown_active:last-child
+{
+    background: transparent url(/etc/designs/mcd/accessmcd/corelibs/images/backgrounds/dropdown_active_last.png) no-repeat 0px top;
+}
+.acts_as_dropdown
+{
+    position: absolute;
+    z-index: 999;
+}
+
+/****End Skip To CSS****/

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:created="{Date}2017-09-11T05:35:06.505-05:00"
+    jcr:createdBy="admin"
+    jcr:description=""
+    jcr:lastModified="{Date}2017-09-11T05:35:06.505-05:00"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="vlt:PackageDefinition"
+    buildCount="1"
+    builtWith="Adobe Experience Manager-6.1.0.SP1"
+    group="my_packages"
+    lastUnwrapped="{Date}2017-09-11T05:35:06.505-05:00"
+    lastUnwrappedBy="admin"
+    lastWrapped="{Date}2017-09-11T05:35:06.505-05:00"
+    lastWrappedBy="admin"
+    name="MCD-TouchUI-1.0"
+    version="">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/apps/mcd"
+            rules="[]"/>
+        <f1
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/content/accessmcd/test123"
+            rules="[]"/>
+        <f2
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/etc/designs/mcd/accessmcd"
+            rules="[]"/>
+    </filter>
+</jcr:root>

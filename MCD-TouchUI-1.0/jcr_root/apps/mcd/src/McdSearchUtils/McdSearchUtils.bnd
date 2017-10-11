@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource:
+Bundle-Name: MCD Search Utility Functions
+Bundle-Description: Assists with tagging content for search indexing and retrieval
+Bundle-SymbolicName: McdSearchUtils
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.cq.util.search.Activator

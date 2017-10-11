@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Product Search Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <productSearchLabel
+                jcr:primaryType="cq:Panel"
+                title="Search Filter Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <titletext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title Text"
+                        name="./titleText"
+                        xtype="textfield"/>
+                    <menuCategoryLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Category Label"
+                        name="./menuCategoryLabel"
+                        xtype="textfield"/>
+                    <targetAudienceLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Target Audience Label"
+                        name="./targetAudienceLabel"
+                        xtype="textfield"/>
+                    <productdDayPartLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Day Part Label"
+                        name="./productDayPartLabel"
+                        xtype="textfield"/>
+                    <menuItemRoleLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Item Role Label"
+                        name="./menuItemRoleLabel"
+                        xtype="textfield"/>
+                    <areaLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Area Label"
+                        name="./areaLabel"
+                        xtype="textfield"/>
+                    <countryLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Country Label"
+                        name="./countryLabel"
+                        xtype="textfield"/>
+                    <archiveItemsLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Archive Items Label"
+                        name="./archiveItemLabel"
+                        xtype="textfield"/>
+                    <textSearchLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text Search Label"
+                        name="./textSearchLabel"
+                        xtype="textfield"/>
+                </items>
+            </productSearchLabel>
+        </items>
+    </items>
+</jcr:root>

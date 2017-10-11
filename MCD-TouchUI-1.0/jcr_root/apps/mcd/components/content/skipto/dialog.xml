@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/components/skipto.html?wcmmode=disabled"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <productlink
+            jcr:primaryType="cq:Widget"
+            title="Page URL"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <label
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Label"
+                    name="./label"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="{Boolean}false"
+                        xtype="textfield"/>
+                    <dropdowntext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Drop Down Label"
+                        name="./dropdownlabel"
+                        xtype="textfield"/>
+                </label>
+                <anchor
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Anchor"
+                    name="./anchor"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="{Boolean}false"
+                        xtype="textfield"/>
+                </anchor>
+                <bottompadding
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="in px. (Default: 44px)&#xa;"
+                    fieldLabel="Bottom Padding"
+                    name="./btmpadding"
+                    xtype="textfield"/>
+            </items>
+        </productlink>
+    </items>
+</jcr:root>

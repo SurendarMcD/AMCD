@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}600"
+    helpPath="/accessmcd/na/us/natl/services_support/cq5_manual/components/accordion.html"
+    width="{Long}1200"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <accordiontab
+                jcr:primaryType="cq:Panel"
+                title="Expandable Content">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <bottompadding
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="in px. (Default: 20px)"
+                        fieldLabel="Bottom Padding"
+                        name="./btmpadding"
+                        xtype="textfield"/>
+                    <arrowcheck
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Display Arrows for Expand/Collapse"
+                        name="./arrowcheck"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <arrowsymbol
+                                jcr:primaryType="nt:unstructured"
+                                value="{Boolean}true"/>
+                        </options>
+                    </arrowcheck>
+                    <whiteseparator
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Display White Separator between Sub Sections"
+                        name="./separatorbtwnsubsection"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <separatorsubsection
+                                jcr:primaryType="nt:unstructured"
+                                value="{Boolean}true"/>
+                        </options>
+                    </whiteseparator>
+                    <excontent
+                        jcr:primaryType="cq:Widget"
+                        dName="./expandableData"
+                        fieldDescription="Click the '+' to add a new detail"
+                        fieldLabel="Expandable Content Data"
+                        name="./expandableData"
+                        title="Expandable Content Data"
+                        width="{Long}500"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            layout="form"
+                            xtype="customlinkpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <question
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="100%"
+                                    dName="question"
+                                    fieldDescription="Question to be displayed on top of section."
+                                    fieldLabel="Section Title * : "
+                                    name="./question"
+                                    xtype="textfield"/>
+                                <subquestions
+                                    jcr:primaryType="cq:Widget"
+                                    dName="./subQuestions"
+                                    fieldDescription="Click the '+' to add a new sub question"
+                                    fieldLabel="Section Content"
+                                    name="./subQuestions"
+                                    title="Section Content"
+                                    width="{Long}600"
+                                    xtype="multifield">
+                                    <fieldConfig
+                                        jcr:primaryType="cq:Widget"
+                                        layout="form"
+                                        xtype="customlinkpanel">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <subQuestion
+                                                jcr:primaryType="cq:Widget"
+                                                anchor="100%"
+                                                dName="subQues"
+                                                fieldDescription="Sub question to be displayed below top question"
+                                                fieldLabel="Sub Title"
+                                                name="./subQues"
+                                                xtype="textfield"/>
+                                            <imagePath
+                                                jcr:primaryType="cq:Widget"
+                                                anchor="100%"
+                                                dName="imagePath"
+                                                fieldDescription="Image to be displayed with sub question"
+                                                fieldLabel="DAM Image Path"
+                                                name="./imagePath"
+                                                xtype="pathfield"/>
+                                            <text
+                                                jcr:primaryType="cq:Widget"
+                                                dName="text"
+                                                fieldDescription="Content to displayed below sub question"
+                                                fieldLabel="Text"
+                                                height="350"
+                                                name="./text"
+                                                width="350"
+                                                xtype="richtext">
+                                                <cssStyles
+                                                    jcr:primaryType="nt:unstructured"
+                                                    exampleHeading="Example Heading"
+                                                    expandableBluecolor="Blue Text LovinSansWeb Medium"
+                                                    expandablelink="URL LovinSansWeb Medium"
+                                                    imgCaption="Image Caption"
+                                                    mainTitle="Main Title"
+                                                    newHeading="New Heading"
+                                                    newSubHeading="New Sub Heading"
+                                                    newTitle="New Title"
+                                                    paragraphTitle="Paragraph Title"
+                                                    paragraphTitleBlack="Paragraph Title (Black)"
+                                                    rtStyleBlueText="Blue Text"
+                                                    rtStyleGoToLink="Go To Link"
+                                                    rtStyleRedText="Red Text"
+                                                    rtStyleWhiteText="White Text"
+                                                    sectionSubTitle="Section Site Title"
+                                                    sectionTitle="Section Title"
+                                                    sectionTitleBlack="Section Title (Black)"
+                                                    seeMore="See More"
+                                                    siteTitle="Site Title"
+                                                    sociaButton="Social Button"
+                                                    whTextBorder="White Text With Right Border"/>
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <edit
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <findreplace
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <justify
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <links
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <lists
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <misctools
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <styles
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <subsuperscript
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <table
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <hrplugin
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                    <spellcheck
+                                                        jcr:primaryType="nt:unstructured"
+                                                        features="*"/>
+                                                </rtePlugins>
+                                                <linkbrowseConfig
+                                                    jcr:primaryType="nt:unstructured"
+                                                    protocols="[http://,https://,ftp://,mailto:]"/>
+                                            </text>
+                                            <richFlag
+                                                jcr:primaryType="cq:Widget"
+                                                dName="textIsRich"
+                                                ignoreData="{Boolean}true"
+                                                name="./textIsRich"
+                                                value="true"
+                                                xtype="hidden"/>
+                                        </items>
+                                    </fieldConfig>
+                                </subquestions>
+                            </items>
+                        </fieldConfig>
+                    </excontent>
+                </items>
+            </accordiontab>
+            <advancetab
+                jcr:primaryType="cq:Panel"
+                title="Color Settings">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <headerbgcolor
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Please provide color hex code without # sign. Hex code must be 3 or 6 digit."
+                        fieldLabel=" Section Header Background Color"
+                        name="./headerBGColor"
+                        xtype="textfield"/>
+                    <titlecolor
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Please provide color hex code without # sign. Hex code must be 3 or 6 digit."
+                        fieldLabel="Section Title Active Color"
+                        name="./sectionTitleColor"
+                        xtype="textfield"/>
+                    <titlecolorinactive
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Please provide color hex code without # sign. Hex code must be 3 or 6 digit."
+                        fieldLabel="Section Title Inactive Color"
+                        name="./sectionTitleColorInactive"
+                        xtype="textfield"/>
+                    <subsectionbgcolor
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Please provide color hex code without # sign. Hex code must be 3 or 6 digit."
+                        fieldLabel="Sub Section Background Color"
+                        name="./subBGColor"
+                        xtype="textfield"/>
+                    <subtitlecolor
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Please provide color hex code without # sign. Hex code must be 3 or 6 digit."
+                        fieldLabel="Sub Title Color"
+                        name="./subTitleColor"
+                        xtype="textfield"/>
+                </items>
+            </advancetab>
+            <subtitlepadding
+                jcr:primaryType="cq:Panel"
+                title="Sub Section Content Padding">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <margin
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Sub Section Padding"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <marginTop
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Enter top margin. value 0"
+                                fieldLabel="Top Margin"
+                                name="./marginTop"
+                                xtype="numberfield"/>
+                            <paddingBottom
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Enter bottom padding.Value 0"
+                                fieldLabel="Bottom Padding"
+                                name="./bottompadding"
+                                xtype="numberfield"/>
+                            <paddingLeft
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Enter left margin. Value 0"
+                                fieldLabel="Left Padding"
+                                name="./paddingLeft"
+                                xtype="numberfield"/>
+                        </items>
+                    </margin>
+                    <subtitleparagraph
+                        jcr:primaryType="cq:Widget"
+                        collapsed="true"
+                        collapsible="true"
+                        title="Sub Section Paragraph Padding"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <marginTop
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Enter top margin. value 0"
+                                fieldLabel="Top Margin"
+                                name="./paragraphTop"
+                                xtype="numberfield"/>
+                            <paddingLeft
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Enter left margin. Value 0"
+                                fieldLabel="Left Padding"
+                                name="./paragraphpaddingLeft"
+                                xtype="numberfield"/>
+                        </items>
+                    </subtitleparagraph>
+                </items>
+            </subtitlepadding>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforeSubmit="function(dialog){ &#xa;&#x9;if(dialog.getField('./expandableData').getValue()=='' || dialog.getField('./expandableData').getValue().length&lt;2){&#xa;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Dialog Validation'),&#xa;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide the data for the Expandable Content (atleast 2).'),&#xa;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;}); &#xa;&#x9;&#x9;return false;&#xa;&#x9;} &#xa;&#x9;else{ &#xa;&#x9;&#x9;var item = dialog.getField('./expandableData').getValue(); &#xa;&#x9;&#x9;for(i=0;i&lt;item.length;i++){&#xa;&#x9;&#x9;&#x9;var count = i + 1;&#xa;&#x9;&#x9;&#x9;var accValue = item[i].split(',');&#xa;&#x9;&#x9;&#x9;var getAccData = JSON.parse(accValue);&#xa;&#x9;&#x9;&#x9;var question = getAccData.question;&#xa;&#x9;&#x9;&#x9;var subQuestions = getAccData['./subQuestions'];&#xa;&#x9;&#x9;&#x9;if(question.trim()==''){ &#xa;&#x9;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Questions Validation'),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide Question Number ' + count),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;/*else if(subQuestions.length == 0){&#xa;&#x9;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Sub Questions Validation'),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide the data for Sub Questions (atleast 1) for Question Number ' + count),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;else if(subQuestions.length > 0){&#xa;&#x9;&#x9;&#x9;&#x9;for(s=0;s&lt;subQuestions.length;s++){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;var scount = s + 1&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;var jsonObjText = subQuestions[s];&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;var jsonObj = JSON.parse(jsonObjText);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;var text = jsonObj.text;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;if(text.trim() == ''){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Sub Questions Item Validation'),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide the data for Text Number ' + scount + ' for Sub Questions under Question Number ' + count),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;}*/&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;var sectionHeaderBgColor = dialog.getField('./headerBGColor').getValue().trim();&#xa;&#x9;var sectionTitleColor = dialog.getField('./sectionTitleColor').getValue().trim();&#xa;&#x9;var sectionTitleColorInactive = dialog.getField('./sectionTitleColorInactive').getValue().trim();&#xa;&#x9;var subSectionBgColor = dialog.getField('./subBGColor').getValue().trim();&#xa;&#x9;var subTitleColor = dialog.getField('./subTitleColor').getValue().trim();&#xa;&#x9;if(sectionHeaderBgColor.trim() != &quot;&quot;){&#xa;&#x9;&#x9;if(sectionHeaderBgColor.length == 3 || sectionHeaderBgColor.length == 6){&#xa;&#x9;&#x9;&#x9;//do nothing &#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;else{&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Section Background Color Validation'),&#xa;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide section header background color in 3 or 6 letters/digits.'),&#xa;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;if(sectionTitleColor.trim() != &quot;&quot;){&#xa;&#x9;&#x9;if(sectionTitleColor.length == 3 || sectionTitleColor.length == 6){&#xa;&#x9;&#x9;&#x9;//do nothing &#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;else{&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Section Title Active Color Validation'),&#xa;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide section title active color in 3 or 6 letters/digits.'),&#xa;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;if(sectionTitleColorInactive.trim() != &quot;&quot;){&#xa;&#x9;&#x9;if(sectionTitleColorInactive.length == 3 || sectionTitleColorInactive.length == 6){&#xa;&#x9;&#x9;&#x9;//do nothing &#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;else{&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Section Title Inactive Color Validation'),&#xa;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide section title inactive color in 3 or 6 letters/digits.'),&#xa;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;if(subSectionBgColor.trim() != &quot;&quot;){&#xa;&#x9;&#x9;if(subSectionBgColor.length == 3 || subSectionBgColor.length == 6){&#xa;&#x9;&#x9;&#x9;//do nothing &#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;else{&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Sub Section Background Color Validation'),&#xa;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide sub section background color in 3 or 6 letters/digits.'),&#xa;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;if(subTitleColor.trim() != &quot;&quot;){&#xa;&#x9;&#x9;if(subTitleColor.length == 3 || subTitleColor.length == 6){&#xa;&#x9;&#x9;&#x9;//do nothing &#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;else{&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Sub Title Color Validation'),&#xa;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Please provide sub title color in 3 or 6 letters/digits.'),&#xa;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;}"/>
+</jcr:root>

@@ -1,0 +1,118 @@
+<database type="object" value="{}">
+	<dcsMultiTrack type="array" value="[]">
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Load]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/load]]></dcsuri>
+			<wtCode type="string"><![CDATA[BigMac_load]]></wtCode>
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Home]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/Homepage_BigMac]]></dcsuri>
+			<wtCode type="string"><![CDATA[Homepage_BigMac]]></wtCode>
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Bun]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/BigMac_Bun]]></dcsuri>
+			<wtCode type="string"><![CDATA[BigMac_Bun]]></wtCode>
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Cheese]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/BigMac_Mustard]]></dcsuri>
+			<wtCode type="string"><![CDATA[BigMac_Mustard]]></wtCode>
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Lettuce]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/BigMac_Ketchup]]></dcsuri>
+			<wtCode type="string"><![CDATA[BigMac_Ketchup]]></wtCode>
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Sauce]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/BigMac_BeefPatty]]></dcsuri>
+			<wtCode type="string"><![CDATA[BigMac_BeefPatty]]></wtCode>
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Beef_Patty]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/BigMac_BeefPatty]]></dcsuri>
+			<wtCode type="string"><![CDATA[BigMac_BeefPatty]]></wtCode>
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Pickles]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/BigMac_Pickles]]></dcsuri>
+			<wtCode type="string"><![CDATA[BigMac_Pickles]]></wtCode>
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Onions]]></identifier>
+			<dcsuri type="string"><![CDATA[/en/us/promotions/bigmac/BigMac_Onions]]></dcsuri>
+			<wtCode type="string"><![CDATA[BigMac_Onions]]></wtCode>
+		</i>
+	</dcsMultiTrack>
+	<home type="object" value="{}">
+		<identifier type="string"><![CDATA[Home]]></identifier>
+		<otherSide type="object" value="{}">
+			<identifier type="string"><![CDATA[Url]]></identifier>
+			<parameter type="string"><![CDATA[http://www.mcdonalds.com/content/us/en/promotions/quarter_pounder_cheese.html]]></parameter>
+		</otherSide>
+		<openVideo type="object" value="{}">
+			<identifier type="string"><![CDATA[Javascript]]></identifier>
+			<parameter type="string"><![CDATA[bigMacVid]]></parameter>
+		</openVideo>
+	</home>
+	<pages type="array" value="[]">
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Bun]]></identifier>
+			<spot type="object" value="{}">
+				<x type="number" value="674" />
+				<y type="number" value="81" />
+			</spot>
+			<arrowsY type="number" value="174" />
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Cheese]]></identifier>
+			<spot type="object" value="{}">
+				<x type="number" value="767" />
+				<y type="number" value="316" />
+			</spot>
+			<arrowsY type="number" value="193" />
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Lettuce]]></identifier>
+			<spot type="object" value="{}">
+				<x type="number" value="354" />
+				<y type="number" value="303" />
+			</spot>
+			<arrowsY type="number" value="192" />
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Sauce]]></identifier>
+			<spot type="object" value="{}">
+				<x type="number" value="454" />
+				<y type="number" value="202" />
+			</spot>
+			<arrowsY type="number" value="207" />
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Beef_Patty]]></identifier>
+			<spot type="object" value="{}">
+				<x type="number" value="541" />
+				<y type="number" value="295" />
+			</spot>
+			<arrowsY type="number" value="203" />
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Pickles]]></identifier>
+			<spot type="object" value="{}">
+				<x type="number" value="672" />
+				<y type="number" value="191" />
+			</spot>
+			<arrowsY type="number" value="192" />
+		</i>
+		<i type="object" value="{}">
+			<identifier type="string"><![CDATA[Onions]]></identifier>
+			<spot type="object" value="{}">
+				<x type="number" value="679" />
+				<y type="number" value="271" />
+			</spot>
+			<arrowsY type="number" value="196" />
+		</i>
+	</pages>
+</database>

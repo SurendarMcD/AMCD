@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    height="520"
+    stateful="false"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <props
+                jcr:primaryType="cq:Panel"
+                title="Global">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <titletext
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/titletext.infinity.json"
+                        xtype="cqinclude"/>
+                    <navtitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/navtitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <pagetitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/pagetitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <subtitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/subtitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <description
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/description.infinity.json"
+                        xtype="cqinclude"/>
+                    <sizeTextBox
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/sizeTextBox.infinity.json"
+                        xtype="cqinclude"/>
+                    <hideinnav
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hide Page in Navigation"
+                        inputValue="true"
+                        name="./hideInNav"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <hideLeftNav
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hide Left Navigation"
+                        inputValue="true"
+                        name="./hideLeftNav"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <hideHeader
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/hideHeader.infinity.json"
+                        xtype="cqinclude">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <parent
+                                jcr:primaryType="nt:unstructured"
+                                text="As in Parent"
+                                value="parent"/>
+                        </options>
+                    </hideHeader>
+                    <launchType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="Used in Top Navigation Menu Bar"
+                        fieldLabel="Launch Type"
+                        name="./launchType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <self
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window"
+                                value="_self"/>
+                            <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        </options>
+                    </launchType>
+                </items>
+            </props>
+            <advanced
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/advanced.infinity.json"
+                title="Advanced"
+                xtype="cqinclude"/>
+            <author
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/author.infinity.json"
+                title="Author"
+                xtype="cqinclude"/>
+            <pci
+                jcr:primaryType="cq:Panel"
+                autoWidth="{Boolean}true"
+                path="/apps/mcd/components/page/global/dialog/items/items/pci.infinity.json"
+                title="Post"
+                xtype="cqinclude"/>
+            <blueprint
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Widget"
+                path="/apps/mcd/components/page/global/dialog/items/items/blueprint.infinity.json"
+                xtype="cqinclude"/>
+            <liveCopy
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Widget"
+                path="/apps/mcd/components/page/global/dialog/items/items/liveCopy.infinity.json"
+                xtype="cqinclude"/>
+            <tagging
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/tagging.infinity.json"
+                title="Tags/Keywords"
+                xtype="cqinclude"/>
+            <analytics
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/analytics.infinity.json"
+                title="Page Analytics"
+                xtype="cqinclude"/>
+            <cug
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/cug.infinity.json"
+                title="CUG"
+                xtype="cqinclude"/>
+            <statistics
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/statistics.infinity.json"
+                title="Impressions"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){&#xa;var name = dialog.getField('./siteOwnerName').getValue();&#xa;var mail = dialog.getField('./siteOwnerEmail').getValue();&#xa;var siteownername=1;&#xa;var siteowneremail=1;&#xa;&#xa;if(name.split(' ').join('')=='')&#xa;{&#xa;siteownername=0;&#xa;}&#xa;&#xa;if(mail.split(' ').join('')=='')&#xa;{&#xa;siteowneremail=0;&#xa;}&#xa;&#xa;&#xa;if(siteownername==1 &amp;&amp; siteowneremail==0)&#xa;{&#xa;  CQ.Ext.Msg.show({&#xa;  'title':  CQ.I18n.getMessage('Page Properties Validation'),&#xa;  'msg': CQ.I18n.getMessage('Please Enter The ' + 'Site Owner Email')  ,&#xa;  'buttons':CQ.Ext.Msg.OK,&#xa;  'icon':CQ.Ext.MessageBox.INFO,'scope':this});&#xa;  return false;&#xa;}&#xa;&#xa;if(siteownername==0 &amp;&amp; siteowneremail==1)&#xa;{&#xa;  CQ.Ext.Msg.show({&#xa;  'title':  CQ.I18n.getMessage('Page Properties Validation'),&#xa;  'msg': CQ.I18n.getMessage('Please Enter The ' + 'Site Owner Name')  ,&#xa;  'buttons':CQ.Ext.Msg.OK,&#xa;  'icon':CQ.Ext.MessageBox.INFO,'scope':this});&#xa;  return false;&#xa;}&#xa;&#xa;&#xa;&#xa;}&#xa;"
+        loadcontent="function(dialog){dialog.getField('./sizeVal').setValue('');dialog.getField('./sizeVal').setValue(CQ.Util.formatData(CQ.HTTP.eval(CQ.HTTP.get('/content/utility/utility.getpagesize.html?path='+this.path.replace('/jcr:content',''))))[0].disppagesize);}"/>
+</jcr:root>

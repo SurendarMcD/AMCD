@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Product Form Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <selectProducts
+                jcr:primaryType="cq:Panel"
+                title="Products Selection Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <rootPath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Root Path"
+                        name="./rootpath"
+                        xtype="browsefield"/>
+                    <addLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Add Label"
+                        name="./addLabel"
+                        xtype="textfield"/>
+                    <editLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Edit Label"
+                        name="./editLabel"
+                        xtype="textfield"/>
+                </items>
+            </selectProducts>
+            <productFormLabel
+                jcr:primaryType="cq:Panel"
+                title="Product Form Labels">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <productName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Name Label"
+                        name="./productName"
+                        xtype="textfield"/>
+                    <productDescription
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Description Label"
+                        name="./productDescription"
+                        xtype="textfield"/>
+                    <launchDate
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Launch Date Label"
+                        name="./launchDate"
+                        xtype="textfield"/>
+                    <inMenuLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product on menu label"
+                        name="./inMenu"
+                        xtype="textfield"/>
+                    <priceLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Item Price Label"
+                        name="./menuItemPrice"
+                        xtype="textfield"/>
+                    <cheeseBurgerpricelabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cheese Burger Price Label"
+                        name="./cheeseBurgerPrice"
+                        xtype="textfield"/>
+                    <bigMacPriceLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Big Mac Price Label"
+                        name="./bigMacPrice"
+                        xtype="textfield"/>
+                    <datePickr
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Date Picker Label"
+                        name="./datePickr"
+                        xtype="textfield"/>
+                    <AOW
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Areas of the World Label"
+                        name="./aow"
+                        xtype="textfield"/>
+                    <selectCountryLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Select Country Label"
+                        name="./selectCountry"
+                        xtype="textfield"/>
+                    <MenuItemRoleLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Item Role Label"
+                        name="./menuItemRoleLabel"
+                        xtype="textfield"/>
+                    <productDayport
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Daypart Label"
+                        name="./productDayportLabel"
+                        xtype="textfield"/>
+                    <targetConsumerLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Target Consumer Label"
+                        name="./targetConsumerLabel"
+                        xtype="textfield"/>
+                    <menuItemCategory
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Item Category Label"
+                        name="./menuItemCategory"
+                        xtype="textfield"/>
+                    <salesInformation
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sales Information Label"
+                        name="./salesInformation"
+                        xtype="textfield"/>
+                    <keyLearnings
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Key Learnings Label"
+                        name="./keyLearnings"
+                        xtype="textfield"/>
+                    <businessObjective
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Business Objective Label"
+                        name="./businessObjective"
+                        xtype="textfield"/>
+                    <consumerObjective
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Consumer Objective  Label"
+                        name="./consumerObjective"
+                        xtype="textfield"/>
+                    <keyWords
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Key Words  Label"
+                        name="./keyWords"
+                        xtype="textfield"/>
+                    <contactName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Contact Name  Label"
+                        name="./contactName"
+                        xtype="textfield"/>
+                    <contactEmail
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Contact Email Label"
+                        name="./contactEmail"
+                        xtype="textfield"/>
+                    <additional
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Additional Comments &amp; Considerations Label"
+                        name="./addnalcmmnts"
+                        xtype="textfield"/>
+                    <productPhoto
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Photo Label"
+                        name="./productPhoto"
+                        xtype="textfield"/>
+                    <enteredInPMP
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Entered in PMP Label"
+                        name="./enteredinpmp"
+                        xtype="textfield"/>
+                    <enteredInMenu
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Entered in Menu Label"
+                        name="./enteredInMenu"
+                        xtype="textfield"/>
+                    <menuItemIdLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Item ID Label"
+                        name="./MenuItemIdLabel"
+                        xtype="textfield"/>
+                    <productSpecsEnteredLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Specs Entered Label"
+                        name="./productspecs"
+                        xtype="textfield"/>
+                </items>
+            </productFormLabel>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    height="520"
+    stateful="false"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <props
+                jcr:primaryType="cq:Panel"
+                title="Global">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <titletext
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/titletext.infinity.json"
+                        xtype="cqinclude"/>
+                    <navtitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/navtitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <pagetitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/pagetitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <subtitle
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/subtitle.infinity.json"
+                        xtype="cqinclude"/>
+                    <description
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/description.infinity.json"
+                        xtype="cqinclude"/>
+                    <sizeTextBox
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/sizeTextBox.infinity.json"
+                        xtype="cqinclude"/>
+                    <hideinnav
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription=" "
+                        fieldLabel="Hide Page in Navigation"
+                        inputValue="true"
+                        name="./hideinnav"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <top
+                                jcr:primaryType="nt:unstructured"
+                                text="Top"
+                                value="top"/>
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                        </options>
+                    </hideinnav>
+                    <hideTopNav
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="parent"
+                        fieldDescription=" "
+                        fieldLabel="Hide Top Navigation"
+                        name="./hideTopNav"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <parent
+                                jcr:primaryType="nt:unstructured"
+                                text="As in Parent"
+                                value="parent"/>
+                        </options>
+                    </hideTopNav>
+                    <hideLeftNav
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="parent"
+                        fieldDescription=" "
+                        fieldLabel="Hide Left Navigation"
+                        name="./hideLeftNav"
+                        type="radio"
+                        xtype="hidden">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <parent
+                                jcr:primaryType="nt:unstructured"
+                                text="As in Parent"
+                                value="parent"/>
+                        </options>
+                    </hideLeftNav>
+                    <hideHeader
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/mcd/components/page/global/dialog/items/items/props/items/hideHeader.infinity.json"
+                        xtype="cqinclude">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <parent
+                                jcr:primaryType="nt:unstructured"
+                                text="As in Parent"
+                                value="parent"/>
+                        </options>
+                    </hideHeader>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./topnavimage/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </props>
+            <advanced
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/advanced.infinity.json"
+                title="Advanced"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <language
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Page Language"
+                        name="./jcr:language"
+                        optionsCallback="CQ.utils.WCM.setContentLanguageOptionsCB"
+                        type="select"
+                        xtype="selection"/>
+                    <redirect
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Redirect Target"
+                        name="./redirectTarget"
+                        xtype="pathcompletion"/>
+                    <onTimeHint
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./onTime@TypeHint"
+                        value="Date"
+                        xtype="hidden"/>
+                    <ontime
+                        jcr:primaryType="cq:Widget"
+                        disabled="{Boolean}true"
+                        fieldLabel="On Time"
+                        name="./onTime"
+                        xtype="datetime"/>
+                    <offTimeHint
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./offTime@TypeHint"
+                        value="Date"
+                        xtype="hidden"/>
+                    <offtime
+                        jcr:primaryType="cq:Widget"
+                        disabled="{Boolean}true"
+                        fieldLabel="Off Time"
+                        name="./offTime"
+                        xtype="datetime"/>
+                    <designpath
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Design Path"
+                        name="./cq:designPath"
+                        rootPath="/etc/designs"
+                        xtype="pathcompletion">
+                        <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+                    </designpath>
+                    <vanityPath
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Vanity URL"
+                        name="./sling:vanityPath"
+                        xtype="multifield">
+                        <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            regex="/^\\/((.+?)\\/)*[a-zA-Z0-9]+$/"
+                            regexText="Vanity URL must start with a slash and should not contain an extension like .html."
+                            xtype="browsefield"/>
+                    </vanityPath>
+                    <vanityPathRedirect
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Redirect Vanity URL"
+                        name="./sling:redirect"
+                        type="checkbox"
+                        xtype="selection">
+                        <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+                    </vanityPathRedirect>
+                </items>
+            </advanced>
+            <author
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/author.infinity.json"
+                title="Author"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <name
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        blankText="Author Name is mandatory"
+                        fieldLabel="Author Name"
+                        name="./authorName"
+                        xtype="textfield"/>
+                    <email
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        blankText="Author Email is mandatory"
+                        fieldLabel="Author Email"
+                        name="./authorEmail"
+                        regex="/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\\.([a-zA-Z])+([a-zA-Z])+/"
+                        xtype="textfield"/>
+                </items>
+            </author>
+            <pci
+                jcr:primaryType="cq:Panel"
+                autoWidth="{Boolean}true"
+                path="/apps/mcd/components/page/global/dialog/items/items/pci.infinity.json"
+                title="Post"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <publishToPCI
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Publish To Portal"
+                        inputValue="true"
+                        name="./pci/PublishToPCI"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                        </options>
+                    </publishToPCI>
+                    <PCIImage
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddGroups="[media]"
+                        fieldLabel="Image File"
+                        fileNameParameter="./pci/PCIImageFilename"
+                        fileReferenceParameter="./pci/PCIImageFile"
+                        height="{Long}200"
+                        name="./pci/PCIImage"
+                        sizeLimit="1000"
+                        uploadUrl="/tmp/*"
+                        xtype="smartimage"/>
+                    <PCIEntry
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Panel"
+                        autoWidth="{Boolean}true"
+                        layout="form"
+                        title="PCI Entry"
+                        width="{Long}500"
+                        xtype="panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <Category
+                                jcr:primaryType="cq:Widget"
+                                autoWidth="{Boolean}false"
+                                fieldDescription=""
+                                fieldLabel="Category"
+                                listWidth="{Long}200"
+                                minListWidth="{Long}200"
+                                name="./pci/entry1/Category"
+                                optionsCallback=" function(path, record) {var pageHandle;var sidekick = CQ.utils.WCM.getSidekick();if (sidekick) {pageHandle=location.toString();pageHandle=pageHandle.replace('.html','.pcicategory.html');}else {pageHandle=this.findParentByType('dialog').path;pageHandle=pageHandle.replace('/jcr:content','.pcicategory.html');}this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); }"
+                                type="select"
+                                width="{Long}400"
+                                xtype="pcicategories">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <calendar
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Australia Homepage Calendar"
+                                        value="1000"/>
+                                    <inside_x0020_MCD
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Inside Mcdonalds"
+                                        value="20051"/>
+                                    <pcitesting
+                                        jcr:primaryType="nt:unstructured"
+                                        text="PCI Testing"
+                                        value="20113"/>
+                                </options>
+                            </Category>
+                            <views
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="global"
+                                fieldDescription="&lt;br>"
+                                fieldLabel="View(s)"
+                                name="./pci/entry1/View"
+                                type="checkbox"
+                                width="{Long}300"
+                                xtype="pciviews">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <australia
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Australia"
+                                        value="AU"/>
+                                    <global
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Global"
+                                        value="ENT"/>
+                                    <unitedstates
+                                        jcr:primaryType="nt:unstructured"
+                                        text="United States"
+                                        value="US"/>
+                                    <newzealand
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Zealand"
+                                        value="NZ"/>
+                                </options>
+                            </views>
+                            <Title
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Defaults to Page Title"
+                                fieldLabel="Title"
+                                inputValue="{Boolean}true"
+                                name="./pci/entry1/Title"
+                                width="300"
+                                xtype="textfield"/>
+                            <Description
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Defaults to Page Description"
+                                fieldLabel="Description"
+                                name="./pci/entry1/Description"
+                                rows="4"
+                                width="300"
+                                xtype="textarea"/>
+                            <PublishDate
+                                jcr:primaryType="cq:Widget"
+                                dateFormat="m/d/Y"
+                                dateWidth="{Long}200"
+                                defaultValue="now"
+                                fieldDescription=" Used by date-sorted categories, such as Inside McDonald's. Defaults to initial page activation date. &lt;br>"
+                                fieldLabel="Publish Date"
+                                name="./pci/entry1/PublishDate"
+                                timePosition="below"
+                                timeWidth="{Long}200"
+                                width="{Long}200"
+                                xtype="datetime"/>
+                            <DisplayType
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="shownav"
+                                fieldDescription="&lt;br>"
+                                fieldLabel="Display"
+                                inputValue="true"
+                                name="./pci/entry1/DisplayType"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <shownav
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Show site header &amp; navigation "
+                                        value="shownav"/>
+                                    <newwin
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Open in new window"
+                                        value="newwin"/>
+                                </options>
+                            </DisplayType>
+                        </items>
+                    </PCIEntry>
+                </items>
+            </pci>
+            <blueprint
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Widget"
+                path="/apps/mcd/components/page/global/dialog/items/items/blueprint.infinity.json"
+                xtype="cqinclude">
+                <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+            </blueprint>
+            <liveCopy
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Widget"
+                path="/apps/mcd/components/page/global/dialog/items/items/liveCopy.infinity.json"
+                xtype="cqinclude">
+                <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+            </liveCopy>
+            <tagging
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/tagging.infinity.json"
+                title="Tags/Keywords"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <tags
+                        jcr:primaryType="cq:Widget"
+                        alowBlank="{Boolean}false"
+                        blankText="At least 1 tag/keyword must be entered"
+                        hideLabel="{Boolean}true"
+                        name="./cq:tags"
+                        xtype="tags"/>
+                </items>
+            </tagging>
+            <analytics
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/analytics.infinity.json"
+                title="Page Analytics"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <provider
+                        jcr:primaryType="cq:Widget"
+                        allowEmpty="true"
+                        fieldLabel="External Provider"
+                        name="./analyticsProvider"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <empty
+                                jcr:primaryType="nt:unstructured"
+                                text="&amp;nbsp;"
+                                value=""/>
+                            <google
+                                jcr:primaryType="nt:unstructured"
+                                text="Google Analytics"
+                                value="google"/>
+                        </options>
+                    </provider>
+                    <snippet
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="ID / Snippet"
+                        name="./analyticsSnippet"
+                        xtype="textarea"/>
+                </items>
+                <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+            </analytics>
+            <cug
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/cug.infinity.json"
+                title="CUG"
+                xtype="cqinclude">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enabled
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enabled"
+                        inputValue="true"
+                        name="./cq:cugEnabled"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <loginPage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Login Page"
+                        name="./cq:cugLoginPage"
+                        xtype="pathcompletion"/>
+                    <principals
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Admitted Groups"
+                        name="./cq:cugPrincipals"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            filter="groups"
+                            xtype="authselection"/>
+                    </principals>
+                    <realm
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Realm"
+                        name="./cq:cugRealm"
+                        xtype="textfield"/>
+                </items>
+                <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+            </cug>
+            <statistics
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Panel"
+                path="/apps/mcd/components/page/global/dialog/items/items/statistics.infinity.json"
+                title="Impressions"
+                xtype="cqinclude">
+                <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+            </statistics>
+            <workflow
+                jcr:primaryType="cq:Panel"
+                title="Workflow">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <attachToWF
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="false"
+                        fieldLabel="Associate Approval Workflow ?"
+                        name="./attachToWF"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <true
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="true"/>
+                            <false
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="false"/>
+                        </options>
+                    </attachToWF>
+                    <reviewerName
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default : administrators"
+                        fieldLabel="Reviewer"
+                        filter="groups"
+                        name="./reviewerName"
+                        xtype="authselection"/>
+                </items>
+            </workflow>
+            <WWKB
+                jcr:primaryType="cq:Panel"
+                jcr:title="WWKB">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <menuItems
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(Ctrl+click to select multiple)"
+                        fieldLabel="Menu Item Category"
+                        name="./WWKBMenuCategory"
+                        optionsCallback="function(path,record) { var pageHandle=path.replace('/jcr:content','.common.html?type=menuItemCategory');&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); }"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <otherMenuCategory
+                        jcr:primaryType="cq:Widget"
+                        name="./WWKBMenuCategoryOtherTxt"
+                        xtype="textfield"/>
+                    <targetCustomer
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="kids"
+                        fieldDescription="(Ctrl+click to select multiple)"
+                        fieldLabel="Target Customer"
+                        name="./WWKBTargetAudience"
+                        optionsCallback="function(path,record) { var pageHandle=path.replace('/jcr:content','.common.html?type=targetConsumer');&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); }"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <otherTargetConsuner
+                        jcr:primaryType="cq:Widget"
+                        name="./WWKBTargetConsumerOtherTxt"
+                        xtype="textfield"/>
+                    <productDaypart
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="breakfast"
+                        fieldDescription="(Ctrl+click to select multiple)"
+                        fieldLabel="Product Daypart"
+                        name="./WWKBProductDaypart"
+                        optionsCallback="function(path,record) { var pageHandle=path.replace('/jcr:content','.common.html?type=productDaypart');&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); }"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <menuItemRole
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="limitedtimeoffer"
+                        fieldDescription="(Ctrl+click to select multiple)"
+                        fieldLabel="Menu Item Role"
+                        name="./WWKBMenuItemRole"
+                        optionsCallback="function(path,record) { var pageHandle=path.replace('/jcr:content','.common.html?type=menuItemRole');&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); }"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <areaOfWorld
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Europe"
+                        fieldDescription="(Please select AOW)"
+                        fieldLabel="Area of the World"
+                        name="./WWKBZone"
+                        optionsCallback="function(path,record) { var pageHandle=path.replace('/jcr:content','.common.html?type=areaOfTheWorld');&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); }"
+                        type="select"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box,value){  var dialog=this.findParentByType('dialog');&#xa;var Data=CQ.Util.eval(CQ.HTTP.get(dialog.path.replace('/jcr:content','.common.html?type=areaOfTheWorld&amp;country=true&amp;aowValue='+value)));&#xa;dialog.getField('./WWKBCountry').setOptions(CQ.Util.formatData(Data));&#xa;dialog.getField('./WWKBCountry').setValue(Data[0].value);}"/>
+                    </areaOfWorld>
+                    <country
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="EU Food Studio"
+                        fieldDescription="(Please select Country)"
+                        fieldLabel="Country"
+                        name="./WWKBCountry"
+                        optionsCallback="&#xa;function(path,record) { var dialog=this.findParentByType('dialog'); &#xa;var aowValue=dialog.getField('./WWKBZone').getValue(); &#xa;var pageHandle=path.replace('/jcr:content','.common.html?type=areaOfTheWorld&amp;country=true&amp;aowValue='+aowValue);&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); &#xa;var data = CQ.Util.eval(CQ.HTTP.get(pageHandle));&#xa;dialog.getField('./WWKBCountry').setValue(data[0].value);&#xa;}"
+                        type="select"
+                        xtype="selection"/>
+                    <Currency
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(Ctrl+click to select multiple)"
+                        fieldLabel="Currency"
+                        name="./Atom_CurrencyVal"
+                        xtype="textfield"/>
+                </items>
+            </WWKB>
+            <productInfo
+                jcr:primaryType="cq:Panel"
+                jcr:title="Product Info">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <launchDate
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Launch Date"
+                        name="./WWKBLaunchDate"
+                        xtype="textfield"/>
+                    <addToArchived
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Add To Archieved?"
+                        name="./WWKBArchievedFlag"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </addToArchived>
+                    <isDateOffMenu
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="if Yes, then please select Date Off Menu below"
+                        fieldLabel="Is Date Off Menu?"
+                        name="./WWKBIsDateOffMenu"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="no"
+                                value="no"/>
+                        </options>
+                    </isDateOffMenu>
+                    <dateOffMenu
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Date Off Menu"
+                        name="./WWKBDateOffMenu"
+                        xtype="textfield"/>
+                    <menuItemPrice
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Item Price"
+                        name="./WWKBMenuItemPrice"
+                        xtype="textfield"/>
+                    <menuPriceOfCheeseburger
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Price of a Cheeseburger"
+                        name="./WWKBMenuPriceChsBrg"
+                        xtype="textfield"/>
+                    <menuPriceOfBigmac
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Price of a Big Mac"
+                        name="./WWKBMenuPriceBigMac"
+                        xtype="textfield"/>
+                </items>
+            </productInfo>
+            <otherInfo
+                jcr:primaryType="cq:Panel"
+                jcr:title="Other Info">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <salesInfo
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(can include HTML) Include UPTs in sales results"
+                        fieldLabel="Sales Information"
+                        name="./WWKBSalesInfo"
+                        width="400"
+                        xtype="textarea"/>
+                    <consumerObjective
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(can include HTML)"
+                        fieldLabel="Consumer Objective"
+                        name="./WWKBConsumerObjective"
+                        width="400"
+                        xtype="textarea"/>
+                    <businessObjective
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(can include HTML)"
+                        fieldLabel="Business Objective"
+                        name="./WWKBBusinessObjective"
+                        width="400"
+                        xtype="textarea"/>
+                    <keyLearnings
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(can include HTML)"
+                        fieldLabel="Key Learnings"
+                        name="./WWKBKeyLearnings"
+                        width="400"
+                        xtype="textarea"/>
+                    <multipleVersions
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Multiple Versions/Other Variations"
+                        name="./WWKBVersionsVariations"
+                        width="400"
+                        xtype="textarea"/>
+                    <additionalComments
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Describe any line extensions or other versions in test"
+                        fieldLabel="Additional Comments &amp; Considerations"
+                        name="./WWKBAdditionalComments"
+                        width="400"
+                        xtype="textarea"/>
+                </items>
+            </otherInfo>
+            <merlin
+                jcr:primaryType="cq:Panel"
+                jcr:title="MERLIN">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <pmp
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Entered in PMP?"
+                        name="./MERLINInPMP"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </pmp>
+                    <menuItemSpecs
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Entered In Menu Item Specs?"
+                        name="./MERLINInMenuItemSpecs"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </menuItemSpecs>
+                    <menuItemId
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Menu Item ID"
+                        name="./MERLINMenuItemID"
+                        xtype="textfield"/>
+                    <productSpecsEntered
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Specs Entered?"
+                        name="./MERLINProductSpecsEntered"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </productSpecsEntered>
+                    <productBuildXML
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Build XML"
+                        name="./MERLINProductBuildXML"
+                        width="400"
+                        xtype="textarea"/>
+                    <productBuildXSLT
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Build XSLT String"
+                        name="./MERLINProductBuildXSLT"
+                        width="400"
+                        xtype="textarea"/>
+                    <nutritioninfoXML
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Nutrition Information XML"
+                        name="./MERLINNutritionInfoXML"
+                        width="400"
+                        xtype="textarea"/>
+                    <nutritioninfoXSLT
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Nutrition Information XSLT String"
+                        name="./MERLINNutritionInfoXSLT"
+                        width="400"
+                        xtype="textarea"/>
+                </items>
+            </merlin>
+            <productPhoto
+                jcr:primaryType="cq:Widget"
+                cropParameter="./productimage/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./productimage/fileName"
+                fileReferenceParameter="./productimage/fileReference"
+                mapParameter="./productimage//imageMap"
+                name="./productimage/file"
+                rotateParameter="./productimage/imageRotate"
+                sizeLimit="{Long}100"
+                title="Product Photo"
+                uploadUrl="/tmp/upload_prodimg/*"
+                xtype="smartimage"/>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog){dialog.getField('./sizeVal').setValue('');dialog.getField('./sizeVal').setValue(CQ.Util.formatData(CQ.HTTP.eval(CQ.HTTP.get('/content/utility/utility.getpagesize.html?path='+this.path.replace('/jcr:content',''))))[0].disppagesize);}"/>
+</jcr:root>

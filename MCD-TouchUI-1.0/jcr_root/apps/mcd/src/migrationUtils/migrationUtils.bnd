@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: Migration Utils
+Bundle-Description: 
+Bundle-SymbolicName: migrationUtils
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.accessmcd.cq.migration.util.Activator

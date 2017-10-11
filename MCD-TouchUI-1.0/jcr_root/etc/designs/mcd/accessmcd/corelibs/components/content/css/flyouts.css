@@ -1,0 +1,85 @@
+.topnavigationitems ul#navrender {
+    position: relative;
+    left: 33px;
+    width: 185px !important;
+    z-index: 2000;
+}
+
+.topnavigationitems ul#navrender li {
+    position: relative;
+    padding: 0 !important; margin: 0 !important;
+    width: 100% !important;
+    background: none;
+}
+.topnavigationitems ul#navrender li:hover {
+    display: block;
+    background: url('/etc/designs/mcd/accessmcd/corelibs/images/navrender-fade.png') repeat-y 0 0;
+}
+.topnavigationitems ul#navrender li a {
+    display: block;
+    width: 100% !important; height: 100% !important;
+    margin: 0; padding: 4px 0 4px 0;
+}
+
+.topnavigationitems ul#navrender li a.leftalign {
+    text-align: left;
+    padding-left: 25px !important;
+}
+
+.topnavigationitems ul#navrender li div.showFlyouts {
+    visibility: visible !important;
+}
+.topnavigationitems ul#navrender li div.hideFlyouts {
+    visibility: hidden !important;
+}
+.topnavigationitems ul#navrender li div#flyouts {
+    position: absolute; 
+    top: 0px; left: 175px; 
+    width: auto; height: auto;
+    padding: 15px 15px; margin: 0; 
+    background: #FFF; 
+    -webkit-box-shadow: #666 2px 2px 3px;
+    -moz-box-shadow: #666 2px 2px 3px;
+    box-shadow: #666 2px 2px 3px;
+    border-radius: 12px; 
+    -moz-border-radius: 12px; 
+    -webkit-border-radius: 12px; 
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+    z-index: 2000;
+}
+
+.topnavigationitems ul#navrender li.noFlyout {
+    background: none;
+}
+.topnavigationitems ul#navrender li.noFlyout div#flyouts {
+    color: #666;
+}
+
+.topnavigationitems ul#navrender li div#flyouts ul li {
+    display: inline; 
+    text-align: left !important;
+    font-size: 11px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.topnavigationitems ul#navrender li div#flyouts ul li a:link,
+.topnavigationitems ul#navrender li div#flyouts ul li a:visited {
+    color: #000;
+}
+.topnavigationitems ul#navrender li div#flyouts div#col {
+    float: left;
+    display: block;
+    margin-left: 10px !important;
+    padding-right: 10px;
+    border-right: 1px solid #CCC;
+    z-index: 2000;
+}
+.topnavigationitems ul#navrender li div#flyouts div#col-end {
+    float: left;
+    display: block;
+    margin-left: 10px !important;
+    padding-right: 0px;
+    border-right: none;
+    z-index: 2000;
+}

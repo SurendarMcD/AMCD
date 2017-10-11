@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/components/reference.html?wcmmode=disabled"
+    title="Paragraph Reference"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <reference
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Reference"
+            name="./path"
+            xtype="paragraphreference"/>
+    </items>
+</jcr:root>

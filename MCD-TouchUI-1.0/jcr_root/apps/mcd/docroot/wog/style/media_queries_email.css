@@ -1,0 +1,44 @@
+/*Media Queries*/
+@media all and (min-width:1000px)
+{
+    body{background:#fff;}
+    .leftside{width:13% !important;}
+    input[type="text"], textarea{width:84%;}
+}
+@media all and (max-width: 1000px) and (min-width: 760px)
+{
+    body{background:#fff;}
+    .leftside{width:20% !important;}
+    input[type="text"], textarea{width:76%;}
+}
+@media all and (max-width: 760px) and (min-width: 600px)
+{
+    body{background:#fff;}
+    .leftside{width:24% !important;}
+    input[type="text"], textarea{width:71%;}
+}
+@media all and (max-width: 600px) and (min-width: 480px)
+{
+    body{background:#fff;}
+    .leftside{width:24% !important;}
+    input[type="text"], textarea{width:68%;}
+}
+
+@media all and (max-width: 480px) and (min-width: 320px)
+{
+    body{background:#fff;}
+    .leftside{width:34% !important;}
+    .FootertitleRed{font-size:9px !important;}
+    input[type="text"], textarea{width:58%;}
+    .mfp-iframe-holder{padding:12% 0 !important;}
+}
+
+@media only screen and (max-width : 320px)
+{
+    body{background:#fff;}
+    .leftside{width:100% !important; float:none !important;}
+    .FootertitleRed{font-size:9px !important;}
+    .Footerbodybold{font-size:12px !important;}
+    input[type="text"], textarea{width:90%;}
+    .mfp-iframe-holder{padding:12% 0 !important;}
+}

@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: ActivationNotificationManager
+Bundle-Description: 
+Bundle-SymbolicName: com.mcd.utility
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.utility.Activator

@@ -1,0 +1,67 @@
+#tagbox {
+    position: relative;     
+    font-family: Arial,Helvetica,sans-serif;
+    color: #333333;
+    line-height: 28px;
+    margin-bottom: 10px;
+    background: #FFF;
+    width: 100%;
+    bor der: 1px solid #CCCCCC;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    bor der-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+}
+
+.tagHdBlack
+{
+    background-color: #F3F3F3;
+    border-bottom: 1px solid #CCCCCC;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+    border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    color: #E4281F;
+    display: block;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 28px;
+    margin: 0 0 10px !important;
+    min-width: 100%;
+    position: relative;
+}
+
+.tagHeading
+{
+    padding: 10px;
+}
+
+.tagcloud {
+    margin: 0px;
+    padding: 5px;
+    background: none repeat scroll 0 0 transparent !important;
+    
+}
+
+.tagcloud li {
+    display: inline;
+    text-align: center;
+    padding-left: 5px;  
+}
+
+
+.tagcloud .tag24 { font-size:24pt; }
+.tagcloud .tag23 { font-size:23pt; }
+.tagcloud .tag22 { font-size:22pt; }
+.tagcloud .tag21 { font-size:21pt; }
+.tagcloud .tag20 { font-size:20pt; }
+.tagcloud .tag19 { font-size:19pt; }
+.tagcloud .tag18 { font-size:18pt; }
+.tagcloud .tag17 { font-size:17pt; }
+.tagcloud .tag16 { font-size:16pt; }
+.tagcloud .tag15 { font-size:15pt; }
+.tagcloud .tag14 { font-size:14pt; }
+.tagcloud .tag13 { font-size:13pt; }
+.tagcloud .tag12 { font-size:12pt; }
+.tagcloud .tag11 { font-size:11pt; }
+.tagcloud .tag10 { font-size: 10pt;}
+.tagcloud .tag9  { font-size: 9pt; }

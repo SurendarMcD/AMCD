@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    formUrl="/mcd/accessmcd/aucalnbservlet/AUCalendarInsertPost"
+    height="500"
+    responseScope="this"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items
+            jcr:primaryType="nt:unstructured"
+            border="false"
+            height=""
+            title="Calendar"
+            width=""
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <mandatoryField
+                    jcr:primaryType="cq:Widget"
+                    html="&lt;center>*Denotes mandatory fields"
+                    xtype="label"/>
+                <postingDate
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Select a posting date"
+                    fieldLabel="*Posting Date:"
+                    format="d/m/Y"
+                    multiSelectionrenderPreNextYearButtons="{Boolean}true"
+                    name="./postingDate"
+                    showWeekNumber="{Boolean}false"
+                    submitFormat="Y-m-d"
+                    xtype="datefieldplus"/>
+                <title
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Maximum 120 characters"
+                    fieldLabel="*Title:"
+                    name="./title"
+                    title="Title"
+                    width="{Long}300"
+                    xtype="textfield"/>
+                <audienceStaff
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Staff"
+                    checked="{Boolean}true"
+                    fieldLabel="*Audience:"
+                    inputValue="1"
+                    name="./audienceStaff"
+                    type="checkbox"
+                    xtype="selection"/>
+                <linkStaff
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click the browse icon to browse internal link or type in http/https external URL"
+                    name="./linkStaff"
+                    predicate="nosystem"
+                    rootPath="/content/accessmcd/apmea"
+                    showTitlesInTree="{Boolean}false"
+                    width="{Long}300"
+                    xtype="pathfield"/>
+                <displayStaff
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Display Staff link in a New Window"
+                    inputValue="{Long}2"
+                    name="./displayStaff"
+                    type="checkbox"
+                    xtype="selection"/>
+                <audienceFranchiees
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Franchisees"
+                    checked="{Boolean}true"
+                    inputValue="{Long}4"
+                    name="./audienceFranchiees"
+                    type="checkbox"
+                    xtype="selection"/>
+                <linkFranchiees
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click the browse icon to browse internal link or type in http/https external URL"
+                    name="./linkFranchiees"
+                    predicate="nosystem"
+                    rootPath="/content/accessmcd/apmea"
+                    showTitlesInTree="{Boolean}false"
+                    width="{Long}300"
+                    xtype="pathfield"/>
+                <displayFranchiees
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Display Franchisees link in a New Window"
+                    inputValue="2"
+                    name="./displayFranchiees"
+                    type="checkbox"
+                    xtype="selection"/>
+                <viewAU
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="Australia"
+                    checked="{Boolean}true"
+                    fieldLabel="*View:"
+                    inputValue="{Long}4"
+                    name="./viewAU"
+                    type="checkbox"
+                    xtype="selection"/>
+                <viewNZ
+                    jcr:primaryType="cq:Widget"
+                    boxLabel="New Zealand"
+                    checked="{Boolean}true"
+                    inputValue="5"
+                    name="./viewNZ"
+                    type="checkbox"
+                    xtype="selection"/>
+                <postingType
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="{Long}1"
+                    name="./postingType"
+                    xtype="hidden"/>
+                <categoryId
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="{Long}3000"
+                    name="./categoryId"
+                    xtype="hidden"/>
+                <action
+                    jcr:primaryType="cq:Widget"
+                    name="./action"
+                    xtype="hidden"/>
+                <uuid
+                    jcr:primaryType="nt:unstructured"
+                    name="./uuid"
+                    xtype="hidden"/>
+            </items>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforeSubmit="function(dialog){var postingDate = dialog.getField('./postingDate').getValue();  if (postingDate == '') {alert('Please input Posting Date'); return false;} var title = dialog.getField('./title').getValue().trim();  if (title == '') {alert('Please input Title'); return false;} if (title.length > 120) {alert('Title can not exceed 120 characters'); return false;}  var audienceStaff = dialog.getField('./audienceStaff').getValue();   var audienceFranchiees = dialog.getField('./audienceFranchiees').getValue();    if (audienceStaff == '' &amp;&amp; audienceFranchiees == '') { alert('Please select audience Staff or Franchisees'); return false; }   var viewAU = dialog.getField('./viewAU').getValue();  var viewNZ = dialog.getField('./viewNZ').getValue();  if (viewAU == '' &amp;&amp; viewNZ == '') {alert('Please select Australia or New Zealand view'); return false; } dialog.form.addListener('actioncomplete',dialog.refreshComponent); dialog.form.addListener('actionfailed',dialog.refreshComponent);   }"/>
+</jcr:root>

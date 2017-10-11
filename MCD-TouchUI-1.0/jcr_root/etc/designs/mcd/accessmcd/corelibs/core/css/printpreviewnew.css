@@ -1,0 +1,15 @@
+/* Style overwrites for printing output. */
+body {margin: 0 !important;}
+
+#printpreview {display: block;}
+#pagecontentwrapper{width:980px !important;}
+
+.mainBody {display:block!important;}
+#logo_t {display: none !important;}
+#bread_tnav_cntr {display: none !important;}
+#headerwrap {display: none !important;}
+#headerwrapper {display: none !important;}
+#left-widgets-column {width:230px;}
+#right-results-column {width:720px;}
+#right_content_par {width:120px;}
+#content_txt {width:580px;}

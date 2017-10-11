@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Pop Up">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enable
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enable Pop Up Window"
+                        name="./enablePopUp"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </enable>
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter your text here."
+                        fieldLabel="Text"
+                        hideLabel="{Boolean}false"
+                        name="./text"
+                        width="300"
+                        xtype="richtext">
+                        <cssStyles
+                            jcr:primaryType="nt:unstructured"
+                            mainTitle="Main Title"
+                            paragraphTitle="Paragraph Title"
+                            rtStyleBlueText="Blue Text"
+                            rtStyleGoToLink="Go To Link"
+                            rtStyleRedText="Red Text"
+                            rtStyleWhiteText="White Text"
+                            sectionSubTitle="Section Site Title"
+                            sectionTitle="Section Title"
+                            siteTitle="Site Title"/>
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <hrplugin
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                        <linkbrowseConfig
+                            jcr:primaryType="nt:unstructured"
+                            protocols="[http://,https://,ftp://,mailto:]"/>
+                    </text>
+                    <isRichFlag
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        disabled="false"
+                        name="./textIsRich"
+                        readOnly="false"
+                        selectOnFocus="false"
+                        validateOnBlur="false"
+                        value="true"
+                        xtype="hidden"/>
+                    <randomNumber
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Random number range will be between 0 and the number provided."
+                        fieldLabel="Random Number"
+                        name="./randomNum"
+                        xtype="numberfield"/>
+                    <surveyID
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This will be used for naming the cookie and so it's not mistaken for another survey component."
+                        fieldLabel="Unique Survey ID"
+                        name="./surveyID"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Pop Up Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <audienceGroups
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select which audience groups you'd like to receive this survey."
+                        fieldLabel="Viewable to these groups"
+                        name="./audience"
+                        optionsProvider="function() {&#xa;return CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(CQ.HTTP.getPath() + '.AudienceType.html'))); &#xa;}"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <remindMeLater
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Remind Me Later Link"
+                        name="./remindMe"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </remindMeLater>
+                    <noThanks
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="No Thanks Link"
+                        name="./noThanks"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </noThanks>
+                    <popupWidth
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="410"
+                        fieldDescription="Default is 410"
+                        fieldLabel="Pop Up Window Width"
+                        name="./popupWidth"
+                        xtype="numberfield"/>
+                    <popupHeight
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="80"
+                        fieldDescription="Default is 80"
+                        fieldLabel="Pop Up Height"
+                        name="./popupHeight"
+                        xtype="numberfield"/>
+                    <surveyURL
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="true"
+                        fieldLabel="Survey URL"
+                        name="./surveyURL"
+                        xtype="pathfield"/>
+                    <surveyLinkText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Survey Link Text"
+                        name="./surveyText"
+                        xtype="textfield"/>
+                    <reminderLinkText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default is &quot;Remind Me Later&quot;"
+                        fieldLabel="Reminder Link Text"
+                        name="./reminderText"
+                        xtype="textfield"/>
+                    <nothanksLinkText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Default is &quot;No Thanks&quot;"
+                        fieldLabel="No Thanks Link Text"
+                        name="./nothanksText"
+                        xtype="textfield"/>
+                    <resPopupWidth
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="50"
+                        fieldDescription="Please set responsive width in percentage (%) upto 100% only. Default set to 50% "
+                        fieldLabel="Responsive Pop Up Window Width"
+                        name="./resPopupWidth"
+                        xtype="numberfield"/>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="Image">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <Image
+                        jcr:primaryType="cq:Widget"
+                        autoWidth="{Boolean}false"
+                        cropParameter="./image/imageCrop"
+                        ddGroups="[media]"
+                        fileNameParameter="./image/fileName"
+                        fileReferenceParameter="./image/fileReference"
+                        height="290"
+                        hideLabel="{Boolean}true"
+                        mapParameter="./image/imageMap"
+                        name="./image/file"
+                        requestSuffix="/image.img.png"
+                        rotateParameter="./image/imageRotate"
+                        sizeLimit="100"
+                        title="Image"
+                        uploadUrl="/tmp/upload_test/*"
+                        xtype="smartimage"/>
+                </items>
+            </tab3>
+            <tab4
+                jcr:primaryType="cq:Panel"
+                title="Image Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <akamaiImage
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter Path for akamai Image"
+                        fieldLabel="Path of akamai image"
+                        name="./akamaiImage"
+                        xtype="hidden"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                    <imagesize
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="1.0"
+                        fieldLabel="Image Size"
+                        name="./imageSize"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <twentyfive
+                                jcr:primaryType="nt:unstructured"
+                                text="25%"
+                                value="0.25"/>
+                            <fifty
+                                jcr:primaryType="nt:unstructured"
+                                text="50%"
+                                value="0.50"/>
+                            <seventyfive
+                                jcr:primaryType="nt:unstructured"
+                                text="75%"
+                                value="0.75"/>
+                            <hundred
+                                jcr:primaryType="nt:unstructured"
+                                text="100%"
+                                value="1.0"/>
+                        </options>
+                    </imagesize>
+                    <imageposition
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="bottomLeft"
+                        fieldDescription="Choose whether the image is on the right or left of the text"
+                        fieldLabel="Image Position"
+                        name="./imagePosition"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Bottom
+                                jcr:primaryType="nt:unstructured"
+                                text="Bottom (centered)"
+                                value="bottom"/>
+                            <BottomLeft
+                                jcr:primaryType="nt:unstructured"
+                                text="Bottom-Left"
+                                value="bottomLeft"/>
+                            <BottomRight
+                                jcr:primaryType="nt:unstructured"
+                                text="Bottom-Right"
+                                value="bottomRight"/>
+                            <Left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                            <Right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
+                            <Top
+                                jcr:primaryType="nt:unstructured"
+                                text="Top (centered)"
+                                value="top"/>
+                            <TopLeft
+                                jcr:primaryType="nt:unstructured"
+                                text="Top-Left"
+                                value="topLeft"/>
+                            <TopRight
+                                jcr:primaryType="nt:unstructured"
+                                text="Top-Right"
+                                value="topRight"/>
+                        </options>
+                    </imageposition>
+                    <alt
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter alternate text for the image"
+                        fieldLabel="Alt Text"
+                        name="./image/alt"
+                        xtype="textfield"/>
+                    <Image_x0020_Link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Link"
+                        name="./imageLink"
+                        xtype="browsefield"/>
+                    <imageNewWindow
+                        jcr:primaryType="cq:Widget"
+                        name="./imageNewWindow"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <newWindow
+                                jcr:primaryType="nt:unstructured"
+                                text="Open image link in a new window"
+                                value="new"/>
+                        </options>
+                    </imageNewWindow>
+                    <caption
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Caption text for image."
+                        fieldLabel="Caption Text"
+                        hideLabel="{Boolean}false"
+                        name="./captionText"
+                        width="300"
+                        xtype="richtext">
+                        <cssStyles
+                            jcr:primaryType="nt:unstructured"
+                            mainTitle="Main Title"
+                            paragraphTitle="Paragraph Title"
+                            rtStyleBlueText="Blue Text"
+                            rtStyleGoToLink="Go To Link"
+                            rtStyleRedText="Red Text"
+                            rtStyleWhiteText="White Text"
+                            sectionSubTitle="Section Site Title"
+                            sectionTitle="Section Title"
+                            siteTitle="Site Title"/>
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <hrplugin
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                        <linkbrowseConfig
+                            jcr:primaryType="nt:unstructured"
+                            protocols="[http://,https://,ftp://,mailto:]"/>
+                    </caption>
+                    <captionAlignment
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Choose how the caption text should be vertically aligned with the image"
+                        fieldLabel="Caption Alignment"
+                        name="./captionAlignment"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="center"/>
+                            <Left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                            <Right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
+                        </options>
+                    </captionAlignment>
+                    <file
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddGroups="\[&quot;media&quot;]"
+                        fieldLabel="Upload a file for downloading"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        name="./file"
+                        sizeLimit="100"
+                        uploadUrl="/tmp/upload_test/*"
+                        useFlash="{Boolean}false"
+                        xtype="smartfile"/>
+                    <alttitle
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Provide a name for the file."
+                        fieldLabel="File Title"
+                        name="./altTitle"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./jcr:description"
+                        xtype="textarea"/>
+                    <createThumbnail
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Create Thumbnail"
+                        name="./createThumbnail"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Include Rounded Corners"
+                                text="yes"
+                                value="{Boolean}true"/>
+                        </options>
+                    </createThumbnail>
+                </items>
+            </tab4>
+        </items>
+        <listeners
+            jcr:primaryType="nt:unstructured"
+            beforesubmit="function(dialog){ var img = dialog.getField('./image/file').hasData(); var imgPath = dialog.getField('./akamaiImage').getValue();if(img &amp;&amp; imgPath.length>0){CQ.Ext.Msg.show({'title':'Dialog Validation','msg':'Please provide Image either from local server or using Akamai path.','buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); return false;}  }"/>
+    </items>
+</jcr:root>

@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: MCD Caching
+Bundle-Description: Bundle for caching related functionality
+Bundle-SymbolicName: MCDCachingUtils
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.cq.caching.Activator

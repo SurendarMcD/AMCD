@@ -1,0 +1,9 @@
+
+BODY { FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff; }
+INPUT, td { FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, sans-serif; }
+p { 
+    margin:0px 0px 25px 0px; 
+    padding:0px;
+}
+
+input { width: 200px; }

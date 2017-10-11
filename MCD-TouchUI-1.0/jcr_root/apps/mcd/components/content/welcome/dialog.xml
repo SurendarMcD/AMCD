@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:TabPanel"
+    activeTab="0"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <Image
+            jcr:primaryType="cq:Widget"
+            cropParameter="./image/imageCrop"
+            ddGroups="[media]"
+            fileNameParameter="./image/fileName"
+            fileReferenceParameter="./image/fileReference"
+            mapParameter="./image/imageMap"
+            name="./image/file"
+            requestSuffix="/image.img.png"
+            rotateParameter="./image/imageRotate"
+            sizeLimit="100"
+            title="Image"
+            uploadUrl="/tmp/upload_test/*"
+            xtype="smartimage"/>
+        <Text
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <nameformat
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Name Format"
+                    name="./nameFormat"
+                    type="radio"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <First
+                            jcr:primaryType="nt:unstructured"
+                            text="FirstName LastName"
+                            value="first"/>
+                        <Last
+                            jcr:primaryType="nt:unstructured"
+                            text="LastName FirstName"
+                            value="last"/>
+                    </options>
+                </nameformat>
+                <welText
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Default : &quot;Welcome back&quot;"
+                    fieldLabel="Welcome Text"
+                    name="./welcomeText"
+                    xtype="textarea"/>
+                <resType
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./image/sling:resourceType"
+                    value="mcd/components/content/welcome"
+                    xtype="hidden"/>
+            </items>
+        </Text>
+    </items>
+</jcr:root>

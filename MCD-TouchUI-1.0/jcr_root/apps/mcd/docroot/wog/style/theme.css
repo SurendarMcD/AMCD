@@ -1,0 +1,47 @@
+*{margin: 0px; padding: 0px;}
+
+.dk_container
+{
+border-radius:5px;
+line-height: 14px;
+background-color:#cecdbd;
+border-radius:15px;
+}
+.dk_container:hover{outline:0px; border-color:#DDDBDB;}
+.dk_container:focus{outline:0px; border-color:#DDDBDB;}
+.dk_container a {text-decoration:none; cursor:pointer;}
+.dk_toggle
+{
+background-position:94%;
+padding: 7px 45px 7px 5px;
+border-radius: 5px;
+background-image: url("../images/dk_arrows.png");
+background-repeat: no-repeat;
+border-radius: 15px;
+}
+.dk_open{z-index:99999; }
+.dk_open .dk_toggle{border-radius: 5px 5px 0px 0px; background-color:#cecdbd; -moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0;}
+.dk_options{border-radius: 0px 0px 5px 5px;  -moz-border-radius: 0 0 5px 5px; -webkit-border-radius: 0 0 5px 5px; }
+.dk_options a{padding: 8px 10px; border-bottom-color:#DBDBDB; border-bottom-width: 1px; border-bottom-style: solid; background-color:#cecdbd;}
+.dk_options li:last-child a {border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;}
+.dk_options a:hover{color:#fff; text-decoration:none; border-bottom-color:#DDDBDB; background-color:#004c8e;}
+.dk_option_current a{color:#fff; text-decoration:none; border-bottom-color:#DDDBDB; background-color:#004c8e;}
+.dk_options_inner{border-width: 1px 1px 1px; border-style: solid; border-color: #dbdbdb; border-radius: 0px 0px 5px 5px; max-height: 250px; -moz-border-radius: 0 0 5px 5px; -webkit-border-radius: 0 0 5px 5px;}
+.dk_options_inner{max-height: 250px;}
+.dk_touch .dk_options{max-height: 250px;}
+.dk_container{ position: relative;}
+.dk_container a{outline: 0px;}
+.dk_toggle{display: inline-block; position: relative; zoom: 1;}
+.dk_open{position: relative;}
+.dk_open .dk_options{display: block;}
+.dk_open .dk_label{color: inherit;}
+.dk_options{width: 100%; right: 0px; margin-top: -1px; display: none; position: absolute;}
+.dk_options a{display: block;}
+.dk_options a:link {display: block;}
+.dk_options a:visited {display: block;}
+.dk_options_inner {overflow: auto; position: relative;}
+.dk_touch .dk_options {overflow: hidden;}
+.dk_touch .dk_options_inner {overflow: visible; max-height: none;}
+/*.dk_fouc select {top: -99999em; visibility: hidden; position: relative;}*/
+.dk_ie6 .dk_options {right: 0px;}
+.mcdonalds{background:url(../images/mcdonalds.png) no-repeat left center;}

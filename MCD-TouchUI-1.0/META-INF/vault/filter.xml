@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/mcd"/>
+    <filter root="/content/accessmcd/test123"/>
+    <filter root="/etc/designs/mcd/accessmcd"/>
+</workspaceFilter>

@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Edit News Tab"
+    width="{Long}800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        manageDefault="function(selection){&#xa;if(selection==&quot;selected1&quot;) {&#xa;this.findById(&quot;default2&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default3&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default4&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default5&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default6&quot;).setValue(&quot;&quot;);&#xa;}else if(selection==&quot;selected2&quot;){&#xa;this.findById(&quot;default1&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default3&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default4&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default5&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default6&quot;).setValue(&quot;&quot;);&#xa;}else if(selection==&quot;selected3&quot;){&#xa;this.findById(&quot;default1&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default2&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default4&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default5&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default6&quot;).setValue(&quot;&quot;);&#xa;}else if(selection==&quot;selected4&quot;){&#xa;this.findById(&quot;default1&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default2&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default3&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default5&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default6&quot;).setValue(&quot;&quot;);&#xa;}else if(selection==&quot;selected5&quot;){&#xa;this.findById(&quot;default1&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default2&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default3&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default4&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default6&quot;).setValue(&quot;&quot;);&#xa;}else if(selection==&quot;selected6&quot;){&#xa;this.findById(&quot;default1&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default2&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default3&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default4&quot;).setValue(&quot;&quot;);&#xa;this.findById(&quot;default5&quot;).setValue(&quot;&quot;);&#xa;}&#xa;}"
+        manageRegional="function(selection){&#xa;if(selection==&quot;regional1&quot;) {&#xa;this.findById(&quot;regional2&quot;).setValue('0');&#xa;this.findById(&quot;regional3&quot;).setValue('0');&#xa;this.findById(&quot;regional4&quot;).setValue('0');&#xa;this.findById(&quot;regional5&quot;).setValue('0');&#xa;this.findById(&quot;regional6&quot;).setValue('0');&#xa;}else if(selection==&quot;regional2&quot;){&#xa;this.findById(&quot;regional1&quot;).setValue('0');&#xa;this.findById(&quot;regional3&quot;).setValue('0');&#xa;this.findById(&quot;regional4&quot;).setValue('0');&#xa;this.findById(&quot;regional5&quot;).setValue('0');&#xa;this.findById(&quot;regional6&quot;).setValue('0');&#xa;}else if(selection==&quot;regional3&quot;){&#xa;this.findById(&quot;regional1&quot;).setValue('0');&#xa;this.findById(&quot;regional2&quot;).setValue('0');&#xa;this.findById(&quot;regional4&quot;).setValue('0');&#xa;this.findById(&quot;regional5&quot;).setValue('0');&#xa;this.findById(&quot;regional6&quot;).setValue('0');&#xa;}else if(selection==&quot;regional4&quot;){&#xa;this.findById(&quot;regional1&quot;).setValue('0');&#xa;this.findById(&quot;regional2&quot;).setValue('0');&#xa;this.findById(&quot;regional3&quot;).setValue('0');&#xa;this.findById(&quot;regional5&quot;).setValue('0');&#xa;this.findById(&quot;regional6&quot;).setValue('0');&#xa;}else if(selection==&quot;regional5&quot;){&#xa;this.findById(&quot;regional1&quot;).setValue('0');&#xa;this.findById(&quot;regional2&quot;).setValue('0');&#xa;this.findById(&quot;regional3&quot;).setValue('0');&#xa;this.findById(&quot;regional4&quot;).setValue('0');&#xa;this.findById(&quot;regional6&quot;).setValue('0');&#xa;}else if(selection==&quot;regional6&quot;){&#xa;this.findById(&quot;regional1&quot;).setValue('0');&#xa;this.findById(&quot;regional2&quot;).setValue('0');&#xa;this.findById(&quot;regional3&quot;).setValue('0');&#xa;this.findById(&quot;regional4&quot;)."
+        manageTabs="function(tab,noSwitch){&#xa;var tabs=['general','tab1','tab2','tab3','tab4','tab5','tab6'];&#xa;var index=tabs.indexOf(tab);&#xa;if(index==-1) return;&#xa;if(index==1){&#xa;this.unhideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;}else if(index==2){&#xa;this.unhideTabStripItem(1);&#xa;this.unhideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;}else if(index==3){&#xa;this.unhideTabStripItem(1);&#xa;this.unhideTabStripItem(2);&#xa;this.unhideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;}else if(index==4){&#xa;this.unhideTabStripItem(1);&#xa;this.unhideTabStripItem(2);&#xa;this.unhideTabStripItem(3);&#xa;this.unhideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;}else if(index==5){&#xa;this.unhideTabStripItem(1);&#xa;this.unhideTabStripItem(2);&#xa;this.unhideTabStripItem(3);&#xa;this.unhideTabStripItem(4);&#xa;this.unhideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;}else if(index==6){&#xa;this.unhideTabStripItem(1);&#xa;this.unhideTabStripItem(2);&#xa;this.unhideTabStripItem(3);&#xa;this.unhideTabStripItem(4);&#xa;this.unhideTabStripItem(5);&#xa;this.unhideTabStripItem(6);&#xa;}else{&#xa;this.hideTabStripItem(1);&#xa;this.hideTabStripItem(2);&#xa;this.hideTabStripItem(3);&#xa;this.hideTabStripItem(4);&#xa;this.hideTabStripItem(5);&#xa;this.hideTabStripItem(6);&#xa;}&#xa;this.doLayout();&#xa;if(!noSwitch)this.activate(0);&#xa;}"
+        manageType1="function(type){&#xa;if(type==&quot;pci1&quot;){&#xa;this.findById(&quot;pci1&quot;).enable();&#xa;this.findById(&quot;pci1&quot;).expand();&#xa;this.findById(&quot;manual1&quot;).disable();&#xa;this.findById(&quot;manual1&quot;).collapse();&#xa;this.doLayout();&#xa;}else if(type=&quot;manual1&quot;){&#xa;this.findById(&quot;pci1&quot;).disable();&#xa;this.findById(&quot;pci1&quot;).collapse();&#xa;this.findById(&quot;manual1&quot;).enable();&#xa;this.findById(&quot;manual1&quot;).expand();&#xa;this.findById(&quot;regional1&quot;).setValue(&quot;&quot;);&#xa;this.doLayout();&#xa;}else{&#xa;this.findById(&quot;pci1&quot;).disable();&#xa;this.findById(&quot;pci1&quot;).collapse();&#xa;this.findById(&quot;manual1&quot;).disable();&#xa;this.findById(&quot;manual1&quot;).collapse();&#xa;this.doLayout();&#xa;}&#xa;}"
+        manageType2="function(type){&#xa;if(type==&quot;pci2&quot;){&#xa;this.findById(&quot;pci2&quot;).enable();&#xa;this.findById(&quot;pci2&quot;).expand();&#xa;this.findById(&quot;manual2&quot;).disable();&#xa;this.findById(&quot;manual2&quot;).collapse();&#xa;this.doLayout();&#xa;}else if(type=&quot;manual2&quot;){&#xa;this.findById(&quot;pci2&quot;).disable();&#xa;this.findById(&quot;pci2&quot;).collapse();&#xa;this.findById(&quot;manual2&quot;).enable();&#xa;this.findById(&quot;manual2&quot;).expand();&#xa;this.findById(&quot;regional2&quot;).setValue(&quot;&quot;);&#xa;this.doLayout();&#xa;}else{&#xa;this.findById(&quot;pci2&quot;).disable();&#xa;this.findById(&quot;pci2&quot;).collapse();&#xa;this.findById(&quot;manual2&quot;).disable();&#xa;this.findById(&quot;manual2&quot;).collapse();&#xa;this.doLayout();&#xa;}&#xa;}"
+        manageType3="function(type){&#xa;if(type==&quot;pci3&quot;){&#xa;this.findById(&quot;pci3&quot;).enable();&#xa;this.findById(&quot;pci3&quot;).expand();&#xa;this.findById(&quot;manual3&quot;).disable();&#xa;this.findById(&quot;manual3&quot;).collapse();&#xa;this.doLayout();&#xa;}else if(type=&quot;manual3&quot;){&#xa;this.findById(&quot;pci3&quot;).disable();&#xa;this.findById(&quot;pci3&quot;).collapse();&#xa;this.findById(&quot;manual3&quot;).enable();&#xa;this.findById(&quot;manual3&quot;).expand();&#xa;this.findById(&quot;regional3&quot;).setValue(&quot;&quot;);&#xa;this.doLayout();&#xa;}else{&#xa;this.findById(&quot;pci3&quot;).disable();&#xa;this.findById(&quot;pci3&quot;).collapse();&#xa;this.findById(&quot;manual3&quot;).disable();&#xa;this.findById(&quot;manual3&quot;).collapse();&#xa;this.doLayout();&#xa;}&#xa;}"
+        manageType4="function(type){&#xa;if(type==&quot;pci5&quot;){&#xa;this.findById(&quot;pci5&quot;).enable();&#xa;this.findById(&quot;pci5&quot;).expand();&#xa;this.findById(&quot;manual5&quot;).disable();&#xa;this.findById(&quot;manual5&quot;).collapse();&#xa;this.doLayout();&#xa;}else if(type=&quot;manual5&quot;){&#xa;this.findById(&quot;pci5&quot;).disable();&#xa;this.findById(&quot;pci5&quot;).collapse();&#xa;this.findById(&quot;manual5&quot;).enable();&#xa;this.findById(&quot;manual5&quot;).expand();&#xa;this.findById(&quot;regional5&quot;).setValue(&quot;&quot;);&#xa;this.doLayout();&#xa;}else{&#xa;this.findById(&quot;pci5&quot;).disable();&#xa;this.findById(&quot;pci5&quot;).collapse();&#xa;this.findById(&quot;manual5&quot;).disable();&#xa;this.findById(&quot;manual5&quot;).collapse();&#xa;this.doLayout();&#xa;}&#xa;}"
+        manageType5="function(type){&#xa;if(type==&quot;pci5&quot;){&#xa;this.findById(&quot;pci5&quot;).enable();&#xa;this.findById(&quot;pci5&quot;).expand();&#xa;this.findById(&quot;manual5&quot;).disable();&#xa;this.findById(&quot;manual5&quot;).collapse();&#xa;this.doLayout();&#xa;}else if(type=&quot;manual5&quot;){&#xa;this.findById(&quot;pci5&quot;).disable();&#xa;this.findById(&quot;pci5&quot;).collapse();&#xa;this.findById(&quot;manual5&quot;).enable();&#xa;this.findById(&quot;manual5&quot;).expand();&#xa;this.findById(&quot;regional5&quot;).setValue(&quot;&quot;);&#xa;this.doLayout();&#xa;}else{&#xa;this.findById(&quot;pci5&quot;).disable();&#xa;this.findById(&quot;pci5&quot;).collapse();&#xa;this.findById(&quot;manual5&quot;).disable();&#xa;this.findById(&quot;manual5&quot;).collapse();&#xa;this.doLayout();&#xa;}&#xa;}"
+        manageType6="function(type){&#xa;if(type==&quot;pci6&quot;){&#xa;this.findById(&quot;pci6&quot;).enable();&#xa;this.findById(&quot;pci6&quot;).expand();&#xa;this.findById(&quot;manual6&quot;).disable();&#xa;this.findById(&quot;manual6&quot;).collapse();&#xa;this.doLayout();&#xa;}else if(type=&quot;manual6&quot;){&#xa;this.findById(&quot;pci6&quot;).disable();&#xa;this.findById(&quot;pci6&quot;).collapse();&#xa;this.findById(&quot;manual6&quot;).enable();&#xa;this.findById(&quot;manual6&quot;).expand();&#xa;this.findById(&quot;regional6&quot;).setValue(&quot;&quot;);&#xa;this.doLayout();&#xa;}else{&#xa;this.findById(&quot;pci6&quot;).disable();&#xa;this.findById(&quot;pci6&quot;).collapse();&#xa;this.findById(&quot;manual6&quot;).disable();&#xa;this.findById(&quot;manual6&quot;).collapse();&#xa;this.doLayout();&#xa;}&#xa;}"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General"
+                width="600">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <numTabs
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Number of tabs:"
+                        name="./numTabs"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <_x0032_
+                                jcr:primaryType="nt:unstructured"
+                                text="2"
+                                value="tab2"/>
+                            <_x0033_
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="tab3"/>
+                            <_x0034_
+                                jcr:primaryType="nt:unstructured"
+                                text="4"
+                                value="tab4"/>
+                            <_x0035_
+                                jcr:primaryType="nt:unstructured"
+                                text="5"
+                                value="tab5"/>
+                            <_x0036_
+                                jcr:primaryType="nt:unstructured"
+                                text="6"
+                                value="tab6"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                            selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                    </numTabs>
+                </items>
+            </general>
+            <tab1
+                jcr:primaryType="cq:Widget"
+                id="tab1"
+                title="Tab 1"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <generalFieldSet
+                        jcr:primaryType="cq:Widget"
+                        title="General Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <typeOfTab
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Type:"
+                                name="./tabType1"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <textType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual Entry"
+                                        value="manual1"/>
+                                    <pciType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="PCI Category"
+                                        value="pci1"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageType1(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageType1(value);}"/>
+                            </typeOfTab>
+                            <defaultTab
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The chosen default tab will be opened on page load."
+                                fieldLabel="Default Tab?:"
+                                id="default1"
+                                name="./defaultTab1"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="selected1"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageDefault(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageDefault(value);}"/>
+                            </defaultTab>
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Title:"
+                                name="./title1"
+                                xtype="textfield"/>
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Image size should be 150x150 or less."
+                                fieldLabel="Image Location:"
+                                name="./image1"
+                                rootPath="/content/dam"
+                                rootTitle="DAM Location..."
+                                xtype="pathfield">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    blur="function(){ var imgPath=this.getValue(); var imgType=imgPath.trim().substring(imgPath.length - 3); if(imgType != &quot;jpg&quot; &amp;&amp; imgType != &quot;gif&quot; &amp;&amp; imgType != &quot;png&quot;){ CQ.Ext.Msg.show ({'title':CQ.I18n.getMessage('News Tab Image Validation'), 'msg':CQ.I18n.getMessage('The path specified is not a valid image.  Choose a file with an extension of jpg, gif or png.'), 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.ERROR,&#x9;'scope':this});} }"/>
+                            </image>
+                            <viewAllLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link:"
+                                name="./viewAllLink1"
+                                xtype="pathfield"/>
+                            <viewAllLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link Text:"
+                                name="./viewAllLabel1"
+                                xtype="textfield"/>
+                            <viewTopicLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link:"
+                                name="./viewTopicLink1"
+                                xtype="pathfield"/>
+                            <viewTopicLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link Text:"
+                                name="./viewTopicLabel1"
+                                xtype="textfield"/>
+                            <admittedGroups
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Admitted Groups"
+                                name="./admittedGroups1"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    displayField="admittedGroups"
+                                    optionsCallback="function(path, record) {&#xa;var pageHandle=location.toString();&#xa;&#xa;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);&#xa;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;var temp = new Array();&#xa;temp = url2.split('.');&#xa;pageHandle = url1 + '/' +  temp[0] + '.AudienceType.html';&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))));&#xa;}"
+                                    type="select"
+                                    xtype="selection"/>
+                            </admittedGroups>
+                        </items>
+                    </generalFieldSet>
+                    <manualFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="manual1"
+                        title="Manual News Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <news
+                                jcr:primaryType="cq:Widget"
+                                hideLabel="{Boolean}true"
+                                name="./manualNews1"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    xtype="newsitem"/>
+                            </news>
+                        </items>
+                    </manualFieldSet>
+                    <pciFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="pci1"
+                        title="PCI Category Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <pciRegional
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="There can only be one regional tab.  If regional is selected, PCI ID is not needed."
+                                fieldLabel="Regional Tab? "
+                                id="regional1"
+                                name="./pciRegional1"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="regional1"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageRegional(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageRegional(value);}"/>
+                            </pciRegional>
+                            <pciCategoryId
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="If tab set to 'regional', the category ID will be unused."
+                                fieldLabel="PCI Category Id: "
+                                id="pciCat1"
+                                name="./pciId1"
+                                xtype="numberfield"/>
+                            <resultsCount
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This will be the max number of results shown."
+                                fieldLabel="Results Count: "
+                                name="./resultCount1"
+                                xtype="numberfield"/>
+                            <sortType
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Sort By: "
+                                name="./sortType1"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <chrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Chronological"
+                                        value="chrono"/>
+                                    <rChrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Reverse Chronological"
+                                        value="rchrono"/>
+                                    <alpha
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Alphabetical"
+                                        value="alpha"/>
+                                </options>
+                            </sortType>
+                            <entity
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="US"
+                                fieldLabel="Entity Type:"
+                                name="./entity1"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <US
+                                        jcr:primaryType="nt:unstructured"
+                                        text="US"
+                                        value="US"/>
+                                    <ENT
+                                        jcr:primaryType="nt:unstructured"
+                                        text="ENT"
+                                        value="ENT"/>
+                                    <AU
+                                        jcr:primaryType="nt:unstructured"
+                                        text="AU"
+                                        value="AU"/>
+                                </options>
+                            </entity>
+                        </items>
+                    </pciFieldSet>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(1); this.findById('pci1').disable(); }"/>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Widget"
+                id="tab2"
+                title="Tab 2"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <generalFieldSet
+                        jcr:primaryType="cq:Widget"
+                        title="General Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <typeOfTab
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Type:"
+                                name="./tabType2"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <textType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual Entry"
+                                        value="manual2"/>
+                                    <pciType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="PCI Category"
+                                        value="pci2"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageType2(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageType2(value);}"/>
+                            </typeOfTab>
+                            <defaultTab
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The chosen default tab will be opened on page load."
+                                fieldLabel="Default Tab?:"
+                                id="default2"
+                                name="./defaultTab2"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="selected2"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageDefault(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageDefault(value);}"/>
+                            </defaultTab>
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Title:"
+                                name="./title2"
+                                xtype="textfield"/>
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Image size should be 150x150 or less."
+                                fieldLabel="Image Location:"
+                                name="./image2"
+                                rootPath="/content/dam"
+                                rootTitle="DAM Location..."
+                                xtype="pathfield">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    blur="function(){ var imgPath=this.getValue(); var imgType=imgPath.trim().substring(imgPath.length - 3); if(imgType != &quot;jpg&quot; &amp;&amp; imgType != &quot;gif&quot; &amp;&amp; imgType != &quot;png&quot;){ CQ.Ext.Msg.show ({'title':CQ.I18n.getMessage('News Tab Image Validation'), 'msg':CQ.I18n.getMessage('The path specified is not a valid image.  Choose a file with an extension of jpg, gif or png.'), 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.ERROR,&#x9;'scope':this});} }"/>
+                            </image>
+                            <viewAllLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link:"
+                                name="./viewAllLink2"
+                                xtype="pathfield"/>
+                            <viewAllLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link Text:"
+                                name="./viewAllLabel2"
+                                xtype="textfield"/>
+                            <viewTopicLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link:"
+                                name="./viewTopicLink2"
+                                xtype="pathfield"/>
+                            <viewTopicLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link Text:"
+                                name="./viewTopicLabel2"
+                                xtype="textfield"/>
+                            <admittedGroups
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Admitted Groups"
+                                name="./admittedGroups2"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    displayField="admittedGroups"
+                                    optionsCallback="function(path, record) {&#xa;var pageHandle=location.toString();&#xa;&#xa;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);&#xa;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;var temp = new Array();&#xa;temp = url2.split('.');&#xa;pageHandle = url1 + '/' +  temp[0] + '.AudienceType.html';&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))));&#xa;}"
+                                    type="select"
+                                    xtype="selection"/>
+                            </admittedGroups>
+                        </items>
+                    </generalFieldSet>
+                    <manualFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="manual2"
+                        title="Manual News Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <news
+                                jcr:primaryType="cq:Widget"
+                                hideLabel="{Boolean}true"
+                                name="./manualNews2"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    xtype="newsitem"/>
+                            </news>
+                        </items>
+                    </manualFieldSet>
+                    <pciFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="pci2"
+                        title="PCI Category Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <pciRegional
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="There can only be one regional tab.  If regional is selected, PCI ID is not needed."
+                                fieldLabel="Regional Tab? "
+                                id="regional2"
+                                name="./pciRegional2"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="regional2"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageRegional(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageRegional(value);}"/>
+                            </pciRegional>
+                            <pciCategoryId
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="If tab set to 'regional', the category ID will be unused."
+                                fieldLabel="PCI Category Id: "
+                                id="pciCat2"
+                                name="./pciId2"
+                                xtype="numberfield"/>
+                            <resultsCount
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This will be the max number of results shown."
+                                fieldLabel="Results Count: "
+                                name="./resultCount2"
+                                xtype="numberfield"/>
+                            <sortType
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Sort By: "
+                                name="./sortType2"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <chrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Chronological"
+                                        value="chrono"/>
+                                    <rChrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Reverse Chronological"
+                                        value="rchrono"/>
+                                    <alpha
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Alphabetical"
+                                        value="alpha"/>
+                                </options>
+                            </sortType>
+                            <entity
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="US"
+                                fieldLabel="Entity Type:"
+                                name="./entity2"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <US
+                                        jcr:primaryType="nt:unstructured"
+                                        text="US"
+                                        value="US"/>
+                                    <ENT
+                                        jcr:primaryType="nt:unstructured"
+                                        text="ENT"
+                                        value="ENT"/>
+                                    <AU
+                                        jcr:primaryType="nt:unstructured"
+                                        text="AU"
+                                        value="AU"/>
+                                </options>
+                            </entity>
+                        </items>
+                    </pciFieldSet>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(2); this.findById('pci2').disable(); }"/>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Widget"
+                id="tab3"
+                title="Tab 3"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <generalFieldSet
+                        jcr:primaryType="cq:Widget"
+                        title="General Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <typeOfTab
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Type:"
+                                name="./tabType3"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <textType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual Entry"
+                                        value="manual3"/>
+                                    <pciType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="PCI Category"
+                                        value="pci3"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageType3(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageType3(value);}"/>
+                            </typeOfTab>
+                            <defaultTab
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The chosen default tab will be opened on page load."
+                                fieldLabel="Default Tab?:"
+                                id="default3"
+                                name="./defaultTab3"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="selected3"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageDefault(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageDefault(value);}"/>
+                            </defaultTab>
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Title:"
+                                name="./title3"
+                                xtype="textfield"/>
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Image size should be 150x150 or less."
+                                fieldLabel="Image Location:"
+                                name="./image3"
+                                rootPath="/content/dam"
+                                rootTitle="DAM Location..."
+                                xtype="pathfield">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    blur="function(){ var imgPath=this.getValue(); var imgType=imgPath.trim().substring(imgPath.length - 3); if(imgType != &quot;jpg&quot; &amp;&amp; imgType != &quot;gif&quot; &amp;&amp; imgType != &quot;png&quot;){ CQ.Ext.Msg.show ({'title':CQ.I18n.getMessage('News Tab Image Validation'), 'msg':CQ.I18n.getMessage('The path specified is not a valid image.  Choose a file with an extension of jpg, gif or png.'), 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.ERROR,&#x9;'scope':this});} }"/>
+                            </image>
+                            <viewAllLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link:"
+                                name="./viewAllLink3"
+                                xtype="pathfield"/>
+                            <viewAllLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link Text:"
+                                name="./viewAllLabel3"
+                                xtype="textfield"/>
+                            <viewTopicLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link:"
+                                name="./viewTopicLink3"
+                                xtype="pathfield"/>
+                            <viewTopicLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link Text:"
+                                name="./viewTopicLabel3"
+                                xtype="textfield"/>
+                            <admittedGroups
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Admitted Groups"
+                                name="./admittedGroups3"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    displayField="admittedGroups"
+                                    optionsCallback="function(path, record) {&#xa;var pageHandle=location.toString();&#xa;&#xa;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);&#xa;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;var temp = new Array();&#xa;temp = url2.split('.');&#xa;pageHandle = url1 + '/' +  temp[0] + '.AudienceType.html';&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))));&#xa;}"
+                                    type="select"
+                                    xtype="selection"/>
+                            </admittedGroups>
+                        </items>
+                    </generalFieldSet>
+                    <manualFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="manual3"
+                        title="Manual News Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <news
+                                jcr:primaryType="cq:Widget"
+                                hideLabel="{Boolean}true"
+                                name="./manualNews3"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    xtype="newsitem"/>
+                            </news>
+                        </items>
+                    </manualFieldSet>
+                    <pciFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="pci3"
+                        title="PCI Category Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <pciRegional
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="There can only be one regional tab.  If regional is selected, PCI ID is not needed."
+                                fieldLabel="Regional Tab? "
+                                id="regional3"
+                                name="./pciRegional3"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="regional3"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageRegional(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageRegional(value);}"/>
+                            </pciRegional>
+                            <pciCategoryId
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="If tab set to 'regional', the category ID will be unused."
+                                fieldLabel="PCI Category Id: "
+                                id="pciCat3"
+                                name="./pciId3"
+                                xtype="numberfield"/>
+                            <resultsCount
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This will be the max number of results shown."
+                                fieldLabel="Results Count: "
+                                name="./resultCount3"
+                                xtype="numberfield"/>
+                            <sortType
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Sort By: "
+                                name="./sortType3"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <chrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Chronological"
+                                        value="chrono"/>
+                                    <rChrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Reverse Chronological"
+                                        value="rchrono"/>
+                                    <alpha
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Alphabetical"
+                                        value="alpha"/>
+                                </options>
+                            </sortType>
+                            <entity
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="US"
+                                fieldLabel="Entity Type:"
+                                name="./entity3"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <US
+                                        jcr:primaryType="nt:unstructured"
+                                        text="US"
+                                        value="US"/>
+                                    <ENT
+                                        jcr:primaryType="nt:unstructured"
+                                        text="ENT"
+                                        value="ENT"/>
+                                    <AU
+                                        jcr:primaryType="nt:unstructured"
+                                        text="AU"
+                                        value="AU"/>
+                                </options>
+                            </entity>
+                        </items>
+                    </pciFieldSet>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(3); this.findById('pci3').disable(); }"/>
+            </tab3>
+            <tab4
+                jcr:primaryType="cq:Widget"
+                id="tab4"
+                title="Tab 4"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <generalFieldSet
+                        jcr:primaryType="cq:Widget"
+                        title="General Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <typeOfTab
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Type:"
+                                name="./tabType4"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <textType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual Entry"
+                                        value="manual4"/>
+                                    <pciType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="PCI Category"
+                                        value="pci4"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageType4(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageType4(value);}"/>
+                            </typeOfTab>
+                            <defaultTab
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The chosen default tab will be opened on page load."
+                                fieldLabel="Default Tab?:"
+                                id="default4"
+                                name="./defaultTab4"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="selected4"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageDefault(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageDefault(value);}"/>
+                            </defaultTab>
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Title:"
+                                name="./title4"
+                                xtype="textfield"/>
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Image size should be 150x150 or less."
+                                fieldLabel="Image Location:"
+                                name="./image4"
+                                rootPath="/content/dam"
+                                rootTitle="DAM Location..."
+                                xtype="pathfield">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    blur="function(){ var imgPath=this.getValue(); var imgType=imgPath.trim().substring(imgPath.length - 3); if(imgType != &quot;jpg&quot; &amp;&amp; imgType != &quot;gif&quot; &amp;&amp; imgType != &quot;png&quot;){ CQ.Ext.Msg.show ({'title':CQ.I18n.getMessage('News Tab Image Validation'), 'msg':CQ.I18n.getMessage('The path specified is not a valid image.  Choose a file with an extension of jpg, gif or png.'), 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.ERROR,&#x9;'scope':this});} }"/>
+                            </image>
+                            <viewAllLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link:"
+                                name="./viewAllLink4"
+                                xtype="pathfield"/>
+                            <viewAllLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link Text:"
+                                name="./viewAllLabel4"
+                                xtype="textfield"/>
+                            <viewTopicLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link:"
+                                name="./viewTopicLink4"
+                                xtype="pathfield"/>
+                            <viewTopicLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link Text:"
+                                name="./viewTopicLabel4"
+                                xtype="textfield"/>
+                            <admittedGroups
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Admitted Groups"
+                                name="./admittedGroups4"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    displayField="admittedGroups"
+                                    optionsCallback="function(path, record) {&#xa;var pageHandle=location.toString();&#xa;&#xa;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);&#xa;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;var temp = new Array();&#xa;temp = url2.split('.');&#xa;pageHandle = url1 + '/' +  temp[0] + '.AudienceType.html';&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))));&#xa;}"
+                                    type="select"
+                                    xtype="selection"/>
+                            </admittedGroups>
+                        </items>
+                    </generalFieldSet>
+                    <manualFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="manual4"
+                        title="Manual News Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <news
+                                jcr:primaryType="cq:Widget"
+                                hideLabel="{Boolean}true"
+                                name="./manualNews4"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    xtype="newsitem"/>
+                            </news>
+                        </items>
+                    </manualFieldSet>
+                    <pciFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="pci4"
+                        title="PCI Category Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <pciRegional
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="There can only be one regional tab.  If regional is selected, PCI ID is not needed."
+                                fieldLabel="Regional Tab?"
+                                id="regional4"
+                                name="./pciRegional4"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="regional4"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageRegional(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageRegional(value);}"/>
+                            </pciRegional>
+                            <pciCategoryId
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="If tab set to 'regional', the category ID will be unused."
+                                fieldLabel="PCI Category Id: "
+                                id="pciCat4"
+                                name="./pciId4"
+                                xtype="numberfield"/>
+                            <resultsCount
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This will be the max number of results shown."
+                                fieldLabel="Results Count: "
+                                name="./resultCount4"
+                                xtype="numberfield"/>
+                            <sortType
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Sort By: "
+                                name="./sortType4"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <chrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Chronological"
+                                        value="chrono"/>
+                                    <rChrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Reverse Chronological"
+                                        value="rchrono"/>
+                                    <alpha
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Alphabetical"
+                                        value="alpha"/>
+                                </options>
+                            </sortType>
+                            <entity
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="US"
+                                fieldLabel="Entity Type:"
+                                name="./entity4"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <US
+                                        jcr:primaryType="nt:unstructured"
+                                        text="US"
+                                        value="US"/>
+                                    <ENT
+                                        jcr:primaryType="nt:unstructured"
+                                        text="ENT"
+                                        value="ENT"/>
+                                    <AU
+                                        jcr:primaryType="nt:unstructured"
+                                        text="AU"
+                                        value="AU"/>
+                                </options>
+                            </entity>
+                        </items>
+                    </pciFieldSet>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(4); this.findById('pci4').disable(); }"/>
+            </tab4>
+            <tab5
+                jcr:primaryType="cq:Widget"
+                id="tab5"
+                title="Tab 5"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <generalFieldSet
+                        jcr:primaryType="cq:Widget"
+                        title="General Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <typeOfTab
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Type:"
+                                name="./tabType5"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <textType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual Entry"
+                                        value="manual5"/>
+                                    <pciType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="PCI Category"
+                                        value="pci5"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageType5(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageType5(value);}"/>
+                            </typeOfTab>
+                            <defaultTab
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The chosen default tab will be opened on page load."
+                                fieldLabel="Default Tab?:"
+                                id="default5"
+                                name="./defaultTab5"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="selected5"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageDefault(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageDefault(value);}"/>
+                            </defaultTab>
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Title:"
+                                name="./title5"
+                                xtype="textfield"/>
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Image size should be 150x150 or less."
+                                fieldLabel="Image Location:"
+                                name="./image5"
+                                rootPath="/content/dam"
+                                rootTitle="DAM Location..."
+                                xtype="pathfield">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    blur="function(){ var imgPath=this.getValue(); var imgType=imgPath.trim().substring(imgPath.length - 3); if(imgType != &quot;jpg&quot; &amp;&amp; imgType != &quot;gif&quot; &amp;&amp; imgType != &quot;png&quot;){ CQ.Ext.Msg.show ({'title':CQ.I18n.getMessage('News Tab Image Validation'), 'msg':CQ.I18n.getMessage('The path specified is not a valid image.  Choose a file with an extension of jpg, gif or png.'), 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.ERROR,&#x9;'scope':this});} }"/>
+                            </image>
+                            <viewAllLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link:"
+                                name="./viewAllLink5"
+                                xtype="pathfield"/>
+                            <viewAllLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link Text:"
+                                name="./viewAllLabel5"
+                                xtype="textfield"/>
+                            <viewTopicLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link:"
+                                name="./viewTopicLink5"
+                                xtype="pathfield"/>
+                            <viewTopicLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link Text:"
+                                name="./viewTopicLabel5"
+                                xtype="textfield"/>
+                            <admittedGroups
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Admitted Groups"
+                                name="./admittedGroups5"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    displayField="admittedGroups"
+                                    optionsCallback="function(path, record) {&#xa;var pageHandle=location.toString();&#xa;&#xa;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);&#xa;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;var temp = new Array();&#xa;temp = url2.split('.');&#xa;pageHandle = url1 + '/' +  temp[0] + '.AudienceType.html';&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))));&#xa;}"
+                                    type="select"
+                                    xtype="selection"/>
+                            </admittedGroups>
+                        </items>
+                    </generalFieldSet>
+                    <manualFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="manual5"
+                        title="Manual News Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <news
+                                jcr:primaryType="cq:Widget"
+                                hideLabel="{Boolean}true"
+                                name="./manualNews5"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    xtype="newsitem"/>
+                            </news>
+                        </items>
+                    </manualFieldSet>
+                    <pciFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="pci5"
+                        title="PCI Category Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <pciRegional
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="There can only be one regional tab.  If regional is selected, PCI ID is not needed."
+                                fieldLabel="Regional Tab?"
+                                id="regional5"
+                                name="./pciRegional5"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="regional5"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageRegional(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageRegional(value);}"/>
+                            </pciRegional>
+                            <pciCategoryId
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="If tab set to 'regional', the category ID will be unused."
+                                fieldLabel="PCI Category Id: "
+                                id="pciCat5"
+                                name="./pciId5"
+                                xtype="numberfield"/>
+                            <resultsCount
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This will be the max number of results shown."
+                                fieldLabel="Results Count: "
+                                name="./resultCount5"
+                                xtype="numberfield"/>
+                            <sortType
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Sort By: "
+                                name="./sortType5"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <chrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Chronological"
+                                        value="chrono"/>
+                                    <rChrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Reverse Chronological"
+                                        value="rchrono"/>
+                                    <alpha
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Alphabetical"
+                                        value="alpha"/>
+                                </options>
+                            </sortType>
+                            <entity
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="US"
+                                fieldLabel="Entity Type:"
+                                name="./entity5"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <US
+                                        jcr:primaryType="nt:unstructured"
+                                        text="US"
+                                        value="US"/>
+                                    <ENT
+                                        jcr:primaryType="nt:unstructured"
+                                        text="ENT"
+                                        value="ENT"/>
+                                    <AU
+                                        jcr:primaryType="nt:unstructured"
+                                        text="AU"
+                                        value="AU"/>
+                                </options>
+                            </entity>
+                        </items>
+                    </pciFieldSet>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(5); this.findById('pci5').disable(); }"/>
+            </tab5>
+            <tab6
+                jcr:primaryType="cq:Widget"
+                id="tab6"
+                title="Tab 6"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <generalFieldSet
+                        jcr:primaryType="cq:Widget"
+                        title="General Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <typeOfTab
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Type:"
+                                name="./tabType6"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <textType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual Entry"
+                                        value="manual6"/>
+                                    <pciType
+                                        jcr:primaryType="nt:unstructured"
+                                        text="PCI Category"
+                                        value="pci6"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageType6(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageType6(value);}"/>
+                            </typeOfTab>
+                            <defaultTab
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The chosen default tab will be opened on page load."
+                                fieldLabel="Default Tab?:"
+                                id="default6"
+                                name="./defaultTab6"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="selected6"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageDefault(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageDefault(value);}"/>
+                            </defaultTab>
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Tab Title:"
+                                name="./title6"
+                                xtype="textfield"/>
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Image size should be 150x150 or less."
+                                fieldLabel="Image Location:"
+                                name="./image6"
+                                rootPath="/content/dam"
+                                rootTitle="DAM Location..."
+                                xtype="pathfield">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    blur="function(){ var imgPath=this.getValue(); var imgType=imgPath.trim().substring(imgPath.length - 3); if(imgType != &quot;jpg&quot; &amp;&amp; imgType != &quot;gif&quot; &amp;&amp; imgType != &quot;png&quot;){ CQ.Ext.Msg.show ({'title':CQ.I18n.getMessage('News Tab Image Validation'), 'msg':CQ.I18n.getMessage('The path specified is not a valid image.  Choose a file with an extension of jpg, gif or png.'), 'buttons':CQ.Ext.Msg.OK, 'icon':CQ.Ext.MessageBox.ERROR,&#x9;'scope':this});} }"/>
+                            </image>
+                            <viewAllLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link:"
+                                name="./viewAllLink6"
+                                xtype="pathfield"/>
+                            <viewAllLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View All Link Text:"
+                                name="./viewAllLabel6"
+                                xtype="textfield"/>
+                            <viewTopicLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link:"
+                                name="./viewTopicLink6"
+                                xtype="pathfield"/>
+                            <viewTopicLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic Link Text:"
+                                name="./viewTopicLabel6"
+                                xtype="textfield"/>
+                            <admittedGroups
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Admitted Groups"
+                                name="./admittedGroups6"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    displayField="admittedGroups"
+                                    optionsCallback="function(path, record) {&#xa;var pageHandle=location.toString();&#xa;&#xa;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);&#xa;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;var temp = new Array();&#xa;temp = url2.split('.');&#xa;pageHandle = url1 + '/' +  temp[0] + '.AudienceType.html';&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))));&#xa;}"
+                                    type="select"
+                                    xtype="selection"/>
+                            </admittedGroups>
+                        </items>
+                    </generalFieldSet>
+                    <manualFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="manual6"
+                        title="Manual News Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <news
+                                jcr:primaryType="cq:Widget"
+                                hideLabel="{Boolean}true"
+                                name="./manualNews6"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    xtype="newsitem"/>
+                            </news>
+                        </items>
+                    </manualFieldSet>
+                    <pciFieldSet
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        id="pci6"
+                        title="PCI Category Options"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <pciRegional
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="There can only be one regional tab.  If regional is selected, PCI ID is not needed."
+                                fieldLabel="Regional Tab? "
+                                id="regional6"
+                                name="./pciRegional6"
+                                type="checkbox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <selected
+                                        jcr:primaryType="nt:unstructured"
+                                        text=""
+                                        value="regional6"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(){this.findParentByType('tabpanel').manageRegional(this.getValue(),true);}"
+                                    selectionchanged="function(box,value){box.findParentByType('tabpanel').manageRegional(value);}"/>
+                            </pciRegional>
+                            <pciCategoryId
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="If tab set to 'regional', the category ID will be unused."
+                                fieldLabel="PCI Category Id: "
+                                id="pciCat6"
+                                name="./pciId6"
+                                xtype="numberfield"/>
+                            <resultsCount
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This will be the max number of results shown."
+                                fieldLabel="Results Count: "
+                                name="./resultCount6"
+                                xtype="numberfield"/>
+                            <sortType
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Sort By: "
+                                name="./sortType6"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <chrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Chronological"
+                                        value="chrono"/>
+                                    <rChrono
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Reverse Chronological"
+                                        value="rchrono"/>
+                                    <alpha
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Alphabetical"
+                                        value="alpha"/>
+                                </options>
+                            </sortType>
+                            <entity
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="US"
+                                fieldLabel="Entity Type:"
+                                name="./entity6"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <US
+                                        jcr:primaryType="nt:unstructured"
+                                        text="US"
+                                        value="US"/>
+                                    <ENT
+                                        jcr:primaryType="nt:unstructured"
+                                        text="ENT"
+                                        value="ENT"/>
+                                    <AU
+                                        jcr:primaryType="nt:unstructured"
+                                        text="AU"
+                                        value="AU"/>
+                                </options>
+                            </entity>
+                        </items>
+                    </pciFieldSet>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(6); this.findById('pci6').disable(); }"/>
+            </tab6>
+        </items>
+    </items>
+</jcr:root>

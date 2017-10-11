@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/components/download.html?wcmmode=disabled"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items
+            jcr:primaryType="nt:unstructured"
+            border="false"
+            height=""
+            title="Download"
+            width=""
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <description
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Description"
+                    name="./jcr:description"
+                    xtype="textarea"/>
+                <file
+                    jcr:primaryType="cq:Widget"
+                    autoUploadDelay="1"
+                    ddGroups="[media]"
+                    fieldLabel="File"
+                    fileNameParameter="./fileName"
+                    fileReferenceParameter="./fileReference"
+                    name="./file"
+                    sizeLimit="100"
+                    uploadUrl="/tmp/upload_test/*"
+                    useHTML5="{Boolean}false"
+                    xtype="html5smartfile"/>
+                <alttitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Alternate Title"
+                    name="./altTitle"
+                    validateOnBlur="true"
+                    xtype="textfield"/>
+            </items>
+        </items>
+    </items>
+</jcr:root>

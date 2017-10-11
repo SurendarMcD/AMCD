@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/components/imagegallery.html?wcmmode=disabled"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <GalleryDetails
+            jcr:primaryType="cq:Widget"
+            size="{Long}0"
+            title="GalleryDetails"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <path
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    emptyText="Path is mandatory"
+                    fieldDescription="Best viewed with 124*90 px size of thumbnail images."
+                    fieldLabel="Gallery path"
+                    name="./path"
+                    xtype="browsefield"/>
+                <description
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Gallery Description"
+                    name="./gallerydesc"
+                    xtype="textfield"/>
+                <bottompadding
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="in px. (Default: 44px)"
+                    fieldLabel="Bottom Padding"
+                    name="./btmpadding"
+                    xtype="textfield"/>
+            </items>
+        </GalleryDetails>
+    </items>
+</jcr:root>

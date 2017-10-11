@@ -1,0 +1,16 @@
+/* Top Navigation menu spacing fix */
+#div_topnav ul {
+    z-index: 1000 !important;
+}
+#nav {
+    z-index: 1000 !important;
+}
+
+.topnavigation #nav a {
+    padding: 9px 0px !important;
+}
+
+.topnavigation #nav ul li ul li a {
+    padding: 9px !important;
+    text-align: left !important;
+}

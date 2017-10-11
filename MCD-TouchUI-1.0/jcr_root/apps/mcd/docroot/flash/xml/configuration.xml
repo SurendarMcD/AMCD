@@ -1,0 +1,17 @@
+<configuration>
+
+	<config>
+	
+		<someUrl></someUrl>
+		<locationsUrl>/content/accessmcd/util/worldclock/_jcr_content.html</locationsUrl>
+		<serverUrl></serverUrl>
+		<!--<getTimeZoneUrl>php/getTimeXML.php</getTimeZoneUrl> -->
+		<getTimeZoneUrl>/content/accessmcd/util/worldclock/_jcr_content.html/locations</getTimeZoneUrl>
+		<!--<getTimeZoneUrl>http://localhost:8888/worldclockwidget/php/getTimeXML.php</getTimeZoneUrl> --> 
+		<sydneyTimeUrl>/content/accessmcd/util/worldclock/_jcr_content.html/sydney</sydneyTimeUrl>
+		<londonTimeUrl>/content/accessmcd/util/worldclock/_jcr_content.html/london</londonTimeUrl>
+		<newYorkTimeUrl>/content/accessmcd/util/worldclock/_jcr_content.html/newyork</newYorkTimeUrl>
+		
+	</config>
+	
+</configuration>

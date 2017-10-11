@@ -1,0 +1,10 @@
+#cboxOverlay
+{
+    background-image:none;
+    background-color:#1c1c1c;   
+    opacity:0.5; 
+    filter:alpha(opacity=70) !important;
+    zoom:1; /* hasLayout  */
+    display:block;
+}
+

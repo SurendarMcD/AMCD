@@ -1,0 +1,3 @@
+#base=css
+static.css
+../../../g2g_purple/clientlib/css/static.css

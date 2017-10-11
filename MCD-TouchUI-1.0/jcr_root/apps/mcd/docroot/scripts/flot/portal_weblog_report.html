@@ -1,0 +1,208 @@
+<html>
+ <head>
+    <title>AccessMCD Portal Web Traffic</title>
+        <script id="source1" language="javascript">
+    var perfdata=[];
+    </script>
+    <link href="style.css" rel="styleSheet" />
+    <!--[if IE]><script language="javascript" src="excanvas.pack.js"></script><![endif]-->
+    <script language="javascript" src="jquery.js"></script>
+    
+    <script language="javascript"  src="jquery.flot.js"></script>
+    <script language="javascript"  src="jquery.blockUI.js"></script>
+
+ </head>
+    <body>
+    <h2>AccessMCD Portal Web Traffic</h2>
+    <h3 id="fordate"></h3><button onclick="reloadData();">reload</button>
+		<br>
+
+<!--<b>Page:</b><select onchange='javascript:drawChart();' id='pagelist'>
+</select>-->
+    <!--div id="chart2" style="background-image:url(puppy.jpg);width:950px;height:500px;"></div-->
+		<div id="chart2" style="width:950px;height:500px;"></div>
+		
+		<div id="chart" style="width:950px;height:500px;"></div>
+
+        <script language="javascript" id="datasource" src="weblogs.0603.js"></script>
+<script id="source" language="javascript">
+var series=[];
+var reportdate="Fri, 12 May 2009";
+var currentdata=[];
+function reloadData(){
+	var newdate=prompt("new date?");
+	perfdata=[];
+	$.getScript("weblogs."+newdate+".js", function() {
+		drawCharts();
+		$("#fordate").html(newdate);
+	});
+}
+function parseData(){
+var cnt=0;
+var retSeries=new Array();
+for(var ix in perfdata){
+  var line=perfdata[ix];
+  var fields=line.split("|")
+  requesttime=Date.parse(reportdate+":00 "+fields[0]+" UTC");
+  retSeries[0]=[requesttime,parseInt(fields[1])];
+  retSeries[1]=[requesttime,parseInt(fields[2])];
+  retSeries[3]=[requesttime,parseInt(fields[3])];
+}
+return retSeries;
+}
+
+function parseCurrentData(series,x1,x2){
+var cnt=0;
+var retSeries=new Array();
+
+
+for(var ix in series){
+  var datapoint=series[ix];
+  if((datapoint[0]>x1) && (datapoint[0]<x2)){
+     retSeries[cnt++]=datapoint;
+  }
+}
+return retSeries;
+}
+
+function getData(bytes){
+    var page = chartedpage;
+		var data=new Array();
+		var dataSeries1=new Array();
+		var dataSeries2=new Array();
+		var dataSeries3=new Array();
+    var cnt=0;
+		for(var ix in perfdata){
+		  var line=perfdata[ix];
+		  var fields=line.split("|")
+		  requesttime=Date.parse(reportdate+" "+fields[0]+":00 UTC");
+		  dataSeries1[cnt]=[requesttime,parseInt(fields[1])];
+		  dataSeries2[cnt]=[requesttime,parseInt(fields[2])];
+		  dataSeries3[cnt++]=[requesttime,parseInt(fields[3])];
+		}
+    if(!bytes){
+			var series=new Object();
+			series.label="Requests/sec";
+	    series.data=dataSeries1;
+	    data.push(series);   
+	    var series=new Object();
+	    series.label="HTML Requests/sec";
+	    series.data=dataSeries2;
+	    data.push(series);   
+    }else{
+			var series=new Object();
+	    series.label="Bytes/sec";
+	    series.data=dataSeries3;
+	    series.lines={show:false};
+			//series.yaxis=2;
+			series.color="blue";
+	    data.push(series);   
+	  }
+    //data.push(getRequestsPerHour("ALL",page));
+    return data;
+}
+
+
+var chartedpage="";
+
+var chartoptions = {
+		lines: {show:false },
+		points: {show:true },
+		xaxis: { mode: "time" },
+    yaxis: { min: 0,tickFormatter: function (v, axis) { return v.toFixed(axis.tickDecimals) +"Req/s" }},
+    y2axis: { min: 0,tickFormatter: function (v, axis) { return v.toFixed(axis.tickDecimals) +"bytes/s" }},
+		legend: {position: "nw"}
+		,
+    selection: { mode: "xy" }
+};
+
+function drawCharts(){
+var maxdate=Date.parse(reportdate+" 23:59:59 UTC");
+$.plot($('#chart'), getData(false), {
+ 				lines: {show:true },
+				points: {show:false },
+ xaxis: { mode: "time" ,max:maxdate},
+    		yaxis: { min: 0 , tickFormatter: function (v, axis) { return v.toFixed(axis.tickDecimals) +"Req/s" }},
+				legend: {position: "nw"}
+				,
+        selection: { mode: "xy" }
+}
+);
+
+$.plot($('#chart2'), getData(true), {
+ 				lines: {show:true },
+				points: {show:false },
+ xaxis: { mode: "time" ,max:maxdate},
+    		yaxis: { max: 250000, min: 0,tickFormatter: function (v, axis) { return v.toFixed(axis.tickDecimals) +"bytes/s" }},
+    		grid: {markings: [ { yaxis: { from: 100000, to: 100000 } ,color: "#ff0000" }]},
+				legend: {position: "nw"}
+				,
+        selection: { mode: "xy" }
+}
+);
+
+    $("#chart").bind("plotselected", function (event, ranges) {
+        // clamp the zooming to prevent eternal zoom
+        if (ranges.xaxis.to - ranges.xaxis.from < 0.00001)
+            ranges.xaxis.to = ranges.xaxis.from + 0.00001;
+        if (ranges.yaxis.to - ranges.yaxis.from < 0.00001)
+            ranges.yaxis.to = ranges.yaxis.from + 0.00001;
+        
+        // do the zooming
+        plot = $.plot($("#chart"), getData(ranges.xaxis.from, ranges.xaxis.to),
+                      $.extend(true, {}, chartoptions, {
+                          xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to },
+                          yaxis: { min: ranges.yaxis.from, max: ranges.yaxis.to }
+                      }));
+    });
+}
+
+function showChart(page) {
+   chartedpage=page;
+	  $.blockUI({ 
+            message: "<center><b><span id='charttitle'></span>&nbsp;&nbsp;<a href='#' id='unzoom'>[unzoom]</a>&nbsp;&nbsp;<a href='#' id='closechart'>[close]</a></b></center><div id='chart' style='width:950px;height:500px;'></div>", 
+            css: { 
+						    top:  ($(window).height() - 550) /2 + 'px', 
+                left: ($(window).width() - 950) /2 + 'px', 
+                height: '550px', 
+                width: '950px' 
+								}
+        }); 
+ 
+  	drawChart();
+  
+    $("#chart").bind("plotselected", function (event, ranges) {
+        // clamp the zooming to prevent eternal zoom
+        if (ranges.xaxis.to - ranges.xaxis.from < 0.00001)
+            ranges.xaxis.to = ranges.xaxis.from + 0.00001;
+        if (ranges.yaxis.to - ranges.yaxis.from < 0.00001)
+            ranges.yaxis.to = ranges.yaxis.from + 0.00001;
+        
+        // do the zooming
+        plot = $.plot($("#chart"), getData(ranges.xaxis.from, ranges.xaxis.to),
+                      $.extend(true, {}, chartoptions, {
+                          xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to },
+                          yaxis: { min: ranges.yaxis.from, max: ranges.yaxis.to }
+                      }));
+    });
+
+
+  $('#charttitle').html(page);
+   $('#closechart').click($.unblockUI); 
+   $('#unzoom').click(drawChart); 
+   
+ 
+}
+
+$(function () {
+  //populatePagelist();
+  //populateTable();
+  //$('#pagelist').val("/global.html");
+  //$("#placeholder").hide();
+	drawCharts();
+  //populatePageTable();
+});
+</script>
+
+ </body>
+</html>

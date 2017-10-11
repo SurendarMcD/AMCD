@@ -1,0 +1,94 @@
+th.tableText{
+    background-color: #D85201;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    padding-left: 4px;
+}
+td.tableText{
+    border:1px solid #000000;
+    padding-left:6px;
+    background-color:#FFFFFF;
+    font-size:12px;
+}
+
+td.text {
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+td.titleWithBlackBoldBorder {
+    color: #000000;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-color=#FFFFFF;
+    font-weight: bold;
+    padding: 3px 5px;
+    text-decoration: none;
+    vertical-align: middle; 
+} 
+.wwkb a {
+    color: #D85201;
+    text-decoration: underline;
+}
+
+.wwkb img {
+    max-width: 320px;
+}
+
+table.wwkb{
+background-color:#FFFFFF;
+}
+
+.searchgms{
+  padding-left: 3px;
+  font-size:12px;
+  
+}
+.searchgmsarchive{
+ padding-left: 10px;
+ padding-bottom:2px;
+ font-size:12px;
+ 
+}
+se{ font-size:12px;}
+
+table.wwkbSearchLeftNav{
+text-align:left;
+font-size:12px;
+background-color: #FFFFFF;
+border-right: 1px solid #CCCCCC;
+font-family: Arial,Helvetica,sans-serif;
+bord er-bottom: 1px solid #CCCCCC;
+}
+
+.wwkbc td
+{  
+    border-bottom: 1px dotted #333333;
+    padding-bottom: 11px;
+    padding-top: 4px;
+} 
+#statusdiv 
+{ padding-bottom: 10px;
+  padding-left: 190px;
+  padding-top:50px;
+} 
+.asterisk{
+    color:#FF0000;
+}
+.wwkb #menuItemIdAsterisk{
+    display:none;
+    width:20px;
+    mar gin-top:-16px;
+    pad ding-left:80px;
+}
+
+#productFormHeaderText p{
+    padding-left:300px; 
+}
+
+#Product_Photo_DIV img{
+    max-width:100px;
+}

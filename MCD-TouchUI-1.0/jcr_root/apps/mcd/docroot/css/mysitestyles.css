@@ -1,0 +1,86 @@
+#mainContainer{
+background-color:#ffffff;
+
+}
+
+#contentArea{
+background-color:#ffffff;
+}
+
+
+
+.whitebg {
+    background-color : #FFFFFF;
+}
+
+.grey3bg {
+    background-color: #666666;
+}
+
+.goldbg {
+    background-color: #FEC200;
+}
+
+.paleyellow2bg {
+        background-color : #F9E9AE
+}
+
+
+.txtblue {
+    color : #3366CF;
+    font-family : Arial, Helvetica, sans-serif;
+    font-size : 11px;
+    font-weight : normal;
+}
+
+table{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+input{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+select{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+fieldset{
+    border: #CCCCCC 0px solid;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+legend{
+    color: #007796;
+}
+hr{
+    color:#CCCCCC;
+    margin-top:-2px;
+    border: 1px solid #CCCCCC;
+}
+.actionLink{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    color: #007796;
+    font-weight: bold;
+}
+.resultMsg{
+    font-weight: bold;
+    color: #c20000;
+    padding-left:9px;
+}
+table.dataTable{
+    border: 1px solid #000000;
+    border-spacing: 0px;
+}
+table.dataTable td {
+    border: thin solid #CCCCCC;
+    padding: 1px;
+}
+.lableTxt{
+    color: #007796;
+}
+.txtMandatory{
+    font-weight: bold;
+    color: red;
+}

@@ -1,0 +1,1051 @@
+.accessbody {
+background-color:#9999FF;
+border:2px ridge #9999FF;
+color:#660099;
+} 
+#mainContainer {
+background-color:#FFFFFF;
+}
+#contentArea {
+background-color:#FFFFFF;
+}
+form {
+margin-bottom:0;
+margin-top:0;
+}
+#LinkNavigation div {
+font-family:Arial,Helvetica,sans-serif;
+}
+#LinkNavigation td {
+font-family:Arial,Helvetica,sans-serif;
+}
+.linkBarBorder {
+background-color:#FFFFFF;
+background-repeat:no-repeat;
+border-left:1px solid #CCCCCC;
+color:#FFFFFF;
+padding-bottom:4px;
+padding-top:0;
+text-align:left;
+white-space:nowrap;
+}
+.linkBarNoBorder {
+background-color:#FFFFFF;
+border-color:#FFFFFF #FFFFFF #FFFFFF #000000;
+border-style:solid none solid solid;
+border-width:0;
+color:#666666;
+font-size:10px;
+padding:0;
+white-space:nowrap;
+}
+.linkBar, .linkBar:visited, .linkBar:hover, .linkBar:active {
+color:#3366CF;
+font-size:10px;
+padding-left:3px;
+padding-right:8px;
+text-decoration:none;
+}
+.linkBar:hover {
+color:#3366CF;
+padding-right:8px;
+text-decoration:underline;
+}
+.linkTool, .linkTool:visited, .linkTool:hover, .linkTool:active {
+color:#3366CF;
+font-size:10px;
+padding-left:3px;
+text-decoration:none;
+}
+.linkTool:hover {
+color:#3366CF;
+padding-left:3px;
+text-decoration:underline;
+}
+.linkNoBar, .linkNoBar:visited, .linkNoBar:hover, .linkNoBar:active {
+color:#3366CF;
+font-size:10px;
+padding-right:0;
+text-decoration:none;
+}
+.linkNoBar:hover {
+color:#3366CF;
+padding-right:0;
+text-decoration:underline;
+}
+.linkSeparator {
+background-color:#FFFFFF;
+color:#000000;
+padding-left:4px;
+padding-right:3px;
+}
+.mysitebackground {
+background-color:#5B7FA1;
+color:#FFFFFF;
+padding-left:2px;
+padding-right:2px;
+}
+.mysiteTitle {
+background-color:#5B7FA1;
+color:#FFFFFF;
+font-family:verdana;
+font-size:12px;
+font-weight:bold;
+padding-left:5px;
+}
+.mysiteTitleIconBackground {
+background-color:#5B7FA1;
+color:#FFFFFF;
+padding-left:2px;
+padding-right:2px;
+}
+.mysiteDropShadow1 {
+background-color:#A7A7A7;
+height:1px;
+}
+.mysiteDropShadow2 {
+background-color:#B7B6B6;
+height:1px;
+}
+.mysiteDropShadow3 {
+background-color:#C8C8C8;
+height:1px;
+}
+.mysiteDropShadow4 {
+background-color:#D8D7D7;
+height:1px;
+}
+.mysiteDropShadow5 {
+background-color:#E1E1E1;
+height:1px;
+}
+.mysiteBorder {
+background-color:#FFFFFF;
+border:0 solid #CFD9E5;
+}
+#mysites select {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+#mysites table, input, textarea, button {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+#SiteToggler .defaultRonald {
+background-color:#FFFFFF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+#SiteToggler td {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+#SiteToggler .siteLabel {
+}
+#SiteToggler #selectSite {
+font-family:Arial;
+font-size:10px;
+width:120px;
+}
+#BasicSearch td {
+font-size:11px;
+}
+#BasicSearch #searchForm {
+padding-bottom:0;
+z-index:1;
+}
+.searchAlign .labelSearch {
+color:#C20000;
+font-size:12px;
+font-weight:bold;
+}
+#BasicSearch .searchAlign {
+float:none;
+height:34px;
+}
+.searchAlign input {
+height:20px;
+width:325px;
+}
+.searchAlign .inputtd {
+padding:0;
+}
+.searchAlign .simpleSearch {
+padding-top:0;
+}
+.searchAlign .advanceSearch {
+font-weight:bold;
+height:14px;
+padding:0 25px 0 4px;
+text-align:right;
+}
+.advanceSearch .advanceSearchSize {
+font-size:11px;
+}
+.FStext {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:normal;
+text-decoration:none;
+}
+.FStextRed {
+color:red;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:bold;
+text-decoration:none;
+}
+a.FS {
+background-color:transparent;
+color:#0033CC;
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+font-weight:normal;
+text-decoration:none;
+}
+.FSmainTitle {
+font-family:Arial Black;
+font-size:14pt;
+}
+.FStableBodyBgColor {
+background-color:#CEE3F8;
+}
+.FStrBrownColor {
+background-color:#78256E;
+}
+.FStrBlueColor {
+background-color:#C5D5FE;
+}
+.FStdBrownBgColor {
+background-color:#8B5256;
+color:#FFFFFF;
+font-family:Arial;
+font-size:11px;
+font-weight:bold;
+text-decoration:none;
+}
+.FSbutton {
+background-color:#FFD200;
+border:0 none;
+color:#FFFFFF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:normal;
+}
+#footer {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+td.mcdFooter {
+background-color:#B9B9B9;
+color:#000000;
+font-family:arial,helvetica,sans-serif;
+font-size:11px;
+}
+a.mcdFooter:link, a.mcdFooter:visited {
+color:#3366CF;
+text-decoration:none;
+}
+a.mcdfooter:hover {
+color:#3366CF;
+text-decoration:underline;
+}
+a.mcdFooter:active {
+}
+.black {
+color:#000000;
+}
+.blackbg {
+background-color:#5B7FA1;
+}
+.white {
+color:#FFFFFF;
+}
+.whitestock {
+color:#FFFFFF;
+font-family:Arial;
+font-size:11px;
+font-weight:bold;
+}
+.whitebg {
+background-color:#FFFFFF;
+}
+.modulebg {
+background-color:#E4E5E9;
+}
+.footerbg {
+background-color:#B9B9B9;
+}
+.goldbg {
+background-color:#FEC200;
+}
+.grey1 {
+color:#CCCCCC;
+}
+.Blue1 {
+color:#CEE4FB;
+font-family:Arial,Helvetica,sans-serif;
+font-size:20px;
+font-weight:bold;
+line-height:135%;
+text-decoration:none;
+}
+.grey1bg {
+background-color:#CCCCCC;
+}
+.grey2 {
+color:#999999;
+}
+.grey2bg {
+background-color:#999999;
+}
+.grey3 {
+color:#666666;
+}
+.grey3bg {
+background-color:#666666;
+}
+.bluebg {
+background-color:#597F9E;
+}
+.grey4 {
+color:#333333;
+}
+.grey4bg {
+background-color:#333333;
+}
+.noborder {
+}
+.grey5 {
+color:#323234;
+font-family:Arial,Helvetica,sans-serif;
+font-size:15px;
+font-weight:bold;
+}
+.grey5bg {
+background-color:#323234;
+}
+.red {
+color:#C20000;
+}
+.redbg {
+background-color:#C20000;
+}
+.yellow {
+color:#FFCC33;
+}
+.yellowbg {
+background-color:#FFCC00;
+}
+.paleyellow {
+color:#FFFFCC;
+}
+.paleyellowbg {
+background-color:#FFFFCC;
+}
+.paleyellow2 {
+color:#F9E9AE;
+}
+.paleyellow2bg {
+background-color:#F9E9AE;
+}
+a.contentlnk:link {
+color:#4678A7;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+a.contentlnkRed:link {
+color:red;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+a.contentlnk:visited {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+a.contentlnk:hover {
+color:#3366CF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:underline;
+}
+a.contentlnkRed:visited {
+color:red;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+a.contentlnkRed:hover {
+color:red;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:underline;
+}
+td.contenttdlnk {
+color:red;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+.gcdcontenthd {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:80%;
+text-decoration:none;
+}
+.contentlnkhead {
+}
+.contentlnkhd {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+.gcdSkinTitleIcon {
+height:12px;
+width:12px;
+}
+.gcdSkinTitle {
+background-color:#FFFFFF;
+color:#6699CC;
+font-family:Arial,Helvetica,sans-serif;
+font-size:16px;
+font-weight:bold;
+line-height:135%;
+padding-left:5px;
+text-decoration:none;
+}
+.gcdSkinTitleIconBackground {
+display:none;
+}
+.gcdSkinDropShadow1 {
+background-color:#A7A7A7;
+height:1px;
+}
+.gcdSkinDropShadow2 {
+background-color:#B7B6B6;
+height:1px;
+}
+.gcdSkinDropShadow3 {
+background-color:#C8C8C8;
+height:1px;
+}
+.gcdSkinDropShadow4 {
+background-color:#D8D7D7;
+height:1px;
+}
+.gcdSkinDropShadow5 {
+background-color:#E1E1E1;
+height:1px;
+}
+.gcdSkinBorder {
+background-color:#FFFFFF;
+border:0 solid #CFD9E5;
+}
+.gcdRoundCorner {
+display:none;
+}
+.gcdTitleShadow {
+display:none;
+}
+.gcddata {
+background-color:#FFFFFF;
+}
+.gcdbottomimage {
+display:none;
+}
+.gcdcontentlnkhd {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+.gcderrormessage {
+color:#C20000;
+font-size:11px;
+}
+select {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+.RCtext {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+.RCtextRed {
+color:#FF0033;
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+font-weight:bold;
+text-decoration:none;
+}
+a.RCLnk, .RCLnk:visited {
+color:#4678A7;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+a.RCLnk:hover {
+color:#3366CF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:underline;
+}
+.RCmainTitle {
+color:#000000;
+font-family:verdana,arial,helvetica,sens-serif;
+font-size:18px;
+font-style:normal;
+font-weight:bold;
+}
+.RCtableBodyBgColor {
+background-color:#CEE3F8;
+}
+.RCtrBrownColor {
+background-color:#78256E;
+}
+.RCtrBlueColor {
+background-color:#C5D5FE;
+}
+.RCtdBrownBgColor {
+background-color:#8B5256;
+color:#FFFFFF;
+font-family:Arial;
+font-size:11px;
+font-weight:bold;
+text-decoration:none;
+}
+.RCbutton {
+background-color:#597F9E;
+border:0 none;
+color:#FFFFFF;
+cursor:pointer;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:normal;
+}
+.RCSkinTitleIconBackground {
+background-color:#5B7FA1;
+color:#FFFFFF;
+padding-left:2px;
+padding-right:2px;
+}
+.RCSkinTitleWhite {
+background-color:#5B7FA1;
+color:#FFFFFF;
+font-family:verdana;
+font-size:12px;
+font-weight:bold;
+padding-left:5px;
+}
+.RCTitleIconBackgroundBlue {
+background-color:#5B7FA1;
+color:#FFFFFF;
+padding-left:2px;
+padding-right:2px;
+}
+.RCTitleWhite {
+background-color:#5B7FA1;
+color:#FFFFFF;
+font-family:verdana;
+font-size:12px;
+font-weight:bold;
+padding-left:5px;
+}
+.RCDropShadow1g {
+background-color:#6D6D6E;
+height:1px;
+}
+.RCDropShadow2g {
+background-color:#909091;
+height:1px;
+}
+.RCDropShadow3g {
+background-color:#A4A4A5;
+height:1px;
+}
+.RCDropShadow4g {
+background-color:#C1C0C1;
+height:1px;
+}
+.webmailbody {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+padding-left:1px;
+}
+.webmailTitle {
+background-color:#FFFFFF;
+color:#6699CC;
+font-family:arial;
+font-size:16px;
+font-weight:bold;
+padding-left:5px;
+}
+.mcdSkinPortletBorder {
+background-color:#FFFFFF;
+border:0 solid #CFD9E5;
+}
+#webmail select {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+#webmail table, input, textarea, button {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+.DTdate_time {
+color:#FEC200;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:normal;
+text-decoration:none;
+}
+.DTColor {
+background-color:#C20000;
+}
+td {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+select {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+input {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+input.nfatwmodeButton {
+background-color:#80ACD7;
+border:0 none;
+color:#FFFFFF;
+font-family:Arial;
+font-size:12px;
+font-weight:bold;
+}
+input.modeButton {
+background-color:#597F9E;
+border:0 none;
+color:#FFFFFF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:normal;
+}
+a.plainButton, .plainButton:visited, .plainButton:active, .plainButton:hover {
+background-color:#FFFFFF;
+border:0 solid white;
+color:#000000;
+text-decoration:none;
+}
+input.plainButton {
+background-color:#FFFFFF;
+border:0 solid white;
+}
+input.plainBlueButton {
+background-color:#CEE3F8;
+border:0 none;
+}
+table {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+input {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+textarea {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+button {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+select {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+div {
+font-family:Arial,Helvetica,sans-serif;
+}
+span {
+font-family:calibri;
+}
+p {
+font-family:Arial,Helvetica,sans-serif;
+}
+ul {
+font-family:Arial,Helvetica,sans-serif;
+}
+li {
+font-family:Arial,Helvetica,sans-serif;
+}
+td {
+font-family:Arial,Helvetica,sans-serif;
+}
+th {
+font-family:Arial,Helvetica,sans-serif;
+}
+pre {
+font-family:monospace;
+font-size:small;
+}
+a {
+color:#494647;
+text-decoration: underline;
+}
+a:active {
+color:#3366CF;
+}
+a:visited {
+color:#3366CF;
+}
+a:hover {
+color:#3366CF;
+text-decoration:underline;
+}
+.cdBody {
+}
+.cdBackground {
+background-color:#5B7FA1;
+color:#FFFFFF;
+padding-left:2px;
+padding-right:2px;
+}
+.cdTitleWhite {
+background-color:#5B7FA1;
+color:#FFFFFF;
+font-family:verdana;
+font-size:12px;
+font-weight:bold;
+padding-left:5px;
+}
+.cdTitleIcon {
+height:12px;
+width:12px;
+}
+.cdDropShadow1g {
+background-color:#6D6D6E;
+height:1px;
+}
+.cdDropShadow2g {
+background-color:#909091;
+height:1px;
+}
+.cdDropShadow3g {
+background-color:#A4A4A5;
+height:1px;
+}
+.cdDropShadow4g {
+background-color:#C1C0C1;
+height:1px;
+}
+.cdDropShadow5g {
+background-color:#D1D1D2;
+height:1px;
+}
+.cdwhitebg {
+background-color:#FFFFFF;
+}
+.cdbody {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+}
+.cdbluebg {
+background-color:#597F9E;
+}
+.cdtxtblue {
+color:#3366CF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:normal;
+}
+.cdheading5 {
+color:#C20000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+.cdtxt3 {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+font-weight:bold;
+}
+input.modeButton {
+background-color:#597F9E;
+border:0 none;
+color:#FFFFFF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:normal;
+}
+.cdgrey1 {
+color:#CCCCCC;
+}
+a.cdlnk {
+color:#4678A7;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+.cdlnk:visited {
+color:#3366CF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+a.cdlnk:hover {
+color:#3366CF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:underline;
+}
+input.nfatwmodeButton {
+background-color:#80ACD7;
+border:0 none;
+color:#FFFFFF;
+font-family:Arial;
+font-size:12px;
+font-weight:bold;
+}
+.cdTitle {
+background-color:#FEC200;
+color:#333333;
+font-family:arial,sans-serif;
+font-size:11px;
+font-weight:bold;
+padding-left:5px;
+}
+.cdTitleIconBackground {
+background-color:#FEC200;
+color:#FFFFFF;
+padding-left:2px;
+padding-right:2px;
+}
+.cdDropShadow1 {
+background-color:#A7A7A7;
+height:1px;
+}
+.cdDropShadow2 {
+background-color:#B7B6B6;
+height:1px;
+}
+.cdShadow3 {
+background-color:#C8C8C8;
+height:1px;
+}
+.cdShadow4 {
+background-color:#D8D7D7;
+height:1px;
+}
+.cdShadow5 {
+background-color:#E1E1E1;
+height:1px;
+}
+.cdBorder {
+background-color:#FFFFFF;
+border:0 solid #CFD9E5;
+}
+.cdgrey3bg {
+background-color:#666666;
+}
+input.plainButton {
+background-color:#FFFFFF;
+border:0 solid white;
+}
+.cdTitleGray {
+background-color:#999999;
+color:#FFFFFF;
+font-family:arial,sans-serif;
+font-size:11px;
+font-weight:bold;
+padding-left:5px;
+}
+.cdTitleIconBackgroundGray {
+background-color:#999999;
+color:#FFFFFF;
+padding-left:2px;
+padding-right:2px;
+}
+.cdBorderGray {
+background-color:#E4E5E9;
+border:0 solid #CFD9E5;
+}
+.sitefinderdiv {
+background-color:#E4F0FB;
+}
+.sitefindertxt3 {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+font-weight:bold;
+background-color:#c3c3c3;
+}
+a.siteminderindex {
+color:#494647;
+font-family:Arial,Helvetica,sans-serif;
+font-size:20px;
+font-weight:bold;
+line-height:135%;
+text-decoration:none;
+display:inline-block;
+}
+a.sitefinderlnk:link {
+color:#494647;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+a.sitefinderlnk:visited {
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:none;
+}
+a.sitefinderlnk:hover {
+color:#c3c3c3;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:135%;
+text-decoration:underline;
+}
+.sitefindergrey1 {
+color:#494647;
+font-family:Arial,Helvetica,sans-serif;
+font-size:20px;
+font-weight:bold;
+line-height:135%;
+text-decoration:none;
+}
+.heading6 {
+color:#494647;
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+font-weight:bold;
+}
+.mcdSkinPortletTitleIconBackgroundBlueSF {
+background-color:#AAAAAA;
+color:#FFFFFF;
+}
+.mcdSkinPortletTitleWhiteSF {
+background-color:#5B7FA1;
+color:#FFFFFF;
+font-family:verdana;
+font-size:12px;
+font-weight:bold;
+padding-left:15px;
+}
+.mcdSkinPortletTitleIconSF {
+height:12px;
+width:12px;
+}
+.mcdSkinPortletTitleIconSF {
+height:12px;
+width:12px;
+}
+.mcdSkinPortletTitleIconSF {
+height:12px;
+width:12px;
+}
+.mcdSkinPortletTitleIconBackgroundSF {
+background-color:#FEC200;
+color:#FFFFFF;
+padding-left:2px;
+padding-right:2px;
+}
+.mcdSkinPortletDropShadow1 {
+background-color:#A7A7A7;
+height:1px;
+}
+.mcdSkinPortletDropShadow2 {
+background-color:#B7B6B6;
+height:1px;
+}
+.mcdSkinPortletDropShadow3 {
+background-color:#C8C8C8;
+height:1px;
+}
+.mcdSkinPortletDropShadow4 {
+background-color:#D8D7D7;
+height:1px;
+}
+.mcdSkinPortletDropShadow5 {
+background-color:#E1E1E1;
+height:1px;
+}
+.mcdSkinPortletBorderSF {
+background-color:#FFFFFF;
+border:0 solid #CFD9E5;
+}
+.mcdSkinPortletTitleBackgroundYellowSF {
+background-color:#FEC200;
+}
+.mcdSkinPortletTitleLargeSF {
+background-color:#AAAAAA;
+color:#FFFFFF;
+font-family:arial,sans-serif;
+font-size:15px;
+font-weight:bold;
+padding-left:15px;
+}
+.wpsPortletBody, .portlet-section-body {
+}
+.portlet-section-alternate {
+}
+.portlet-section-selected {
+}
+.portlet-section-footer {
+}
+.defaultstockticker {
+color:#FFC92F;
+font-family:Arial;
+font-size:11px;
+font-weight:bold;
+}
+a.stocktickerlnk, .stocktickerlnk:visited, .stocktickerlnk:active {
+color:#FFFFFF;
+font-family:Arial;
+font-size:11px;
+font-weight:bold;
+text-decoration:none;
+}
+a.stocktickerlnk:hover {
+color:#FFFFFF;
+font-family:Arial;
+font-size:11px;
+font-weight:bold;
+text-decoration:underline;
+}
+.tickerbg {
+background-color:#5B7FA1;
+}
+.whitestock {
+color:#FFFFFF;
+font-family:Arial;
+font-size:11px;
+font-weight:bold;
+}

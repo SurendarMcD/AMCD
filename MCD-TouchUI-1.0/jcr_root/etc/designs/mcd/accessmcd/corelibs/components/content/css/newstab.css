@@ -1,0 +1,134 @@
+ul.newsui-newstabs-nav li a span {color:#000 !important;}
+ul.newsui-newstabs-nav li.newsui-newstabs-selected a span {
+color:#dc291e !important;
+}
+.newsImg{float:right;}
+
+#linksBlock {
+    display: block;
+    width: 100%;
+}
+#tabViewLinks {
+    float: left;
+    display: inline;
+    text-align: left;
+    margin-top: 5px;
+}
+#tabViewLinks a {
+    margin: 0 5px 0 5px;
+}
+#viewAllLink {
+    float: left;
+    display: inline;
+    margin: 5px 8px 0px 5px;
+}
+
+#tab1, #tab2, #tab3, #tab4, #tab5, #tab6 {
+    min-height: 135px;
+}
+
+#tab1 #frmRegionContent {
+    min-height: 160px !important;
+}
+
+#tab1 li, #tab2 li, #tab3 li, #tab4 li, #tab5 li, #tab6 li {
+    list-style-type: none !important;
+    list-style-image: url('/etc/designs/mcd/accessmcd/corelibs/images/tabview-bullet.jpg') !important;
+}
+
+#tab1 #tabImage, #tab2 #tabImage, #tab3 #tabImage, #tab4 #tabImage, #tab5 #tabImage, #tab6 #tabImage {
+    float: right;
+    text-align: right;
+    margin-right: 3px;
+    margin-bottom: 15px;
+    width:150px;
+}
+
+#tabContent {
+    margin-bottom: 5px;
+}
+
+#tabContent ul {
+    margin-top: 0px;
+}
+
+.noImage #tabContent {
+    margin-bottom: 0px !important;
+}
+
+.newsTab a #newsDate {
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.newsTab a {
+    color: #dc291e !important; 
+    text-decoration: none;
+}
+
+.newsTab a:hover {
+    text-decoration: none;
+}
+
+#div_regiondetail {
+    margin-top: 8px;
+    width: 75%;
+}
+
+#newsDate {
+    color: #000;
+    font-style: italic;
+}
+
+.linkImg {
+    position: absolute;
+    top: 35px;
+    right: 13px;
+    width: 24%;
+    max-height:120px;
+    max-width:120px;
+}
+
+.linkImgHide .linkImg {
+    display: none;
+}
+
+.linkImgShow .linkImg {
+    display: block;
+}
+
+.newsTab .yui3-tab {
+    #font-weight: bold !important;
+}
+
+.newstab .yui3-tab {
+    color: #000;
+}
+
+.newsTab .yui3-tab-focused a#tab-title, .newsTab .yui3-tab a#tab-title {
+    color: #000 !important;
+}
+
+.newsTab a#tab-title, .newsTab .yui3-tab-selected a#tab-title {
+    color: #dc291e !important;
+}
+.newsTab .yui3-tab-selected a#tab-title {
+    font-weight: bold !important;
+}
+
+.defaultHide {
+    visibility: hidden;
+}
+
+.newsImg {
+    position: absolute !important;
+    top: 35px !important;
+    right: 11px !important;
+    width: 20%;
+    max-height:120px;
+    max-width:120px;
+}
+
+.pciTab .newsImg {
+    right: 10px !important;
+}

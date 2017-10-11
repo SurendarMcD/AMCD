@@ -1,0 +1,50 @@
+.parsys_column .roundedcheck {
+    position: relative;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+}
+
+.parsys_column .rounded {
+    position: relative;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+/* column control layouts */
+div.cq-colctrl-cols {width: 100%; float: left; }
+
+div.cq-colctrl-default { width: 100%;}
+
+div.cq-colctrl-lt0-c0 { float:left; width: 48.95%;#width: 48.45%; padding-right: 2.1%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.1%; _margin-right: 2.1%;}
+div.cq-colctrl-lt0-c1 { float:left; width: 48.95%;#width: 48.45%; }
+
+div.cq-colctrl-lt1-c0 { float:left; width: 32%;#width: 31.7%; padding-right: 2.1%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.1%; _margin-right: 2.1%;}
+div.cq-colctrl-lt1-c1 { float:left; width: 65.9%;#width: 65.2%;}
+
+div.cq-colctrl-lt6-c0 { float:left; width: 65.9%;#width: 65.2%; padding-right: 2.1%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.1%; _margin-right: 2.1%;}
+div.cq-colctrl-lt6-c1 { float:left; width: 32%;#width: 31.7%;}
+
+div.cq-colctrl-lt7-c0 { float:left; width: 100%;#width: 99%;_width: 99%;} 
+
+div.cq-colctrl-lt2-c0 { float:left; width: 31.7%;#width: 31.4%; padding-right: 2.4%; #padding-right: 0px; _padding-right: 0px; margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt2-c1 { float:left; width: 31.7%;#width: 31.4%; padding-right: 2.4%; #padding-right: 0px; _padding-right: 0px; margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt2-c2 { float:left; width: 31.8%;#width: 31.4%; }
+
+div.cq-colctrl-lt3-c0 { float:left; width: 47.6%;#width: 47%; padding-right: 2.4%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt3-c1 { float:left; width: 23.8%;#width: 23.6%; padding-right: 2.4%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt3-c2 { float:left; width: 23.8%;#width: 23.6%; }
+
+div.cq-colctrl-lt4-c0 { float:left; width: 23.2%;#width: 23%; padding-right: 2.4%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt4-c1 { float:left; width: 23.2%;#width: 22.9%; padding-right: 2.4%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt4-c2 { float:left; width: 23.2%;#width: 23%; padding-right: 2.4%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt4-c3 { float:left; width: 23.2%;#width: 22.9%; }
+
+div.cq-colctrl-lt8-c0 { float:left; width: 28.56%;#width: 28.26%; padding-right: 2.4%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt8-c1 { float:left; width: 38.08%;#width: 37.68%; padding-right: 2.4%;_padding-right: 0px;#padding-right: 0px;margin-right: 0px; #margin-right: 2.4%; _margin-right: 2.4%;}
+div.cq-colctrl-lt8-c2 { float:left; width: 28.56%;#width: 28.26%; }
+
+div.cq-colctrl-default-c0 {#width: 99%;_width: 99%;}
+/* END column control layouts */

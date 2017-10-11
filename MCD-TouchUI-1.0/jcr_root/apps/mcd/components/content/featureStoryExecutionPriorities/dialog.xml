@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Edit Feature Story / Execution Priorities"
+    width="705"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <featuredStory
+                jcr:primaryType="cq:Panel"
+                title="Featured Story">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Preferred character limit should not exceed 40 characters"
+                        fieldLabel="Title"
+                        name="./fsTitle"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Preferred character limit should not exceed 250 characters"
+                        fieldLabel="Description"
+                        name="./fsDescription"
+                        xtype="textarea"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="URL"
+                        name="./fsURL"
+                        xtype="pathfield"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select an image of dimensions 400*354. Image type must be jpg/ jpeg/ gif/ png."
+                        fieldLabel="Image"
+                        name="./fsImage"
+                        xtype="pathfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            blur="function(field){&#xa; var img = new Image();&#xa; var path=field.getValue();&#xa;if(path.split(&quot; &quot;).join(&quot;&quot;)!='') &#xa;{&#xa;   img.src=path;&#xa;   if((img.width)!= 400 &amp;&amp; (img.height)!= 354)&#xa;   {&#xa;    CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 400 X 354'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue(''); &#xa;  }&#xa; var ext = (path.split('.'))[1];&#xa; if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;  {&#xa;  }&#xa; else &#xa;  {&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  }&#xa;}&#xa;&#xa; }"
+                            dialogselect="function(dialog,path,anchor){&#xa;var ext = (path.split('.'))[1];&#xa;if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;{&#xa;}&#xa;else&#xa;{&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;   return false;&#xa;}&#xa;&#xa;var add = dialog.findParentByType('dialog').path;&#xa;var val1=CQ.Util.eval(CQ.HTTP.get(add+'.checkDimension.html?path=' + path + &quot;&amp;height=400&amp;width=354&quot;));&#xa;if(val1.validity[0].valid != 'true')&#xa;{&#xa;  CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 400 X 354'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  return false;&#xa; }&#xa;&#xa;&#xa; }"/>
+                    </image>
+                    <commentcount
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Show Comment Count"
+                        name="./showcommentcount"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <show
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </commentcount>
+                </items>
+            </featuredStory>
+            <executionPriority1
+                jcr:primaryType="cq:Panel"
+                title="Execution Priority 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Preferred character limit should not exceed 25 characters"
+                        fieldLabel="Title"
+                        name="./ep1Title"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="URL"
+                        name="./ep1URL"
+                        xtype="pathfield"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select an image of dimensions 200*68. Image type must be jpg/ jpeg/ gif/ png."
+                        fieldLabel="Image"
+                        name="./ep1Image"
+                        xtype="pathfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            blur="function(field){&#xa; var img = new Image();&#xa; var path=field.getValue();&#xa;if(path.split(&quot; &quot;).join(&quot;&quot;)!='') &#xa;{&#xa;   img.src=path;&#xa;   if((img.width)!= 200 &amp;&amp; (img.height)!= 68)&#xa;   {&#xa;    CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue(''); &#xa;  }&#xa; var ext = (path.split('.'))[1];&#xa; if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;  {&#xa;  }&#xa; else &#xa;  {&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  }&#xa;}&#xa;&#xa; }"
+                            dialogselect="function(dialog,path,anchor){&#xa;&#xa;var ext = (path.split('.'))[1];&#xa;if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;{&#xa;}&#xa;else&#xa;{&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;   return false;&#xa;}&#xa;&#xa;&#xa;var add = dialog.findParentByType('dialog').path;&#xa;var val1=CQ.Util.eval(CQ.HTTP.get(add+'.checkDimension.html?path=' + path + &quot;&amp;height=200&amp;width=68&quot;));&#xa;if(val1.validity[0].valid != 'true')&#xa;{&#xa;  CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  return false;&#xa; }&#xa;&#xa; }"/>
+                    </image>
+                </items>
+            </executionPriority1>
+            <executionPriority2
+                jcr:primaryType="cq:Panel"
+                title="Execution Priority 2">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Preferred character limit should not exceed 25 characters"
+                        fieldLabel="Title"
+                        name="./ep2Title"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="URL"
+                        name="./ep2URL"
+                        xtype="pathfield"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select an image of dimensions 200*68. Image type must be jpg/ jpeg/ gif/ png."
+                        fieldLabel="Image"
+                        name="./ep2Image"
+                        xtype="pathfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            blur="function(field){&#xa; var img = new Image();&#xa; var path=field.getValue();&#xa;if(path.split(&quot; &quot;).join(&quot;&quot;)!='') &#xa;{&#xa;   img.src=path;&#xa;   if((img.width)!= 200 &amp;&amp; (img.height)!= 68)&#xa;   {&#xa;    CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue(''); &#xa;  }&#xa; var ext = (path.split('.'))[1];&#xa; if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;  {&#xa;  }&#xa; else &#xa;  {&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  }&#xa;}&#xa;&#xa; }"
+                            dialogselect="function(dialog,path,anchor){&#xa;&#xa;var ext = (path.split('.'))[1];&#xa;if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;{&#xa;}&#xa;else&#xa;{&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;   return false;&#xa;}&#xa;&#xa;&#xa;var add = dialog.findParentByType('dialog').path;&#xa;var val1=CQ.Util.eval(CQ.HTTP.get(add+'.checkDimension.html?path=' + path + &quot;&amp;height=200&amp;width=68&quot;));&#xa;if(val1.validity[0].valid != 'true')&#xa;{&#xa;  CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  return false;&#xa; }&#xa;&#xa; }"/>
+                    </image>
+                </items>
+            </executionPriority2>
+            <executionPriority3
+                jcr:primaryType="cq:Panel"
+                title="Execution Priority 3">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Preferred character limit should not exceed 25 characters"
+                        fieldLabel="Title"
+                        name="./ep3Title"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="URL"
+                        name="./ep3URL"
+                        xtype="pathfield"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select an image of dimensions 200*68. Image type must be jpg/ jpeg/ gif/ png."
+                        fieldLabel="Image"
+                        name="./ep3Image"
+                        xtype="pathfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            blur="function(field){&#xa; var img = new Image();&#xa; var path=field.getValue();&#xa;if(path.split(&quot; &quot;).join(&quot;&quot;)!='') &#xa;{&#xa;   img.src=path;&#xa;   if((img.width)!= 200 &amp;&amp; (img.height)!= 68)&#xa;   {&#xa;    CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue(''); &#xa;  }&#xa; var ext = (path.split('.'))[1];&#xa; if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;  {&#xa;  }&#xa; else &#xa;  {&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  }&#xa;}&#xa;&#xa; }"
+                            dialogselect="function(dialog,path,anchor){&#xa;&#xa;var ext = (path.split('.'))[1];&#xa;if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;{&#xa;}&#xa;else&#xa;{&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;   return false;&#xa;}&#xa;&#xa;&#xa;var add = dialog.findParentByType('dialog').path;&#xa;var val1=CQ.Util.eval(CQ.HTTP.get(add+'.checkDimension.html?path=' + path + &quot;&amp;height=200&amp;width=68&quot;));&#xa;if(val1.validity[0].valid != 'true')&#xa;{&#xa;  CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  return false;&#xa; }&#xa;&#xa; }"/>
+                    </image>
+                </items>
+            </executionPriority3>
+            <executionPriority4
+                jcr:primaryType="cq:Panel"
+                title="Execution Priority 4">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Preferred character limit should not exceed 25 characters"
+                        fieldLabel="Title"
+                        name="./ep4Title"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="URL"
+                        name="./ep4URL"
+                        xtype="pathfield"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select an image of dimensions 200*68. Image type must be jpg/ jpeg/ gif/ png."
+                        fieldLabel="Image"
+                        name="./ep4Image"
+                        xtype="pathfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            blur="function(field){&#xa; var img = new Image();&#xa; var path=field.getValue();&#xa;if(path.split(&quot; &quot;).join(&quot;&quot;)!='') &#xa;{&#xa;   img.src=path;&#xa;   if((img.width)!= 200 &amp;&amp; (img.height)!= 68)&#xa;   {&#xa;    CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue(''); &#xa;  }&#xa; var ext = (path.split('.'))[1];&#xa; if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;  {&#xa;  }&#xa; else &#xa;  {&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  }&#xa;}&#xa;&#xa; }"
+                            dialogselect="function(dialog,path,anchor){&#xa;&#xa;var ext = (path.split('.'))[1];&#xa;if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;{&#xa;}&#xa;else&#xa;{&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;   return false;&#xa;}&#xa;&#xa;&#xa;var add = dialog.findParentByType('dialog').path;&#xa;var val1=CQ.Util.eval(CQ.HTTP.get(add+'.checkDimension.html?path=' + path + &quot;&amp;height=200&amp;width=68&quot;));&#xa;if(val1.validity[0].valid != 'true')&#xa;{&#xa;  CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  return false;&#xa; }&#xa;&#xa; }"/>
+                    </image>
+                </items>
+            </executionPriority4>
+            <executionPriority5
+                jcr:primaryType="cq:Panel"
+                title="Execution Priority 5">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Preferred character limit should not exceed 25 characters"
+                        fieldLabel="Title"
+                        name="./ep5Title"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="URL"
+                        name="./ep5URL"
+                        xtype="pathfield"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select an image of dimensions 200*68. Image type must be jpg/ jpeg/ gif/ png."
+                        fieldLabel="Image"
+                        name="./ep5Image"
+                        xtype="pathfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            blur="function(field){&#xa; var img = new Image();&#xa; var path=field.getValue();&#xa;if(path.split(&quot; &quot;).join(&quot;&quot;)!='') &#xa;{&#xa;   img.src=path;&#xa;   if((img.width)!= 200 &amp;&amp; (img.height)!= 68)&#xa;   {&#xa;    CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue(''); &#xa;  }&#xa; var ext = (path.split('.'))[1];&#xa; if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;  {&#xa;  }&#xa; else &#xa;  {&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  }&#xa;}&#xa;&#xa; }"
+                            dialogselect="function(dialog,path,anchor){&#xa;&#xa;var ext = (path.split('.'))[1];&#xa;if(ext=='jpg' || ext=='jpeg' || ext=='gif' || ext=='png')&#xa;{&#xa;}&#xa;else&#xa;{&#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select a valid image type i.e. .jpg/.jpeg/.gif/.png'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;   return false;&#xa;}&#xa;&#xa;&#xa;var add = dialog.findParentByType('dialog').path;&#xa;var val1=CQ.Util.eval(CQ.HTTP.get(add+'.checkDimension.html?path=' + path + &quot;&amp;height=200&amp;width=68&quot;));&#xa;if(val1.validity[0].valid != 'true')&#xa;{&#xa;  CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Feature Story Validation'),'msg': CQ.I18n.getMessage('Please select an image of valid dimensions i.e. 200 X 68'),&#xa;  'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,&#xa;  'scope':this});&#xa;  this.setValue('');&#xa;  return false;&#xa; }&#xa;&#xa; }"/>
+                    </image>
+                </items>
+            </executionPriority5>
+        </items>
+    </items>
+</jcr:root>

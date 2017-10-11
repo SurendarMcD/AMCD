@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    autoWidth="{Boolean}false"
+    height="{Long}300"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <Stories
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Past Stories"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the link of the page, below which the feature story articles are to be picked"
+                        fieldLabel="Past Stories Link"
+                        hideLabel="{Boolean}false"
+                        name="./pastStoriesLink"
+                        width="300"
+                        xtype="browsefield"/>
+                    <results
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter the maximum no. of articles to be shown on the page. '10' will be taken as default"
+                        fieldLabel="No. of Results"
+                        name="./results"
+                        xtype="textfield"/>
+                    <hideImages
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription=" This will hide past story image."
+                        fieldLabel="Hide Images"
+                        inputValue="true"
+                        name="./hidePSImage"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <psimages
+                                jcr:primaryType="nt:unstructured"
+                                value="yes"/>
+                        </options>
+                    </hideImages>
+                    <hideDateInTitle
+                        jcr:mixinTypes="[rep:AccessControllable]"
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription=" This will not add date into story title."
+                        fieldLabel="Hide Date Into Story Title"
+                        inputValue="true"
+                        name="./hideDateTitle"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <datetitle
+                                jcr:primaryType="nt:unstructured"
+                                value="yes"/>
+                        </options>
+                    </hideDateInTitle>
+                </items>
+            </Stories>
+        </items>
+    </items>
+    <listeners jcr:primaryType="nt:unstructured"/>
+</jcr:root>

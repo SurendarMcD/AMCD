@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/admin/lets-talk.html?wcmmode=disabled"
+    title="Edit Let's Talk"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Let's Talk">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <corner
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Rounded Corner"
+                        name="./corners"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <show
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </corner>
+                    <Title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Component Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <headline
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="HeadLine"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <Description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./description"
+                        xtype="textarea"/>
+                    <date
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Date"
+                        name="./date"
+                        xtype="datefield"/>
+                    <linktext
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Caption for the Link"
+                        fieldLabel="Link Text"
+                        name="./linktext"
+                        xtype="textfield"/>
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link Path"
+                        name="./link"
+                        xtype="browsefield"/>
+                    <commentcount
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Show Comment Count"
+                        name="./showcommentcount"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <show
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </commentcount>
+                </items>
+            </tab1>
+            <tab_x0020_3
+                jcr:primaryType="cq:Panel"
+                title="Groups">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                    <Groups
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Admitted Groups"
+                        name="./groupsdata"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            displayField="principal"
+                            optionsCallback="function(path, record) {&#xa;var pageHandle=location.toString();&#xa;&#xa;var url2 = pageHandle.substring(pageHandle.lastIndexOf('/') + 1);&#xa;var url1 = pageHandle.substring(0,pageHandle.lastIndexOf('/'));&#xa;var temp = new Array();&#xa;temp = url2.split('.');&#xa;pageHandle = url1 + '/' +  temp[0] + '.AudienceType.html';&#xa;this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))));&#xa;}"
+                            type="select"
+                            xtype="selection"/>
+                    </Groups>
+                </items>
+            </tab_x0020_3>
+            <Image
+                jcr:primaryType="cq:Widget"
+                autoWidth="{Boolean}false"
+                cropParameter="./image/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                height="{Long}600"
+                mapParameter="./image/imageMap"
+                name="./image/file"
+                requestSuffix="/image.img.png"
+                rotateParameter="./image/imageRotate"
+                sizeLimit="{Long}100"
+                title="Image"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage"/>
+        </items>
+    </items>
+</jcr:root>

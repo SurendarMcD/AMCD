@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    autoWidth="{Boolean}false"
+    height="{Long}600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <LogoImage
+                jcr:primaryType="cq:Widget"
+                cropParameter="./image/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                mapParameter="./image/imageMap"
+                name="./image/file"
+                requestSuffix="/image.img.png"
+                rotateParameter="./image/imageRotate"
+                sizeLimit="{Long}100"
+                title="Logo"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage"/>
+            <AdvancedLogo
+                jcr:primaryType="cq:Widget"
+                title="Logo Settings"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <imagesize
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="1.0"
+                        fieldLabel="Image Size"
+                        name="./image/imageSize"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <twentyfive
+                                jcr:primaryType="nt:unstructured"
+                                text="25%"
+                                value="0.25"/>
+                            <fifty
+                                jcr:primaryType="nt:unstructured"
+                                text="50%"
+                                value="0.50"/>
+                            <seventyfive
+                                jcr:primaryType="nt:unstructured"
+                                text="75%"
+                                value="0.75"/>
+                            <hundred
+                                jcr:primaryType="nt:unstructured"
+                                text="100%"
+                                value="1.0"/>
+                        </options>
+                    </imagesize>
+                    <alt
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter alternate text for the image"
+                        fieldLabel="Alt Text"
+                        name="./image/alt"
+                        xtype="textfield"/>
+                    <Image_x0020_Link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Link"
+                        name="./imageLink"
+                        xtype="browsefield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </AdvancedLogo>
+            <SearchText
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Search Text"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Label to display above Search Box."
+                        fieldLabel="Search Label"
+                        hideLabel="{Boolean}false"
+                        name="./searchtext"
+                        width="300"
+                        xtype="textfield"/>
+                </items>
+            </SearchText>
+        </items>
+    </items>
+</jcr:root>

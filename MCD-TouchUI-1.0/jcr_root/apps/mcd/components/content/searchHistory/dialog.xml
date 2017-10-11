@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="dialog"
+    width="500"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Search History">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <label
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="To display the name on the page (Default Value :- Search History.)"
+                        fieldLabel="Display Name"
+                        name="./label"
+                        xtype="textfield"/>
+                    <days
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        allowDecimals="{Boolean}false"
+                        allowNegative="{Boolean}false"
+                        fieldDescription="To display the search results of last n days e.g. 1,2,3..n days. (Max Value of n=99)"
+                        fieldLabel="Number of days"
+                        maxValue="{Long}99"
+                        name="./days"
+                        xtype="numberfield"/>
+                    <datedisplayformat
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="To display the different date formats.(Default Format :- Friday, August 23, 2013). "
+                        fieldLabel="Date Format"
+                        name="./dateFormat"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <option_x0020_1
+                                jcr:primaryType="nt:unstructured"
+                                text="Friday, August 23, 2013"
+                                value="EEEE, MMMM d, yyyy"/>
+                            <option_x0020_2
+                                jcr:primaryType="nt:unstructured"
+                                text="Friday, 23 August, 2013"
+                                value="EEEE, d MMMM, yyyy"/>
+                        </options>
+                    </datedisplayformat>
+                    <order
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="To display the order of the search keywords.(Default Value :- Descending)"
+                        fieldLabel="Display Order"
+                        name="./Order"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Ascending
+                                jcr:primaryType="nt:unstructured"
+                                text="Ascending"
+                                value="ASC"/>
+                            <Descending
+                                jcr:primaryType="nt:unstructured"
+                                text="Descending"
+                                value="DESC"/>
+                        </options>
+                    </order>
+                    <searchresulturl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="To select the url of the search result page. (default search url:/content/accessmcd/search)"
+                        fieldLabel="Search Result URL"
+                        name="./searchURL"
+                        xtype="browsefield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforeSubmit=" function(dialog)&#xa;{&#xa; var tabType = dialog.getField('./label').getValue();&#xa;&#x9;if(tabType.charAt(0)==(&quot; &quot;) || tabType==(&quot; &quot;))&#xa;&#x9;{&#xa;&#x9;alert(CQ.I18n.getMessage(&quot;Please remove leading space from Display Name&quot;));&#xa;&#x9;return false;&#xa;&#x9;}&#xa;&#xa;}"/>
+</jcr:root>

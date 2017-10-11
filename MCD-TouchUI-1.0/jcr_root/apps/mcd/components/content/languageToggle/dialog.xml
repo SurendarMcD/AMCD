@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Edit Language Toggle Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <Switcher
+                jcr:primaryType="cq:Panel"
+                title="Toggle Label Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <Label
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The text will be displayed as label on Toggle Link."
+                        fieldLabel="Language Label"
+                        maxLength="{Long}150"
+                        name="./label"
+                        xtype="textfield"/>
+                    <hovertext
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The text will be displayed as mouse hover on Toggle Link."
+                        fieldLabel="Hover Text"
+                        maxLength="{Long}255"
+                        name="./hoverText"
+                        xtype="textfield"/>
+                </items>
+            </Switcher>
+        </items>
+    </items>
+</jcr:root>

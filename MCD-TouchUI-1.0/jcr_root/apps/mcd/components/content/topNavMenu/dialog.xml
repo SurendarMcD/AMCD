@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <menubar
+                jcr:primaryType="cq:Panel"
+                title="Top Navigation Menu Bar">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <list
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Root Path"
+                        name="./listroot"
+                        rootPath="/content"
+                        xtype="pathfield"/>
+                </items>
+            </menubar>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadContent="function(dialog){  &#x9;var path = this.path.replace('/jcr:content/menubarpara', '');  &#x9;var pageHandle = path + '.moreinfo.html'; &#x9;var JSONObj = CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)));  &#x9;var viewPath = JSONObj.viewPath;  &#x9;if(viewPath.indexOf('/content/')&lt;0) {  &#x9;&#x9;viewPath = '/content' + viewPath; &#x9;}  &#x9;if(path != viewPath) { &#x9;&#x9;CQ.Ext.Msg.show({'title':'Dialog Validation','msg':'Please configure the values only on views home page : ' + viewPath,'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); this.hide();  &#x9;} }"/>
+</jcr:root>

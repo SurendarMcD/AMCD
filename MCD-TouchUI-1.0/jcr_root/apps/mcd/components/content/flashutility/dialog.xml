@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog">
+    <items
+        jcr:primaryType="cq:Dialog"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <flashutility
+                jcr:primaryType="cq:Widget"
+                title="Flash Utility"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <file
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddAccept="[application/x-shockwave-flash]"
+                        ddGroups="[media]"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Flash Utility Zip File"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        mimeTypes="*.zip"
+                        name="./file"
+                        sizeLimit="100"
+                        uploadUrl="/tmp/upload_test/*"
+                        xtype="smartfile"/>
+                    <flag
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Flag"
+                        name="./flag"
+                        xtype="hidden"/>
+                    <docrootPath
+                        jcr:primaryType="cq:Widget"
+                        name="./docroot_path"
+                        xtype="hidden"/>
+                </items>
+            </flashutility>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){ dialog.getField('./flag').setValue('1'); }"/>
+</jcr:root>

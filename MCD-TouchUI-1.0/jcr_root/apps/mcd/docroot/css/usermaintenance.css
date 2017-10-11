@@ -1,0 +1,131 @@
+/*
+    UserMaintenance Style
+*/
+a   
+{
+    font-weight: normal; 
+    color: #0000ff; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    text-decoration: none;
+}
+    
+a:visited 
+{
+    color: #0000ff;
+}
+
+a:hover 
+{
+    color: #333366;
+}
+    
+body 
+{
+    background: rgb(234, 235, 237) url(/images/bgimage.png) repeat-x scroll center top;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Lucida Grande",Helvetica,Verdana,Arial; 
+    font-size: 1.1em;
+}
+
+table
+{ 
+    font-size: 12px;
+} 
+
+font.error
+{
+    color: #ce0000;
+    font-size:13px;
+}
+
+font.success
+{
+    color: #3A732F;
+    font-size:13px;
+}
+
+fieldset 
+{
+    background:#ffffff url(/images/cmxform-fieldset.gif) repeat-x scroll left bottom;
+    border:1px solid #3A732F;
+}
+
+input, textarea, select 
+{
+    margin:0;
+    padding:1px;
+    font-size: 11px;
+    font-family: "Lucida Grande",Helvetica,Verdana,Arial; 
+}
+
+legend, label 
+{
+    color:#333333;
+}
+
+legend 
+{
+    padding-left:0;
+    font-weight:bold;
+    font-size:13px;
+    padding:0 2px;
+}
+
+fieldset form table tr td 
+{
+    background:transparent url(/images/cmxform-divider.gif) repeat-x scroll left bottom;
+    padding:5px 10px 7px;
+}
+
+table.group 
+{
+    border-collapse:collapse;
+    font-family:"Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+    text-align:left;
+}
+
+table.group th 
+{
+    background:#C9DCA6 none repeat scroll 0 0;
+    border:none;
+    color:#3A732F;
+    font-size:13px;
+    font-weight:bold;
+    padding:8px;
+}
+
+table.group td 
+{
+    border:none;
+    color:#3A732F;
+    font-size:13px;
+    font-weight:normal;
+    padding:8px;
+}
+
+table.group td a 
+{
+    color:#3A732F; 
+    text-decoration: underline;
+}
+
+tr.even 
+{
+    background:#C9DCA6 none repeat scroll 0 0;
+}
+
+form 
+{
+    text-align:center;
+}
+
+input.btn 
+{
+    color:#ffffff; 
+    font-weight:bold; 
+    background-color:#3A732F; 
+    border:1px solid; 
+    border-color: #3A732F; 
+    width:250px;
+}

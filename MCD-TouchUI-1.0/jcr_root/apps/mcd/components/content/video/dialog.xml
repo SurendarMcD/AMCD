@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog">
+    <items
+        jcr:primaryType="cq:Dialog"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <video
+                jcr:primaryType="cq:Widget"
+                title="Video"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <file
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddAccept="[application/x-shockwave-flash]"
+                        ddGroups="[media]"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Video File"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        mimeTypes="*.swf;*.flv"
+                        name="./file"
+                        sizeLimit="100"
+                        uploadUrl="/tmp/upload_test/*"
+                        xtype="smartfile"/>
+                    <size
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="For proper results, the width should me more than 300px. Default value is 500 X 300.&lt;br>"
+                        fieldLabel="Size"
+                        heightParameter="./height"
+                        heightPrefix="×  Height: "
+                        heightSuffix=""
+                        widthParameter="./width"
+                        widthPrefix="Width: "
+                        widthSuffix=""
+                        xtype="sizefield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            vtype="percent"/>
+                    </size>
+                    <videopath
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter an External URL to video file.&lt;br>"
+                        fieldLabel="Video Path"
+                        name="./videoPath"
+                        xtype="textfield"/>
+                    <akamaiImg
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Akamai Image"
+                        name="./akamaiImg"
+                        xtype="hidden"/>
+                    <resType_still
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./stillimage/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                    <resType_thumb
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./thumbimage/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                    <bottompadding
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Bottom Padding"
+                        name="./btmpadding"
+                        xtype="textfield"/>
+                    <bgcolor
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Not used in Modal window&lt;br>"
+                        fieldLabel="Background Color"
+                        name="./bgColor"
+                        showHexValue="{Boolean}false"
+                        xtype="mcdsitecolorclassfield"/>
+                </items>
+            </video>
+            <advanced
+                jcr:primaryType="cq:Widget"
+                title="Advanced"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <showInPopup
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="no"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Show video in modal window?"
+                        name="./showpopup"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                        </options>
+                    </showInPopup>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Title will be used only in case of modal window.&lt;br>"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./videodescription"
+                        xtype="textfield"/>
+                    <linktext
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Link Text will be used only in case of modal window&lt;br>"
+                        fieldLabel="Link Text"
+                        name="./linktext"
+                        xtype="textfield"/>
+                    <externalUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Will always open in a new window and will be used only if video is not provided."
+                        fieldLabel="External URL"
+                        name="./externalUrl"
+                        xtype="textfield"/>
+                    <titlecolor
+                        jcr:primaryType="cq:Widget"
+                        columns="{Long}3"
+                        defaultValue="default"
+                        fieldDescription="Default color is the CSS-defined color."
+                        fieldLabel="Title Color"
+                        name="./titleColor"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Default
+                                jcr:primaryType="nt:unstructured"
+                                text="Default"
+                                value="default"/>
+                            <Black
+                                jcr:primaryType="nt:unstructured"
+                                text="Black"
+                                value="black"/>
+                            <White
+                                jcr:primaryType="nt:unstructured"
+                                text="White"
+                                value="white"/>
+                        </options>
+                    </titlecolor>
+                </items>
+            </advanced>
+            <stillimage
+                jcr:primaryType="cq:Widget"
+                cropParameter="./stillimage/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./stillimage/fileName"
+                fileReferenceParameter="./stillimage/fileReference"
+                mapParameter="./stillimage/imageMap"
+                name="./stillimage/file"
+                requestSuffix="/stillimage.img.png"
+                rotateParameter="./stillimage/imageRotate"
+                sizeLimit="100"
+                title="Still Image"
+                uploadUrl="/tmp/mcdonalds/*"
+                xtype="smartimage"/>
+            <thumbimage
+                jcr:primaryType="cq:Widget"
+                cropParameter="./thumbimage/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./thumbimage/fileName"
+                fileReferenceParameter="./thumbimage/fileReference"
+                mapParameter="./thumbimage/imageMap"
+                name="./thumbimage/file"
+                requestSuffix="/thumbimage.img.png"
+                rotateParameter="./thumbimage/imageRotate"
+                sizeLimit="100"
+                title="Thumbnail Image"
+                uploadUrl="/tmp/mcdonalds/*"
+                xtype="smartimage"/>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog) { var title = dialog.getField('./title').getValue(); var showPopup = dialog.getField('./showpopup').getValue(); var linktext = dialog.getField('./linktext').getValue(); var img = dialog.getField('./stillimage/file').hasData(); var imgPath = dialog.getField('./akamaiImg').getValue(); if(img &amp;&amp; imgPath.length>0){CQ.Ext.Msg.show({'title':'Dialog Validation','msg':'Please provide Image either from local server or using Akamai path.','buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); return false;}}"/>
+</jcr:root>

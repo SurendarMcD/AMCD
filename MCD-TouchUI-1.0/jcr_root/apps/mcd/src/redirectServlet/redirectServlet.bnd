@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: redirectServlet
+Bundle-Description: A place to control redirects
+Bundle-SymbolicName: redirectServlet
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.cq.util.redirectservlet.RedirectActivator

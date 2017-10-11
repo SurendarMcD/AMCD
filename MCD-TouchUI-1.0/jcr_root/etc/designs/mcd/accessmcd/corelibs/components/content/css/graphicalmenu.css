@@ -1,0 +1,83 @@
+.graphicalmenu {
+    display: block;
+    color: #000;
+}
+
+.graphicalmenu .clearboth {
+    clear: both;
+}
+
+.graphicalmenu .topAlign .image{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.graphicalmenu .topAlign[align=center] .graphicalMenuText {
+    display: block;
+    text-align: center;
+}
+
+.graphicalmenu .leftAlign .image{
+    display: inline;
+    float: left;
+    text-align:left;
+}
+
+.graphicalmenu .leftAlign .graphicalMenuText {
+    display: inline;
+    float: left;
+    text-align:left;
+}
+
+.graphicalmenu .rightAlign .image{
+    display: inline;
+    float: right;
+    text-align:right;
+}
+
+.graphicalmenu .rightAlign[align=right] .graphicalMenuText {
+    display: inline;
+    float: right;
+    text-align:right;
+}
+
+.graphicalmenu .roundedYes {
+    position: relative;
+    border-radius:12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+}
+
+.graphicalmenu .roundedYes .graphicalMenuTitle {
+    position: relative;
+    width: auto;
+    -webkit-border-radius: 10px 10px 0 0 !important; 
+    -moz-border-radius: 10px 10px 0 0 !important; 
+    border-radius: 10px 10px 0 0 !important; 
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+}
+
+.graphicalmenu .roundedYes .graphicalMenuText {
+    position: relative;
+    -webkit-border-radius: 0 0 10px 10px; 
+    -moz-border-radius: 0 0 10px 10px; 
+    border-radius: 0 0 10px 10px;
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+}
+
+.graphicalmenu .topAlign .graphicalMenuTitle{
+    display: block;
+    text-align: center;
+}
+
+.graphicalmenu .leftAlign .graphicalMenuTitle{
+    display: inline;
+    float: left;
+}
+
+.graphicalmenu .rightAlign .graphicalMenuTitle {
+    display: inline;
+    float: right;
+}

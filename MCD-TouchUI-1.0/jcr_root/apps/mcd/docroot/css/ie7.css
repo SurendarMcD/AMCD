@@ -1,0 +1,288 @@
+p 
+{
+    margin: 8px 0px 20px 0px;
+}
+
+  
+.article_preview 
+{
+    margin-bottom: -2px;
+}
+
+
+
+#search_form .inputform
+{
+    padding-top: 5px;
+}  
+
+
+h1
+{
+    line-height: 30px;
+}
+#top_wrapper 
+{
+    padding-top: 0px;
+}
+#logo,
+#main_navigation
+{
+    left: auto;
+    padding-top: 0px;
+}
+#logo
+{
+    top: 0px;
+}
+#main_navigation
+{
+    top: 92px;
+}
+#breadcrumb
+{
+    position: absolute;
+    top: 0px;
+}
+#page_wrapper 
+{
+    margin: 0 auto;
+}
+#document_wrapper
+{
+    min-width: none;
+}
+
+div.active_nav_widget dl, 
+div.active_nav_widget dl a 
+{
+    padding: 0;
+    height: 10px;
+    line-height: 10pt;
+    font-weight: 900;
+}
+
+/* 
+    Fix nutrition description on food detail page
+*/
+#detail_top 
+{
+    margin-top: 55px;
+}
+.ingredient_list ul 
+{
+    margin-left: 10pt !important;
+    margin-top: 10pt !important;
+}
+
+
+ul.ui-tabs-nav
+{
+    margin-left: 0px;
+}
+
+.nutrition_node .large_number 
+{
+    line-height: 16pt;
+}
+.red_title 
+{
+    line-height: 14pt;
+}
+.nutrition_full div.nutrition_node span 
+{
+    float: left !important;
+    padding: 0px !important;
+}
+.nutrition_full div.nutrition_node span.red_title
+{
+    width: 150px !important;
+}
+input.input_text_bg 
+{
+    padding-top: 0px;
+}
+
+.inputform
+{
+    padding-top: 4px;
+}
+
+div.spacer 
+{
+    clear:left;
+}
+
+
+div.active_nav_widget dl 
+{
+    line-height: 10pt;
+    padding: 4px 0px;
+    margin: 2px;
+    clear:left;
+}
+
+
+#calc_divide 
+{
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+input.input_text_small
+{
+    padding: 0px 5px;
+    background-attachment:fixed;
+    
+}
+input.input_text_bg 
+{
+    padding-top: 10px;
+}
+
+/*
+    Tabs 
+*/
+.ui-tabs .ui-tabs-nav 
+{
+    padding-bottom: 30px !important;
+}
+#tabs.white_tabs .ui-tabs-nav 
+{
+    padding-bottom: 40px !important;
+}
+/*
+    In Place Nav
+*/
+.row 
+{
+    float:left;
+    width: 500px;
+    
+}
+
+/*
+    Category
+*/
+#inner_wrapper 
+{
+    width: 280px !important;
+}
+#mcdColorboxConfirm #inner_wrapper 
+{
+    width: auto !important;
+}
+.product_item 
+{
+    position: relative;
+    float:left;
+    min-width: 35px;
+    max-width: 189px;
+    width: auto;
+    text-align:center;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.popup_title 
+{
+    width: 300px !important;
+    display:block;
+}
+.popup_title td:first-child 
+{
+    
+}
+.popup_title td.title
+{
+    width: 50% !important;
+}
+.calc_item_head h2 
+{
+    padding-right: 40px !important;
+}
+.calc_item_head a.acts_as_button
+{
+    float: right;
+    margin-top: -19px !important;
+    display: inline;
+}
+/*
+    Warning
+*/
+#warning .warning_close 
+{
+    margin-top: -15px;
+    height:17px; 
+}
+.meal_back_button 
+{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    left: 720px;
+}
+.meal_back_button a 
+{
+    padding: 0px 20px !important;
+}
+
+/*
+    Forms
+ */
+ .textarea_end 
+{
+    background-position: 100% 0px;
+}
+.menu_wrap_96x31 
+{
+    z-index: 3000;
+}
+.dropdown_trigger_96x31 
+{
+    z-index: 1000;
+}
+.dropdown_header_327x31
+{
+    position: relative;
+}
+#cboxWrapper.iframe #cboxCurrent,
+#cboxWrapper.iframe #cboxNext,
+#cboxWrapper.iframe #cboxPrevious,
+#cboxWrapper.iframe #cboxTitle
+{
+    
+}
+#cboxWrapper.iframe #cboxLoadedContent 
+{
+    
+}
+#cboxWrapper.iframe #cboxContent 
+{
+    
+}
+
+#cboxOverlay
+{
+    background-image:none;
+    background-color:#1c1c1c;   
+    opacity:0.5; 
+    filter:alpha(opacity=70) !important;
+    zoom:1; /* hasLayout  */
+    display:block;
+}
+
+div.list_body, div.list_body dl, div.list_body dl dt{display:block !important}
+.arch_submit_bttn {margin-left:-16px}
+
+.dropdown_btn
+{
+ padding : 0px;
+ margin-left: 11px;
+ margin-top: -10px;
+} 
+.dropdown_btn_intl
+{
+ padding : 0px;
+ margin-left: 11px;
+ margin-top: -10px;
+}  

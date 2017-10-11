@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: MMonitor
+Bundle-Description: Judy test memory monitor
+Bundle-SymbolicName: MMBundle
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.monitors.Activator

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <upload_html
+                jcr:primaryType="cq:Widget"
+                title="Upload Html"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <file
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddAccept="[text/html]"
+                        ddGroups="[media]"
+                        fieldLabel="Upload Html File"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        mimeTypes="*.html"
+                        name="./file"
+                        sizeLimit="100"
+                        uploadUrl="/tmp/mcdonalds/zip/*"
+                        xtype="smartfile"/>
+                    <html_text
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please provide HTML content by uploading html file or by using Text Area(File will take preference)."
+                        fieldLabel="HTML Content"
+                        height="{Long}500"
+                        name="./html_text"
+                        xtype="textarea"/>
+                </items>
+            </upload_html>
+        </items>
+    </items>
+</jcr:root>

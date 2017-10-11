@@ -1,0 +1,277 @@
+/*
+CSS Document: McWeb - Good to Gold Yellow
+Author - Stephen Pfaff
+Date - June 2012
+*/
+
+/*PAGE THEME*/
+/*#headerwrapper { background-color:#eaa90a !important; }
+#headerwrapper .active { color:#eaa90a !important; }*/
+#headerwrapper .pageheading #globaladtext{
+    background:url("/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/gadbg.png") no-repeat scroll top transparent !important;
+    display:none;
+}
+#pagecontentwrapper a { color:#eaa90a; }
+#accordion_top a, a.contentlinkbold { color:#eaa90a; }
+#accordion_top a:hover, a:hover { color:#eaa90a; }
+
+/*CONTENT WRAPPERS*/
+#headerwrap { background-color:#dedede; } 
+
+/*HEADER NAVIGATION*/
+#headerwrapper .top-nav .topnavigationitems ul li a.active { color:#eaa90a !important; }
+#headerwrapper .top-nav .topnavigationitems ul li a:hover { color:#eaa90a !important; }
+
+/*HEADER COMPONENTS*/
+.si_slider_box {background:#eaa90a !important;}
+#bookmarksTab option.personal, hr { color: #eaa90a !important; }  
+#bookmarksTab option.global, hr { color: #000000; } 
+
+/*NAVIGATION FORMATTING*/
+#nav ul li ul {border:1px solid #eaa90a !important;}
+#nav ul li ul li {border-bottom:1px solid #eaa90a !important;}
+#nav ul li ul li a:hover {background-color:#eaa90a !important;}
+#nav-icons ul li ul {border:1px solid #eaa90a !important;}
+#nav-icons ul li ul li {border-bottom:1px solid #eaa90a !important;}
+#nav-icons ul li ul li a:hover {background-color:#eaa90a !important;}
+
+/* Top Navigation */
+#nav ul li:hover{ background: transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat -6px -34px !important; }
+
+#nav ul li.active { background: transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat -6px -68px !important; color:#fff; }
+#nav ul li.active:hover { background: transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat -6px -34px !important; color:#fff; }
+
+#nav ul li.left_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat 0 0 !important;  }
+#nav ul li.left_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat  0 -34px !important; color:#FFF !important; }
+
+#nav ul li.right_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat right 0 !important;  }
+#nav ul li.right_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat  right -34px !important; color:#FFF !important; }
+
+#nav .left_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat 0 -68px !important; }
+#nav .left_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat 0 -34px !important;}
+
+#nav .right_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat right -68px !important; }
+#nav .right_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat right -34px !important;}
+
+#nav ul li.both_side { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat 0 0 !important;  }
+#nav ul li.both_side:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat  0 -34px !important; color:#FFF !important; }
+
+#nav .both_side_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat 0 -68px !important; }
+#nav .both_side_active:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat 0 -34px !important;}
+
+#nav ul li.both_side700 { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite_700.png) no-repeat 0 0 !important;  }
+#nav ul li.both_side700:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite_700.png) no-repeat  0 -34px !important; color:#FFF !important; }
+
+#nav .both_side_active700 { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite_700.png) no-repeat 0 -68px !important; }
+#nav .both_side_active700:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite_700.png) no-repeat 0 -34px !important;}
+ 
+/*no rounded corners*/
+#nav a.left_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat -6px 0 !important; border-left:1px solid #CCC; }
+#nav a.left_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat  -6px -34px !important; }
+#nav .left_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat -6px -68px !important; }
+
+#nav a.right_side_straight { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat -6px 0 !important; border-right:1px solid #CCC; }
+#nav a.right_side_straight:hover { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat  -6px -34px !important; }
+#nav .right_side_straight_active { background:transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/top_nav_sprite.png) no-repeat -6px -68px !important; }
+/* End Top Navigation */
+
+/*LEFT NAVIGATION FORMATTING*/
+.navitem a {color: #000000 !important;}
+.leftnavigation a:hover {color: #000 !important;}
+.leftnav { background-color:#eaa90a !important; }
+.leftnavRowStart, .leftnavRowStart1, .leftnavRowStart2 { background-color: #999; }
+.leftnav1hover,.leftnav1 { background-color:#eaa90a !important; }
+.leftnav1Onhover a,.leftnav1On a { background-color:#eaa90a !important; }
+.leftnav1Onhover a:visited,.leftnav1On a:visited, .leftnav1Onhover a:hover,.leftnav1On a:hover { background-color:#eaa90a !important; }
+.leftnav2hover,.leftnav2 { background-color:#eaa90a !important; }
+.leftnav2hover, .leftnav3hover, .leftnav4hover, .leftnav5hover, .leftnav6hover, .leftnav7hover { background-color:#eaa90a !important; }
+.leftnav2Onhover,.leftnav2On { background-color:#eaa90a !important; }
+.leftnav3hover,.leftnav3 { background-color:#eaa90a !important; }
+.leftnav3spacerow { background-color:#eaa90a !important; }
+.leftnav4hover,.leftnav4 { background-color:#eaa90a !important; }
+.leftnav4spacerow { background-color:#eaa90a !important; }
+.leftnav5hover,.leftnav5 { background-color:#eaa90a !important; }
+.leftnav5spacerow { background-color:#eaa90a !important; }
+.leftnav6hover,.leftnav6 { background-color:#eaa90a !important; }
+.leftnav6spacerow { background-color:#eaa90a !important; }
+.leftnav7hover,.leftnav7 { background-color:#eaa90a !important; }
+.leftnav7spacerow { background-color:#eaa90a !important; }
+.leftnavBorder *{background:#eaa90a !important;}
+.leftnavBorder1{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;
+  background:#eaa90a
+}
+.leftnavBorder2{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;
+  background:#eaa90a !important;}
+.leftnavBorder3{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;}
+.leftnavBorder4{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;}
+.leftnavBorder5{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;}
+.leftnavBorderfg{
+  background:#eaa90a
+}
+.leftnavBorderSel{display:block}
+.leftnavBorderSel *{
+  background:#eaa90a !important;}
+.leftnavBorderSel1{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;
+  background:#eaa90a !important;}
+.leftnavBorderSel2{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;
+  background:#eaa90a !important;}
+.leftnavBorderSel3{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;}
+.leftnavBorderSel4{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;}
+.leftnavBorderSel5{
+  border-left:1px solid #eaa90a !important;
+  border-right:1px solid #eaa90a !important;}
+.leftnavBorderSelfg{
+  background:#eaa90a !important;
+}
+
+
+/***START COMPONENT DESIGNS***/
+
+/*SKIPTO COMPONENT*/
+div.dropdown_header_active:hover,
+div.dropdown_header:hover 
+{
+    color:#eaa90a !important; 
+}
+ul.dropdown_body li a:hover {
+    color:#eaa90a !important;
+}
+
+/*TABBEDCONTENTPANEL COMPONENT*/
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+    color:#eaa90a !important;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a span {
+    color:#eaa90a !important;
+}
+.ui-tabs .ui-tabs-nav li a:hover, 
+.ui-tabs .ui-tabs-nav li a:hover span
+{
+    color:#eaa90a !important;
+}
+.ui-tabs .ui-tabs-nav li.first-tab-selected a span{
+    color:#eaa90a ;
+}
+/*ACCORDION COMPONENT*/
+#accordion a.active_widget {
+    color: #eaa90a !important;
+}
+#accordion span.ui-icon {
+    background: transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/bullets/yellow_arrow_right.gif) no-repeat 0px 0px !important;
+}
+#accordion h4.ui-state-active span.ui-icon {
+    background: transparent url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/bullets/yellow_arrow_down.gif) no-repeat 0px 0px !important;
+}
+
+/*EVERYTHING COMPONENT*/
+#everythingmain {
+    color:#4f4f4f;
+}
+.mainTitle { 
+    color: #eaa90a;
+}
+.siteTitle {
+    color: #eaa90a;
+}
+.sectionTitle { 
+    color: #eaa90a;
+}
+
+.sectionSubTitle {
+    color: #eaa90a;
+}
+  
+.paragraphTitle {
+    color: #eaa90a;
+}
+
+.rtStyleGoToLink {
+    color: #eaa90a;
+}
+
+/*GMS COMPONENT*/
+td.titleWithBlackBoldBorder { background-color: #eaa90a !important; }
+.searchgms{ background-color:#eaa90a !important; }
+#statusdiv { color: #eaa90a !important; }
+
+/*GCDBASICSEARCH COMPONENT*/
+.empDirBox .empDirboxHdBlack {color:#eaa90a !important;}
+
+/*LETS TALK COMPONENT*/
+.letsTalkBox .boxHdBlack{color:#eaa90a !important;}
+
+/*QUICK POLL COMPONENT*/
+.quickPollboxHdBlack{color:#eaa90a !important;}
+
+/*TRENDING*/
+.trending_text{background:url(/apps/mcd/components/content/trending/clientlibs/images/ca_g2g_yellow.png) left top no-repeat !important;}
+.tagHdBlack{color:#eaa90a !important;}
+
+/*Like*/
+.likeCount {background:url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/like.jpg) left top no-repeat;padding-top:5px;height:25px;padding-left:30px;border:0;opacity:0.5;filter:alpha(opacity=50);display:block;}
+.likeCount_fr {background:url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/jaime2.jpg) left top no-repeat;padding-top:3px;height:25px;padding-left:42px;border:0;opacity:0.5;filter:alpha(opacity=50);display:block;}
+.likePage {padding-left: 20px; background: url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/smiley44.jpg) -4px -4px no-repeat;}
+/*pagecomment Like*/
+.reply-img
+{
+    background:url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/like.jpg) left top no-repeat;
+    border:0;
+    height: 25px;
+    opacity:0.5;
+    width: 25px;
+    filter:alpha(opacity=50);
+    text-indent:-9999px;
+    padding-left:16px;
+    vertical-align: middle;
+}
+
+
+.reply-img_fr
+{
+    background:url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/jaime2.jpg) left top no-repeat;
+    border:0;
+    height: 25px;
+    opacity:0.5;
+    width: 40px;
+    filter:alpha(opacity=50);
+    text-indent:-9999px;
+    padding-left:16px;
+    vertical-align: middle;
+}
+
+.replydiv form {float: inherit;}
+
+.reply-smile-img {padding-left: 20px; background: url(/etc/designs/mcd/accessmcd/g2g/ca_g2g_yellow/images/smiley44.jpg) -4px -4px no-repeat; display: inherit; height: 16px;}
+
+.excontainer.mid-year-conversation .panel-heading.active {
+    color: #eaa90a !important;
+}
+.acc-sub-heading {
+    color: #eaa90a !important;
+}
+.sideLinks {
+    border: 2px solid #eaa90a;
+    color: #eaa90a;
+}
+.sideLine {
+    color: #eaa90a;
+}
+/***END COMPONENT DESIGNS***/

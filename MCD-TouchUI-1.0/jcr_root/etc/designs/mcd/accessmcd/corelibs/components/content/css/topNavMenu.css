@@ -1,0 +1,210 @@
+/**** Main Menu General styles ****/
+UL#navMenu {
+    z-index: 200 !important;
+}
+UL#navMenu LI UL {
+    z-index: 300 !important;
+}
+UL#navMenu {
+    BORDER-RIGHT: #000000 0px solid;
+    BORDER-TOP: #000000 0px solid; 
+    BORDER-LEFT: #000000 0px solid;
+    BORDER-BOTTOM: #000000 0px solid; 
+
+    PADDING-RIGHT: 0px; 
+    PADDING-TOP: 0px; 
+    PADDING-LEFT: 0px; 
+    PADDING-BOTTOM: 0px;
+
+    height: 67px;
+
+    MARGIN: 0px;  
+    FLOAT: left;  
+    POSITION: relative; 
+    WIDTH: 100%; 
+    ZOOM: 1;  
+    LIST-STYLE-POSITION: outside; 
+    LIST-STYLE-IMAGE: none; 
+    LIST-STYLE-TYPE: none;
+    
+    border-radius:0 12px 12px 0 !important;
+    -moz-border-radius: 0 12px 12px 0 !important;
+    -webkit-border-radius: 0 12px 12px 0 !important;
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+    
+    z-index:2;
+}
+UL#navMenu LI {
+    PADDING-RIGHT: 0px; 
+    PADDING-LEFT: 0px; 
+    PADDING-BOTTOM: 0px; 
+    PADDING-TOP: 0px;
+    BORDER-RIGHT: #610000 1px solid;
+    FLOAT: left;    
+    MARGIN: 0px; 
+
+    height: 100%;
+ 
+    width: 110px;   
+}
+UL#navMenu LI A {   
+    position: relative;
+    FONT-FAMILY: AkzidenzGrotesk, Arial, Helvetica, sans-serif; 
+    FONT-SIZE: 15px;
+    DISPLAY: block; 
+    FONT-WEIGHT: bold;  
+    CURSOR: pointer; 
+    COLOR: #ffffff; 
+    TEXT-DECORATION: none; 
+    bac: #CD0000;
+    height: 100%; 
+    #height: 100%;
+    overflow: hidden;
+    height:67px !important;
+    margin: 0 !important; padding: 0 !important;
+}
+UL#navMenu LI A:hover {
+    BACKGROUND-COLOR: #8b0000; 
+    TEXT-DECORATION: none; 
+}
+.mainItemTextPosition{
+    position: absolute;
+    bottom: 4px;
+    left: 10px;
+    width: 99px;
+}
+/**** Main Menu home link ****/
+UL#navMenu LI#auNewHome {
+    PADDING-RIGHT: 0px; 
+    PADDING-LEFT: 0px; 
+    PADDING-BOTTOM: 0px; 
+    PADDING-TOP: 0px;
+    BORDER-RIGHT: #D26D15 0px solid;
+    FLOAT: left;    
+    MARGIN: 0px; 
+    BACKGROUND: #D26D15;    
+    width: auto; 
+}
+UL#navMenu LI#auNewHome A {
+    BORDER-RIGHT: #D26D15 0px solid; 
+    PADDING-RIGHT: 0px; 
+    PADDING-LEFT: 0px; 
+    PADDING-BOTTOM: 0px; 
+    PADDING-TOP: 0px;
+    DISPLAY: block; 
+    FONT-WEIGHT: bold; 
+    CURSOR: pointer; 
+    COLOR: #ffffff; 
+    TEXT-DECORATION: none; 
+    bac: #D26D15;
+    height: auto;   
+}
+UL#navMenu LI#auNewHome A:hover {
+    BACKGROUND-COLOR: #D26D15; 
+    TEXT-DECORATION: none; 
+}
+UL#navMenu LI#auNewHome img {
+    border-style: none;
+    display: block;
+    height: 67px;
+}
+
+/**** Main menu mysites link ****/
+
+UL#navMenu LI#li_mysite {
+    BORDER-RIGHT: #610000 0px solid;    
+}
+UL#navMenu LI#li_mysite.tabHover {
+    BORDER-RIGHT: #610000 1px solid;    
+}
+UL#navMenu LI#li_mysite img {
+    border-style: none;
+    height: auto;
+}
+
+
+/**** onHover styles ****/
+
+UL#navMenu LI.tabHover {
+    BACKGROUND-COLOR: #8b0000; 
+    TEXT-DECORATION: none;  
+    BORDER-RIGHT: #610000 1px solid;    
+}
+UL#navMenu LI.tabHover A {
+    BACKGROUND-COLOR: #8b0000; 
+    TEXT-DECORATION: none; 
+}
+
+
+/**** Sub menu styles ****/
+UL#navMenu LI UL {
+    PADDING-TOP: 0px; 
+    PADDING-RIGHT: 0px; 
+    PADDING-LEFT: 0px; 
+    PADDING-BOTTOM: 0px; 
+    
+    DISPLAY: none; 
+    MARGIN: 0px;    
+    WIDTH: 300px; 
+    POSITION: absolute; 
+    BACKGROUND-COLOR: #8b0000; 
+    z-index:1000; 
+}
+UL#navMenu LI.tabHover UL {
+    DISPLAY: block;
+    BORDER-TOP: #610000 1px solid;
+}
+UL#navMenu LI.tabHover UL iframe {
+    DISPLAY: none;
+}
+UL#navMenu LI.tabHover UL LI {
+    CLEAR: both; 
+    DISPLAY: block; 
+    WIDTH: 300px; 
+    WHITE-SPACE: normal; 
+    POSITION: relative;
+    BACKGROUND: #8b0000;
+    height: 19px;
+    BORDER-RIGHT: #610000 0px solid; 
+    BORDER-TOP: #610000 0px solid;
+    BORDER-LEFT: #610000 0px solid;
+    BORDER-BOTTOM: #610000 0px solid; 
+    
+    z-index:0;
+}
+UL#navMenu LI.tabHover UL LI A {
+    BORDER-RIGHT: #610000 0px solid; 
+    BORDER-TOP: #610000 0px solid;
+    BORDER-LEFT: #610000 0px solid;
+    BORDER-BOTTOM: #610000 1px solid; 
+    
+    height: 20px !important;
+    PADDING : 0px;
+
+    DISPLAY: block; 
+    BACKGROUND: #8b0000; 
+    OVERFLOW: hidden;   
+    WIDTH: 300px; 
+    COLOR: #FFFFFF; 
+    FONT-SIZE: 13px;
+    WHITE-SPACE: nowrap; 
+    TEXT-DECORATION: none
+}
+UL#navMenu LI.tabHover UL LI A:hover {
+    BACKGROUND: #610000; 
+    TEXT-DECORATION: none;  
+}
+.subItemTextPosition{
+    position: absolute;
+    top: 3px;
+    left: 10px; 
+}
+* html UL#navMenu iframe, * html ul.nav iframe {
+    position: absolute;
+    /* account for the border */
+    left: -1px;
+    right: -1px;
+    top:-1px;
+    z-index:0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0); 
+}

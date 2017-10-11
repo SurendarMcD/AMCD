@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/mcd/online_man/components/gcd.html?wcmmode=disabled"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <gcd
+                jcr:primaryType="cq:Panel"
+                title="GCD Form">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <comptitle
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Global Contact Directory is default value"
+                        fieldLabel="Component Title"
+                        name="./comptitle"
+                        xtype="textfield"/>
+                    <firstname
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="First Name"
+                        fieldLabel="Label for First Name"
+                        name="./firstname"
+                        xtype="textfield"/>
+                    <lastname
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Last Name"
+                        fieldLabel="Label for Last Name"
+                        name="./lastname"
+                        xtype="textfield"/>
+                    <country
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Country"
+                        fieldLabel="Label for Country"
+                        name="./country"
+                        xtype="textfield"/>
+                    <startlinkUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="External Link should begin with http://"
+                        fieldLabel="Start Link Page URL"
+                        name="./startLinkPage"
+                        xtype="browsefield"/>
+                </items>
+            </gcd>
+        </items>
+    </items>
+</jcr:root>

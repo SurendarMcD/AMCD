@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:EditConfig">
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        aftercopy="REFRESH_PAGE"
+        afteredit="REFRESH_PAGE"
+        afterinsert="&#xa;&#xa;afterinsert = function(path, definition) { &#xa; var val=CQ.Util.eval(CQ.HTTP.get(path+'.deleteComp.html'));&#xa;  if(val[0].deleted=='true')&#xa;  {CQ.Ext.Msg.show({'title':CQ.I18n.getMessage('Campaign Component Validation'),'msg':CQ.I18n.getMessage('More than one Campaign component is not allowed in a page.'),'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); &#xa;   return false;&#xa;  }&#xa;  else &#xa;  { &#xa;    window.location.reload();&#xa;  }&#xa; }&#xa;"/>
+</jcr:root>

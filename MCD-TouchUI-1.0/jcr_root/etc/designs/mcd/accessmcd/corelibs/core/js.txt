@@ -1,0 +1,17 @@
+#base=js
+jquery-1.9.0.js
+jquery-ui-1.9.2.zindexfix.custom.min.js
+jquery-migrate-1.2.1.min.js
+init.js
+swfobject.js
+sling.js
+resetColCtrl.js
+jquery.activetextinput.js
+global_utils.js
+jquery.mcdcolorbox.js
+jquery.colorbox-mod.js
+common_g2g.js
+jquery.ifixpng.js
+#DD_roundies_0.0.2a-min.js
+jquery.bgiframe.js
+grayout.js 

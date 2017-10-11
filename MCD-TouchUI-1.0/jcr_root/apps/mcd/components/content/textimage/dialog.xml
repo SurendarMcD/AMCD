@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:TabPanel"
+    activeTab="0"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <Text
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <richFlag
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./textIsRich"
+                    value="true"
+                    xtype="hidden"/>
+                <text
+                    jcr:primaryType="cq:Widget"
+                    hideLabel="{Boolean}true"
+                    name="./text"
+                    xtype="richtext">
+                    <externalStyleSheets
+                        jcr:primaryType="nt:unstructured"
+                        sheet1="/etc/designs/project/static.css"/>
+                    <cssStyles
+                        jcr:primaryType="nt:unstructured"
+                        rtStyleBodyHeader="Body Header"
+                        rtStyleDepartmentName="Department Name"
+                        rtStyleMonthName="Month Name"
+                        rtStyleQuickLinks="Quick Links"
+                        rtStyleSectionHeader="Section Header"
+                        rtStyleText="Text"
+                        rtStyleTextLinks="Text Links"
+                        rtStyleWhiteText="White Text"/>
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <table
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <lists
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <edit
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <findreplace
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <subsuperscript
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <styles
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <links
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <spellcheck
+                            jcr:primaryType="nt:unstructured"
+                            features="*"
+                            invalidStyle="background-color: #ffdddd;"/>
+                        <undo
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </rtePlugins>
+                    <specialCharsConfig jcr:primaryType="nt:unstructured">
+                        <chars jcr:primaryType="nt:unstructured">
+                            <copyright
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;copy;"/>
+                            <epsilon
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;epsilon;"/>
+                            <register
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;reg;"/>
+                            <trademark
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;trade;"/>
+                            <eacute
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;eacute;"/>
+                            <mu
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;mu;"/>
+                            <aacute
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;aacute;"/>
+                            <dagger
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;dagger;"/>
+                            <euro
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;euro;"/>
+                            <specialRange
+                                jcr:primaryType="nt:unstructured"
+                                rangeEnd="{Long}254"
+                                rangeStart="{Long}160"/>
+                        </chars>
+                    </specialCharsConfig>
+                    <linkbrowseConfig
+                        jcr:primaryType="nt:unstructured"
+                        protocols="[https://,http://,ftp://,mailto:]"/>
+                </text>
+            </items>
+        </Text>
+        <Image
+            jcr:primaryType="cq:Widget"
+            cropParameter="./image/imageCrop"
+            ddGroups="[media]"
+            fileNameParameter="./image/fileName"
+            fileReferenceParameter="./image/fileReference"
+            mapParameter="./image/imageMap"
+            name="./image/file"
+            requestSuffix="/image.img.png"
+            rotateParameter="./image/imageRotate"
+            sizeLimit="100"
+            title="Image"
+            uploadUrl="/tmp/upload_test/*"
+            xtype="smartimage"/>
+        <AdvancedImage
+            jcr:primaryType="cq:Widget"
+            title="Advanced Image"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <cssClass
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="image_left"
+                    fieldDescription="In case of no style the image will be Left Aligned"
+                    fieldLabel="Style"
+                    name="./cq:cssClass"
+                    newStylePath="textimage/image_styles"
+                    optionsCallback="CQ.utils.WCM.getDesignStyleOptions"
+                    stylePath="image_styles"
+                    type="select"
+                    xtype="selection"/>
+                <description
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Description"
+                    name="./image/jcr:description"
+                    xtype="textarea"/>
+                <resType
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./image/sling:resourceType"
+                    value="foundation/components/image"
+                    xtype="hidden"/>
+                <size
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Size"
+                    heightParameter="./image/height"
+                    widthParameter="./image/width"
+                    xtype="sizefield"/>
+                <title
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Title"
+                    name="./image/jcr:title"
+                    xtype="textfield"/>
+                <alt
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="(leave empty to use the title defined above)"
+                    fieldLabel="Alt Text"
+                    name="./image/alt"
+                    xtype="textfield"/>
+                <centerAlign
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Centre Align the image(Only for top and bottom alignment of image)"
+                    name="./centerAlign"
+                    type="checkbox"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <center
+                            jcr:primaryType="nt:unstructured"
+                            value="text-align:center"/>
+                    </options>
+                </centerAlign>
+            </items>
+        </AdvancedImage>
+        <Advanced
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Advanced"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <inlinealign
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Only for left or right alignment of image"
+                    fieldLabel="Inline Alignment"
+                    name="./inlineAlign"
+                    type="checkbox"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <Center
+                            jcr:primaryType="nt:unstructured"
+                            value="{Boolean}true"/>
+                    </options>
+                </inlinealign>
+                <paddingBottom
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter bottom padding in px"
+                    fieldLabel="Bottom Padding"
+                    name="./paddingBottom"
+                    regex="/^\\s*\\d+\\s*$/"
+                    xtype="numberfield"/>
+                <paddingLeft
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter left padding in px"
+                    fieldLabel="Left Padding"
+                    name="./paddingLeft"
+                    regex="/^\\s*\\d+\\s*$/"
+                    xtype="numberfield"/>
+                <paddingRight
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter right padding in px"
+                    fieldLabel="Right Padding"
+                    name="./paddingRight"
+                    regex="/^\\s*\\d+\\s*$/"
+                    xtype="numberfield"/>
+                <paddingTop
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter Top padding in px"
+                    fieldLabel="Top Padding"
+                    name="./paddingTop"
+                    regex="/^\\s*\\d+\\s*$/"
+                    xtype="numberfield"/>
+                <paddingTxtImg
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter padding between image and text in px(default 5px)"
+                    fieldLabel="Text and Image Padding"
+                    name="./paddingTxtImg"
+                    regex="/^\\s*\\d+\\s*$/"
+                    xtype="numberfield"/>
+            </items>
+        </Advanced>
+        <Title
+            jcr:primaryType="cq:Widget"
+            title="Title"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <heading
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="heading1"
+                    fieldLabel="Select Title styling"
+                    name="./heading"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <Heading1
+                            jcr:primaryType="nt:unstructured"
+                            text="Heading 1(size 18 px)"
+                            value="heading1"/>
+                        <Heading2
+                            jcr:primaryType="nt:unstructured"
+                            text="Heading 2(size 13px)"
+                            value="heading2"/>
+                        <Heading3
+                            jcr:primaryType="nt:unstructured"
+                            text="Heading 3(size 11px)"
+                            value="heading3"/>
+                    </options>
+                </heading>
+                <title
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter the title"
+                    fieldLabel="Title"
+                    name="./title"
+                    xtype="textfield"/>
+                <titlealign
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="left"
+                    fieldLabel="Alignment of title"
+                    name="./titleAlign"
+                    type="radio"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <Center
+                            jcr:primaryType="nt:unstructured"
+                            text="Center"
+                            value="center"/>
+                        <Left
+                            jcr:primaryType="nt:unstructured"
+                            text="Left"
+                            value="left"/>
+                        <Right
+                            jcr:primaryType="nt:unstructured"
+                            text="Right"
+                            value="right"/>
+                    </options>
+                </titlealign>
+                <paddingTitle
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter bottom padding between Title and content (in px)"
+                    fieldLabel="Title Padding"
+                    name="./paddingTitle"
+                    regex="/^\\s*\\d+\\s*$/"
+                    xtype="numberfield"/>
+            </items>
+        </Title>
+        <Theme
+            jcr:primaryType="cq:Widget"
+            title="Theme"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <check
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Include round corners"
+                    name="./checkRoundCorners"
+                    type="checkbox"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <check
+                            jcr:primaryType="nt:unstructured"
+                            value="{Boolean}true"/>
+                    </options>
+                </check>
+                <themecolor
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Select a color"
+                    name="./themecolor"
+                    optionsCallback="function(path, record) {var pageHandle=location.toString();pageHandle=pageHandle.replace('.html','.coloroptions.html');this.setOptions(CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle)))); }"
+                    type="select"
+                    xtype="selection"/>
+            </items>
+        </Theme>
+    </items>
+</jcr:root>

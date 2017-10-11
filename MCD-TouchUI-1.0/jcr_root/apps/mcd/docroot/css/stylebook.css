@@ -1,0 +1,106 @@
+.Search_Result {
+    display: inline-block;
+    float: left;
+    margin: 0 0 0 10px;
+    width: 200px;
+}
+.vertScroll {
+    height: 160px;
+    overflow-y: scroll;
+    width: auto;
+}
+.redStar {
+    color: #FF0000;
+    padding-right: 5px;
+}
+.button{
+font-family:Georgia,arial;
+font-size:14px;
+}
+#formId{
+    
+    width:50%;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 38px;
+   // width: 723px;
+}
+table.listContainer td, table.listContainer th {
+    border: 1px solid #DEDEDE;
+    color: #464646;
+    font-size: 12px;
+    padding: 5px;
+}
+.textBox, .listBox, select {
+    border: 1px solid #A1A1A1;
+    /*color: #727070;*/
+    float: left;
+    font-size: 12px;
+    height: 18px;
+    width: 262px;
+    font-family: georgia;
+}
+textarea {
+    border: 1px solid #A1A1A1;
+    color: #727070;
+    font-size: 12px;
+    height: 100px;
+    width: 463px;
+}
+label{
+    font-size: 14px;
+    margin-left:70px;
+}
+legend{
+    font-family: Georgia,arial;
+    font-size: 12px;
+    background-color:#79050B;    
+}
+#header{
+    background-color:#79050B;
+    background-position: 20px 20px;
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    margin-top:-10px;
+}
+#title{
+    color: yellow;
+    font-family: Georgia,arial;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#logout{           
+    font-family: Georgia,arial;
+    font-size: 12px;
+    color:white;
+    font-weight: bold;
+    text-align:right;
+}
+#footerOuter{
+    background-color:#79050B;
+    height: 20px;
+    width: 100%;
+    position:fixed;
+    bottom:0px;
+}
+body{
+    margin-left: 0px;
+    margin-top: 8px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+#footer{
+    font-family: Georgia,arial;
+    color:white;
+    padding-left:10px;
+    margin-top:auto;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+}
+.superscript{font-size:xx-small; vertical-align:top;} 

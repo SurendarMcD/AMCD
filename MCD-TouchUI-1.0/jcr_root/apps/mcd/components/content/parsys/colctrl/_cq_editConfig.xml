@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:actions="[edit,delete,insert]"
+    cq:layout="editbar"
+    jcr:primaryType="cq:EditConfig">
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        aftercopy="REFRESH_PAGE"
+        afterdelete="REFRESH_PAGE"
+        afteredit="REFRESH_PAGE"
+        afterinsert="REFRESH_PAGE"/>
+    <cq:dropTargets jcr:primaryType="cq:DropTargetConfig">
+        <file
+            jcr:primaryType="nt:unstructured"
+            accept="[application/x-shockwave-flash]"
+            groups="[media]"
+            propertyName="./fileReference"/>
+    </cq:dropTargets>
+</jcr:root>

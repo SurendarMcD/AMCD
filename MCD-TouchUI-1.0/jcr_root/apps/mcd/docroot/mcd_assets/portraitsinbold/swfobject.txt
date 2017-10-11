@@ -1,0 +1,3 @@
+FILE QUARANTINED
+
+Microsoft Managed Services has removed portraitsinbold.zip->swfobject.js since it was found to match the FILE FILTER= MSO File Filter List 1: <in>*.js file filter.

@@ -1,0 +1,292 @@
+.everything {
+    width: 100%;
+}
+#EverythingParagradiv {
+    *min-width: 100%;
+}
+.everythingtable {
+    position: relative;
+}
+.everythingtable table {
+    width: 100%;
+    padding: 0; margin: 0;
+}
+.everythingmainchecked {
+    position: relative;
+}
+.everyThingHeaderRounded{
+    z-index: 20;
+}
+.everythingtable
+{
+    height:100%;
+    display: block;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: normal;
+}
+.mainTitle {
+    font-size:32px;  
+    line-height: 32px;
+}
+
+.newTitle {
+font-family:"Segoe";
+font-weight:bold;
+font-size:20px;
+}
+
+.newHeading {
+font-family:"Arial Black";
+font-weight:bold;
+font-size:24px;
+}
+
+.newSubHeading {
+font-family:"Arial Black";
+font-weight:bold;
+font-size:20px;
+color: #008080;
+}
+
+.exampleHeading {
+font-family:"Arial Black";
+font-weight:bold;
+font-size:13px;
+}
+
+.siteTitle {
+    font-size:28px;  
+    line-height: 28px;
+}
+.sectionTitle {
+    font-size:24px;  
+    line-height: 24px;
+}
+
+.sectionTitleBlack {
+    font-size:24px;  
+    line-height: 24px;
+    color: #000;
+}
+
+.sectionSubTitle {
+    font-size:20px;  
+    line-height: 20px;
+}
+
+.paragraphTitle {
+    font-size:16px;  
+    line-height: 16px;
+}
+.paragraphTitleBlack {
+    font-size:16px;  
+    line-height: 16px;
+    color:#000;
+}
+.rtStyleGoToLink
+ {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight:bold;
+}
+a:link .rtStyleGoToLink 
+{
+    text-decoration: none;
+}
+a:active .rtStyleGoToLink
+{
+    text-decoration: none;
+}
+a:visited .rtStyleGoToLink
+{
+    text-decoration: none;
+}
+a:hover .rtStyleGoToLink
+{
+    text-decoration: underline;
+}
+
+.rtStyleBlueText
+{
+    color:#315090;
+} 
+
+.rtStyleRedText
+{
+    color:#ff0000;
+}
+
+.rtStyleWhiteText
+{
+    color:#ffffff;
+}
+
+div.evrimg {
+    margin-botton: 0px;
+}
+
+.EverythingComponenttextandImage ul{
+    position:relative; 
+    left:20px;
+}
+
+.everythingText table {
+    margin: 4px 0 4px 0;
+}
+
+.everythingtable .download {
+    text-align: right;
+    padding: 5px;
+}
+
+.everythingtable .download a {
+    text-decoration: none !important;
+}
+
+/* EVERYTHING ROUNDED CORNERS */
+.everythingrounded {
+    position: relative;
+    -webkit-border-radius: 12px; 
+    -moz-border-radius: 12px; 
+    border-radius: 12px; 
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+}
+
+.everythingtitle {
+    display: block;
+    position: relative;
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+}
+
+.everythingroundedtitle {
+    display: block;
+    position: relative;
+    -webkit-border-radius: 10px 10px 0px 0px; 
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+}
+
+.everythingroundedcornertable {
+    display: block;
+    position: relative;
+    min-width: 100%;
+    -webkit-border-radius: 0px 0px 10px 10px; 
+    -moz-border-radius: 0px 0px 10px 10px; 
+    border-radius: 0px 0px 10px 10px;
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+}
+
+.everythingroundedtable {
+    display: block;
+    position: relative;
+    min-width: 100%;
+    -webkit-border-radius: 10px 10px 10px 10px; 
+    -moz-border-radius: 10px 10px 10px 10px; 
+    border-radius: 10px 10px 10px 10px;
+    behavior: url(/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc);
+}
+.seeMore{
+    background: transparent url('/etc/designs/mcd/accessmcd/g2g/g2g_rwd/g2g_rwd_white/images/arrow.jpg') no-repeat 0 4px;
+    padding-left: 10px;
+    margin-top: 6px;
+    border-bottom: 1px solid #d1d3d4;
+    padding-bottom: 6px;
+    font-weight:bold;
+    color:#000;
+}
+.imgCaption{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+.whTextBorder{
+    font-size: 18px;
+    line-height: 24px;
+    color:#fff;
+}
+.sociaButton{
+    background: #fff;
+    padding: 5px 0;
+    color: #d7262e;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+.sideLinks{
+    background: #e8e8e8 none repeat scroll 0 0;
+    border: 2px solid #873879;
+    border-radius: 0;
+    color: #873879;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+.sideLine{
+    font-weight: bold;
+    color: #833573;
+    font-size: 24px;
+}
+ /* GBS Changes */
+.everythingLeftsideText{
+    text-align: left;
+    width: 167px;
+    font-weight: bold;
+    font-size: 16px;
+    color:#32528f;
+    font-family: 'LovinSansWeb-Medium';
+    }
+
+.expandableBluecolor {
+    color:#32528f;
+	line-height:35px;
+    font-weight: bold;
+    font-size: 100%;
+	font-family: 'LovinSansWeb-Medium';
+    }
+
+.expandablelink {
+    color:#319ce7;
+	line-height:35px;
+    font-weight: bold;
+    font-size: 100%;
+    word-break: break-all;
+    display:inline-table;
+	font-family: 'LovinSansWeb-Medium';
+    }
+.graycolor {
+    color:#AAAAAA;
+    text-align: left;
+    font-weight: bold;
+    display:inline-block;    
+    font-family: 'LovinSansWeb-Medium';
+    }
+.everything-bg{
+	background-color:#e0e2ea;
+}
+
+/*End GBS Style*/
+
+/* Everything component change */
+.redTextFont {
+    color:#ff0000;
+    font-size:20px;  
+    line-height: 20px;
+    }
+
+/* END */

@@ -1,0 +1,71 @@
+/* Structure
+------------------------------------------*/
+#coolMenu,
+#coolMenu ul {
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+#coolMenu {
+	float: right;
+	position:relative;
+	top:-34px;
+	right:40px;
+}
+#coolMenu > li {
+	float: left;
+}
+#coolMenu li a {
+	display: block;
+	height:32px;
+	line-height:32px;
+	padding:0 32px 0 32px;
+	text-decoration: none;
+}
+#coolMenu ul {
+	display: none;
+	position:absolute;
+	z-index: 999;
+}
+#coolMenu ul li a {
+	width: 80px;
+}
+#coolMenu li:hover ul.noJS {
+	display: block; 
+}
+
+
+/* Main menu
+------------------------------------------*/
+#coolMenu {
+	font-family: Arial;
+	font-size: 12px;
+	background:#fff;
+}
+#coolMenu > li > a {
+	border-left:3px solid #d83c3c;
+	border-right:3px solid #d83c3c;
+	background: #ed4249 url(../images/arrow.png) right 10px center no-repeat;
+	color: #333;
+	font-weight: bold;
+}
+#coolMenu > li:hover > a {
+	background: #fa454c url(../images/arrow.png) right 10px center no-repeat;;
+	color: #000;
+}
+
+
+/* Submenu
+------------------------------------------*/
+#coolMenu ul {
+	background:#fa454c;
+}
+#coolMenu ul li a {
+	color: #000;
+}
+#coolMenu ul li:hover a {
+	background:#fa454c;
+}
+
+ul.noJS li{border-top:2px solid #d83c3c; border-left:2px solid #d83c3c; border-right:2px solid #d83c3c}
+ul.noJS li:last-child{border-bottom:2px solid #d83c3c; border-left:2px solid #d83c3c; border-right:2px solid #d83c3c}

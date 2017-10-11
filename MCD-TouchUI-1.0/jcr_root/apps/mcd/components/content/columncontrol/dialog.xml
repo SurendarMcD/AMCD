@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Column Control"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Column Control"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Choose the width of each column from the dropdown. Add and remove any number of columns using '+' and '-' button respectively."
+                        fieldLabel="Column Widths"
+                        name="./columns"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <col-1
+                                    jcr:primaryType="cq:Widget"
+                                    text="~8%"
+                                    value="1"/>
+                                <col-2
+                                    jcr:primaryType="cq:Widget"
+                                    text="~17%"
+                                    value="2"/>
+                                <col-3
+                                    jcr:primaryType="cq:Widget"
+                                    text="~25%"
+                                    value="3"/>
+                                <col-4
+                                    jcr:primaryType="cq:Widget"
+                                    text="~33%"
+                                    value="4"/>
+                                <col-5
+                                    jcr:primaryType="cq:Widget"
+                                    text="~42%"
+                                    value="5"/>
+                                <col-6
+                                    jcr:primaryType="cq:Widget"
+                                    text="~50%"
+                                    value="6"/>
+                                <col-7
+                                    jcr:primaryType="cq:Widget"
+                                    text="~58%"
+                                    value="7"/>
+                                <col-8
+                                    jcr:primaryType="cq:Widget"
+                                    text="~67%"
+                                    value="8"/>
+                                <col-9
+                                    jcr:primaryType="cq:Widget"
+                                    text="~75%"
+                                    value="9"/>
+                                <col-10
+                                    jcr:primaryType="cq:Widget"
+                                    text="~83%"
+                                    value="10"/>
+                                <col-11
+                                    jcr:primaryType="cq:Widget"
+                                    text="~92%"
+                                    value="11"/>
+                                <col-12
+                                    jcr:primaryType="cq:Widget"
+                                    text="100%"
+                                    value="12"/>
+                            </options>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            beforeadd="function(current, comp, index) {&#xa;    var dlg = current.findParentByType('dialog');&#xa;&#x9;var columnField = dlg.getField('./columns');&#xa;&#x9;if(columnField) {&#xa;&#x9;&#x9;var columns = columnField.getValue();&#xa;&#xa;&#x9;&#x9;var count = 0;&#xa;&#xa;&#x9;&#x9;for(var i = 0; i &lt; columns.length; i++) {&#xa;&#x9;&#x9;&#x9;count += parseInt(columns[i]);&#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;if(count >= 12) {&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.alert('Sorry!', 'Cannot add columns with width more than 100%.');&#xa;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;} "/>
+                    </multi>
+                    <enableMobile
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enable Columns in Mobile"
+                        inputValue="true"
+                        name="./enableMobile"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <background
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Background color to be applied on all columns."
+                        fieldLabel="Background Color"
+                        name="./bgColor"
+                        showHexValue="{Boolean}true"
+                        xtype="colorfield"/>
+                    <bordercolor
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Border to be displayed on top of column control"
+                        fieldLabel=" Border Color"
+                        name="./bordercolor"
+                        showHexValue="{Boolean}true"
+                        xtype="colorfield"/>
+                    <bordersize
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Border size to be displayed on top of all columns. Default set to 25px."
+                        fieldLabel="Border Size"
+                        name="./borderSize"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog) {&#xa;&#xa;    var columns = dialog.getField('./columns').getValue();&#xa;&#xa;    var count = 0;&#xa;&#xa;    for(var i = 0; i &lt; columns.length; i++) {&#xa;        count += parseInt(columns[i]);&#xa;    }&#xa;&#xa;    if(count > 12) {&#xa;        CQ.Ext.Msg.alert('Sorry!', 'Cannot add columns with width more than 100%.');&#xa;        return false;&#xa;    }&#xa;}"/>
+</jcr:root>

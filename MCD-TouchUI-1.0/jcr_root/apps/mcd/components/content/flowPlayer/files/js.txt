@@ -1,0 +1,6 @@
+#base=js
+flowplayer-3.2.13.min.js
+jquery.colorbox-mod.js
+jquery.mcdcolorbox.js
+#jquery.tools.min.js
+flash_detect.js

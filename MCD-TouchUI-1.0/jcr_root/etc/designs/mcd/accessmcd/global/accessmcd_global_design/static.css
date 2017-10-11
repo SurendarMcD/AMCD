@@ -1,0 +1,185 @@
+/* Australia Redesign Styles*/
+
+/* general stuff */
+html{
+    height: 100%;    
+    /*max-height: 100%;*/ 
+}
+body{
+    
+    background: #FFFFFF;
+    /* Commented for ImageGallery & Video hanging issue*/
+   /* wid th: 90%;
+    hei ght: 90%;   */       
+    /*max-height: 100%;*/ 
+    _width: 98%;
+}
+
+/*Main div class for removing height and width from body (GA-ImageGallery & Video hanging issue)*/
+#compbody{
+    width: 100%;
+    height: 100%;      
+}
+
+body, img, a, div, td, th{
+    font: normal 13px Arial;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border: 0;
+}
+
+/* Commented for Tab issue*/
+/*
+ul {
+    margin:0 0 0 -26px;
+    #margin:0 0 0 16px;
+}
+ol {
+    margin:0 0 0 -20px;
+    #margin:0 0 0 24px;
+}
+*/
+
+a { 
+    color: #cd0000; 
+    background-color: transparent; 
+    text-decoration: underline; 
+    } 
+    
+a:visited { 
+    color: #cd0000; 
+    background-color: transparent; 
+    text-decoration: underline; 
+    } 
+    
+a:hover { 
+    color: #666666; 
+    background-color: transparent; 
+    text-decoration: underline; 
+    }
+a:active { 
+    color: #cd0000; 
+    background-color: transparent; 
+    text-decoration: underline; 
+    }
+
+h1{
+    margin: 0 0 0 0;
+}
+div.mainbody{
+    /*background: #FFFFFF;*/
+    height: 100%;   
+    /*max-height: 100%;*/
+}
+HTML .mainbody{    
+    /*height: 100%;*/   
+    /*max-height: 100%;*/
+}
+/**/
+/* Base Template Top Bar Layout*/
+div.topbar{
+    background: #333355; 
+    color: #FFFFFF; 
+    width: 100%;
+}
+div.logobar{     
+    float: left;
+    width: 75%; 
+}
+div.srchbar{     
+    float: right;
+    width: 25%;
+    text-align: right;
+}
+div.topnavsection{    
+    padding: 0 0 0 159px;
+}
+/**/
+/* Base Template Bottom Bar Layout*/
+div.bottombar{    
+    height: 100%; 
+    padding: 19px 0 0 0;  
+    /*max-height: 100%;*/
+    /* For GA Tab Component correction */
+     padding-left:2px;  
+}
+
+div.rightbar{    
+    height: 100%;
+    width: 100%;
+    float: left;
+    /*max-height: 100%;*/
+}
+div.rightsection{
+    margin-left: 159px;
+    height: 100%;
+}
+
+div.rightsectionNoLeftNav{
+    height: 100%;
+}
+
+div.leftbar{
+    background: #FFFFFF;
+    height: 100%; 
+    width: 140px;  
+    float: left;
+    margin-left: -100%;
+    /*max-height: 100%;*/    
+}
+div.breadcrumbbar{
+    width: 81%;    
+    float: left;
+}
+div.printbar{
+    width: 19%;    
+    float: right;
+    text-align: right; 
+}
+div.footerbar{    
+    text-align: center;    
+}
+/**/
+
+/* IE6 Parsys edit bar correction*/
+#CQ .x-toolbar .ytb-text {
+ white-space: normal;
+}
+
+div.clear{
+    clear: both;
+}
+/* parsys component */
+div.par {
+    clear: both;
+}
+div.parsys_column {
+    height: auto;
+    /*height: 100%;*/   /* commented for print glob correction*/
+    width: 100%;
+    float: left;
+    border: 0;
+    vertical-align:top;
+    padding: 0;
+    margin: 0 0 0 0;
+}
+div.containerColumnCntrl{
+    font-size: 0px;
+}
+div.section {
+    margin-bottom: 0px;
+    font-size:0px;
+    /* Property added to avoid IE hasLayout issue on paragraphs
+       see #20817 - IE6: div around Drag Components image not big enough
+    */
+    zoom: 1;
+}
+div.parsys_column .section {
+    overflow:hidden;
+    width: 100%;
+}
+
+.EverythingComponenttextandImage ul{
+    position:relative; 
+    left:20px;
+}  

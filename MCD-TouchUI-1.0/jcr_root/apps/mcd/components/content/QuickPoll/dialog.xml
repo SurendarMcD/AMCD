@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/admin/quick-poll.html?wcmmode=disabled"
+    title="Edit Quick Poll"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Poll">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <corner
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Rounded Corner"
+                        name="./corners"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <show
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </corner>
+                    <headline
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Title for the component"
+                        fieldLabel="Headline"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                    <pid
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="ID of the poll generated in Opinio"
+                        fieldLabel="Poll Id"
+                        name="./pid"
+                        width="{Long}5"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <Image
+                jcr:primaryType="cq:Widget"
+                autoWidth="{Boolean}false"
+                cropParameter="./image/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                height="{Long}600"
+                mapParameter="./image/imageMap"
+                name="./image/file"
+                requestSuffix="/image.img.png"
+                rotateParameter="./image/imageRotate"
+                sizeLimit="{Long}100"
+                title="Image"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage"/>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content/>
+    <test123/>
+    <tester_suneel/>
+    <rep:policy/>
+    <apmea/>
+    <corp/>
+    <na/>
+    <mcd/>
+    <eu/>
+    <util/>
+    <wwc/>
+    <assets_page/>
+    <search/>
+    <sitesAZ/>
+    <test/>
+    <north_america_dummy/>
+    <gcd/>
+    <ja/>
+    <global/>
+    <us/>
+    <oak-brook-home-office-region-news/>
+    <all-news/>
+    <advsearch/>
+    <qa_ace_test/>
+    <cmor2013/>
+</jcr:root>

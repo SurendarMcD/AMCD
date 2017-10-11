@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: gmsbundle
+Bundle-Description: 
+Bundle-SymbolicName: gmsbundle
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.gmt.product.Activator

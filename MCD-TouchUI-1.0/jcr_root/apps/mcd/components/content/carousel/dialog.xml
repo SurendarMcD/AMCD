@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="550"
+    title="Carousel Component"
+    width="800"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1 jcr:primaryType="cq:Panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <message
+                    jcr:primaryType="nt:unstructured"
+                    html="&lt;div style=&quot;margin-bottom:20px;font-weight:bold;&quot;> Carousel recommended image size is 1024 x 408 px (width x height). &lt;/div>"
+                    xtype="label"/>
+                <speed
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldDescription="Enter the speed (in millisecs) after which you want next section to display"
+                    fieldLabel="Speed"
+                    id="speed"
+                    name="./speed"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option1
+                            jcr:primaryType="cq:Widget"
+                            text="3000"
+                            value="3000"/>
+                        <option2
+                            jcr:primaryType="cq:Widget"
+                            text="5000"
+                            value="5000"/>
+                        <option3
+                            jcr:primaryType="cq:Widget"
+                            text="7000"
+                            value="7000"/>
+                        <option4
+                            jcr:primaryType="cq:Widget"
+                            text="10000"
+                            value="10000"/>
+                    </options>
+                </speed>
+                <images
+                    jcr:primaryType="cq:Widget"
+                    border="false"
+                    fieldLabel="Images"
+                    id="tab2"
+                    name="./images"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="carouselmultifield"/>
+                </images>
+                <images-typehint
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./images@TypeHint"
+                    value="String[]"
+                    xtype="hidden"/>
+            </items>
+        </tab1>
+    </items>
+</jcr:root>

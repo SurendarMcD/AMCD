@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    autoWidth="{Boolean}false"
+    helpPath="/content/accessmcd/mcd/online_man/components/top-nav.html?wcmmode=disabled"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <Text
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Top Navigation"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <check
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Include round corners"
+                        name="./checkRoundCorners"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <check
+                                jcr:primaryType="nt:unstructured"
+                                value="true"/>
+                        </options>
+                    </check>
+                    <list
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Root Path"
+                        name="./listroot"
+                        rootPath="/content"
+                        xtype="pathcompletion"/>
+                    <parentLevel
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        disabled="false"
+                        fieldDescription="(eg. 1-  /content/geo...) &lt;br> Note**  If both the Root Path &amp; Parent level values are given then the value for Parent Level will be considered."
+                        fieldLabel="Parent Level(absolute)"
+                        fieldSubLabel="Enter numeric value only"
+                        grow="false"
+                        hideLabel="false"
+                        hideMode="display"
+                        inputType="text"
+                        name="./parentLevel"
+                        readOnly="false"
+                        selectOnFocus="false"
+                        validateOnBlur="true"
+                        xtype="numberfield"/>
+                </items>
+            </Text>
+            <Advanced
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Advanced Options"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <dispTopNavImg
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="yes"
+                        fieldLabel="Top Navigation"
+                        name="./dispTopNavImg"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <dispImageOnly
+                                jcr:primaryType="nt:unstructured"
+                                text="display image only"
+                                value="no"/>
+                            <dispImageWithTitle
+                                jcr:primaryType="nt:unstructured"
+                                text="display image with title"
+                                value="yes"/>
+                        </options>
+                    </dispTopNavImg>
+                </items>
+            </Advanced>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){var list=dialog.getField('./listroot').getValue();var plevel=dialog.getField('./parentLevel').getValue();if(plevel=='' &amp;&amp; list==''){plevel=parseInt(plevel);if(plevel==0){return true;}else{alert(CQ.I18n.getMessage('Author must provide value in either of the two fields - Root Path or Parent level(absolute)')); return false;}}else{plevel=plevel*1; if(plevel&lt;0){alert(CQ.I18n.getMessage('Parent Level Cannot be a negative value'));return false;}plevel=plevel+''; if(plevel.indexOf('.')>0){ alert(CQ.I18n.getMessage('Parent level cannot be in Decimal')); return false;}}}&#xa;"/>
+</jcr:root>

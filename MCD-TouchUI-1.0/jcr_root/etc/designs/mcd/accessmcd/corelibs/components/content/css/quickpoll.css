@@ -1,0 +1,43 @@
+/* START QUICKPOLL STYLES */
+.quickPollBox{
+    margin-bottom: 10px;
+    background:#fff;
+    text-align:left;
+    width: auto;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+}
+
+.quickPollTitle {
+    width: 100%;
+    *min-width: 100%;
+    background: #f3f3f3;
+    font-size:32px; 
+    line-height:36px; 
+    color:#990000; 
+    font-weight:normal;
+    border-bottom: 1px solid #CCC;
+    -webkit-border-radius: 12px 12px 0 0;
+    -moz-border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+}
+
+.quickPollTitlePadding {
+    padding: 6px 6px 6px 6px;
+}
+
+.quickPollContent {
+    width: 100%;
+    *min-width: 100%;
+    padding: 6px 0 6px 0;
+    -webkit-border-radius: 0 0 12px 12px;
+    -moz-border-radius: 0 0 12px 12px;
+    border-radius: 0 0 12px 12px;
+    behavior: url('/etc/designs/mcd/accessmcd/corelibs/htc/PIE.htc');
+    text-align:center;
+}
+/* END QUICKPOLL STYLES */

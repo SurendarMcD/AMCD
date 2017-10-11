@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <global
+                jcr:primaryType="cq:Panel"
+                title="Tab1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <globalCatId
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="PCI Category Id"
+                        name="./globalCatId"
+                        xtype="textfield"/>
+                    <globalTitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue=""
+                        fieldLabel="Title"
+                        name="./globalTitle"
+                        xtype="textfield"/>
+                    <globalSortType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="rchrono"
+                        fieldLabel="Sort Type"
+                        name="./globalSortType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <chrono
+                                jcr:primaryType="nt:unstructured"
+                                text="chrono"
+                                value="&#xa;chrono"/>
+                            <rChrono
+                                jcr:primaryType="nt:unstructured"
+                                text="rchrono"
+                                value="rchrono"/>
+                            <alpha
+                                jcr:primaryType="nt:unstructured"
+                                text="alpha"
+                                value="alpha"/>
+                        </options>
+                    </globalSortType>
+                    <globalEntityType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="US"
+                        fieldLabel="Entity Type"
+                        name="./globalEntityType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <US
+                                jcr:primaryType="nt:unstructured"
+                                text="US"
+                                value="US"/>
+                            <ENT
+                                jcr:primaryType="nt:unstructured"
+                                text="ENT"
+                                value="ENT"/>
+                            <AU
+                                jcr:primaryType="nt:unstructured"
+                                text="AU"
+                                value="AU"/>
+                        </options>
+                    </globalEntityType>
+                    <globalViewType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="content"
+                        fieldLabel="View Type"
+                        name="./globalViewType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                text="content"
+                                value="content"/>
+                        </options>
+                    </globalViewType>
+                    <globalNewsStyleSheet
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Style Sheet Path"
+                        name="./globalNewsStyleSheet"
+                        rootPath="/content/dam/accessmcd"
+                        xtype="pathfield"/>
+                </items>
+            </global>
+            <mcd
+                jcr:primaryType="cq:Panel"
+                title="Tab2">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <mcdCatId
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="PCI Category Id"
+                        name="./mcdCatId"
+                        xtype="textfield"/>
+                    <mcdTitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue=""
+                        fieldLabel="Title"
+                        name="./mcdTitle"
+                        xtype="textfield"/>
+                    <mcdSortType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="rchrono"
+                        fieldLabel="Sort Type"
+                        name="./mcdSortType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <chrono
+                                jcr:primaryType="nt:unstructured"
+                                text="chrono"
+                                value="&#xa;chrono"/>
+                            <rChrono
+                                jcr:primaryType="nt:unstructured"
+                                text="rchrono"
+                                value="rchrono"/>
+                            <alpha
+                                jcr:primaryType="nt:unstructured"
+                                text="alpha"
+                                value="alpha"/>
+                        </options>
+                    </mcdSortType>
+                    <mcdEntityType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="US"
+                        fieldLabel="Entity Type"
+                        name="./mcdEntityType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <US
+                                jcr:primaryType="nt:unstructured"
+                                text="US"
+                                value="US"/>
+                            <ENT
+                                jcr:primaryType="nt:unstructured"
+                                text="ENT"
+                                value="ENT"/>
+                            <AU
+                                jcr:primaryType="nt:unstructured"
+                                text="AU"
+                                value="AU"/>
+                        </options>
+                    </mcdEntityType>
+                    <mcdViewType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="content"
+                        fieldLabel="View Type"
+                        name="./mcdViewType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                text="content"
+                                value="content"/>
+                        </options>
+                    </mcdViewType>
+                    <mcdNewsStyleSheet
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Style Sheet Path"
+                        name="./mcdNewsStyleSheet"
+                        rootPath="/content/dam/accessmcd"
+                        xtype="pathfield"/>
+                </items>
+            </mcd>
+            <us
+                jcr:primaryType="cq:Panel"
+                title="Tab3">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <usCatId
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="PCI Category Id"
+                        name="./usCatId"
+                        xtype="textfield"/>
+                    <usNewsTitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue=""
+                        fieldLabel="Title"
+                        name="./usTitle"
+                        xtype="textfield"/>
+                    <usSortType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="rchrono"
+                        fieldLabel="Sort Type"
+                        name="./usSortType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Chrono
+                                jcr:primaryType="nt:unstructured"
+                                text="chrono"
+                                value="&#xa;chrono"/>
+                            <rChrono
+                                jcr:primaryType="nt:unstructured"
+                                text="rchrono"
+                                value="rchrono"/>
+                            <alpha
+                                jcr:primaryType="nt:unstructured"
+                                text="alpha"
+                                value="alpha"/>
+                        </options>
+                    </usSortType>
+                    <usEntityType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="US"
+                        fieldLabel="Entity Type"
+                        name="./usEntityType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <US
+                                jcr:primaryType="nt:unstructured"
+                                text="US"
+                                value="US"/>
+                            <ENT
+                                jcr:primaryType="nt:unstructured"
+                                text="ENT"
+                                value="ENT"/>
+                            <AU
+                                jcr:primaryType="nt:unstructured"
+                                text="AU"
+                                value="AU"/>
+                        </options>
+                    </usEntityType>
+                    <usViewType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="content"
+                        fieldLabel="View Type"
+                        name="./usViewType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                text="content"
+                                value="content"/>
+                        </options>
+                    </usViewType>
+                    <usNewsStyleSheet
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Style Sheet Path"
+                        name="./usNewsStyleSheet"
+                        rootPath="/content/dam/accessmcd"
+                        xtype="pathfield"/>
+                </items>
+            </us>
+            <regional
+                jcr:primaryType="cq:Panel"
+                title="Regional News">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <regionalNewsCatId
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="PCI Category Id"
+                        name="./regionalCatId"
+                        xtype="textfield"/>
+                    <regionalNewsTitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue=""
+                        fieldLabel="Title"
+                        name="./regionTitle"
+                        xtype="textfield"/>
+                    <regionalSortType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="rchrono"
+                        fieldLabel="Sort Type"
+                        name="./regionalSortType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Chrono
+                                jcr:primaryType="nt:unstructured"
+                                text="chrono"
+                                value="chrono"/>
+                            <rChrono
+                                jcr:primaryType="nt:unstructured"
+                                text="rchrono"
+                                value="rchrono"/>
+                            <alpha
+                                jcr:primaryType="nt:unstructured"
+                                text="alpha"
+                                value="alpha"/>
+                        </options>
+                    </regionalSortType>
+                    <regionalEntityType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="US"
+                        fieldLabel="Entity Type"
+                        name="./regionalEntityType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <US
+                                jcr:primaryType="nt:unstructured"
+                                text="US"
+                                value="US"/>
+                            <ENT
+                                jcr:primaryType="nt:unstructured"
+                                text="ENT"
+                                value="ENT"/>
+                            <AU
+                                jcr:primaryType="nt:unstructured"
+                                text="AU"
+                                value="AU"/>
+                        </options>
+                    </regionalEntityType>
+                    <regionalViewType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="content"
+                        fieldLabel="View Type"
+                        name="./regionalViewType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                text="content"
+                                value="content"/>
+                        </options>
+                    </regionalViewType>
+                    <regionalNewsStyleSheet
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Style Sheet Path"
+                        name="./regionalNewsStyleSheet"
+                        rootPath="/content/dam/accessmcd"
+                        xtype="pathfield"/>
+                </items>
+            </regional>
+        </items>
+    </items>
+</jcr:root>

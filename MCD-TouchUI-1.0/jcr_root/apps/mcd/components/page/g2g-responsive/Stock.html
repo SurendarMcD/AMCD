@@ -1,0 +1,67 @@
+<script id="productData-template1" type="text/x-handlebars-template">
+ <div class="stockInfo">  
+<table width="70%" cellspacing="0" cellpadding="0" border="0" class="qtable">
+  <tbody>
+    <tr class="ccbnOutline">
+      <td valign="top"><table width="100%" cellspacing="1" cellpadding="3" border="0">
+          <tbody>
+            <tr class="ccbnBgTblTtl">
+              <td colspan="2"><span class="ccbnTblTtl">
+                <a href="http://finance.yahoo.com/q?s= {{symbolVal}}" target="_blank">  {{companyVal}} (Symbol:  {{symbolVal}} )</a>
+                </span> </td>
+            </tr>
+            <tr class="ccbnBgTblOdd">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">Exchange</span> </td>
+              <td valign="top" nowrap="nowrap"><span class="ccbnTblTxt">NYSE</span> <span class="ccbnTblTxt"> (US Dollar)</span> </td>
+            </tr>
+            <tr class="ccbnBgTblEven">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">Price</span> </td>
+              <td width="100%" valign="top" nowrap="nowrap" class="ccbnBgPrice"><span class="ccbnPriceMain">{{dollarVal}}{{stockPriceVal}}</span> </td>
+            </tr>
+            <tr class="ccbnBgTblOdd">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">Change</span> <span class="ccbnTblLabelLeft"> (%)</span> </td>
+              <td nowrap="nowrap">&nbsp;
+               {{#if changeDirectionVal }} 
+              <img width="9" hspace="2" height="9" alt="Stock is Up" src="/apps/mcd/docroot/images/arrow_upGreen.gif">&nbsp; <span class="ccbnPos">{{changeVal}}</span> <span class="ccbnPos">&nbsp;({{changePercentVal}})</span> </td>
+              {{else}}
+              <img width="9" hspace="2" height="9" alt="Stock is Down" src="/apps/mcd/docroot/images/arrow_downRed.gif">&nbsp; <span class="ccbnPos">{{changeVal}}</span> <span class="ccbnPos">&nbsp;({{changePercentVal}})</span></td>
+            {{/if}}
+            </tr>
+            <tr class="ccbnBgTblEven">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">Volume</span> </td>
+              <td nowrap="nowrap"><span class="ccbnTblTxt">{{volumeVal}}</span> </td>
+            </tr> 
+            <tr class="ccbnBgTblOdd">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">Todays Open</span> </td>
+              <td nowrap="nowrap"><span class="ccbnTblTxt">{{dollarVal}}{{openVal}}</span> </td>
+            </tr>
+            <tr class="ccbnBgTblEven">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">Previous Close</span></td>
+              <td nowrap="nowrap"><span class="ccbnTblTxt">{{dollarVal}}{{prevCloseVal}}</span></td>
+            </tr>
+            <tr class="ccbnBgTblOdd">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">Intraday High</span></td>
+              <td nowrap="nowrap"><span class="ccbnTblTxt">{{dollarVal}}{{daysHighVal}}</span></td>
+            </tr>
+            <tr class="ccbnBgTblEven">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">Intraday Low</span></td>
+              <td nowrap="nowrap"><span class="ccbnTblTxt">{{dollarVal}}{{daysLowVal}}</span></td>
+            </tr>
+            <tr class="ccbnBgTblOdd">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">52 Week High</span></td>
+              <td nowrap="nowrap"><span class="ccbnTblTxt">{{dollarVal}}{{yearHighVal}}</span></td>
+            </tr>
+            <tr class="ccbnBgTblEven">
+              <td valign="top" nowrap="nowrap" class="ccbnBgTblLabelLeft"><span class="ccbnTblLabelLeft">52 Week Low</span></td>
+              <td nowrap="nowrap"><span class="ccbnTblTxt">{{dollarVal}}{{yearLowVal}}</span></td>
+            </tr>
+            <tr class="ccbnBgTblEven">
+            <td colspan="2"><span class="ccbnTblSubTxt">Data as of {{lastTradeDateVal}}&nbsp;{{lastTradeTimeVal}} ET<br></span><span class="ccbnTblSubTxt">Minimum 15 minute delay<br><a class="ccbnTblSubLnk" href="javascript:self.location.reload()">Refresh quote</a></span></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</script>

@@ -1,0 +1,53 @@
+#slideShow h2 {
+    margin: 2px 0 0 0px !important;
+}
+
+#slideShow #featureTeaser {
+    position: relative !important; top: 0px !important; line-height: 13px;
+}
+
+.cq-wcm-edit #slide-img, .cq-wcm-design #slide-img {width: 193px !important;}
+.cq-wcm-edit #slide-img1, .cq-wcm-edit #slide-img2, .cq-wcm-edit #slide-img3, .cq-wcm-edit .slidelink, 
+.cq-wcm-design #slide-img1, .cq-wcm-design #slide-img2, .cq-wcm-design #slide-img3, .cq-wcm-design .slidelink { display: none !important; }
+.cq-wcm-design #slideShow .carousel {position: relative; left: 0px;}
+
+#slideShow {margin:0; padding:0px; position:relative; float:right; text-align: left;}
+#slideShow div { margin:0px; padding:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000; font-weight:bold;}
+#slideShow div h2{font-size:16px; line-height:20px; margin:0px; padding:0px;}
+#slideShow img.slideImg{cursor: hand; cursor: pointer;}
+#slideShow .slidelink a{font-size:10px; color:#004276; font-weight:bold; font-family:Arial, Helvetica, sans-serif !important; text-decoration:underline;}
+#slideShow .carousel{position: relative; top: -10px; left: -5px; width: 100%; margin: 0 auto; text-align: center;}
+#slideShow .carousel .icon{
+        background:url(/images/carousel.png) no-repeat;
+        padding:0px 6px;
+        cursor: hand; cursor: pointer;
+}
+
+#slideShow .carousel .selected{
+        background:url(/images/carousel_selected.png) no-repeat;
+}
+
+#slideShow .carousel ul{margin:0px;}
+#slideShow .carousel li{
+        display:inline;
+        list-style:none;
+        content:"";
+
+}
+
+#slide-info {
+    position:absolute;
+    opacity:0.6;
+    filter: alpha(opacity=80);
+    background-color:#fff;
+    height:80px;
+    width:422px;
+    top:290px;
+    text-align:left;
+}        
+#slide-img {position:relative;}
+.thumb-info{position:absolute; padding: 2px 5px 10px 5px !important; margin-left:0px;width:173px;opacity:0.6 !important;filter: alpha(opacity=60) !important;background-color:#fff;display:none}
+
+.parbase.carousel {
+    overflow: hidden;
+}

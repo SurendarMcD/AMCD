@@ -1,0 +1,57 @@
+body { background: #DEDEDE !important; }
+#pagecontentwrapper {width: 980px !important; background: #fff !important; margin-top:1px !important; padding: 20px 0px 20px 20px !important; }
+
+/* US Custom Column Sizes */
+.cq-wcm-edit #content_txt {width:490px !important;}
+.cq-wcm-edit #right_content_par, .cq-wcm-design #right_content_par {width: 180px !important;}
+#right_content_par {max-width: 180px;}
+
+/*Like*/
+.likeCount {background:url(/etc/designs/mcd/accessmcd/g2g/g2g_red_us/images/like.jpg) left top no-repeat;padding-top:5px;height:25px;padding-left:30px;border:0;opacity:0.5;filter:alpha(opacity=50);display:block;}
+.likeCount_fr {background:url(/etc/designs/mcd/accessmcd/g2g/g2g_red_us/images/jaime2.jpg) left top no-repeat;padding-top:3px;height:25px;padding-left:42px;border:0;opacity:0.5;filter:alpha(opacity=50);display:block;}
+.likePage {padding-left: 20px; background: url(/etc/designs/mcd/accessmcd/g2g/g2g_red_us/images/smiley44.jpg) -4px -4px no-repeat;}
+/*pagecomment Like*/
+.reply-img
+{
+    background:url(/etc/designs/mcd/accessmcd/g2g/g2g_red_us/images/like.jpg) left top no-repeat;
+    border:0;
+    height: 25px;
+    opacity:0.5;
+    width: 25px;
+    filter:alpha(opacity=50);
+    text-indent:-9999px;
+    padding-left:16px;
+    vertical-align: middle;
+}
+
+
+.reply-img_fr
+{
+    background:url(/etc/designs/mcd/accessmcd/g2g/g2g_red_us/images/jaime2.jpg) left top no-repeat;
+    border:0;
+    height: 25px;
+    opacity:0.5;
+    width: 40px;
+    filter:alpha(opacity=50);
+    text-indent:-9999px;
+    padding-left:16px;
+    vertical-align: middle;
+}
+
+.replydiv form {float: inherit;}
+
+.reply-smile-img {padding-left: 20px; background: url(/etc/designs/mcd/accessmcd/g2g/g2g_red_us/images/smiley44.jpg) -4px -4px no-repeat; display: inherit; height: 16px;}
+
+.excontainer.mid-year-conversation .panel-heading.active {
+    color: #dc291e !important;
+}
+.acc-sub-heading {
+    color: #dc291e !important;
+}
+.sideLinks {
+    border: 2px solid #dc291e;
+    color: #dc291e;
+}
+.sideLine {
+    color: #dc291e;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="400"
+    stateful="false"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <basic
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_basic.infinity.json"
+                    xtype="cqinclude"/>
+                <advanced
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_advanced.infinity.json"
+                    xtype="cqinclude"/>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_image.infinity.json"
+                    xtype="cqinclude"/>
+                <analytics
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/cq/analytics/components/analytics/tab_analytics.infinity.json"
+                    xtype="cqinclude"/>
+                <blueprint
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_blueprint.infinity.json"
+                    xtype="cqinclude"/>
+                <livecopy
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_livecopy.infinity.json"
+                    xtype="cqinclude"/>
+                <author
+                    jcr:primaryType="cq:Panel"
+                    title="Author">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <name
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            blankText="Author Name is mandatory"
+                            fieldLabel="Author Name"
+                            name="./authorName"
+                            xtype="textfield"/>
+                        <email
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            blankText="Author Email is mandatory"
+                            fieldLabel="Author Email"
+                            name="./authorEmail"
+                            regex="/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\\.([a-zA-Z])+([a-zA-Z])+/"
+                            xtype="textfield"/>
+                    </items>
+                </author>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

@@ -1,0 +1,9 @@
+# Export-Package: *
+# Import-Package: *
+Private-Package: com.tv.servlets
+# Include-Resource: 
+Bundle-Name: com.tv.servlets
+Bundle-Description: 
+Bundle-SymbolicName: com.tv.servlets
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.tv.servlets.Activator

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    width="{Long}500">
+    <items
+        jcr:primaryType="cq:Dialog"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <wogsearch
+                jcr:primaryType="cq:Widget"
+                title="World of Good"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <category
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./menucategory"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="wogcategory"/>
+                    </category>
+                </items>
+            </wogsearch>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){ &#xa;&#x9;var item = dialog.getField('./menucategory').getValue(); &#xa;&#x9;for(i=0;i&lt;item.length;i++){ &#xa;&#x9;&#x9;var categoryName = item[i]; &#xa;&#x9;&#x9;if(categoryName == ''){ &#xa;&#x9;&#x9;&#x9;var temp = i + 1;&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show(&#xa;&#x9;&#x9;&#x9;{&#xa;&#x9;&#x9;&#x9;&#x9;'title':'Category Value Validation',&#xa;&#x9;&#x9;&#x9;&#x9;'msg':'Please provide the category information for dropdown ' +temp,&#xa;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;&#xa;&#x9;if(item.length > 1){&#xa;&#x9;&#x9;var sorted_arr = item.sort();&#xa;&#x9;&#x9;for (j = 0; j &lt; item.length; j++) {&#xa;&#x9;&#x9;    if (sorted_arr[j + 1] == sorted_arr[j]) {&#xa;&#x9;&#x9;&#x9;CQ.Ext.Msg.show(&#xa;&#x9;&#x9;&#x9;{&#xa;&#x9;&#x9;&#x9;&#x9;'title':'Duplicate Category Values Validation',&#xa;&#x9;&#x9;&#x9;&#x9;'msg':'Please remove duplicate entry found for category ' + sorted_arr[j] ,&#xa;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;}); &#xa;&#x9;&#x9;&#x9;return false;&#xa;&#x9;&#x9;    }&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;&#xa;}&#xa;&#xa;"/>
+</jcr:root>

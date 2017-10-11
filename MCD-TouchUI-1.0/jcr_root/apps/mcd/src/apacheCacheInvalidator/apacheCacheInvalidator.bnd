@@ -1,0 +1,9 @@
+Export-Package: *
+Import-Package: *
+Private-Package: *
+# Include-Resource: 
+Bundle-Name: Apache Cache Invalidator
+Bundle-Description: Sends scheduled HTTP invalidate requests to Apache flush server
+Bundle-SymbolicName: apacheCacheInvalidator
+Bundle-Version: 1.0.0-SNAPSHOT
+Bundle-Activator: com.mcd.accessmcd.webserver.util.Activator

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:actions="[]"
+    jcr:primaryType="cq:EditConfig">
+    <cq:actionConfigs jcr:primaryType="nt:unstructured">
+        <enable
+            jcr:primaryType="nt:unstructured"
+            handler="function(){&#xa;&#x9;CQ.HTTP.post(&#xa;&#x9;&#x9;'/bin/replicate.json',&#xa;&#x9;&#x9;function(options,success,response){&#xa;&#x9;&#x9;&#x9;if (success){&#xa;&#x9;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Enable Comment'),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Comment has been enabled successfully.'),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'fn':function(btnId){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if(btnId == 'ok'){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;window.location.reload();&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;},&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;else{&#xa;&#x9;&#x9;&#x9;&#x9;CQ.Notification.notifyFromResponse(response);&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;},&#xa;&#x9;&#x9;{ '_charset_':'utf-8', 'path':this.path, 'cmd':'Activate'}&#xa;&#x9;);&#xa;}"
+            text="Enable Comment"/>
+        <disable
+            jcr:primaryType="nt:unstructured"
+            handler="function(){&#xa;&#x9;CQ.HTTP.post(&#xa;&#x9;&#x9;CQ.shared.HTTP.externalize('/bin/replicate.json'),&#xa;&#x9;&#x9;function(options,success,response){ &#xa;&#x9;&#x9;&#x9;if (success){&#xa;&#x9;&#x9;&#x9;&#x9;CQ.Ext.Msg.show({&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'title':CQ.I18n.getMessage('Disable Comment'),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'msg':CQ.I18n.getMessage('Comment has been disabled successfully.'),&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'buttons':CQ.Ext.Msg.OK,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'icon':CQ.Ext.MessageBox.INFO,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'fn':function(btnId){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if(btnId == 'ok'){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;window.location.reload();&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;},&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;'scope':this&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;else{&#xa;&#x9;&#x9;&#x9;&#x9;CQ.Notification.notifyFromResponse(response);&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;},&#xa;&#x9;&#x9;{'_charset_':'utf-8','path':this.path,'cmd':'Deactivate'}&#xa;&#x9;);&#xa;}"
+            text="Disable Comment"/>
+    </cq:actionConfigs>
+</jcr:root>

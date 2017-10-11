@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DtdXHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PM++ Portfolio - Dashboard</title>
+<style type="text/css">
+
+rHeader {font-family: arial; font-size: 20pt; border-top: solid 1px #b9a894;}
+
+TD {font-family: arial; font-size: 8pt; }
+TR {valign: 'top'; align: "left";}
+TH {font-family: arial; font-size: 8pt; border-top: solid 1px #b9a894;}
+
+</style>
+<script type="text/javascript" src="/scripts/jquery-1.3.2.min.js"></script> 
+<script type="text/javascript">
+
+//Colors
+var reportbackgroundcolor = "white";
+var reporttextcolor = "black";
+var reportheadertextcolor = "#b70000";
+var reportheaderbackgroundcolor = "lightblue";
+var projecttableheaderbackgroundcolor = "#FFB90F";
+var projecttableheadertextcolor = "lightblue";
+var projecttablerowcolor = "#FFFFBB";
+var projecttablerowcoloralt = "white";
+var projecttabletextcolor = "black";
+var projecttablefooterbackgroundcolor = "lightgrey";
+var reportfooterbackgroundcolor = "lightgrey";
+var reportfootertextcolor = "brown";
+
+
+// XML IMPORT FUNCTIONS
+var xmlDoc;
+ 
+function importXML()
+{ 
+    var pteam = location.search.substr(1).split("?");
+    alert("document.implementation :: "+window.ActiveXObject);
+    alert("document.implementation.createDocument :: "+ document.implementation.createDocument);
+    if(document.implementation && document.implementation.createDocument)
+    {
+        
+        xmlDoc = document.implementation.createDocument("", "", null);
+        xmlDoc.async="false";
+        if(xmlDoc){
+        }
+        xmlDoc.load("/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/2011_Portfolio/portfolio.xml");
+        xmlDoc.onload = createTable('writeroot',pteam);
+        alert("Inside If");
+    }
+    else if (window.ActiveXObject)
+    {
+        alert("Inside ELSE");
+        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        xmlDoc.onreadystatechange = function () {
+            if (xmlDoc.readyState == 4){    
+
+                if(pteam=="ITR"){   
+                createTable('writeroot',"IT Restaurants");
+                }
+                else if (pteam=="ITA"){
+                createTable('writeroot',"IT APMEA");
+                }
+                else if (pteam=="ITB"){
+                createTable('writeroot',"IT Business");
+                }
+                else if (pteam=="ITE"){
+                createTable('writeroot',"IT Europe");
+                }
+                else if (pteam=="ITF"){
+                createTable('writeroot',"IT Foundation");
+                }
+                else if (pteam=="ITP"){
+                createTable('writeroot',"IT People");
+                }
+                else if (pteam=="ITJ"){
+                createTable('writeroot',"Japan IT");
+                }
+                else if (pteam=="ITO"){
+                createTable('writeroot',"IT Operations and Supply Chain Solutions");
+                }
+                else if (pteam=="ITU"){
+                createTable('writeroot',"IT USA");
+                }
+                else if (pteam=="GTM/LI"){
+                createTable('writeroot',"GTM/LI");
+                }
+                else if (pteam=="INV"){
+                createTable('writeroot',"Innovation");
+                }
+                else if (pteam=="IAC"){
+                createTable('writeroot',"Internal Audit and Controls");
+                }
+                else if (pteam=="NASS"){
+                createTable('writeroot',"Shared Services");
+                }
+                else if (pteam=="USTLD"){
+                createTable('writeroot',"USTLD");
+                }
+                else if (pteam=="WWTLD"){
+                createTable('writeroot',"WWTLD");
+                }
+                else if (pteam=="WWO"){
+                createTable('writeroot',"WW Operations");
+                }
+                else if (pteam=="ITENT"){
+                createTable('writeroot',"IT Enterprise");
+                }
+                else if (pteam=="WWD"){
+                createTable('writeroot',"WW Development");
+                }
+                else{ // Show all teams
+                createTable('writeroot',"IT APMEA");
+                createTable('writeroot',"IT Business");
+                createTable('writeroot',"IT Europe");
+                createTable('writeroot',"IT Foundation");
+                createTable('writeroot',"Japan IT");
+                createTable('writeroot',"IT Operations and Supply Chain Solutions");
+                createTable('writeroot',"IT People");
+                createTable('writeroot',"IT Restaurants");
+                createTable('writeroot',"IT USA");
+                createTable('writeroot',"GTM/LI");
+                createTable('writeroot',"Innovation");
+                createTable('writeroot',"Internal Audit and Controls");
+                createTable('writeroot',"Shared Services");
+                createTable('writeroot',"USTLD");
+                createTable('writeroot',"WWTLD");
+                createTable('writeroot',"WW Operations");
+                createTable('writeroot',"IT Enterprise");
+                createTable('writeroot',"WW Development");
+                }
+
+            }
+        };
+// Local
+//xmlDoc.load("portfolio.xml");
+// AccessMcd uploaded cml
+xmlDoc.load("/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/2011_Portfolio/portfolio.xml");
+
+
+//Live
+//xmlDoc.load("https://dmc.accessmcd.com/content/mcmac/storagearea/wa1/d08e82a5f34f0a4949ae09aa010899ff/1313505.AssetPar.Single.File.0.tmp.x.xml");
+
+    }
+    else
+    {
+        alert('Your browser can not handle this script');
+        return;
+    }
+
+
+}
+
+function createTable(wroot, varea)
+{
+    var project = xmlDoc.getElementsByTagName('project');
+    alert("Project :: " + project);
+    var nCOLS = 25;
+    var nprojects =0;
+    var adoption =0;
+    alert(project[0].getElementsByTagName('scorecardeffectivedate'));
+    var colrefresh = project[0].getElementsByTagName('scorecardeffectivedate');
+
+// Create Report Header Section
+    var rheader = document.createElement('TABLE');  
+    rheader.style.color=reportheadertextcolor; 
+    rheader.style.fontSize=20; 
+    rheader.style.width='100%'; 
+
+    var tmp1 = document.createElement('TBODY');
+    rheader.appendChild(tmp1);
+    var row1 = document.createElement('TR');
+    row1.style.align='left';
+    row1.style.backgroundColor=reportheaderbackgroundcolor; 
+    var container1 = document.createElement('TH'); 
+    container1.style.align='left'; 
+    var str="MCD / "+varea + " Dashboard (As of "+colrefresh[0].firstChild.nodeValue+")";
+    var theData1 = document.createTextNode(str.toUpperCase());
+    container1.appendChild(theData1);
+    row1.appendChild(container1);
+    tmp1.appendChild(row1);
+
+    var row2 = document.createElement('TR');
+    row2.style.backgroundColor=reportbackgroundcolor; 
+    var container2 = document.createElement('TD'); 
+    container2.style.align='left';
+    var d = new Date();
+    str="[Report generated on "+(d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes();
+    str+="hrs] Dashboard produced on scorecard data effective as of Friday 5:00 pm, project scorecards updated after that time might not reflect on this report. Please note, links to scorecard pulls the most recent DMC version of the scorecard. Use the browser print funtion to print this report. "
+    theData1 = document.createTextNode(str);
+    container2.appendChild(theData1);
+    row2.appendChild(container2);
+    tmp1.appendChild(row2);
+
+    document.getElementById(wroot).appendChild(rheader);
+
+// Create Project Table - Header
+    var newEl = document.createElement('TABLE');    
+    newEl.setAttribute('cellPadding',2);
+    newEl.setAttribute('border',0);
+    newEl.setAttribute('width',"100%");
+    newEl.setAttribute('font-size',"12px");
+    newEl.setAttribute('cellSpacing',0);
+
+    var tmp = document.createElement('TBODY');
+//  tmp.style.fontSize=10; 
+    newEl.appendChild(tmp);
+    var row = document.createElement('TR');
+    row.style.backgroundColor=projecttableheaderbackgroundcolor; 
+//  row.setAttribute('align',"Left");
+    
+    for (j=0;j<project[0].childNodes.length;j++)
+    {
+        if (project[0].childNodes[j].nodeType != 1) continue;
+        var container = document.createElement('TH');
+
+        switch(j){
+
+        case 0: //Category
+        var colm = project[0].getElementsByTagName('category');
+        var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 1://Project Id
+        var colm = project[0].getElementsByTagName('projectid');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        var theData = document.createTextNode("#");
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 2://Project Name
+//      container.setAttribute('width',"30%");
+        var colm = project[0].getElementsByTagName('projectname');
+        var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+
+        case 3: //Project Manager
+        var colm = project[0].getElementsByTagName('projectmanager');
+        var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 4: //Project Owner
+        break;
+
+        case 5: //Team
+        break;
+
+        case 6: // current PM++ phase
+        var colm = project[0].getElementsByTagName('currentpmppphase');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        var theData = document.createTextNode("Phase");
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 7: // Start date
+        var colm = project[0].getElementsByTagName('conceptualactualstartdate');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        var theData = document.createTextNode("Start");
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 8: // end date
+        var colm = project[0].getElementsByTagName('deploymentprojectedenddate');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        var theData = document.createTextNode("End");
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+
+        case 9: // Schedule Previous
+//      var colm = project[0].getElementsByTagName('scheduleprevious');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+//      var theData = document.createTextNode("Sch. Prev");
+//      container.appendChild(theData);
+//      row.appendChild(container);
+        break;
+
+        case 10: //Schedule Current
+        var colm = project[0].getElementsByTagName('schedulecurrent');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        var theData = document.createTextNode("Schedule");
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 11: //Budget Current
+        var colm = project[0].getElementsByTagName('budgetcurrent');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        var theData = document.createTextNode("Budget");
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 12: //Scope Current
+        var colm = project[0].getElementsByTagName('scopecurrent');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        var theData = document.createTextNode("Scope");
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 13: //OVerall health
+        break;
+
+        case 14: //PM++ Adoption
+        //var colm = project[0].getElementsByTagName('pmppadoption');
+        //var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        //container.appendChild(theData);
+        //row.appendChild(container);
+        break;
+
+        case 15: //Scorecard Effective Date
+        var colm = project[0].getElementsByTagName('scorecardeffectivedate');
+//      var theData = document.createTextNode(colm[0].firstChild.nodeValue);
+        var theData = document.createTextNode("Last Updated");
+        container.appendChild(theData);
+        row.appendChild(container);
+        break;
+
+        case 16: //Key Issues
+        break;
+
+        case 17: //Overall Status
+        break;
+
+        case 18: //Plans
+        break;
+
+        case 19: //Document Link
+        break;
+
+        case 20: //Details Link
+        break;
+        default:
+
+        }
+    }
+
+    tmp.appendChild(row);
+
+// Create Project Table - List
+
+    var k=1;
+    for (i=0;i<project.length;i++) // for each project
+    {
+        if (project[i].childNodes[5].firstChild.nodeValue != varea) continue;
+        
+        // Check if project completed within 45 days
+//      var projenddate = project[i].getElementsByTagName('deploymentprojectedenddate');
+//      var pds = projenddate[0].firstChild.nodeValue;
+        //var pdd = new Date();
+        //pdd = SimpleDateFormat("MM/dd/yyyy").parse(projenddate[0].firstChild.nodeValue);
+        //alert(pdd);
+
+        // Hide completed projects and Cancelled projects 
+        var cphase = project[i].getElementsByTagName('currentpmppphase');
+        if(( cphase[0].firstChild.nodeValue=="Completed") || ( cphase[0].firstChild.nodeValue=="Cancelled")) continue;
+
+        nprojects++;
+        
+        // Toggle row color;
+        if (k) k=0;
+        else k=1;
+        
+        var row = document.createElement('TR');
+        if(k){row.style.backgroundColor=projecttablerowcolor;}
+        else {row.style.backgroundColor=projecttablerowcoloralt;}
+
+            
+        var container = document.createElement('TH');
+        var doclink = project[i].getElementsByTagName('documentlink');
+
+        //Category
+        var colmcategory = project[i].getElementsByTagName('category');
+        var theDatacategory = document.createTextNode(colmcategory[0].firstChild.nodeValue);
+        var containercategory = document.createElement('TH');
+        containercategory.appendChild(theDatacategory);
+        row.appendChild(containercategory);
+
+        //Project Id
+        var colmprojectid = project[i].getElementsByTagName('projectid');
+        var theDataprojectid = document.createTextNode(colmprojectid[0].firstChild.nodeValue);
+        var containerprojectid = document.createElement('TH');
+        containerprojectid.appendChild(theDataprojectid);
+        row.appendChild(containerprojectid);
+
+
+        //Project Name
+        var colmprojectname = project[i].getElementsByTagName('projectname');
+        var linkNodeprojectname = document.createElement("<a href='"+doclink[0].firstChild.nodeValue+"' target='_blank'></a>");             
+        var linkLabelprojectname = document.createTextNode(colmprojectname[0].firstChild.nodeValue);            
+        linkNodeprojectname.appendChild(linkLabelprojectname);              
+        var containerprojectname = document.createElement('TH');
+        containerprojectname.appendChild(linkNodeprojectname);
+        row.appendChild(containerprojectname);
+
+
+        //Project Manager
+        var colmprojectmanager = project[i].getElementsByTagName('projectmanager');
+        var theDataprojectmanager = document.createTextNode(colmprojectmanager[0].firstChild.nodeValue);
+        var containerprojectmanager = document.createElement('TH');
+        containerprojectmanager.appendChild(theDataprojectmanager);
+        row.appendChild(containerprojectmanager);
+
+        // Current PM++ Phase
+        var colmphase = project[i].getElementsByTagName('currentpmppphase');
+        var theDataphase = document.createTextNode(colmphase[0].firstChild.nodeValue);
+        var containerphase = document.createElement('TH');
+        containerphase.appendChild(theDataphase);
+        row.appendChild(containerphase);
+
+        // start date
+        var colmstartdate = project[i].getElementsByTagName('projectstart');
+        if(colmstartdate.length>0){
+        var theDatastartdate = document.createTextNode(colmstartdate[0].firstChild.nodeValue);
+        var containerstartdate = document.createElement('TH');
+        containerstartdate.appendChild(theDatastartdate);
+        row.appendChild(containerstartdate);
+        } 
+        else {
+        var theDatastartdate = document.createTextNode("None");
+        var containerstartdate = document.createElement('TH');
+        containerstartdate.appendChild(theDatastartdate);       
+        row.appendChild(containerstartdate);
+        }
+
+        // end date
+        var colmenddate = project[i].getElementsByTagName('projectend');
+        if(colmenddate.length>0){
+        var theDataenddate = document.createTextNode(colmenddate[0].firstChild.nodeValue);
+        var containerenddate = document.createElement('TH');
+        containerenddate.appendChild(theDataenddate);
+        row.appendChild(containerenddate);
+        } 
+        else {
+        var theDataenddate = document.createTextNode("None");
+        var containerenddate = document.createElement('TH');
+        containerenddate.appendChild(theDataenddate);
+        row.appendChild(containerenddate);
+        }
+
+        //Schedule Current
+        var colmschedule = project[i].getElementsByTagName('schedulecurrent');          
+        var containerschedule = document.createElement('TH');
+        switch(colmschedule[0].firstChild.nodeValue)
+        {
+            case 'R': //Red
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Reddot.gif";
+            containerschedule.appendChild(img);
+            break;
+
+            case 'Y': //Yellow
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Yellowdot.gif";
+            containerschedule.appendChild(img);
+            break;
+
+            default: //Green
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Greendot.gif";
+            containerschedule.appendChild(img);
+            break;
+        }
+        row.appendChild(containerschedule);
+
+
+        //Budget Current
+        var colmbudget = project[i].getElementsByTagName('budgetcurrent');
+        var containerbudget = document.createElement('TH');     
+        switch(colmbudget[0].firstChild.nodeValue)
+        {
+            case 'R': //Red
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Reddot.gif";
+            containerbudget.appendChild(img);
+            break;
+
+            case 'Y': //Yellow
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Yellowdot.gif";
+            containerbudget.appendChild(img);
+            break;
+
+            default: //Green
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Greendot.gif";
+            containerbudget.appendChild(img);
+            break;
+        }
+        row.appendChild(containerbudget);
+
+        //Scope Current
+        var colmscope = project[i].getElementsByTagName('scopecurrent');
+        var containerscope = document.createElement('TH');                  
+        switch(colmscope[0].firstChild.nodeValue)
+        {
+            case 'R': //Red
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Reddot.gif";
+            containerscope.appendChild(img);
+            break;
+
+            case 'Y': //Yellow
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Yellowdot.gif";
+            containerscope.appendChild(img);
+            break;
+
+            default: //Green
+            var img = document.createElement("IMG");            
+            img.src="/content/dam/accessmcd/corp/global_shared_services/Shared-Services-Enablement/pm_plus_plus/portfolio/Greendot.gif";
+            containerscope.appendChild(img);
+            break;
+        }
+        row.appendChild(containerscope);
+            
+        //Scorecard effective date
+        var colmscorecardeffectivedate = project[i].getElementsByTagName('scorecardeffectivedate');
+        var linkNodescorecardeffectivedate = document.createElement("<a href='"+doclink[0].firstChild.nodeValue+"' target='_blank'></a>");          
+        var linkLabelscorecardeffectivedate = document.createTextNode(colmscorecardeffectivedate[0].firstChild.nodeValue);          
+        linkNodescorecardeffectivedate.appendChild(linkLabelscorecardeffectivedate);            
+        var containerscorecardeffectivedate = document.createElement('TH');
+        containerscorecardeffectivedate.appendChild(linkNodescorecardeffectivedate);
+        row.appendChild(containerscorecardeffectivedate);
+
+        tmp.appendChild(row);
+
+                        
+        //Overall Status
+        var colmoverallstatus = project[i].getElementsByTagName('overallstatus');
+        var theDataoverallstatus = document.createTextNode("OVERALL STATUS: "+colmoverallstatus[0].firstChild.nodeValue);
+        var containeroverallstatus = document.createElement('TD');
+        containeroverallstatus.setAttribute('colSpan',11);
+        containeroverallstatus.appendChild(theDataoverallstatus);
+        var row2 = document.createElement('TR');
+        if(k){row2.style.backgroundColor=projecttablerowcolor;}
+        else {row2.style.backgroundColor=projecttablerowcoloralt;}
+        row2.appendChild(containeroverallstatus);
+        tmp.appendChild(row2);
+
+        //Key Risks and Issues
+        var colmkeyissues = project[i].getElementsByTagName('keyissues');
+        var ki = colmkeyissues[0].firstChild.nodeValue;
+
+        if(ki.length>4){
+
+        var containerkeyissuesh = document.createElement('TH');
+        containerkeyissuesh.style.fontWeight=200;
+        var theDatakeyissuesh = document.createTextNode("KEY RISKS & ISSUES:  ");
+        containerkeyissuesh.appendChild(theDatakeyissuesh);
+        
+        var theDatakeyissues = document.createTextNode(colmkeyissues[0].firstChild.nodeValue);
+        var containerkeyissues = document.createElement('TD');
+        containerkeyissues.setAttribute('colSpan',11);
+
+        containerkeyissues.appendChild(theDatakeyissuesh);
+        containerkeyissues.appendChild(theDatakeyissues);
+        var row1 = document.createElement('TR');
+        if(k){row1.style.backgroundColor=projecttablerowcolor;}
+        else {row1.style.backgroundColor=projecttablerowcoloralt;}
+        
+        //row1.appendChild(containerkeyissuesh);
+        row1.appendChild(containerkeyissues);
+        tmp.appendChild(row1);
+        }
+
+        //Plans
+        var colmplans = project[i].getElementsByTagName('plans');
+        var pl = colmplans[0].firstChild.nodeValue;
+
+        if(pl.length>4){
+        var theDataplans = document.createTextNode("PLANS FOR NEXT PERIOD: "+colmplans[0].firstChild.nodeValue);
+        var containerplans = document.createElement('TD');
+        containerplans.setAttribute('colSpan',11);
+        containerplans.appendChild(theDataplans);
+        var row3 = document.createElement('TR');
+        if(k){row3.style.backgroundColor=projecttablerowcolor;}
+        else {row3.style.backgroundColor=projecttablerowcoloralt;}
+        row3.appendChild(containerplans);
+        tmp.appendChild(row3);
+        }
+    }
+
+
+    document.getElementById(wroot).appendChild(newEl);  
+
+
+// Create Footer Section
+    var footer = document.createElement('TABLE');   
+    footer.style.color=reportfootertextcolor; 
+    footer.style.fontSize=14; 
+    footer.style.width='100%'; 
+
+    tmp1 = document.createElement('TBODY');
+    footer.appendChild(tmp1);
+    row1 = document.createElement('TR');
+    row1.style.backgroundColor=reportfooterbackgroundcolor; 
+    container1 = document.createElement('TH'); 
+    container1.style.align='left'; 
+    str="Total Projects: "+String(nprojects);
+    theData1 = document.createTextNode(str);
+    container1.appendChild(theData1);
+    row1.appendChild(container1);
+    tmp1.appendChild(row1);
+
+    row2 = document.createElement('TR');
+    row2.style.backgroundColor=reportbackgroundcolor; 
+    container2 = document.createElement('TD'); 
+    container2.style.align='left';
+    container2.style.fontSize=9; 
+    str="Dashboard report produced by the PM++ team. Please contact the respective PM on any question related to a particular project and the PM++ team for any questions regarding this report."
+    theData1 = document.createTextNode(str);
+    container2.appendChild(theData1);
+    row2.appendChild(container2);
+    tmp1.appendChild(row2);
+
+    document.getElementById(wroot).appendChild(footer);
+
+}
+
+// Node Functions
+
+if(!window.Node){
+  var Node = {ELEMENT_NODE : 1, TEXT_NODE : 3};
+}
+
+function checkNode(node, filter){
+  return (filter == null || node.nodeType == Node[filter] || node.nodeName.toUpperCase() == filter.toUpperCase());
+}
+
+function getChildren(node, filter){
+  var result = new Array();
+  var children = node.childNodes;
+  for(var i = 0; i < children.length; i++){
+    if(checkNode(children[i], filter)) result[result.length] = children[i];
+  }
+  return result;
+}
+
+function getChildrenByElement(node){
+  return getChildren(node, "ELEMENT_NODE");
+}
+
+function getFirstChild(node, filter){
+  var child;
+  var children = node.childNodes;
+  for(var i = 0; i < children.length; i++){
+    child = children[i];
+    if(checkNode(child, filter)) return child;
+  }
+  return null;
+}
+
+function getFirstChildByText(node){
+  return getFirstChild(node, "TEXT_NODE");
+}
+
+function getNextSibling(node, filter){
+  for(var sibling = node.nextSibling; sibling != null; sibling = sibling.nextSibling){
+    if(checkNode(sibling, filter)) return sibling;
+  }
+  return null;
+}
+function getNextSiblingByElement(node){
+        return getNextSibling(node, "ELEMENT_NODE");
+}
+
+// Node Functions for Menu 1
+
+if(!window.Node1){
+  var Node1 = {ELEMENT_NODE : 1, TEXT_NODE : 3};
+}
+
+function checkNode1(node, filter){
+  return (filter == null || node.nodeType == Node1[filter] || node.nodeName.toUpperCase() == filter.toUpperCase());
+}
+
+function getChildren1(node, filter){
+  var result = new Array();
+  var children = node.childNodes;
+  for(var i = 0; i < children.length; i++){
+    if(checkNode1(children[i], filter)) result[result.length] = children[i];
+  }
+  return result;
+}
+
+function getChildrenByElement1(node){
+  return getChildren1(node, "ELEMENT_NODE");
+}
+
+function getFirstChild1(node, filter){
+  var child;
+  var children = node.childNodes;
+  for(var i = 0; i < children.length; i++){
+    child = children[i];
+    if(checkNode1(child, filter)) return child;
+  }
+  return null;
+}
+
+function getFirstChildByText1(node){
+  return getFirstChild1(node, "TEXT_NODE");
+}
+
+function getNextSibling1(node, filter){
+  for(var sibling = node.nextSibling; sibling != null; sibling = sibling.nextSibling){
+    if(checkNode1(sibling, filter)) return sibling;
+  }
+  return null;
+}
+function getNextSiblingByElement1(node){
+        return getNextSibling1(node, "ELEMENT_NODE");
+}
+
+/*$(window).load(function() {
+        importXML();
+});*/
+
+$(document).ready(function(){
+    importXML();
+});
+</script>
+</head>
+<body>
+<div id="writeroot"></div>
+</body>
+</html>  

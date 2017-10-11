@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}600"
+    title="Edit Awesome Bar"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        manageTabs="function(tab,noSwitch){&#xa;var tabs=['components','g2gDesign','slim navigation design'];&#xa;var index=tabs.indexOf(tab);&#xa;&#xa;if(index==1){&#xa;&#xa;&#xa;}&#xa;this.doLayout();&#xa;if(index==2){&#xa;&#xa;}&#xa;&#xa;if(!noSwitch)this.activate(0);&#xa;}&#xa;"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <awesomebar
+                jcr:primaryType="cq:Panel"
+                title="Awesome Bar">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <userlinks
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="User Action Links"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <viewLinks
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View Switcher"
+                                name="./viewLink"
+                                xtype="browsefield"/>
+                            <getLinkText
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Get Link Hover Text"
+                                name="./getLinkHoverText"
+                                xtype="textfield"/>
+                            <emailText
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Email to Friend Hover Text"
+                                name="./emailHoverText"
+                                xtype="textfield"/>
+                            <view
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Text to be displayed as a view switcher"
+                                fieldLabel="Views Switcher Text"
+                                name="./viewSwitcherText"
+                                xtype="textfield"/>
+                            <role_text
+                                jcr:primaryType="cq:Widget"
+                                collapsed="{Boolean}true"
+                                collapsible="{Boolean}true"
+                                name="./mcdAudience"
+                                title="User Role Text"
+                                xtype="dialogfieldset">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <CorpEmployees
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="CorpEmployees"
+                                        name="./CorpEmployees"
+                                        regex="/^[A-Za-z0-9-/ ]*d{0}$/"
+                                        regexText="Special Characters not allowed"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                    <Crew
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="Crew"
+                                        name="./Crew"
+                                        regex="/^[A-Za-z0-9-/ ]*d{0}$/"
+                                        regexText="Special Characters not allowed"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                    <FranchiseeRestMgrs
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="FranchiseeRestMgrs"
+                                        name="./FranchiseeRestMgrs"
+                                        regex="/^[A-Za-z0-9-/ ]*d{0}$/"
+                                        regexText="Special Characters not allowed"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                    <Franchisees
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="Franchisees"
+                                        name="./Franchisees"
+                                        regex="/^[A-Za-z0-9-/ ]*d{0}$/"
+                                        regexText="Special Characters not allowed"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                    <McOpCoRestMgrs
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="McOpCoRestMgrs"
+                                        name="./McOpCoRestMgrs"
+                                        regex="/^[A-Za-z0-9-/ ]*d{0}$/"
+                                        regexText="Special Characters not allowed"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                    <SupplierVendor
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="SupplierVendor"
+                                        name="./SupplierVendor"
+                                        regex="/^[A-Za-z0-9-/ ]*d{0}$/"
+                                        regexText="Special Characters not allowed"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                    <Agency
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="Agency"
+                                        name="./Agency"
+                                        regex="/^[A-Za-z0-9-/ ]*d{0}$/"
+                                        regexText="Special Characters not allowed"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                    <FranchiseeOfficeStaff
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="FranchiseeOfficeStaff"
+                                        name="./FranchiseeOfficeStaff"
+                                        regex="/^[A-Za-z0-9-/ ]*d{0}$/"
+                                        regexText="Special Characters not allowed"
+                                        validateOnBlur="true"
+                                        xtype="textfield"/>
+                                </items>
+                            </role_text>
+                        </items>
+                    </userlinks>
+                    <search
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Search"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <searchLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Default : in"
+                                fieldLabel="Search In Label"
+                                name="./searchLabel"
+                                regex="/^[A-Za-z0-9 ]*d{0}$/"
+                                regexText="Special Characetrs not allowed"
+                                validateOnBlur="true"
+                                xtype="textfield"/>
+                            <viewSearchText
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="View Search Text"
+                                name="./viewSearchText"
+                                regex="/^[A-Za-z0-9 ]*d{0}$/"
+                                regexText="Special Characters not allowed"
+                                validateOnBlur="true"
+                                xtype="textfield"/>
+                            <mcdSearchText
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="All of AccessMCD Search Text"
+                                name="./mcdSearchText"
+                                regex="/^[A-Za-z0-9 ]*d{0}$/"
+                                regexText="Special Characetrs not allowed"
+                                validateOnBlur="true"
+                                xtype="textfield"/>
+                            <siteSearchText
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Site Specific Search Text"
+                                name="./siteSearchText"
+                                regex="/^[A-Za-z0-9 ]*d{0}$/"
+                                regexText="Special Characetrs not allowed"
+                                validateOnBlur="true"
+                                xtype="textfield"/>
+                            <searchLink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Search Link"
+                                name="./searchLink"
+                                xtype="browsefield"/>
+                        </items>
+                    </search>
+                    <resTypeLogo
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./logoimg/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </awesomebar>
+            <useractions
+                jcr:primaryType="cq:Panel"
+                title="User Actions">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./links"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="userActionLinks"/>
+                    </links>
+                </items>
+            </useractions>
+            <img
+                jcr:primaryType="cq:Widget"
+                ddGroups="[media]"
+                disableZoom="{Boolean}true"
+                fileNameParameter="./logoimg/fileName"
+                fileReferenceParameter="./logoimg/fileReference"
+                name="./logoimg/file"
+                requestSuffix="/logoimg.img.png"
+                sizeLimit="{Long}100"
+                title="Logo Image"
+                uploadUrl="/tmp/upload_test/*"
+                xtype="smartimage"/>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadContent="function(dialog){&#xa;var path = this.path.replace('/jcr:content/awesomebarpara', '');&#xa;var pageHandle = path + '.moreinfo.html';&#xa;var JSONObj = CQ.Util.formatData(CQ.Util.eval(CQ.HTTP.get(pageHandle))); &#xa;var viewPath = JSONObj.viewPath;  &#xa;if(viewPath.indexOf('/content/')&lt;0) {&#xa;viewPath = '/content' + viewPath; &#x9;&#xa;}&#xa;if(path != viewPath) {  &#xa;CQ.Ext.Msg.show({'title':  CQ.I18n.getMessage('Awesome Bar Validation'),'msg': CQ.I18n.getMessage('Please configure the values only on views home page') + ' : ' + viewPath,'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); this.hide();  &#x9;} }"/>
+</jcr:root>

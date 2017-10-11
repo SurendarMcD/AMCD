@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Template"
+    jcr:title="G2G Responsive Template"
+    allowedPaths="[/content/accessmcd/mcd(/.*)?,/content/accessmcd/na/mcweb/en/restaurant/restinfo/programexecution/nabit1(/.*)?,/content/accessmcd/na/mcweb/fr/restaurant/restinfo/programexecution/nabit1(/.*)?,/content/accessmcd/na/mcweb/en/mymcd/InsidetheArches1(/.*)?,/content/accessmcd/na/mcweb/fr/mymcd/InsidetheArches1(/.*)?,/content/accessmcd/na/mcweb/en/restaurant/restinfo/programexecution/manager_s_guide_v21(/.*)?,/content/accessmcd/na/mcweb/fr/restaurant/restinfo/programexecution/manager_s_guide_v21(/.*)?,/content/accessmcd/na/mcweb/en/restaurant/people/ourlounge(/.*)?,/content/accessmcd/na/mcweb/en/restaurant(/.*)?,/content/accessmcd/na/mcweb/fr/restaurant(/.*)?,/content/accessmcd/corp/company/mcd_digital_university(/.*)?,/content/accessmcd/corp/career/people(/.*)?,/content/accessmcd/corp/company/digital_resource_center(/.*)?,/content/accessmcd/na/us/natl/restaurant_ops/rt/bckoff(/.*)?,/content/accessmcd/na/us/natl/people/pdm(/.*)?,/content/accessmcd/na/us/natl/about_company/supply_sustainability/sustainable_sourcing_guide(/.*)?,/content/accessmcd/na/us/natl/about_company/sustainable_sourcing_guide(/.*)?,/content/accessmcd/corp/services_support/ols(/.*)?,/content/accessmcd/corp/company/golden_archives(/.*)?,/content/accessmcd/corp(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="mcd/components/page/g2g-responsive"/>
+</jcr:root>

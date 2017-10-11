@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000; margin:0; padding:0;}
+.float_left{float:left;}
+.clear{clear:both;}
+.trending{padding-bottom:15px;}
+.trendingData{width:100%; background:#dedede; height:25px; border-radius:4px !important;}    
+.trending_text{
+    padding:5px 10px 5px 10px !important; 
+    color:#fff !important; 
+    font-weight:bold !important; 
+    background:url(../images/arrow.jpg) left center no-repeat;
+    width:110px !important; 
+    font-size:16px !important; 
+    font-family:calibri !important; 
+    text-align:center; 
+    word-wrap:break-word;
+}
+.list_item{margin:0; pad ding:0; list-style-type:none;}
+.list_item li{display:inline-block; font-size:13px; font-family:calibri; font-weight:bold; color:#000; 
+padding-top:4px;
+padding-bottom:4px;
+padding-left:0px;
+padding-right:0px;
+border-right:1px solid #fff; 
+wi dth:auto !important;
+}  
+#flexiselDemo1 a{color:#000; padding:5px 10px; text-decoration:none;}
+#flexiselDemo1 a:hover{color:#000; text-decoration:underline;}
+#flexiselDemo1 .nbs-flexisel-item a{color:#000; padding:5px 10px; text-decoration:none;}
+#flexiselDemo1 .nbs-flexisel-item a:hover{color:#000; text-decoration:underline;}
+#trendingNoData{background:#ffffff !important;}
+
+
+
+

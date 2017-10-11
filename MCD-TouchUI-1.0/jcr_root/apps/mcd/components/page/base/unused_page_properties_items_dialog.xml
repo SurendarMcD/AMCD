@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1"/>
+            <accessmcd
+                jcr:primaryType="cq:Panel"
+                title="AccessMCD">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <publishAccessMCD
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Publish To AccessMCD"
+                        inputValue="true"
+                        name="./publishAccessMCD"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                        </options>
+                    </publishAccessMCD>
+                    <views
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="global"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="View(s)"
+                        name="./views"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <australia
+                                jcr:primaryType="nt:unstructured"
+                                text="Australia"
+                                value="australia"/>
+                            <global
+                                jcr:primaryType="nt:unstructured"
+                                text="Global"
+                                value="global"/>
+                            <unitedstates
+                                jcr:primaryType="nt:unstructured"
+                                text="United States"
+                                value="unitedstates"/>
+                        </options>
+                    </views>
+                    <categoryList
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(ctrl + click to select multiple)"
+                        fieldLabel="AccessMCD Category"
+                        name="./categoryList"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <australia
+                                jcr:primaryType="nt:unstructured"
+                                text="Australia"
+                                value="australia"/>
+                            <global
+                                jcr:primaryType="nt:unstructured"
+                                text="Global"
+                                value="global"/>
+                            <unitedstates
+                                jcr:primaryType="nt:unstructured"
+                                text="United States"
+                                value="unitedstates"/>
+                        </options>
+                    </categoryList>
+                    <categoryTitle
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Category Title"
+                        name="./categoryTitle"
+                        width="10"
+                        xtype="textfield"/>
+                    <publishDate
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="mm/dd/yy &lt;br> Used by date-sorted categories, such as Inside McDonald's. Defaults to initial activation date. &lt;br>"
+                        fieldLabel="Publish Date"
+                        name="./publishDate"
+                        xtype="datefield"/>
+                    <topStoryInformation
+                        jcr:primaryType="nt:unstructured"
+                        name="./topStoryInformation"
+                        text="Top Story Information       (Applies only to categories denoted by * )"
+                        xtype="static"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Title"
+                        name="./topStoryTitle"
+                        xtype="textfield"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Text"
+                        name="./topStoryText"
+                        xtype="textarea"/>
+                </items>
+            </accessmcd>
+            <calendar
+                jcr:mixinTypes="[rep:AccessControllable]"
+                jcr:primaryType="cq:Panel"
+                title="Calendar">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <calendarActivityDate
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Calendar Activity Date"
+                        name="./calendarActivityDate"
+                        xtype="datefield"/>
+                    <calendarActivityTitle
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Calendar Activity Title"
+                        name="./calendarActivityTitle"
+                        xtype="textfield"/>
+                    <calendarActivityType
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Calendar Activity Type"
+                        name="./calendarActivityType"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <restaurant
+                                jcr:primaryType="nt:unstructured"
+                                text="Restaurant"
+                                value="restaurant"/>
+                            <staff
+                                jcr:primaryType="nt:unstructured"
+                                text="Staff"
+                                value="staff"/>
+                        </options>
+                    </calendarActivityType>
+                    <calendarActivityURL
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Calendar Activity URL"
+                        name="./calendarActivityURL"
+                        xtype="pathcompletion"/>
+                    <showInCalendar
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="&lt;br>"
+                        fieldLabel="Show In Calendar"
+                        inputValue="true"
+                        name="./showInCalendar"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                        </options>
+                    </showInCalendar>
+                </items>
+                <rep:accessControl jcr:primaryType="rep:AccessControl"/>
+            </calendar>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="/content/accessmcd/na/us/natl/services_support/cq5_manual/components/accordion.html?wcmmode=disabled"
+    width="750px"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <accordiontab
+                jcr:primaryType="cq:Panel"
+                title="Accordion Section">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <bottompadding
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="in px. (Default: 20px)"
+                        fieldLabel="Bottom Padding"
+                        name="./btmpadding"
+                        xtype="textfield"/>
+                    <accLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter Accordion Data"
+                        xtype="label"/>
+                    <accitem
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        name="./accordiandata"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            xtype="usaccordionitem"/>
+                    </accitem>
+                </items>
+            </accordiontab>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforeSubmit="function(dialog){ &#xa;if(dialog.getField('./accordiandata').getValue()=='' || dialog.getField('./accordiandata').getValue().length&lt;2)&#xa;{&#xa;CQ.Ext.Msg.show({'title':CQ.I18n.getMessage('Dialog Validation'),'msg':CQ.I18n.getMessage('Please provide the data for the Accordion Section (atleast 2).'),'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); return false;} &#xa;else&#xa;{ &#xa;var item=dialog.getField('./accordiandata').getValue(); &#xa;for(i=0;i&lt;item.length;i++){&#xa;var accValue = item[i].split('|');&#xa;if(accValue.length>0){&#xa;ques = accValue[0];&#xa;ans = accValue[1]; &#xa;}&#xa;if(ques=='' || ans==''){ CQ.Ext.Msg.show({'title':CQ.I18n.getMessage('Dialog Validation'),'msg':CQ.I18n.getMessage('Please provide the Question and Answer for each item.'),'buttons':CQ.Ext.Msg.OK,'icon':CQ.Ext.MessageBox.INFO,'scope':this}); return false;}}}}"
+        loadcontent="function(dialog){&#xa;var a= new Array();&#xa;a = dialog.getField('./accordiandata').getValue();&#xa;}"/>
+</jcr:root>

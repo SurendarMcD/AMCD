@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    helpPath="/accessmcd/na/us/natl/services_support/cq5_manual/components/tabpanel.html"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <Tab
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Tab Component"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <tabTitle0
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter text for the section title to be associated with this Paragraph"
+                        fieldLabel="Title for 1st paragraph"
+                        name="./tabTitle0"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <tabTitle1
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter text for the section title to be associated with this Paragraph"
+                        fieldLabel="Title for 2nd paragraph"
+                        name="./tabTitle1"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <tabTitle2
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter text for the section title to be associated with this Paragraph"
+                        fieldLabel="Title for 3rd paragraph"
+                        name="./tabTitle2"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <tabTitle3
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter text for the section title to be associated with this Paragraph"
+                        fieldLabel="Title for 4th paragraph"
+                        name="./tabTitle3"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <tabTitle4
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter text for the section title to be associated with this Paragraph"
+                        fieldLabel="Title for 5th paragraph"
+                        name="./tabTitle4"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <displayFirstTab
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Display first tab by default or collapse all the tabs"
+                        fieldLabel="Display First Tab By Default"
+                        name="./displayFirstTab"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="{Boolean}true"/>
+                            <No
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="{Boolean}false"/>
+                        </options>
+                    </displayFirstTab>
+                    <tabType
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the type of tab to be rendered"
+                        fieldLabel="Type of Tab"
+                        name="./tabType"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <Normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Normal Tab"
+                                value="normal"/>
+                            <Wide
+                                jcr:primaryType="nt:unstructured"
+                                text="Wide Tab"
+                                value="wide"/>
+                        </options>
+                    </tabType>
+                    <bottompadding
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="in px. (Default: 44px)&#xa;"
+                        fieldLabel="Bottom Padding"
+                        name="./btmpadding"
+                        xtype="textfield"/>
+                </items>
+            </Tab>
+        </items>
+    </items>
+</jcr:root>
