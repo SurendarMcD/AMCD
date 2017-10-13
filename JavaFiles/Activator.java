@@ -28,4 +28,5 @@ public class Activator implements BundleActivator {
     }
 
 }
+//added comment here
 
